@@ -45,6 +45,7 @@
                     <span class="logo-title">PavedRoad.io</span>
                 </a>
             </h1><!--//logo-->              
+
             <nav id="main-nav" class="main-nav navbar-expand-md float-right" role="navigation">
                 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse">
@@ -79,88 +80,165 @@
     </header><!--//header-->
     
     <!-- ******ABOUT****** --> 
-    <section id="devKitTraining" class="about section">
-      <div class="container">
-        <h3 class="title text-left" style="margin-top: 45px; margin-bottom: 5px;">
-          DevKit training
-        </h3>
+
+    <section id="devKitTraining" 
+      class="about section">
+      <div class="container" style="margin-top: 45px;">
+        <span class="text-primary" style="font-size: 25px; virtical-align: text-top;">
+        <img src="assets/images/kubernetes.png" hieght="75" width="75"/>
+        Kubernetes (microk8s) Training
+        </span>
+        <h4 style="margin-top: 10px;">Overivew</h4>
         <p>
-        Select your devKit from the options below to get started.  It provides training on the language, tools, design patterns, and CI/CD pipelines.
+        Kubernetes support in your development enviornment is provided via 
+        <a href="https://microk8s.io/">microk8s</a>.
         </p>
-        <div class="row">
 
-          <div class="item col-lg-6 col-md-12">
-            <div class="icon-holder">
-              <i class="fas fa-heart"></i>
+        <h4 style="margin-top: 15px;">Kubernetes subjects</h4>
+        <div class="accordion" id="k8sAccording">
+          <div class="card">
+            <div class="card-header" id="k8s-working-with">
+              <h2 class="mb-0">
+                <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#collapseOne">
+                  Working with microk8s
+                </button>									
+                </h2>
             </div>
-            <div class="content" onclick="location.href='goDevKitTraining.html'">
-              <h3 class="sub-title">GoKit</h3>
-              <div class="row">
-
-                <div class="col">
-                 <ul>
-                   <li>Golang(1.12)</li>
-                   <li>Vim</li>
-                   <li>Dep</li>
-                   <li>git</li>
-                   <li>linters</li>
-                 </ul>
-                </div>
-
-                <div class="col">
-                 <ul>
-                   <li>docker</li>
-                   <li>microk8s</li>
-                   <li>skaffold</li>
-                   <li>enhanced bash</li>
-                 </ul>
-                </div>
-
-                <div class="col">
-                 <ul>
-                   <li>Delve</li>
-                   <li>kompose</li>
-                   <li>graphviz</li>
-                   <li>More...</li>
-                 </ul>
-                </div>
-
+            <div id="collapseOne" class="collapse show" aria-labelledby="k8s-working-with" data-parent="#k8sAccording">
+              <div class="card-body">
+                <p><a href="#">Enabling addons</a></p>
+                <p><a href="#">Daily usage/cheat sheet</a></p>
+                <p><a href="#">CI integrations</a></p>
               </div>
-            </div><!--//content-->
-          </div><!--//item-->
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="addons">
+                <h2 class="mb-0">
+                    <button type="button" class="btn btn-link collapsed" 
+                      data-toggle="collapse" data-target="#collapseTwo">
+                      Addons
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="addons" data-parent="#k8sAccording">
+                <div class="card-body">
+                  <p><a href="#">Jaeger</a></p>
+                  <p><a href="#">Fluentd</a></p>
+                  <p><a href="#">GPU support</a></p>
+                  <p><a href="#">Storage</a></p>
+                  <p><a href="#">RBAC</a></p>
+                  <p><a href="#">Ingress</a></p>
+                  <p><a href="#">DNS</a></p>
+                  <p><a href="#">Metrics server</a></p>
+                  <p><a href="#">linkerd service</a></p>
+                  <p><a href="#">Prometheus</a></p>
+                  <p><a href="#">Istio</a></p>
+                  <p><a href="#">k8s dashboard</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="serverless">
+                <h2 class="mb-0">
+                    <button type="button" class="btn btn-link collapsed" data-toggle="collapse" 
+                      data-target="#collapseThree">
+                    Serverless
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="serverless" data-parent="#k8sAccording">
+                <div class="card-body">
+                  <p><a href="#">Knative</a></p>
+                  <p><a href="#">Open_Faas</a></p>
+                  <p><a href="#">Write your first function()</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
 
-          <div class="item col-lg-6 col-md-12">
-            <div class="icon-holder">
-              <i class="far fa-clock"></i>
-           </div>
-         <div class="content">
-           <h3 class="sub-title">node.js</h3>
-           <p>Available soon</p>
-         </div><!--//content-->
-       </div><!--//item-->
+        <h4 style="margin-top: 20px;">Training content</h4>
 
-       <div class="item col-lg-6 col-md-12">
-         <div class="icon-holder">
-           <i class="fas fa-code"></i>
-         </div>
-         <div class="content">
-           <h3 class="sub-title">Python</h3>
-           <p>Available soon</p>
-         </div><!--//content-->
-       </div><!--//item-->
+        <div class="container" style="margin-top: 20px;">
+          <h5>Enabling addons</h5>
+          <a name="k8s-addons"></a>
+        </div>
 
-       <div class="item col-lg-6 col-md-12">
-         <div class="icon-holder">
-           <i class="fas fa-crosshairs"></i>
-         </div>
-         <div class="content">
-           <h3 class="sub-title">Java</h3>
-           <p>Available soon</p>
-         </div><!--//content-->
-       </div><!--//item-->           
-                <div class="clearfix visible-md"></div>    
-            </div><!--//row-->            
-        </div><!--//container-->
+        <div class="container" style="margin-top: 20px;">
+          <h5>Daily usage</h5>
+          <a name="k8s-daily"></a>
+        </div>
+
+        <div class="container" style="margin-top: 20px;">
+          <h5>CI integrations</h5>
+          <a name="k8s-ci"></a>
+        </div>
+
+        <div class="container" style="margin-top: 20px;">
+          <h5>Jaeger</h5>
+          <a name="k8s-jaeger"></a>
+        </div>
+
+        <div class="container" style="margin-top: 20px;">
+          <h5>GPU support</h5>
+          <a name="k8s-gpu"></a>
+        </div>
+
+        <div class="container" style="margin-top: 20px;">
+          <h5>Storage</h5>
+          <a name="k8s-storage"></a>
+        </div>
+
+        <div class="container" style="margin-top: 20px;">
+          <h5>RBAC</h5>
+          <a name="k8s-rbac"></a>
+        </div>
+
+        <div class="container" style="margin-top: 20px;">
+          <h5>Ingress controllers</h5>
+          <a name="k8s-ingress"></a>
+        </div>
+
+        <div class="container" style="margin-top: 20px;">
+          <h5>DNS</h5>
+          <a name="k8s-dns"></a>
+        </div>
+
+        <div class="container" style="margin-top: 20px;">
+          <h5>Kuberentes metrics server</h5>
+          <a name="k8s-metrics"></a>
+        </div>
+
+        <div class="container" style="margin-top: 20px;">
+          <h5>linkerd</h5>
+          <a name="k8s-linkerd"</a>
+        </div>
+
+        <div class="container" style="margin-top: 20px;">
+          <h5>Prometheous</h5>
+          <a name="k8s-prometheous"</a>
+        </div>
+
+        <div class="container" style="margin-top: 20px;">
+          <h5>Istio</h5>
+          <a name="k8s-istio"</a>
+        </div>
+
+        <div class="container" style="margin-top: 20px;">
+          <h5>Kubernetes dashboard</h5>
+          <a name="k8s-dashboard"</a>
+        </div>
+
+        <div class="container" style="margin-top: 20px;">
+          <h5>linkerd</h5>
+          <a name="k8s-linkerd"</a>
+        </div>
+
+
+
+
+
+      </div><!--//container-->
     </section><!--//about-->
     
     <!-- ******CONTACT****** --> 
@@ -175,7 +253,7 @@
             </div><!--//contact-inner-->
         </div><!--//container-->
     </section><!--//contact-->  
-      
+
     <!-- ******FOOTER****** --> 
     <footer class="footer">
         <div class="container text-center">
