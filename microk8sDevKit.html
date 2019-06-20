@@ -163,9 +163,10 @@
           <h5>Enabling addons</h5>
           <a name="k8s-addons"></a>
           <h6>Addons</h6>
-          <p>The initial install of microk8s includes only the upstream distribution.  However,
-          microk8s supports several popular addon that can be enabled.</p>
-          <p>Get a list of available addon using microk8s.status</p>
+          <p>The initial install of microk8s includes only the upstream 
+          distribution.  However, microk8s supports several popular add-ons 
+          that can be enabled.</p>
+          <p>Get a list of available add-ons using microk8s.status.</p>
           <h6>microk8s.status</h6>
           <pre><code>
 $ microk8s.status
@@ -189,8 +190,9 @@ dashboard: enabled
           </code></pre>
 
           <h6>microk8s.enable [list of services to enable]</h6>
-          Use the microk8s.enable command to add services.  Do not use sudo, if a password is required, 
-          microk8s will prompt you as shown below:
+          Use <code>microk8s.enable</code> command to add services.  
+          Do not use sudo, if a password is required, microk8s will 
+          prompt you as shown below:
           <pre>
           <code>
 $ microk8s.enable ingress dns
@@ -220,12 +222,12 @@ DNS is enabled
           </code>
 
           <h6>microk8s.disable [list of services to enable]</h6>
-          Use the microk8s.disable command to remove services.  Do not use sudo, if a password is required, 
+          Use <code>microk8s.disable</code> command to remove services.  
+          Do not use sudo, if a password is required, 
           microk8s will prompt you as shown below:
           <pre>
           <code>
 $ microk8s.disable ingress
-<samp>
 Disabling Ingress
 deployment.extensions "default-http-backend" deleted
 service "default-http-backend" deleted
@@ -237,17 +239,19 @@ rolebinding.rbac.authorization.k8s.io "nginx-ingress-microk8s" deleted
 configmap "nginx-load-balancer-microk8s-conf" deleted
 daemonset.apps "nginx-ingress-microk8s-controller" deleted
 Ingress is disabled
-
-</samp>
-          </pre>
           </code>
 
 
+=======
+          </pre>
+          </code>
+>>>>>>> 8b550741cce5d475686fac1e89bd3e2ac2ace083
         </div>
 
         <div class="container" style="margin-top: 20px;">
           <a name="k8s-daily"><h5>Daily usage</h5></a>
           
+<<<<<<< HEAD
           <b>Starting, Stopping, and Resetting your cluster microk8s</b>
           <p>
           You can use the <code>microk8s.start</code> and <code>microk8s.stop</code> 
@@ -258,6 +262,17 @@ Ingress is disabled
 
           <div class="text-primary font-weight-bold">
           NOTE: do not run microk8s using sudo, if need, it will prompt 
+=======
+          <h6>Starting, Stopping, and Resetting your cluster microk8s</h6>
+          You can use the <code>microk8s.start</code> and <code>microk8s.stop</code> 
+          commands to start and stop the cluster. 
+          Microk8s is extremely fast to start and stop.  So it is common to 
+          free up resources by stopping it when not needed.
+          </p>
+
+          <div class="text-primary font-weight-bold">
+          NOTE: do not run microk8s using sudo, if needed, it will prompt 
+>>>>>>> 8b550741cce5d475686fac1e89bd3e2ac2ace083
           for the password as shown below.
           </div>
           <span class="text-success font-weight-bold">Starting</span>
@@ -284,7 +299,12 @@ sys	0m0.116s
           </pre>
 <span class="text-success font-weight-bold">Resetting</span>
 <p>
+<<<<<<< HEAD
 In testing, it is often required to clear all prior state and start with a clean cluster.  This is what <code>microk8s.reset</code> is for.  When executes, it resets all the cluster state to that of a new cluster.
+=======
+In testing, it is often required to clear all previous state and 
+start with a clean cluster.  The <code>microk8s.reset</code> accomplishes this.  When executes, it resets all the cluster state to that of a new cluster.
+>>>>>>> 8b550741cce5d475686fac1e89bd3e2ac2ace083
 
 <pre>
 jscharber@ubuntu:~$ /snap/bin/microk8s.reset
@@ -310,11 +330,24 @@ No resources found
 Waiting for kubernetes resources to be released
 Cleaning up addons client binaries..
 </pre>
+<<<<<<< HEAD
           <b>Accessing dashboards</b></br>
           There are two way to fine endpoints for cluster resources:<br>
           Use kubectl to display all services<br>
           <code>microk8s.kubectl get services --all-namespaces</code><br>
           Example
+=======
+          <h5>Accessing dashboards</h5>
+          <p>
+          There are two way to find the endpoints for cluster resources:
+          </p>
+          <p>
+          <h6>Kubectl to display all services</h6>
+          <p>Execute <code>microk8s.kubectl get services --all-namespaces. 
+          </code> Note, we use --all-namespaces.  The --all-namespaces option 
+          displays all services in the cluster irrespective of namespace.</p>
+          <p>Example:</p>
+>>>>>>> 8b550741cce5d475686fac1e89bd3e2ac2ace083
           <pre>
 jscharber@ubuntu:~$ microk8s.kubectl get services --all-namespaces
 NAMESPACE            NAME                   TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)                               AGE
@@ -330,9 +363,15 @@ kube-system          kubernetes-dashboard   ClusterIP   10.152.183.68    <none> 
 kube-system          monitoring-grafana     ClusterIP   10.152.183.233   <none>        80/TCP                                55s
 kube-system          monitoring-influxdb    ClusterIP   10.152.183.228   <none>        8083/TCP,8086/TCP                     55s
           </pre>
+<<<<<<< HEAD
           Use kubectl to display cluter information<br>
           <code>microk8s.kubectl cluster-info</code><br>
           Example
+=======
+          <h6>Kubectl to display cluter information</h6>
+          <p>Enter: <code>microk8s.kubectl cluster-info</code> as shown below.</p>
+          <p>Example</p>
+>>>>>>> 8b550741cce5d475686fac1e89bd3e2ac2ace083
           <pre>
 jscharber@ubuntu:~$ microk8s.kubectl cluster-info
 Kubernetes master is running at https://127.0.0.1:16443
@@ -344,9 +383,23 @@ InfluxDB is running at https://127.0.0.1:16443/api/v1/namespaces/kube-system/ser
 To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
 jscharber@ubuntu:~$
           </pre>
+<<<<<<< HEAD
           To get details on a service.<br>
           <code>microk8s.kubectl --namespace=kube-system describe service kubernetes-dashboard</code><br>
           Example
+=======
+          <h6>To get details on a service.</h6>
+          <p>Use the --namespace=xxxxx option to limit your search, followed by 
+          "describe service" and the name of the service.  In the example below,
+          you can see the ClusterIP is 10.152.183.68 and kubernetes-dashboard 
+          is listening on port 443.
+          </p>
+          <p>
+          This information can be used to bring up the dashboard in the 
+          browser of your choice.
+          </p>
+          For example, <code>microk8s.kubectl --namespace=kube-system describe service kubernetes-dashboard</code><br>
+>>>>>>> 8b550741cce5d475686fac1e89bd3e2ac2ace083
           <pre>
 
 jscharber@ubuntu:~$ microk8s.kubectl --namespace=kube-system describe service kubernetes-dashboard
@@ -368,6 +421,7 @@ Events:            <none>
           Use the IP and port information to access the dashboard<br>
           <img src="assets/images/k8s-dashboard.png"/>
 
+<<<<<<< HEAD
           <h5>Authentication</h5>
           You will need to authenticate for full access to portal capabilities
           <div>
@@ -377,11 +431,31 @@ Events:            <none>
           <div>
             <h6>client.config</h6>
             Are found in <code>/var/snap/microk8s/current/credentials/client.config</code>
+=======
+          <br>
+          <br>
+          <h5>Authentication</h5>
+          <p>
+          You need to authenticate for full access to portal capabilities
+          </p>
+          <div>
+            <h6>basic auth</h6>
+            If you want to use basic authenticaion, those credientials are 
+            stored in:<br> 
+            <code>/var/snap/microk8s/current/credentials/basic_auth.csv</code>
+          </div>
+          <div>
+            <br><h6>client.config</h6>
+            If you want to use certificat authenticaion, when prompted select:
+            <br> 
+            <code>/var/snap/microk8s/current/credentials/client.config</code>
+>>>>>>> 8b550741cce5d475686fac1e89bd3e2ac2ace083
           </div><br>
 
           <h5>Managing the cluster</h5>
           <div>
             <h6>snap alias</h6>
+<<<<<<< HEAD
             <p>
             The snap package manager provides the ability to create aliases.
             This can be helpful to shortern or create familar versions of 
@@ -391,14 +465,31 @@ Events:            <none>
             <p>
             creating an alias:
             </p>
+=======
+            <div>
+            The snap package manager provides the ability to create 
+            aliases. An alias is  helpful to shorten or create familiar 
+            versions of the standard Kubernetes commands.
+            </div>
+
+            <div class="text-success font-weight-bold">
+            creating an alias:
+            </div>
+>>>>>>> 8b550741cce5d475686fac1e89bd3e2ac2ace083
 
             <p>
             <code>snap alias microk8s.kubectl kubectl</code>
             </p>
             
+<<<<<<< HEAD
             <p>
             remove an alias:
             </p>
+=======
+            <div class="text-success font-weight-bold">
+            remove an alias:
+            </div>
+>>>>>>> 8b550741cce5d475686fac1e89bd3e2ac2ace083
 
             <p>
             <code>snap usalias kubectl</code>
@@ -406,11 +497,21 @@ Events:            <none>
             
             <h6>microk8s.status</h6>
             <p>
+<<<<<<< HEAD
             Showes the status of microks8 cluster.  This provides a list 
             of which addons are enabled or disabled.  When the cluster 
             is first starting up, you can add the <code>--wait-ready
             </code> option, or specify a timeout using the 
             <code>--timeout seconds</code> option.
+=======
+            The <code>microks8.status</code> command shows the status of 
+            the cluster.  The output includes the list of add-ons and 
+            their status; enabled or disabled. When the cluster is first 
+            starting up, you can add the <code>--wait-ready option</code>, 
+            or specify a timeout using the <code>--timeout seconds</code> 
+            option.
+
+>>>>>>> 8b550741cce5d475686fac1e89bd3e2ac2ace083
             </p>
             <p>
             If you are going to use the output of the microk8s.status 
@@ -438,6 +539,7 @@ addons:
 
             <h6>microk8s.inspect</h6>
             <p>
+<<<<<<< HEAD
             To troubleshoot a non-functional MicroK8s deployment, start by 
             running the microk8s.inspect command. This command performs a 
             set of tests against MicroK8s and collects traces and logs in 
@@ -446,6 +548,23 @@ addons:
             with <code>journalctl -u snap.microk8s.<daemon>.service. 
             microk8s.inspect</code> may also make suggestions on potential 
             issues it may find.
+=======
+            To troubleshoot a non-functioning MicroK8s deployment, start by 
+            running the <code>microk8s.inspect</code> command. This 
+            command performs a set of tests against MicroK8s and collects 
+            traces and logs in a report tarball. Each daemons that make up 
+            the Kubernetes master are listed in the output.
+            </p>
+            
+            <p>
+            In case any of the daemons mentioned above are failing use 
+            the <code>journalctl</code> command to review their logs.  
+            For example,<br> 
+            <code>journalctl -u snap.microk8s.{daemon-name}.service. microk8s.inspect</code>.<br>
+            The output of the 
+            <code>journalctl</code> can include suggestions on potential 
+            issues and recommend actions.
+>>>>>>> 8b550741cce5d475686fac1e89bd3e2ac2ace083
             </p>
             <pre><code>
 jscharber@ubuntu:~$ microk8s.inspect
@@ -478,11 +597,19 @@ jscharber@ubuntu:~$ journalctl -u snap.microk8s.daemon-etc.service.microk8s.insp
             </code></pre>
 
             <h6>microk8s.config</h6>
+<<<<<<< HEAD
             <p>
             Returns the client configuration used to connect to your cluster.
             If you decide not use use microk8s.kubectl, there are several ways
             of passing this to kubectl.
             </p>
+=======
+            <div>
+            Returns the client configuration used to connect to your 
+            cluster. You can use kubectl instead of the microk8s.kubectl 
+            command.  Below are several methods for accomplishing this.
+            </div>
+>>>>>>> 8b550741cce5d475686fac1e89bd3e2ac2ace083
 
             <ul>
               <li>Write it to ~/.kube/config — the default configuration 
@@ -533,7 +660,11 @@ users:
                   <td><code>microk8s.ctr</code></td>
                   <td>
                     <a href="https://github.com/projectatomic/containerd/blob/master/docs/cli.md" target="_blank">
+<<<<<<< HEAD
                     Wrapper for containerd CLI
+=======
+                    containerd CLI
+>>>>>>> 8b550741cce5d475686fac1e89bd3e2ac2ace083
                     </a>
                   </td>
                 </tr>
@@ -541,7 +672,11 @@ users:
                   <td><code>microk8s.kubectl</code></td>
                   <td>
                     <a href="https://kubernetes.io/docs/reference/kubectl/overview/" target="_blank">
+<<<<<<< HEAD
                       Wrapper for Kubernetes CLI
+=======
+                      Kubernetes CLI
+>>>>>>> 8b550741cce5d475686fac1e89bd3e2ac2ace083
                     </a>
                   </td>
                 </tr>
@@ -549,7 +684,11 @@ users:
                   <td><code>microk8s.istio</code></td>
                   <td>
                     <a href="https://istio.io/docs/reference/commands/istioctl/" target="_blank">
+<<<<<<< HEAD
                       Wrapper for istioctl
+=======
+                      istioctl CLI
+>>>>>>> 8b550741cce5d475686fac1e89bd3e2ac2ace083
                     </a>
                   </td>
                 </tr>
@@ -557,7 +696,11 @@ users:
                   <td><code>microk8s.linkderd</code></td>
                   <td>
                     <a href="https://linkerd.io/2/reference/cli/" target="_blank">
+<<<<<<< HEAD
                       Wrapper for linkerd CLI
+=======
+                      linkerd CLI
+>>>>>>> 8b550741cce5d475686fac1e89bd3e2ac2ace083
                     </a>
                   </td>
                 </tr>
@@ -587,18 +730,35 @@ users:
             <li>Service dependency analysis</li>
             <li>Performance / latency optimization</li>
           </ul>
+<<<<<<< HEAD
           <a href="https://www.jaegertracing.io/docs/1.12/" target="_blank">
             Jaeger documentation
           </a>
+=======
+          <ul>
+            <li>
+              <a href="https://www.jaegertracing.io/docs/1.12/" 
+                target="_blank">
+                Jaeger documentation
+              </a>
+            </li>
+          </ul>
+>>>>>>> 8b550741cce5d475686fac1e89bd3e2ac2ace083
         </div>
 
         <div class="container" style="margin-top: 20px;">
           <h5>Fluentd</h5>
           <a name="k8s-fluentd"></a>
           <p>
+<<<<<<< HEAD
           Fluentd is an open source data collector for unified logging layer. 
           Fluentd allows you to unify data collection and consumption for a 
           better use and understanding of data.
+=======
+          Fluentd is an open source data collector for unified logging 
+          layer. Fluentd allows you to unify data collection and 
+          consumption for better use and understanding of data.
+>>>>>>> 8b550741cce5d475686fac1e89bd3e2ac2ace083
           </p>
           <a href="https://docs.fluentd.org/" target="_blank">
             Fluentd documentation
@@ -609,16 +769,27 @@ users:
           <h5>GPU support</h5>
           <a name="k8s-gpu"></a>
           <p>Expose GPU(s) to MicroK8s by enabling the nvidia-docker runtime 
+<<<<<<< HEAD
           and nvidia-device-plugin-daemonset. Requires NVIDIA drivers to be 
           already installed on the host system.
+=======
+          and nvidia-device-plugin-daemonset. Requires NVIDIA drivers.  
+          These driver are already installed on most systems.
+>>>>>>> 8b550741cce5d475686fac1e89bd3e2ac2ace083
           </p>
         </div>
 
         <div class="container" style="margin-top: 20px;">
           <h5>Storage</h5>
           <a name="k8s-storage"></a>
+<<<<<<< HEAD
           <p>Create a default storage class. This storage class makes use of 
           the hostpath-provisioner pointing to a directory on the host.
+=======
+          <p>Creates a default storage class. This storage class makes 
+          use of the hostpath-provisioner pointing to a directory on 
+          the host.
+>>>>>>> 8b550741cce5d475686fac1e89bd3e2ac2ace083
           </p>
         </div>
 
@@ -626,9 +797,15 @@ users:
           <h5>RBAC</h5>
           <a name="k8s-rbac"></a>
           <p>
+<<<<<<< HEAD
           By default, RBAC is not enabled.  If you enable RBAC, you can use 
           <code>--authorization-mode=AlwaysAllow</code> as needed.  i
           Note that other add-ons may not work with RBAC enabled.
+=======
+          By default, RBAC is disabled.  If you enable RBAC, you can use 
+          <code>--authorization-mode=AlwaysAllow</code> as needed.
+          <b>Note:</b> Other add-ons may not work with RBAC enabled.
+>>>>>>> 8b550741cce5d475686fac1e89bd3e2ac2ace083
           </p>
           <a href="https://kubernetes.io/docs/reference/access-authn-authz/rbac/" target="_blank">
           Role-Based Access Control documentation
@@ -639,8 +816,16 @@ users:
           <h5>Ingress controllers</h5>
           <a name="k8s-ingress"></a>
           <h6>What is Ingress?</h6>
+<<<<<<< HEAD
           <p>
 Ingress, added in Kubernetes v1.1, exposes HTTP and HTTPS routes from outside the cluster to services within the cluster. Traffic routing is controlled by rules defined on the Ingress resource.
+=======
+<p>
+Ingress, added in Kubernetes v1.1, exposes HTTP and HTTPS routes from 
+outside the cluster to services within the cluster. Rules defined on the 
+Ingress resource control traffic routing.
+</p>
+>>>>>>> 8b550741cce5d475686fac1e89bd3e2ac2ace083
 <pre>
     internet
         |
@@ -648,6 +833,7 @@ Ingress, added in Kubernetes v1.1, exposes HTTP and HTTPS routes from outside th
    --|-----|--
    [ Services ]
 </pre>
+<<<<<<< HEAD
 An Ingress can be configured to give services externally-reachable URLs, load balance traffic, terminate SSL, and offer name based virtual hosting. An Ingress controller is responsible for fulfilling the Ingress, usually with a loadbalancer, though it may also configure your edge router or additional frontends to help handle the traffic.
 
 An Ingress does not expose arbitrary ports or protocols. Exposing services other than HTTP and HTTPS to the internet typically uses a service of type Service.Type=NodePort or Service.Type=LoadBalancer.
@@ -655,6 +841,25 @@ An Ingress does not expose arbitrary ports or protocols. Exposing services other
           <a href="https://kubernetes.io/docs/concepts/services-networking/ingress/" target="_blank">
           Concepts - Ingress
           </a>
+=======
+<p>
+An Ingress can be configured to give services externally-reachable URLs, 
+load balance traffic, terminate SSL, and offer name-based virtual hosting. 
+An Ingress controller is responsible for fulfilling the Ingress, usually 
+with a load balancer, though it may also configure your edge router or 
+additional frontends to help handle the traffic. An Ingress does not 
+expose arbitrary ports or protocols. Exposing services other than HTTP and 
+HTTPS to the internet typically uses a service of type 
+Service.Type=NodePort or Service.Type=LoadBalancer.
+</p>
+        <ul>
+          <li>
+            <a href="https://kubernetes.io/docs/concepts/services-networking/ingress/" target="_blank">
+              Concepts - Ingress
+            </a>
+          </li>
+        </ul>
+>>>>>>> 8b550741cce5d475686fac1e89bd3e2ac2ace083
         </div>
 
         <div class="container" style="margin-top: 20px;">
@@ -663,12 +868,27 @@ An Ingress does not expose arbitrary ports or protocols. Exposing services other
           <p>
           Kube-dns makes Kubernetes endpoints available via DNS.  
           </p>
+<<<<<<< HEAD
           <a href="https://www.digitalocean.com/community/tutorials/an-introduction-to-the-kubernetes-dns-service" target="_blank">
           DigitalOcean overview
           </a><br>
           <a href="https://github.com/kubernetes/kubernetes/tree/master/cluster/addons/dns/kube-dns" target="_blank">
           Kube-DNS documentation
           </a>
+=======
+          <ul>
+            <li>
+              <a href="https://www.digitalocean.com/community/tutorials/an-introduction-to-the-kubernetes-dns-service" target="_blank">
+                DigitalOcean overview
+              </a>
+            </li>
+          <li>
+            <a href="https://github.com/kubernetes/kubernetes/tree/master/cluster/addons/dns/kube-dns" target="_blank">
+              Kube-DNS documentation
+            </a>
+          </li>
+          </ul>
+>>>>>>> 8b550741cce5d475686fac1e89bd3e2ac2ace083
         </div>
 
         <div class="container" style="margin-top: 20px;">
@@ -676,7 +896,17 @@ An Ingress does not expose arbitrary ports or protocols. Exposing services other
           <a name="k8s-metrics"></a>
           <p>
           The k8s metrics server provides a unified method for collection 
+<<<<<<< HEAD
           resource usage information. Data can be collected via <a href="https://kubernetes.io/docs/tasks/debug-application-cluster/resource-metrics-pipeline/#the-metrics-api" traget="blank">The Metrics API</a>.  More information about the <a href="https://kubernetes.io/docs/tasks/debug-application-cluster/resource-metrics-pipeline/#metrics-server" target="_blank">Metrics Server</a> is here.
+=======
+          resource usage information. You collected data by making calls 
+          to the metrics server
+          <a href="https://kubernetes.io/docs/tasks/debug-application-cluster/resource-metrics-pipeline/#the-metrics-api" traget="blank">
+            the Metrics API</a>.
+          
+          More information about the <a href="https://kubernetes.io/docs/tasks/debug-application-cluster/resource-metrics-pipeline/#metrics-server" target="_blank">Metrics Server</a> is here.
+          
+>>>>>>> 8b550741cce5d475686fac1e89bd3e2ac2ace083
         </div>
 
         <div class="container" style="margin-top: 20px;">
@@ -688,14 +918,25 @@ An Ingress does not expose arbitrary ports or protocols. Exposing services other
           debugging, observability, reliability, and security—all without 
           requiring any changes to your code.
           </p>
+<<<<<<< HEAD
           <a href="https://linkerd.io/2/overview/" target="_blank">
             Linkerd documentation
           </a>
+=======
+          <ul>
+            <li>
+              <a href="https://linkerd.io/2/overview/" target="_blank">
+                Linkerd documentation
+              </a>
+            </li>
+          <ul>
+>>>>>>> 8b550741cce5d475686fac1e89bd3e2ac2ace083
         </div>
 
         <div class="container" style="margin-top: 20px;">
           <h5>Prometheous</h5>
           <a name="k8s-prometheous"</a>
+<<<<<<< HEAD
           <p>Prometheus is an open source monitoring and alerting system that 
           directly scrapes metrics from agents running on the target hosts and 
           stores the collected samples centrally on its server. Metrics can 
@@ -713,6 +954,31 @@ An Ingress does not expose arbitrary ports or protocols. Exposing services other
             Prometheous documentation
           </a>
 
+=======
+          <div>
+          Prometheus is an open source monitoring and alerting system 
+          that directly scrapes metrics from agents running on the 
+          target hosts and stores the collected samples centrally on 
+          its server. Metrics can also be pushed using plugins like 
+          collectd_exporter—although this is not Prometheus' default 
+          behavior, it may be useful in some environments where hosts are 
+          behind a firewall or prohibited from opening ports by a security 
+          policy.
+          </div>
+
+          <div>
+            <ul>
+              <li><a href="https://opensource.com/article/18/12/introduction-prometheus"
+                 target="_blank">
+                Introduction to Prometheous
+                </a></li>
+              <li><a href="https://prometheus.io/docs/"
+                 target="_blank">
+                Prometheous documentation
+                </a></li>
+            </ul>
+          </div>
+>>>>>>> 8b550741cce5d475686fac1e89bd3e2ac2ace083
         </div>
 
         <div class="container" style="margin-top: 20px;">
