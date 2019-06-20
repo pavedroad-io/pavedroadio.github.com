@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>PavedRoad.io</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">    
+    <link rel="shortcut icon" href="favicon.ico">  
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'> 
+    <!-- FontAwesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js" integrity="sha384-3LK/3kTpDE/Pkp8gTNp2gR/2gOiwQ6QaO7Td0zV76UFJVhqLl4Vl3KL1We6q6wR9" crossorigin="anonymous"></script>
+
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Plugins CSS -->    
+    <link rel="stylesheet" href="assets/plugins/prism/prism.css">
+    <!-- Theme CSS -->  
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme-1.css">
+    <!-- GitHub Button -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script> 
+</head> 
+
+<body data-spy="scroll">
+
+    <!---//Facebook button code-->
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    
+    <!-- ******HEADER****** --> 
+    <header id="header" class="header">  
+        <div class="container">            
+            <h1 class="logo float-left">
+                <a href="/">
+                    <span class="logo-title">PavedRoad.io</span>
+                </a>
+            </h1><!--//logo-->              
+
+            <nav id="main-nav" class="main-nav navbar-expand-md float-right" role="navigation">
+                
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button><!--//nav-toggle-->
+                           
+                <div class="navbar-collapse collapse" id="navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item sr-only"><a class="nav-link" href="/">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#docs">Documentation</a></li>
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" data-toggle="dropdown"
+                             href="#" role="button" aria-haspopup="true" aria-expanded="false">Training</a>
+                          <div class="dropdown-menu">
+                            <a class="dropdown-item" href="devKits.html">DevKits</a>
+                            <a class="dropdown-item" onclick="return false;" href="#">CI/CD</a>
+                            <a class="dropdown-item" onclick="return false;" href="#">Operations</a>
+                            <a class="dropdown-item" onclick="return false;" href="#">Insights</a>
+                          </div>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="#license">License</a></li>                        
+                        <li class="nav-item last"><a class="nav-link" href="#contact">Contact</a></li>
+                    </ul><!--//nav-->
+                </div><!--//navabr-collapse-->
+            </nav><!--//main-nav-->
+        </div>
+    </header><!--//header-->
+    
+    <!-- ******ABOUT****** --> 
+
+    <section id="devKitTraining" 
+      class="about section">
+      <div class="container" style="margin-top: 45px;">
+        <span class="text-primary" style="font-size: 25px; virtical-align: text-top;">
+        Kubernetes (microk8s) Training
+        <img src="assets/images/kubernetes.png" hieght="75" width="75"/>
+        </span>
+        <h4 style="margin-top: 10px;">Overivew</h4>
+        <p>
+        Kubernetes support in your development enviornment is provided via 
+        <a href="https://microk8s.io/">microk8s</a>.
+        </p>
+
+        <h4 style="margin-top: 15px;">Kubernetes subjects</h4>
+        <div class="accordion" id="k8sAccording">
+          <div class="card">
+            <div class="card-header" id="k8s-working-with">
+              <h2 class="mb-0">
+                <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#collapseOne">
+                  Working with microk8s
+                </button>									
+                </h2>
+            </div>
+            <div id="collapseOne" class="collapse show" aria-labelledby="k8s-working-with" data-parent="#k8sAccording">
+              <div class="card-body">
+                <p><a href="#k8s-daily">Daily usage/cheat sheet</a></p>
+                <p><a href="#k8s-addons">Enabling addons</a></p>
+                <p><a href="#k8s-ci">CI integrations</a></p>
+              </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="addons">
+                <h2 class="mb-0">
+                    <button type="button" class="btn btn-link collapsed" 
+                      data-toggle="collapse" data-target="#collapseTwo">
+                      Addons
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="addons" data-parent="#k8sAccording">
+                <div class="card-body">
+                  <p><a href="#k8s-jaeger">Jaeger</a></p>
+                  <p><a href="#k8s-fluentd">Fluentd</a></p>
+                  <p><a href="#k8s-gpu">GPU support</a></p>
+                  <p><a href="#k8s-storage">Storage</a></p>
+                  <p><a href="#k8s-rbac">RBAC</a></p>
+                  <p><a href="#k8s-ingress">Ingress</a></p>
+                  <p><a href="#k8s-dns">DNS</a></p>
+                  <p><a href="#k8s-metrics">Metrics server</a></p>
+                  <p><a href="#k8s-linkerd">linkerd service</a></p>
+                  <p><a href="#k8s-prometheus">Prometheus</a></p>
+                  <p><a href="#k8s-istio">Istio</a></p>
+                  <p><a href="#k8s-dashboard">k8s dashboard</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="serverless">
+                <h2 class="mb-0">
+                    <button type="button" class="btn btn-link collapsed" data-toggle="collapse" 
+                      data-target="#collapseThree">
+                    Serverless
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="serverless" data-parent="#k8sAccording">
+                <div class="card-body">
+                  <p><a href="#k8s-knative">Knative</a></p>
+                  <p><a href="#k8s-open-faas">Open_Faas</a></p>
+                  <p><a href="#k8s-first-faas">Write your first function()</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <h4 style="margin-top: 20px;">Training content</h4>
+
+        <div class="container" style="margin-top: 20px;">
+          <h5>Enabling addons</h5>
+          <a name="k8s-addons"></a>
+          <h6>Addons</h6>
+          <p>The initial install of microk8s includes only the upstream distribution.  However,
+          microk8s supports several popular addon that can be enabled.</p>
+          <p>Get a list of available addon using microk8s.status</p>
+          <h6>microk8s.status</h6>
+          <pre><code>
+$ microk8s.status
+<samp>
+microk8s is running
+addons:
+jaeger: disabled
+fluentd: disabled
+gpu: disabled
+storage: enabled
+registry: enabled
+rbac: disabled
+ingress: disabled
+dns: enabled
+metrics-server: disabled
+linkerd: disabled
+prometheus: disabled
+istio: disabled
+dashboard: enabled
+</samp>
+          </code></pre>
+
+          <h6>microk8s.enable [list of services to enable]</h6>
+          Use the microk8s.enable command to add services.  Do not use sudo, if a password is required, 
+          microk8s will prompt you as shown below:
+          <pre>
+          <code>
+$ microk8s.enable ingress dns
+<samp>
+Enabling Ingress
+deployment.extensions/default-http-backend created
+service/default-http-backend created
+serviceaccount/nginx-ingress-microk8s-serviceaccount created
+clusterrole.rbac.authorization.k8s.io/nginx-ingress-microk8s-clusterrole created
+role.rbac.authorization.k8s.io/nginx-ingress-microk8s-role created
+clusterrolebinding.rbac.authorization.k8s.io/nginx-ingress-microk8s created
+rolebinding.rbac.authorization.k8s.io/nginx-ingress-microk8s created
+configmap/nginx-load-balancer-microk8s-conf created
+daemonset.apps/nginx-ingress-microk8s-controller created
+Ingress is enabled
+Enabling DNS
+Applying manifest
+service/kube-dns unchanged
+serviceaccount/kube-dns unchanged
+configmap/kube-dns unchanged
+deployment.extensions/kube-dns configured
+Restarting kubelet
+[sudo] password for jscharber:
+DNS is enabled
+</samp>
+          </pre>
+          </code>
+
+          <h6>microk8s.disable [list of services to enable]</h6>
+          Use the microk8s.disable command to remove services.  Do not use sudo, if a password is required, 
+          microk8s will prompt you as shown below:
+          <pre>
+          <code>
+$ microk8s.disable ingress
+<samp>
+Disabling Ingress
+deployment.extensions "default-http-backend" deleted
+service "default-http-backend" deleted
+serviceaccount "nginx-ingress-microk8s-serviceaccount" deleted
+clusterrole.rbac.authorization.k8s.io "nginx-ingress-microk8s-clusterrole" deleted
+role.rbac.authorization.k8s.io "nginx-ingress-microk8s-role" deleted
+clusterrolebinding.rbac.authorization.k8s.io "nginx-ingress-microk8s" deleted
+rolebinding.rbac.authorization.k8s.io "nginx-ingress-microk8s" deleted
+configmap "nginx-load-balancer-microk8s-conf" deleted
+daemonset.apps "nginx-ingress-microk8s-controller" deleted
+Ingress is disabled
+
+</samp>
+          </pre>
+          </code>
+
+
+        </div>
+
+        <div class="container" style="margin-top: 20px;">
+          <a name="k8s-daily"><h5>Daily usage</h5></a>
+          
+          <b>Starting, Stopping, and Resetting your cluster microk8s</b>
+          <p>
+          You can use the <code>microk8s.start</code> and <code>microk8s.stop</code> 
+          commands to start and stop the cluster. 
+          Microk8s is exeremlty fast to start and stop.  So it is common to 
+          free up resouces by stopping it when not needed.
+          </p>
+
+          <div class="text-primary font-weight-bold">
+          NOTE: do not run microk8s using sudo, if need, it will prompt 
+          for the password as shown below.
+          </div>
+          <span class="text-success font-weight-bold">Starting</span>
+          <pre>
+jscharber@ubuntu:~$ time microk8s.start
+[sudo] password for jscharber:
+Started.
+Enabling pod scheduling
+node/ubuntu already uncordoned
+
+real	0m14.862s
+user	0m0.591s
+sys	0m0.761s
+jscharber@ubuntu:~$
+          </pre>
+          <span class="text-success font-weight-bold">Stopping</span>
+          <pre>
+jscharber@ubuntu:~$ time microk8s.stop
+Stopped.
+
+real	0m0.906s
+user	0m0.034s
+sys	0m0.116s
+          </pre>
+<span class="text-success font-weight-bold">Resetting</span>
+<p>
+In testing, it is often required to clear all prior state and start with a clean cluster.  This is what <code>microk8s.reset</code> is for.  When executes, it resets all the cluster state to that of a new cluster.
+
+<pre>
+jscharber@ubuntu:~$ /snap/bin/microk8s.reset
+[sudo] password for jscharber:
+Calling clean_cluster
+Cleaning resources in namespace container-registry
+endpoints "registry" deleted
+event "registry-7d65c894c-pscpq.15a60802274fa135" deleted
+event "registry-7d65c894c-pscpq.15a6080281fb7405" deleted
+event "registry-7d65c894c-pscpq.15a60802c569f501" deleted
+event "registry-7d65c894c-pscpq.15a60802f83a9cc8" deleted
+event "registry-7d65c894c-pscpq.15a6096d1f1e01a1" deleted
+event "registry-7d65c894c-pscpq.15a6096dc4e935ea" deleted
+event "registry-7d65c894c-pscpq.15a6096e5108b8c5" deleted
+event "registry-7d65c894c-pscpq.15a6096eb6c16c4f" deleted
+
+Lots of output.......
+
+namespace "container-registry" deleted
+namespace "kube-node-lease" deleted
+Removing CRDs
+No resources found
+Waiting for kubernetes resources to be released
+Cleaning up addons client binaries..
+</pre>
+          <b>Accessing dashboards</b></br>
+          There are two way to fine endpoints for cluster resources:<br>
+          Use kubectl to display all services<br>
+          <code>microk8s.kubectl get services --all-namespaces</code><br>
+          Example
+          <pre>
+jscharber@ubuntu:~$ microk8s.kubectl get services --all-namespaces
+NAMESPACE            NAME                   TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)                               AGE
+container-registry   registry               NodePort    10.152.183.73    <none>        5000:32000/TCP                        46s
+default              default-http-backend   ClusterIP   10.152.183.215   <none>        80/TCP                                39s
+default              kubernetes             ClusterIP   10.152.183.1     <none>        443/TCP                               8m34s
+default              simplest-agent         ClusterIP   None             <none>        5775/TCP,5778/TCP,6831/TCP,6832/TCP   6s
+default              simplest-collector     ClusterIP   None             <none>        9411/TCP,14267/TCP,14268/TCP          6s
+default              simplest-query         ClusterIP   None             <none>        16686/TCP                             6s
+kube-system          heapster               ClusterIP   10.152.183.139   <none>        80/TCP                                55s
+kube-system          kube-dns               ClusterIP   10.152.183.10    <none>        53/UDP,53/TCP                         54s
+kube-system          kubernetes-dashboard   ClusterIP   10.152.183.68    <none>        443/TCP                               56s
+kube-system          monitoring-grafana     ClusterIP   10.152.183.233   <none>        80/TCP                                55s
+kube-system          monitoring-influxdb    ClusterIP   10.152.183.228   <none>        8083/TCP,8086/TCP                     55s
+          </pre>
+          Use kubectl to display cluter information<br>
+          <code>microk8s.kubectl cluster-info</code><br>
+          Example
+          <pre>
+jscharber@ubuntu:~$ microk8s.kubectl cluster-info
+Kubernetes master is running at https://127.0.0.1:16443
+Heapster is running at https://127.0.0.1:16443/api/v1/namespaces/kube-system/services/heapster/proxy
+KubeDNS is running at https://127.0.0.1:16443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
+Grafana is running at https://127.0.0.1:16443/api/v1/namespaces/kube-system/services/monitoring-grafana/proxy
+InfluxDB is running at https://127.0.0.1:16443/api/v1/namespaces/kube-system/services/monitoring-influxdb:http/proxy
+
+To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
+jscharber@ubuntu:~$
+          </pre>
+          To get details on a service.<br>
+          <code>microk8s.kubectl --namespace=kube-system describe service kubernetes-dashboard</code><br>
+          Example
+          <pre>
+
+jscharber@ubuntu:~$ microk8s.kubectl --namespace=kube-system describe service kubernetes-dashboard
+Name:              kubernetes-dashboard
+Namespace:         kube-system
+Labels:            k8s-app=kubernetes-dashboard
+Annotations:       kubectl.kubernetes.io/last-applied-configuration:
+                     {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"labels":{"k8s-app":"kubernetes-dashboard"},"name":"kubernetes-dashboard"...
+Selector:          k8s-app=kubernetes-dashboard
+Type:              ClusterIP
+IP:                10.152.183.68
+Port:              <unset>  443/TCP
+TargetPort:        8443/TCP
+Endpoints:         10.1.1.32:8443
+Session Affinity:  None
+Events:            <none>
+          </pre>
+
+          Use the IP and port information to access the dashboard<br>
+          <img src="assets/images/k8s-dashboard.png"/>
+
+          <h5>Authentication</h5>
+          You will need to authenticate for full access to portal capabilities
+          <div>
+            <h6>basic auth</h6>
+            Are found in <code>/var/snap/microk8s/current/credentials/basic_auth.csv</code>
+          </div>
+          <div>
+            <h6>client.config</h6>
+            Are found in <code>/var/snap/microk8s/current/credentials/client.config</code>
+          </div><br>
+
+          <h5>Managing the cluster</h5>
+          <div>
+            <h6>snap alias</h6>
+            <p>
+            The snap package manager provides the ability to create aliases.
+            This can be helpful to shortern or create familar versions of 
+            the standard Kubernetes commands.
+            </p>
+
+            <p>
+            creating an alias:
+            </p>
+
+            <p>
+            <code>snap alias microk8s.kubectl kubectl</code>
+            </p>
+            
+            <p>
+            remove an alias:
+            </p>
+
+            <p>
+            <code>snap usalias kubectl</code>
+            </p>
+            
+            <h6>microk8s.status</h6>
+            <p>
+            Showes the status of microks8 cluster.  This provides a list 
+            of which addons are enabled or disabled.  When the cluster 
+            is first starting up, you can add the <code>--wait-ready
+            </code> option, or specify a timeout using the 
+            <code>--timeout seconds</code> option.
+            </p>
+            <p>
+            If you are going to use the output of the microk8s.status 
+            command in a program, add the <code>--yaml</code> option.
+            </p>
+            <pre>
+jscharber@ubuntu:~$ microk8s.status --yaml
+microk8s:
+  running: true
+addons:
+  jaeger: disabled
+  fluentd: disabled
+  gpu: disabled
+  storage: enabled
+  registry: enabled
+  rbac: disabled
+  ingress: enabled
+  dns: enabled
+  metrics-server: disabled
+  linkerd: disabled
+  prometheus: disabled
+  istio: disabled
+  dashboard: enabled
+            </pre>
+
+            <h6>microk8s.inspect</h6>
+            <p>
+            To troubleshoot a non-functional MicroK8s deployment, start by 
+            running the microk8s.inspect command. This command performs a 
+            set of tests against MicroK8s and collects traces and logs in 
+            a report tarball. In case any of the aforementioned daemons 
+            are failing you will be urged to look at the respective logs 
+            with <code>journalctl -u snap.microk8s.<daemon>.service. 
+            microk8s.inspect</code> may also make suggestions on potential 
+            issues it may find.
+            </p>
+            <pre><code>
+jscharber@ubuntu:~$ microk8s.inspect
+Inspecting services
+  Service snap.microk8s.daemon-containerd is running
+  Service snap.microk8s.daemon-apiserver is running
+  Service snap.microk8s.daemon-proxy is running
+  Service snap.microk8s.daemon-kubelet is running
+  Service snap.microk8s.daemon-scheduler is running
+  Service snap.microk8s.daemon-controller-manager is running
+  Service snap.microk8s.daemon-etcd is running
+  Copy service arguments to the final report tarball
+Inspecting AppArmor configuration
+Gathering system info
+  Copy network configuration to the final report tarball
+  Copy processes list to the final report tarball
+  Copy snap list to the final report tarball
+  Inspect kubernetes cluster
+
+ WARNING:  IPtables FORWARD policy is DROP. Consider enabling traffic forwarding with: sudo iptables -P FORWARD ACCEPT 
+The change can be made persistent with: sudo apt-get install iptables-persistent
+Building the report tarball
+  Report tarball is at /var/snap/microk8s/608/inspection-report-20190608_080955.tar.gz
+            </code></pre>
+
+            <code><pre>
+jscharber@ubuntu:~$ journalctl -u snap.microk8s.daemon-etc.service.microk8s.inspect
+-- Logs begin at Sun 2019-05-26 00:08:04 PDT, end at Sat 2019-06-08 08:12:23 PDT
+-- No entries --
+            </code></pre>
+
+            <h6>microk8s.config</h6>
+            <p>
+            Returns the client configuration used to connect to your cluster.
+            If you decide not use use microk8s.kubectl, there are several ways
+            of passing this to kubectl.
+            </p>
+
+            <ul>
+              <li>Write it to ~/.kube/config — the default configuration 
+                  location</li>
+              <code>microk8s.kubectl config view --raw > $HOME/.kube/config
+              </code>
+              <li>Pass it as a parameter to kubectl (every time)<br>
+                <code>kubectl --kubeconfig=./client-config ...</code></li>
+              <li>Export it via the environment variable (once per terminal 
+                session)<br>
+                <code>export KUBECONFIG=/absolute/path/to/client-config</code></li>
+            </ul>
+            <b>Sample output</b><br>
+            <pre><code>
+jscharber@ubuntu:~$ microk8s.config
+apiVersion: v1
+clusters:
+- cluster:
+    certificate-authority-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUMvakNDQWVhZ0F3SUJBZ0lKQUtvK3d0MzhkK3FFTUEwR0NTcUdTSWIzRFFFQkN3VUFNQlF4RWpBUUJnTlYKQkFNTUNURXlOeTR3TGpBdU1UQWVGdzB4T1RBMU1EY3lNalE1TVRGYUZ3MDBOakE1TWpJeU1qUTVNVEZhTUJReApFakFRQmdOVkJBTU1DVEV5Tnk0d0xqQXVNVENDQVNJd0RRWUpLb1pJaHZjTkFRRUJCUUFEZ2dFUEFEQ0NBUW9DCmdnRUJBTWZzSXZhNTlUaXVYU1lWZDFmYXlkVmFQbndkclU3clVZalR2dmNsdE5XVG5BOEVSK3hmblV4UTA2OVUKR3VkQ25WaklLOVQ5ZExjQkp5Y0ZmYnVYTjdJMmVWYUJVcVhKeGdVVG1pRjJlUWZkTkRINUt1dzRJUzkxajJKUwpSakJjcXNyWlBXVjNqdEFaMXNDWE1IVnZoR0IyNmtYUm1OUCtoNW8wNklDeWpndUFxQTUrL2VmM3RvbmUyRDA2CjNuT3p6cGlkS2FGdVFRMGdBZlVGMFdZKzhsUVdsTkk1UHl3UHZ6UUdyT3pOeUZBcmVQaXRGeWpJMHpweFRKdXIKRDh1TlQ4dWhaS1pQOCt6cUtpZFJqTGdQczhKUmhIUjdaRFh5R1Ruakg0STludGxTa3JBOEM4ajlTZHNSS2RxUwpzNVpvUHVqSXo2VUxtbFZLVWhuSE1pQmtOZVVDQXdFQUFhTlRNRkV3SFFZRFZSME9CQllFRkVQaHdBV2ZoNGpMCjJJZS9yUFFpVmo2Vm5NYytNQjhHQTFVZEl3UVlNQmFBRkVQaHdBV2ZoNGpMMkllL3JQUWlWajZWbk1jK01BOEcKQTFVZEV3RUIvd1FGTUFNQkFmOHdEUVlKS29aSWh2Y05BUUVMQlFBRGdnRUJBTHQzV09Kd3A2SnBQWlNQMHB2WQpaVnB2RFVocXBhL0lIbjQ2bTRsZDVxZGUwTTF5a0N6d2hWSnZTNXNWQjlBS2dvS2wzbzNXUWExU1B6RnFEZDdXCnJPMkpxQ0xUVk9TbGJWMkVNME1vRUxyNmR1S1BCc0xISEJ4TzVOZFJvRndBdnFhOENmeXZwa2FsSGx1dHpqdnMKcC96cXF1dWpIU0NuZ3pSeXNGZ2tZMk1EaGkvQkQ2WGRvT0NEK1lpRVh1VkIvcWE3cWNzZnNIVVE3RFNWVTNhbgp1aGlsYnVEMU84NnBZdC9LaVZvZG9hV2R6YklvNkVmcW4wTXJaVGJuZUVjMThPNEJ2a1ZkSWZiVzkzMUUyMWl6ClpkNEpoZEhBcDIyeWN0M0lwRFFqWDl4Q2xzM080a3JUaWFGOFpBMERlZC96MnVIYjAzVk5qWFM0RTFkYjh5NXIKOEM0PQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+    server: https://192.168.150.179:16443
+  name: microk8s-cluster
+contexts:
+- context:
+    cluster: microk8s-cluster
+    user: admin
+  name: microk8s
+current-context: microk8s
+kind: Config
+preferences: {}
+users:
+- name: admin
+  user:
+    username: admin
+    password: ###################################
+            </code></pre>
+
+
+          <h5>Kubernetes wrapper commands</h5>
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th width="25%">Command</th>
+                  <th>Link to documentation</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>microk8s.ctr</code></td>
+                  <td>
+                    <a href="https://github.com/projectatomic/containerd/blob/master/docs/cli.md" target="_blank">
+                    Wrapper for containerd CLI
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td><code>microk8s.kubectl</code></td>
+                  <td>
+                    <a href="https://kubernetes.io/docs/reference/kubectl/overview/" target="_blank">
+                      Wrapper for Kubernetes CLI
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td><code>microk8s.istio</code></td>
+                  <td>
+                    <a href="https://istio.io/docs/reference/commands/istioctl/" target="_blank">
+                      Wrapper for istioctl
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td><code>microk8s.linkderd</code></td>
+                  <td>
+                    <a href="https://linkerd.io/2/reference/cli/" target="_blank">
+                      Wrapper for linkerd CLI
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+        </div>
+
+        <div class="container" style="margin-top: 20px;">
+          <h5>CI integrations</h5>
+          <a name="k8s-ci"></a>
+          <p>
+          TBD
+          </p>
+        </div>
+
+        <div class="container" style="margin-top: 20px;">
+          <h5>Jaeger</h5>
+          <a name="k8s-jaeger"></a>
+          <p>
+          Jaeger is used for monitoring and troubleshooting microservices-based 
+          distributed systems, including:
+          </p>
+          <ul>
+            <li>Distributed context propagation</li>
+            <li>Distributed transaction monitoring</li>
+            <li>Root cause analysis</li>
+            <li>Service dependency analysis</li>
+            <li>Performance / latency optimization</li>
+          </ul>
+          <a href="https://www.jaegertracing.io/docs/1.12/" target="_blank">
+            Jaeger documentation
+          </a>
+        </div>
+
+        <div class="container" style="margin-top: 20px;">
+          <h5>Fluentd</h5>
+          <a name="k8s-fluentd"></a>
+          <p>
+          Fluentd is an open source data collector for unified logging layer. 
+          Fluentd allows you to unify data collection and consumption for a 
+          better use and understanding of data.
+          </p>
+          <a href="https://docs.fluentd.org/" target="_blank">
+            Fluentd documentation
+          </a>
+        </div>
+
+        <div class="container" style="margin-top: 20px;">
+          <h5>GPU support</h5>
+          <a name="k8s-gpu"></a>
+          <p>Expose GPU(s) to MicroK8s by enabling the nvidia-docker runtime 
+          and nvidia-device-plugin-daemonset. Requires NVIDIA drivers to be 
+          already installed on the host system.
+          </p>
+        </div>
+
+        <div class="container" style="margin-top: 20px;">
+          <h5>Storage</h5>
+          <a name="k8s-storage"></a>
+          <p>Create a default storage class. This storage class makes use of 
+          the hostpath-provisioner pointing to a directory on the host.
+          </p>
+        </div>
+
+        <div class="container" style="margin-top: 20px;">
+          <h5>RBAC</h5>
+          <a name="k8s-rbac"></a>
+          <p>
+          By default, RBAC is not enabled.  If you enable RBAC, you can use 
+          <code>--authorization-mode=AlwaysAllow</code> as needed.  i
+          Note that other add-ons may not work with RBAC enabled.
+          </p>
+          <a href="https://kubernetes.io/docs/reference/access-authn-authz/rbac/" target="_blank">
+          Role-Based Access Control documentation
+          </a>
+        </div>
+
+        <div class="container" style="margin-top: 20px;">
+          <h5>Ingress controllers</h5>
+          <a name="k8s-ingress"></a>
+          <h6>What is Ingress?</h6>
+          <p>
+Ingress, added in Kubernetes v1.1, exposes HTTP and HTTPS routes from outside the cluster to services within the cluster. Traffic routing is controlled by rules defined on the Ingress resource.
+<pre>
+    internet
+        |
+   [ Ingress ]
+   --|-----|--
+   [ Services ]
+</pre>
+An Ingress can be configured to give services externally-reachable URLs, load balance traffic, terminate SSL, and offer name based virtual hosting. An Ingress controller is responsible for fulfilling the Ingress, usually with a loadbalancer, though it may also configure your edge router or additional frontends to help handle the traffic.
+
+An Ingress does not expose arbitrary ports or protocols. Exposing services other than HTTP and HTTPS to the internet typically uses a service of type Service.Type=NodePort or Service.Type=LoadBalancer.
+          </p>
+          <a href="https://kubernetes.io/docs/concepts/services-networking/ingress/" target="_blank">
+          Concepts - Ingress
+          </a>
+        </div>
+
+        <div class="container" style="margin-top: 20px;">
+          <h5>DNS</h5>
+          <a name="k8s-dns"></a>
+          <p>
+          Kube-dns makes Kubernetes endpoints available via DNS.  
+          </p>
+          <a href="https://www.digitalocean.com/community/tutorials/an-introduction-to-the-kubernetes-dns-service" target="_blank">
+          DigitalOcean overview
+          </a><br>
+          <a href="https://github.com/kubernetes/kubernetes/tree/master/cluster/addons/dns/kube-dns" target="_blank">
+          Kube-DNS documentation
+          </a>
+        </div>
+
+        <div class="container" style="margin-top: 20px;">
+          <h5>Kuberentes metrics server</h5>
+          <a name="k8s-metrics"></a>
+          <p>
+          The k8s metrics server provides a unified method for collection 
+          resource usage information. Data can be collected via <a href="https://kubernetes.io/docs/tasks/debug-application-cluster/resource-metrics-pipeline/#the-metrics-api" traget="blank">The Metrics API</a>.  More information about the <a href="https://kubernetes.io/docs/tasks/debug-application-cluster/resource-metrics-pipeline/#metrics-server" target="_blank">Metrics Server</a> is here.
+        </div>
+
+        <div class="container" style="margin-top: 20px;">
+          <h5>linkerd</h5>
+          <a name="k8s-linkerd"</a>
+          <p>
+          Linkerd is a service mesh for Kubernetes and other frameworks. It 
+          makes running services easier and safer by giving you runtime 
+          debugging, observability, reliability, and security—all without 
+          requiring any changes to your code.
+          </p>
+          <a href="https://linkerd.io/2/overview/" target="_blank">
+            Linkerd documentation
+          </a>
+        </div>
+
+        <div class="container" style="margin-top: 20px;">
+          <h5>Prometheous</h5>
+          <a name="k8s-prometheous"</a>
+          <p>Prometheus is an open source monitoring and alerting system that 
+          directly scrapes metrics from agents running on the target hosts and 
+          stores the collected samples centrally on its server. Metrics can 
+          also be pushed using plugins like collectd_exporter—although this is 
+          not Promethius' default behavior, it may be useful in some 
+          environments where hosts are behind a firewall or prohibited from 
+          opening ports by security policy.
+          </p>
+          <a href="https://opensource.com/article/18/12/introduction-prometheus"
+             target="_blank">
+            Introduction to Prometheous
+          </a><br>
+          <a href="https://prometheus.io/docs/"
+             target="_blank">
+            Prometheous documentation
+          </a>
+
+        </div>
+
+        <div class="container" style="margin-top: 20px;">
+          <h5>Istio</h5>
+          <a name="k8s-istio"</a>
+          <p>
+          Istio makes it easy to create a network of deployed services with 
+          load balancing, service-to-service authentication, monitoring, and 
+          more, with few or no code changes in service code. You add Istio 
+          support to services by deploying a special sidecar proxy throughout 
+          your environment that intercepts all network communication between 
+          microservices, then configure and manage Istio using its control 
+          plane functionality, which includes:
+          </p>
+          <ul>
+            <li>Automatic load balancing for HTTP, gRPC, WebSocket, and TCP traffic.</li>
+            <li>A pluggable policy layer and configuration API supporting access controls, rate limits and quotas.</li>
+            <li>Automatic metrics, logs, and traces for all traffic within a cluster, including cluster ingress and egress.</li>
+            <li>Secure service-to-service communication in a cluster with strong identity-based authentication and authorization.</li>
+          </ul>
+          <a href="https://istio.io/docs" target="_blank">
+            Istio documentation
+          </a>
+        </div>
+
+        <div class="container" style="margin-top: 20px;">
+          <h5>Kubernetes dashboard</h5>
+          <a name="k8s-dashboard"</a>
+          <p>
+          Kubernetes Dashboard is a general purpose, web-based UI for 
+          Kubernetes clusters. It allows users to manage applications running 
+          in the cluster and troubleshoot them, as well as manage the cluster 
+          itself.
+          </p>
+          <a href="https://github.com/kubernetes/dashboard/wiki" 
+            target="_blank">
+            Dashboard documentation
+          </a>
+
+        </div>
+
+        <div class="container" style="margin-top: 20px;">
+          <h5>Knative</h5>
+          <a name="k8s-knative"</a>
+          <p>TBD</p>
+        </div>
+
+        <div class="container" style="margin-top: 20px;">
+          <h5>Open-FaaS</h5>
+          <a name="k8s-open-faas"</a>
+          <p>TBD</p>
+        </div>
+
+        <div class="container" style="margin-top: 20px;">
+          <h5>First Function</h5>
+          <a name="k8s-first-faas"</a>
+          <p>TBD</p>
+        </div>
+
+      </div><!--//container-->
+    </section><!--//about-->
+    
+    <!-- ******CONTACT****** --> 
+    <section id="contact" class="contact section has-pattern"
+      style="padding: 5px;">
+        <div class="container">
+            <div class="contact-inner">
+                <h2 class="title  text-center"
+                  style="margin-bottom: 5px;">Contact</h2>
+                <p class="text-center">
+                <a href="mailto:training@pavedroad.io">training@pavedroad.io</a></p>
+            </div><!--//contact-inner-->
+        </div><!--//container-->
+    </section><!--//contact-->  
+
+    <!-- ******FOOTER****** --> 
+    <footer class="footer">
+        <div class="container text-center">
+            <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can buy the commercial license via our website: themes.3rdwavemedia.com */-->
+            <small class="copyright">Designed with <i class="fas fa-heart"></i> by <a href="https://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
+        </div><!--//container-->
+    </footer><!--//footer-->
+     
+    <!-- Javascript -->          
+    <!-- Global JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script> 
+    <script type="text/javascript" src="assets/plugins/prism/prism.js"></script>    
+    <script type="text/javascript" src="assets/js/main.js"></script>  
+
+    
+        
+</body>
+</html> 
+
+
