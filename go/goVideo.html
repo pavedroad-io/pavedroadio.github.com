@@ -18,9 +18,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <!-- Plugins CSS -->    
-    <link rel="stylesheet" href="assets/plugins/prism/prism.css">
+    <link rel="stylesheet" href="../assets/plugins/prism/prism.css">
     <!-- Theme CSS -->  
-    <link id="theme-style" rel="stylesheet" href="assets/css/theme-1.css">
+    <link id="theme-style" rel="stylesheet" href="../assets/css/theme-1.css">
     <!-- GitHub Button -->
     <script async defer src="https://buttons.github.io/buttons.js"></script> 
 </head> 
@@ -45,6 +45,7 @@
                     <span class="logo-title">PavedRoad.io</span>
                 </a>
             </h1><!--//logo-->              
+
             <nav id="main-nav" class="main-nav navbar-expand-md float-right" role="navigation">
                 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse">
@@ -79,43 +80,75 @@
     </header><!--//header-->
     
     <!-- ******ABOUT****** --> 
-    <section id="CI/CD Training" class="about section">
-      <div class="container">
-        <h3 class="title text-left" style="margin-top: 45px; margin-bottom: 5px;">
-          CI/CD Training
-        </h3>
+
+    <section id="devKitTraining" 
+      class="about section">
+      <div class="container" style="margin-top: 45px;">
+        <span class="text-primary" style="font-size: 25px; virtical-align: text-top;">
+        <img src="../assets/images/kubernetes.png" hieght="75" width="75"/>
+        Training topic
+        </span>
+        <h4 style="margin-top: 10px;">Overivew</h4>
         <p>
-        There are a number of CI/CD tools that are vying for their place in the Kubernetes (K8s) ecosystem. Some are strong on the build/test (CI) side while others excel at the deployment (CD) side. A few tools can do both and there are several “workflow” or “pipeline” tools that are general purpose but have been effectively used to solve the entire CI/CD pipelines.
+        Introduction
         </p>
-        <div class="row">
 
-          <div class="item col-lg-6 col-md-12">
-            <div class="icon-holder">
-              <i class="fas fa-cogs"></i>
+        <h4 style="margin-top: 15px;">Subjects covered</h4>
+        <div class="accordion" id="topicAccording">
+          <div class="card">
+            <div class="card-header" id="topic-working-with">
+              <h2 class="mb-0">
+                <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#collapseOne">
+                  Area 1
+                </button>									
+                </h2>
             </div>
-            <div class="content" onclick="location.href='CICDTraining.html'">
-              <h3 class="sub-title">CI/CD Package Training</h3>
-              <div class="row">
-
-                <div class="col">
-                 <ul>
-                   <li>
-                    <a href="CICDTraining.html">Skaffold</a>
-                   </li>
-                   <li>Tekton</li>
-                   <li>Argo</li>
-                   <li>ArgoCD</li>
-                   <li>TravisCI</li>
-                 </ul>
-                </div>
-
+            <div id="collapseOne" class="collapse show" aria-labelledby="topic-working-with" data-parent="#topicAccording">
+              <div class="card-body">
+                <p><a href="https://www.youtube.com/watch?v=PH-2FfFD2PU" target="_blank">
+                  item 2</a></p>
+                <p><a href="https://www.youtube.com/watch?v=kOa_llowQ1c" target="_blank">
+                  item 2</a></p>
+                <p><a href="https://www.youtube.com/watch?v=zeS6OyDoy78" target="_blank">
+                  item 3</a></p>
               </div>
-            </div><!--//content-->
-          </div><!--//item-->
+            </div>
+          </div>
 
-                <div class="clearfix visible-md"></div>    
-            </div><!--//row-->            
-        </div><!--//container-->
+          <div class="card">
+            <div class="card-header" id="addons">
+                <h2 class="mb-0">
+                    <button type="button" class="btn btn-link collapsed" 
+                      data-toggle="collapse" data-target="#collapseTwo">
+                      Area 2
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="addons" data-parent="#topicAccording">
+                <div class="card-body">
+                </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="faas">
+                <h2 class="mb-0">
+                    <button type="button" class="btn btn-link collapsed" 
+                      data-toggle="collapse" data-target="#collapseThree">
+                      Area 3
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="faas" data-parent="#topicAccording">
+                <div class="card-body">
+                <p><a href="https://www.youtube.com/watch?v=CylT5O6IfkU" target="_blank">
+                  item 1</a></p>
+                </div>
+            </div>
+          </div>
+
+    </div>
+      </div><!--//container-->
     </section><!--//about-->
     
     <!-- ******CONTACT****** --> 
@@ -130,7 +163,7 @@
             </div><!--//contact-inner-->
         </div><!--//container-->
     </section><!--//contact-->  
-      
+
     <!-- ******FOOTER****** --> 
     <footer class="footer">
         <div class="container text-center">
@@ -144,9 +177,9 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script> 
-    <script type="text/javascript" src="assets/plugins/prism/prism.js"></script>    
-    <script type="text/javascript" src="assets/js/main.js"></script>  
+    <script type="text/javascript" src="../assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script> 
+    <script type="text/javascript" src="../assets/plugins/prism/prism.js"></script>    
+    <script type="text/javascript" src="../assets/js/main.js"></script>  
 
     
         
