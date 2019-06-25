@@ -432,7 +432,7 @@ $ git branch
         In our examples, we have a branch called "gh-pages" and one called
         "git-content".  The "git-content" branch contains this document.  The
         "gh-pages" branch are changes being stagged for the master branch. 
-        If we want the changes in our "get-content" branch to be merged with
+        If we want the changes in our "git-content" branch to be merged with
         "gh-pages", we us the <code>git merge</code> command.
         </div>
         <div>
@@ -444,8 +444,23 @@ $ git branch
           <li>
             start your merge by switching to the march you want to merge <b>into</b> using the <code>git checkout</code> command</li>
         </ul>
+
 <pre style="padding: 5px; border: 1px solid blue; white-space:pre-line;">
-#
+# Change branches
+$ git checkout gh-pages
+<samp>
+Switched to branch 'gh-pages'
+</samp>
+$ git merge git-content
+<samp>
+Updating d44239e..d74c28f
+
+Fast-forward
+ assets/images/git-logo.png | Bin 0 -> 3728 bytes
+ git/gitDevKit.html         | 500 +++++++++++++++++++++++++++++----------------
+ 2 files changed, 322 insertions(+), 178 deletions(-)
+ create mode 100644 assets/images/git-logo.png
+</samp>
 </pre>
 
         <h6>Merging conflicts</h6>
