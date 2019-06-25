@@ -264,7 +264,7 @@ $ git commit -m "WIP: Issue: 10 taining for git"
         </ul>
         <mark>* represents the current branch</mark>
 <pre style="padding: 5px; border: 1px solid blue; white-space:pre-line;">
-git branch
+$ git branch
 <samp>
 *  gh-pages
   master
@@ -272,7 +272,7 @@ git branch
 </pre>
 
 <pre style="padding: 5px; border: 1px solid blue; white-space:pre-line;">
-git branch -r
+$ git branch -r
 <samp>
   origin/HEAD -> origin/master
   origin/gh-pages
@@ -281,7 +281,7 @@ git branch -r
 </pre>
 
 <pre style="padding: 5px; border: 1px solid blue; white-space:pre-line;">
-git branch -a
+$ git branch -a
 <samp>
 * gh-pages
   master
@@ -336,14 +336,14 @@ git branch -a
         </ul>
 
 <pre style="padding: 5px; border: 1px solid blue; white-space:pre-line;">
-git checkout -b newbranch
+$ git checkout -b newbranch
 <samp>
 Switched to a new branch 'newbranch'
 </samp>
 </pre>
 
 <pre style="padding: 5px; border: 1px solid blue; white-space:pre-line;">
-git checkout -b gh-pages vim-content
+$ git checkout -b gh-pages vim-content
 <samp>
 Switched to a new branch 'vim-content'
 </samp>
@@ -351,11 +351,11 @@ Switched to a new branch 'vim-content'
 
 <mark>Example error</mark>
 <pre style="padding: 5px; border: 1px solid blue; white-space:pre-line;">
-git checkout -b gh-pages vim-content
+$ git checkout -b gh-pages vim-content
 <samp>
 fatal: 'vim-content' is not a commit and a branch 'gh-pages' cannot be created from it
 </samp>
-git status
+$ git status
 <samp>
 On branch git-content
 Changes not staged for commit:
@@ -364,16 +364,16 @@ Changes not staged for commit:
 
 	modified:   git/gitDevKit.html
 </samp>
-git stash
+$ git stash
 <samp>
-git stash
+$ git stash
 Saved working directory and index state WIP on git-content: d44239e Create generic landing pages for each training area Create sub-directories for each area to keep things clean Correct menus to work with sub-directories Stubout content for Go training
 </samp>
-git stash list
+$ git stash list
 <samp>
 stash@{0}: WIP on git-content: d44239e Create generic landing pages for each training area Create sub-directories for each area to keep things clean Correct menus to work with sub-directories Stubout content for Go training
 </samp>
-git stash apply stash@{0}
+$ git stash apply stash@{0}
 <samp>
 On branch git-content
 Changes not staged for commit:
@@ -394,7 +394,7 @@ Changes not staged for commit:
         </ul>
 <pre style="padding: 5px; border: 1px solid blue; white-space:pre-line;">
 # Create a branch called example
-git checkout -b example
+$ git checkout -b example
 <samp>
 Switched to a new branch 'example'
 </samp>
@@ -410,10 +410,10 @@ $
 # Switch to your old branch
 # Delete the example branch
 # List again to confirm it is gone
-git checkout git-content
+$ git checkout git-content
 Switched to branch 'git-content'
 $
-git branch -d example
+$ git branch -d example
 <samp>
 Deleted branch example (was d44239e).
 </samp>
@@ -480,7 +480,7 @@ Fast-forward
           <li>Then trying to merge the "git-content" branch in again</li>
         </ul>
 <pre style="padding: 5px; border: 1px solid blue; white-space:pre-line;">
-git checkout gh-pages
+$ git checkout gh-pages
 Switched to branch 'gh-pages'
 
 # Make the conflicting change
@@ -588,10 +588,13 @@ $
 
 <pre style="padding: 5px; border: 1px solid blue; white-space:pre-line;">
 $ vi git/gitDevKit.html
+
 $ git add git/gitDevKit.html 
+
 $ git commit 
 [git-content df71443] Exmaple of pushing without -u option
  1 file changed, 31 insertions(+)
+
 $ git push origin git-content 
 Username for 'https://github.com': jscharber
 Password for 'https://jscharber@github.com': 
@@ -611,7 +614,7 @@ To https://github.com/pavedroad-io/pavedroadio.github.com.git
         </div>
 
 <pre style="padding: 5px; border: 1px solid blue; white-space:pre-line;">
-git pull origin git-content
+$ git pull origin git-content
 From https://github.com/pavedroad-io/pavedroadio.github.com
  * branch            git-content -> FETCH_HEAD
 Auto-merging git/gitDevKit.html
@@ -619,6 +622,23 @@ CONFLICT (content): Merge conflict in git/gitDevKit.html
 Automatic merge failed; fix conflicts and then commit the result.
 </pre>
 
+<pre style="padding: 5px; border: 1px solid blue; white-space:pre-line;">
+$ vi git/gitDevKit.html 
+$ git add git/gitDevKit.html 
+$ git commit
+[git-content d8c07a7] Merge branch 'git-content' of https://github.com/pavedroad-io/pavedroadio.github.com into git-content
+$ git push origin git-content 
+Username for 'https://github.com': jscharber
+Password for 'https://jscharber@github.com': 
+Counting objects: 8, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (8/8), 1.22 KiB | 1.22 MiB/s, done.
+Total 8 (delta 6), reused 0 (delta 0)
+remote: Resolving deltas: 100% (6/6), completed with 3 local objects.
+To https://github.com/pavedroad-io/pavedroadio.github.com.git
+   df71443..d8c07a7  git-content -> git-content
+</pre>
 
 
       </div><!--//container-->
