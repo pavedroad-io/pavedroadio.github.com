@@ -542,6 +542,11 @@ $ git commit
         The following commands accomplish this:
         </div>
         <ul>
+          <li><code>git push -u origin mybranch</code>
+            <span>
+              push my changes to origin, use the -u option to update the origin
+            <span>
+          </li>
           <li><code>git push origin mybranch</code>
             <span>
               push my changes to origin
@@ -553,8 +558,34 @@ $ git commit
             <span>
           </li>
         </ul>
+        <div>
+        The following example demonstrate and initial push with the -u.  
+        <b>Note: GitHub suggests greating a pull request, you should use the 
+        link provided to do that.</b>
+        </div>
+        <div>
+        Next lets make more changes and push again without the -u.
+        </div>
 <pre style="padding: 5px; border: 1px solid blue; white-space:pre-line;">
 # Create a branch called example
+$ git push -u origin git-content
+Username for 'https://github.com': jscharber
+Password for 'https://jscharber@github.com':
+Counting objects: 11, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (11/11), done.
+Writing objects: 100% (11/11), 10.01 KiB | 3.34 MiB/s, done.
+Total 11 (delta 7), reused 0 (delta 0)
+remote: Resolving deltas: 100% (7/7), completed with 4 local objects.
+remote:
+remote: Create a pull request for 'git-content' on GitHub by visiting:
+remote:      <mark>https://github.com/pavedroad-io/pavedroadio.github.com/pull/new/git-content</mark>
+remote:
+To https://github.com/pavedroad-io/pavedroadio.github.com.git
+ * [new branch]      git-content -> git-content
+Branch 'git-content' set up to track remote branch 'git-content' from 'origin'.
+$
+
 </pre>
 
       </div><!--//container-->
