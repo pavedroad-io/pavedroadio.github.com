@@ -605,15 +605,18 @@ To https://github.com/pavedroad-io/pavedroadio.github.com.git
    2397506..df71443  git-content -> git-content
 </pre>
         <div>
-          Let's look for changes on the origin using <code>git pull</code>
+          Let's look for changes on the origin using <code>git pull</code>. In 
+          this case there are merge conflicts.  Resolve them as shown above and
+          commit the changes.
         </div>
 
 <pre style="padding: 5px; border: 1px solid blue; white-space:pre-line;">
-$ vi git/gitDevKit.html
-$ git add git/gitDevKit.html 
-$ git commit 
-[git-content df71443] Exmaple of pushing without -u option
- 1 file changed, 31 insertions(+)
+git pull origin git-content
+From https://github.com/pavedroad-io/pavedroadio.github.com
+ * branch            git-content -> FETCH_HEAD
+Auto-merging git/gitDevKit.html
+CONFLICT (content): Merge conflict in git/gitDevKit.html
+Automatic merge failed; fix conflicts and then commit the result.
 </pre>
 
 
