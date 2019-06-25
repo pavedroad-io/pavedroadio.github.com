@@ -264,7 +264,7 @@ $ git commit -m "WIP: Issue: 10 taining for git"
         </ul>
         <mark>* represents the current branch</mark>
 <pre style="padding: 5px; border: 1px solid blue; white-space:pre-line;">
-git branch
+$ git branch
 <samp>
 *  gh-pages
   master
@@ -272,7 +272,7 @@ git branch
 </pre>
 
 <pre style="padding: 5px; border: 1px solid blue; white-space:pre-line;">
-git branch -r
+$ git branch -r
 <samp>
   origin/HEAD -> origin/master
   origin/gh-pages
@@ -281,7 +281,7 @@ git branch -r
 </pre>
 
 <pre style="padding: 5px; border: 1px solid blue; white-space:pre-line;">
-git branch -a
+$ git branch -a
 <samp>
 * gh-pages
   master
@@ -336,14 +336,14 @@ git branch -a
         </ul>
 
 <pre style="padding: 5px; border: 1px solid blue; white-space:pre-line;">
-git checkout -b newbranch
+$ git checkout -b newbranch
 <samp>
 Switched to a new branch 'newbranch'
 </samp>
 </pre>
 
 <pre style="padding: 5px; border: 1px solid blue; white-space:pre-line;">
-git checkout -b gh-pages vim-content
+$ git checkout -b gh-pages vim-content
 <samp>
 Switched to a new branch 'vim-content'
 </samp>
@@ -351,11 +351,11 @@ Switched to a new branch 'vim-content'
 
 <mark>Example error</mark>
 <pre style="padding: 5px; border: 1px solid blue; white-space:pre-line;">
-git checkout -b gh-pages vim-content
+$ git checkout -b gh-pages vim-content
 <samp>
 fatal: 'vim-content' is not a commit and a branch 'gh-pages' cannot be created from it
 </samp>
-git status
+$ git status
 <samp>
 On branch git-content
 Changes not staged for commit:
@@ -364,16 +364,16 @@ Changes not staged for commit:
 
 	modified:   git/gitDevKit.html
 </samp>
-git stash
+$ git stash
 <samp>
-git stash
+$ git stash
 Saved working directory and index state WIP on git-content: d44239e Create generic landing pages for each training area Create sub-directories for each area to keep things clean Correct menus to work with sub-directories Stubout content for Go training
 </samp>
-git stash list
+$ git stash list
 <samp>
 stash@{0}: WIP on git-content: d44239e Create generic landing pages for each training area Create sub-directories for each area to keep things clean Correct menus to work with sub-directories Stubout content for Go training
 </samp>
-git stash apply stash@{0}
+$ git stash apply stash@{0}
 <samp>
 On branch git-content
 Changes not staged for commit:
@@ -394,7 +394,7 @@ Changes not staged for commit:
         </ul>
 <pre style="padding: 5px; border: 1px solid blue; white-space:pre-line;">
 # Create a branch called example
-git checkout -b example
+$ git checkout -b example
 <samp>
 Switched to a new branch 'example'
 </samp>
@@ -410,10 +410,10 @@ $
 # Switch to your old branch
 # Delete the example branch
 # List again to confirm it is gone
-git checkout git-content
+$ git checkout git-content
 Switched to branch 'git-content'
 $
-git branch -d example
+$ git branch -d example
 <samp>
 Deleted branch example (was d44239e).
 </samp>
@@ -464,6 +464,181 @@ Fast-forward
 </pre>
 
         <h6>Merging conflicts</h6>
+        <div>
+        A merge conflict happens when the changes in one branch for the same 
+        section of code are different.  Git doesn't know which version is 
+        correct so it is up to the developer to tell get which changes to keep.
+        </div>
+        <div>
+        We will demonstrate this by creating a conflict between the "gh-pages"
+        branch and the "git-content" branch. The example below demonstrates:
+        </div>
+        <ul>
+          <li>switch to the gh-pages branch and changing "git" to "get" on a 
+            line of code</li>
+          <li>Adding then commiting that change</li>
+          <li>Then trying to merge the "git-content" branch in again</li>
+        </ul>
+<pre style="padding: 5px; border: 1px solid blue; white-space:pre-line;">
+$ git checkout gh-pages
+Switched to branch 'gh-pages'
+
+# Make the conflicting change
+$ vi git/gitDevKit.html
+
+# See the change is detected, then add and commit it
+$ git status
+On branch gh-pages
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   git/gitDevKit.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+$ git add git/gitDevKit.html
+$ git commit -m "create sample merge conflict"
+[gh-pages 2ee42e9] create sample merge conflict
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+# Now attempt to re-merge
+$ git merge git-content
+Auto-merging git/gitDevKit.html
+CONFLICT (content): <mark>Merge conflict in git/gitDevKit.html</mark>
+Automatic merge failed; fix conflicts and then commit the result.
+
+$ vi git/gitDevKit.html
+# vi file(s) identified as conflicting, CONFLICT (content).
+# Then look for the conflict(s): 
+#
+# <<<<<<< is what is in our current branch
+# ======= seperates the changes in the branch being merged
+# >>>>>>> is the end of the conflicts
+# In this case, we want to keep the changes in the git-content branch
+# so delete the changes in head and remove the markers
+
+<<<<<<< HEAD
+        If we want the changes in our "get-content" branch to be merged with
+=======
+        If we want the changes in our "git-content" branch to be merged with
+>>>>>>> git-content
+
+# Add the modified file and commit the changes
+
+$ git add git/gitDevKit.html
+$ git commit
+[gh-pages eaa4688] Merge branch 'git-content' into gh-pages
+</pre>
+
+        <h6>Pushing changes and Pulling updates from the origin</h6>
+        <div>
+        So far we have made local changes, what happens when we want 
+        to push our changes to the origin so other developers can see
+        them, or pull in other developers changes?
+        </div>
+        <div>
+        The following commands accomplish this:
+        </div>
+        <ul>
+          <li><code>git push -u origin mybranch</code>
+            <span>
+              push my changes to origin, use the -u option to update the origin
+            <span>
+          </li>
+          <li><code>git push origin mybranch</code>
+            <span>
+              push my changes to origin
+            <span>
+          </li>
+          <li><code>git pull origin mybranch</code>
+            <span>
+              pull other developers changes from the origin
+            <span>
+          </li>
+        </ul>
+        <div>
+        The following example demonstrate and initial push with the -u.  
+        <b>Note: GitHub suggests greating a pull request, you should use the 
+        link provided to do that.</b>
+        </div>
+<pre style="padding: 5px; border: 1px solid blue; white-space:pre-line;">
+$ git push -u origin git-content
+Username for 'https://github.com': jscharber
+Password for 'https://jscharber@github.com':
+Counting objects: 11, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (11/11), done.
+Writing objects: 100% (11/11), 10.01 KiB | 3.34 MiB/s, done.
+Total 11 (delta 7), reused 0 (delta 0)
+remote: Resolving deltas: 100% (7/7), completed with 4 local objects.
+remote:
+remote: Create a pull request for 'git-content' on GitHub by visiting:
+remote:      <mark>https://github.com/pavedroad-io/pavedroadio.github.com/pull/new/git-content</mark>
+remote:
+To https://github.com/pavedroad-io/pavedroadio.github.com.git
+ * [new branch]      git-content -> git-content
+Branch 'git-content' set up to track remote branch 'git-content' from 'origin'.
+$
+</pre>
+        <div>
+        Next lets make more changes and push again without the -u.
+        </div>
+
+<pre style="padding: 5px; border: 1px solid blue; white-space:pre-line;">
+$ vi git/gitDevKit.html
+
+$ git add git/gitDevKit.html 
+
+$ git commit 
+[git-content df71443] Exmaple of pushing without -u option
+ 1 file changed, 31 insertions(+)
+
+$ git push origin git-content 
+Username for 'https://github.com': jscharber
+Password for 'https://jscharber@github.com': 
+Counting objects: 4, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 1004 bytes | 1004.00 KiB/s, done.
+Total 4 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/pavedroad-io/pavedroadio.github.com.git
+   2397506..df71443  git-content -> git-content
+</pre>
+        <div>
+          Let's look for changes on the origin using <code>git pull</code>. In 
+          this case there are merge conflicts.  Resolve them as shown above and
+          commit the changes.
+        </div>
+
+<pre style="padding: 5px; border: 1px solid blue; white-space:pre-line;">
+$ git pull origin git-content
+From https://github.com/pavedroad-io/pavedroadio.github.com
+ * branch            git-content -> FETCH_HEAD
+Auto-merging git/gitDevKit.html
+CONFLICT (content): Merge conflict in git/gitDevKit.html
+Automatic merge failed; fix conflicts and then commit the result.
+</pre>
+
+<pre style="padding: 5px; border: 1px solid blue; white-space:pre-line;">
+$ vi git/gitDevKit.html 
+$ git add git/gitDevKit.html 
+$ git commit
+[git-content d8c07a7] Merge branch 'git-content' of https://github.com/pavedroad-io/pavedroadio.github.com into git-content
+$ git push origin git-content 
+Username for 'https://github.com': jscharber
+Password for 'https://jscharber@github.com': 
+Counting objects: 8, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (8/8), 1.22 KiB | 1.22 MiB/s, done.
+Total 8 (delta 6), reused 0 (delta 0)
+remote: Resolving deltas: 100% (6/6), completed with 3 local objects.
+To https://github.com/pavedroad-io/pavedroadio.github.com.git
+   df71443..d8c07a7  git-content -> git-content
+</pre>
 
       </div><!--//container-->
     </section><!--//about-->
