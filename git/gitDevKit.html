@@ -179,6 +179,52 @@
             </div>
           </li>
         </ul>
+        <div>
+        Below is an example of checking git status, adding a file, and then
+        making a commit using the command line option "-m".  Note, you should
+        include the issue the commit is related to in the commit message.
+        </div>
+<pre style="padding: 5px; border: 1px solid blue; white-space:pre-line;">
+# run git status
+$ git status
+On branch git-content
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   git/gitDevKit.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	assets/images/git-logo.png
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+# Note: git/gitDevKit.html is modified, assets/images/git-logo.png is 
+# not being tracked. Let's add them using "git add" as suggested.
+
+$ git add git/gitDevKit.html assets/images/git-logo.png
+$ git status
+<samp>
+On branch git-content
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   assets/images/git-logo.png
+	modified:   git/gitDevKit.html
+
+Untracked files:
+<samp>
+
+$ git commit -m "WIP: Issue: 10 taining for git"
+<samp>
+[git-content 5e8ebb4] WIP: Issue: 10 taining for git
+ 2 files changed, 256 insertions(+), 176 deletions(-)
+ create mode 100644 assets/images/git-logo.png
+</samp>
+</pre>
+
 
         <h5>Working with branches</h5>
         <h6>See what branches exists</h6>
@@ -347,7 +393,6 @@ Changes not staged for commit:
           </li>
         </ul>
 <pre style="padding: 5px; border: 1px solid blue; white-space:pre-line;">
-
 # Create a branch called example
 git checkout -b example
 <samp>
@@ -383,8 +428,134 @@ $ git branch
 
 
         <h6>Merging branches</h6>
+        <div>
+        In our examples, we have a branch called "gh-pages" and one called
+        "git-content".  The "git-content" branch contains this document.  The
+        "gh-pages" branch are changes being stagged for the master branch. 
+        If we want the changes in our "git-content" branch to be merged with
+        "gh-pages", we us the <code>git merge</code> command.
+        </div>
+        <div>
+        You can merge from one branch into another multiple times. This enables
+        bug fixes from a feature branch to be merged/updated or changes to be 
+        gradually added.
+        </div>
+        <ul>
+          <li>
+            start your merge by switching to the march you want to merge <b>into</b> using the <code>git checkout</code> command</li>
+        </ul>
 
-      </div>
+<pre style="padding: 5px; border: 1px solid blue; white-space:pre-line;">
+# Change branches
+$ git checkout gh-pages
+<samp>
+Switched to branch 'gh-pages'
+</samp>
+$ git merge git-content
+<samp>
+Updating d44239e..d74c28f
+
+Fast-forward
+ assets/images/git-logo.png | Bin 0 -> 3728 bytes
+ git/gitDevKit.html         | 500 +++++++++++++++++++++++++++++----------------
+ 2 files changed, 322 insertions(+), 178 deletions(-)
+ create mode 100644 assets/images/git-logo.png
+</samp>
+</pre>
+
+        <h6>Merging conflicts</h6>
+        <div>
+        A merge conflict happens when the changes in one branch for the same 
+        section of code are different.  Git doesn't know which version is 
+        correct so it is up to the developer to tell get which changes to keep.
+        </div>
+        <div>
+        We will demonstrate this by creating a conflict between the "gh-pages"
+        branch and the "git-content" branch. The example below demonstrates:
+        </div>
+        <ul>
+          <li>switch to the gh-pages branch and changing "git" to "get" on a 
+            line of code</li>
+          <li>Adding then commiting that change</li>
+          <li>Then trying to merge the "git-content" branch in again</li>
+        </ul>
+<pre style="padding: 5px; border: 1px solid blue; white-space:pre-line;">
+git checkout gh-pages
+Switched to branch 'gh-pages'
+
+# Make the conflicting change
+$ vi git/gitDevKit.html
+
+# See the change is detected, then add and commit it
+$ git status
+On branch gh-pages
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   git/gitDevKit.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+$ git add git/gitDevKit.html
+$ git commit -m "create sample merge conflict"
+[gh-pages 2ee42e9] create sample merge conflict
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+# Now attempt to re-merge
+$ git merge git-content
+Auto-merging git/gitDevKit.html
+CONFLICT (content): <mark>Merge conflict in git/gitDevKit.html</mark>
+Automatic merge failed; fix conflicts and then commit the result.
+
+$ vi git/gitDevKit.html
+# vi file(s) identified as conflicting, CONFLICT (content).
+# Then look for the conflict(s): 
+#
+# <<<<<<< is what is in our current branch
+# ======= seperates the changes in the branch being merged
+# >>>>>>> is the end of the conflicts
+# In this case, we want to keep the changes in the git-content branch
+# so delete the changes in head and remove the markers
+
+<<<<<<< HEAD
+        If we want the changes in our "get-content" branch to be merged with
+=======
+        If we want the changes in our "git-content" branch to be merged with
+>>>>>>> git-content
+
+# Add the modified file and commit the changes
+
+$ git add git/gitDevKit.html
+$ git commit
+[gh-pages eaa4688] Merge branch 'git-content' into gh-pages
+</pre>
+
+        <h6>Pushing changes and Pulling updates from the origin</h6>
+        <div>
+        So far we have made local changes, what happens when we want 
+        to push our changes to the origin so other developers can see
+        them, or pull in other developers changes?
+        </div>
+        <div>
+        The following commands accomplish this:
+        </div>
+        <ul>
+          <li><code>git push origin mybranch</code>
+            <span>
+              push my changes to origin
+            <span>
+          </li>
+          <li><code>git pull origin mybranch</code>
+            <span>
+              pull other developers changes from the origin
+            <span>
+          </li>
+        </ul>
+<pre style="padding: 5px; border: 1px solid blue; white-space:pre-line;">
+# Create a branch called example
+</pre>
 
       </div><!--//container-->
     </section><!--//about-->
