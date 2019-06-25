@@ -179,6 +179,52 @@
             </div>
           </li>
         </ul>
+        <div>
+        Below is an example of checking git status, adding a file, and then
+        making a commit using the command line option "-m".  Note, you should
+        include the issue the commit is related to in the commit message.
+        </div>
+<pre style="padding: 5px; border: 1px solid blue; white-space:pre-line;">
+# run git status
+$ git status
+On branch git-content
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   git/gitDevKit.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	assets/images/git-logo.png
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+# Note: git/gitDevKit.html is modified, assets/images/git-logo.png is 
+# not being tracked. Let's add them using "git add" as suggested.
+
+$ git add git/gitDevKit.html assets/images/git-logo.png
+$ git status
+<samp>
+On branch git-content
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   assets/images/git-logo.png
+	modified:   git/gitDevKit.html
+
+Untracked files:
+<samp>
+
+$ git commit -m "WIP: Issue: 10 taining for git"
+<samp>
+[git-content 5e8ebb4] WIP: Issue: 10 taining for git
+ 2 files changed, 256 insertions(+), 176 deletions(-)
+ create mode 100644 assets/images/git-logo.png
+</samp>
+</pre>
+
 
         <h5>Working with branches</h5>
         <h6>See what branches exists</h6>
@@ -347,7 +393,6 @@ Changes not staged for commit:
           </li>
         </ul>
 <pre style="padding: 5px; border: 1px solid blue; white-space:pre-line;">
-
 # Create a branch called example
 git checkout -b example
 <samp>
@@ -383,8 +428,42 @@ $ git branch
 
 
         <h6>Merging branches</h6>
+        <div>
+        In our examples, we have a branch called "gh-pages" and one called
+        "git-content".  The "git-content" branch contains this document.  The
+        "gh-pages" branch are changes being stagged for the master branch. 
+        If we want the changes in our "git-content" branch to be merged with
+        "gh-pages", we us the <code>git merge</code> command.
+        </div>
+        <div>
+        You can merge from one branch into another multiple times. This enables
+        bug fixes from a feature branch to be merged/updated or changes to be 
+        gradually added.
+        </div>
+        <ul>
+          <li>
+            start your merge by switching to the march you want to merge <b>into</b> using the <code>git checkout</code> command</li>
+        </ul>
 
-      </div>
+<pre style="padding: 5px; border: 1px solid blue; white-space:pre-line;">
+# Change branches
+$ git checkout gh-pages
+<samp>
+Switched to branch 'gh-pages'
+</samp>
+$ git merge git-content
+<samp>
+Updating d44239e..d74c28f
+
+Fast-forward
+ assets/images/git-logo.png | Bin 0 -> 3728 bytes
+ git/gitDevKit.html         | 500 +++++++++++++++++++++++++++++----------------
+ 2 files changed, 322 insertions(+), 178 deletions(-)
+ create mode 100644 assets/images/git-logo.png
+</samp>
+</pre>
+
+        <h6>Merging conflicts</h6>
 
       </div><!--//container-->
     </section><!--//about-->
