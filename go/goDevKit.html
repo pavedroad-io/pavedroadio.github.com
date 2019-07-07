@@ -9,8 +9,8 @@
     <meta name="description" content="">
     <meta name="author" content="">    
     <link rel="shortcut icon" href="favicon.ico">  
-    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'> 
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'"> 
     <!-- FontAwesome JS -->
     <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js" integrity="sha384-3LK/3kTpDE/Pkp8gTNp2gR/2gOiwQ6QaO7Td0zV76UFJVhqLl4Vl3KL1We6q6wR9" crossorigin="anonymous"></script>
 
@@ -63,7 +63,7 @@
                         <li class="nav-item"><a class="nav-link" href="#docs">Documentation</a></li>
                         <li class="nav-item dropdown">
                           <a class="nav-link dropdown-toggle" data-toggle="dropdown"
-                             href="#" role="button" aria-haspopup="true" aria-expanded="false">Training</a>
+                             href="#" role="button" aria-haspopup="true" aria-expanded="false">Guides</a>
                           <div class="dropdown-menu">
                             <a class="dropdown-item" href="/devKits.html">DevKits</a>
                             <a class="dropdown-item" href="/cicd.html">CI/CD</a>
@@ -84,11 +84,12 @@
     <section id="devKitTraining" 
       class="about section">
       <div class="container" style="margin-top: 45px;">
-        <span class="text-primary" style="font-size: 25px; virtical-align: text-top;">
-        <img src="../assets/images/Go-Logo/PNG/Go-Logo_Fuchsia.png" hieght="75" width="75"/>
-        training
-        </span>
-        <h4 style="margin-top: 10px;">Overivew</h4>
+	  <img src="../assets/images/Go-Logo/PNG/Go-Logo_Fuchsia.png" height="75" width="75"/>
+        <span class="text-primary" style="font-size: 25px; virtical-align: text-top;"><span class="container" style="margin-top: 45px;">
+		<span class="text-primary" style="font-size: 25px; virtical-align: text-top;">DevKit</span></span></span><span class="container" style="margin-top: 45px;">
+		<span class="text-primary" style="font-size: 25px; virtical-align: text-top;"></span></span>
+		
+        <h4 style="margin-top: 10px;">Overview</h4>
         <p dir="ltr">Go is an open source programming language from Google with the first stable 
         release in 2011. The Go source code can be found in <a taget="_blank" href="https://github.com/golang/go">
           Github</a>. Go was built to resemble a simplified version of the C programming language. 
@@ -108,7 +109,7 @@
               <h2 class="mb-0">
                 <button type="button" class="btn btn-link collapsed" 
                   data-toggle="collapse" data-target="#collapseOne">
-                  PavedRoad enhancements
+                  PavedRoad Enhancements
                 </button>
               </h2>
             </div>
@@ -141,7 +142,7 @@
               <div class="card-body">
                 <p><a href="#go-commands">Go Commands</a></p>
                 <p><a href="#go-tools">Go Tools</a></p>
-                <p><a href="#go-testing">Go testing</a></p>
+                <p><a href="#go-testing">Go Testing</a></p>
               </div>
             </div>
         </div>
@@ -209,7 +210,7 @@
     <h4 style="margin-top: 20px;">PavedRoad enhancements</h4>
 
       <div class="container" style="margin-top: 20px;">
-        <h5>Evnironment</h5>
+        <h5>Environment</h5>
         <a name="pr-go-env"></a>
       </div>
 
@@ -219,7 +220,7 @@
       </div>
 
       <div class="container" style="margin-top: 20px;">
-        <h5>Auto docuemntation</h5>
+        <h5>Auto documentation</h5>
         <a name="pr-go-auto-doc"></a>
       </div>
 
@@ -252,51 +253,526 @@
       <div class="container" style="margin-top: 20px;">
         <h5>Go commands</h5>
         <a name="go-commands"></a>
-        <h6>Basic commands to know</h6)
-        <ul>
-          <!-- build links to cover each command -->
-          <li><code>go build</code></li>
-          <li><code>go clean</code></li>
-          <li><code>go env</code></li>
-          <li><code>go get</code></li>
-          <li><code>go run</code></li>
-          <li><code>go test</code></li>
-          <li><code>go version</code></li>
-          <li><code>go vet</code></li>
-        </ul>
+		  <h6>Basic commands to know</h6>
+		  <br>
+       <table class="table">
+<thead>
+            <tr>
+              <th scope="col" width="20%">Command</th>
+              <th scope="col">Description</th>
+            </tr>
+          </thead>
+<tr>
+   <td scope="row"><a href="#gobuild"<code>gobuild</a></code></td>
+  <td>compile packages and dependencies</td>
+		   </tr>
+		  
+<tr>
+  <td scope="row"><a href="#goclean"<code>goclean</code></a></td>
+  <td>remove object files and cached files</td>
+		   </tr>
+		   
+<tr>
+  <td scope="row"><a href="#godep"><code>godep</code></a></td>
+  <td>download and install packages and dependencies</td>
+		   </tr>	
+		   
+<tr>
+   <td scope="row"><a href="#goenv"<code>goenv</code></a></td>
+  <td>print Go environment information</td>
+		   </tr>		   
+		  	  	  
+	
+<tr>
+   <td scope="row"><a href="#golist"<code>golist</code></a></td>
+  <td>list packages or modules</td>
+		   </tr>		  
 
+ <tr>
+   <td scope="row"><a href="#gorun"<code>gorun</code></a></td>
+  <td>compile and run Go program</td>
+		   </tr>	
+		
+<tr>
+   <td scope="row"><a href="#gotest"<code>gotest</code></a></td>
+  <td>test packages</td>
+		   </tr>	
+		   
+<tr>
+   <td scope="row"><a href="#goversion"<code>goversion</code></a></td>
+  <td>print Go version</td>
+		   </tr>			  
+		  
+<tr>
+   <td scope="row"><a href="#govet"<code>govet</code></a></td>
+  <td>report likely mistakes in packages</td>
+		   </tr>		  
+		  
+		  </table>
       </div>
 
       <div class="container" style="margin-top: 20px;">
         <h5>Go tools</h5>
         <a name="go-tools"></a>
-        <h6>Basic commands to know</h6)
-        <ul>
-          <!-- build links to cover each command -->
-          <li><a href="#dep"><code>dep</code> depenecy manager</a></li>
-          <li><a href="#go-sec"><code>go-sec</code> security scanner</a></li>
-          <li><a href="#delv"><code>delv</code> Go debugger</a></li>
-          <li><a href="#golsp">golsp tools automation</a></li>
-          <li><a href="#meta-linter"><code>gomeatlinter</code> run multiple linters</a></li>
-          <li><a href="#golangci-line"><code>golangci-line</code> lint aggretator</a></li>
-          <li><a href="#go-lint"><code>golint</code> go default linter</a></li>
-          <li><a href="#meta-linter"><code>gomeatlinter</code> run multiple linters</a></li>
-          <li><a href="#meta-linter">.....the rest</a></li>
-        </ul>
+		  <h6>Basic tools to know</h6>
+		  
+		    <table class="table">
+<thead>
+            <tr>
+              <th scope="col" width="20%">Tools</th>
+              <th scope="col">Description</th>
+            </tr>
+          </thead>
+			</tr>
+			
+			<tr>
+  <td scope="row"><a href="#gosec"><code>gosec</code></a></td>
+  <td>
+    Go security checker  
+  </td>
+			</tr>
+			
+			<tr>
+  <td scope="row"><a href="#godelve"><code>godelve</code></a></td>
+  <td>
+    Delve is a debugger for the Go programming language  
+  </td>
+			</tr>
+
+		<tr>
+			<td scope="row"><a href="#gopls"><code>gopls</code></a></td>
+      <td>
+        <p> 
+          gopls (pronounced "go please") is an implementation of the Language Server Protocol (LSP) server for Go.
+        </p>	
+		  </td>
+			</tr>
+		<tr>
+      <td scope="row"><a href="#gometalinter"><code>gometalinter</code></a></td>
+      <td>
+        <p> 
+        Go gometalinter, can wholly parallel execute many different Linters, and normalize the results and rearrange them so
+			they are easier to see.
+		  </p></td></tr>
+		
+			
+	 <tr>
+      <td scope="row"><a href="#golangci-lint"><code>golangci-lint</code></a></td>
+      <td>
+        <p> 
+          GolangCI-Lint is a linters aggregator.
+		  </p></td></tr>
+		 
+		  	<tr>
+				<td scope="row"><a href="#golint"><code>golint</code></a></td>
+      <td>
+        <p> 
+       Golint prints out style mistakes. The suggestions made by golint are exactly that: suggestions. 
+		  </p></td></tr>
+				
+		  	  	<tr>
+      		  	<tr>
+      <td scope="row"><a href="#gotags"><code>gotags</code></a></td>
+      <td>
+        <p>Gotags  are a way to attach additional information to a struct field. Tags in other languages like &ldquo;C&rdquo; are automatically generated by scanning the code and allow you to jump to those tagged locations in the code, say you are at a function call, select it and enter a go-to-tag command and you will be taken to the function declaration in the code, maybe in another file, another directory or where ever.</p></td>
+		  </tr>		  
+					
+	   <td scope="row"><a href="#gomodifytags"><code>gomodifytags</code></a></td>
+      <td>
+        <p> 
+        Gomodifytags makes it easy to update, add or delete the tags in a struct field. It's intended to be used by an editor, but also has modes to run it from the terminal. 
+		  </p></td></tr>
+
+		  		  	<tr>
+      <td scope="row"><a href="#gogetdoc"><code>gogetdoc</code></a></td>
+      <td>
+        <p> 
+          Gogetdoc retrieves documentation for items in the Go source code. The gogetdoc tool makes it easier for editors to provide access to Go documentation.  
+        </p>
+			  </td></tr>
+		  	
+	      <tfoot>
+    </tfoot>
+  </table>
       </div>
 
-      <!-- example name achor -->
-      <h6>dep</h6>
-      <a name="dep"></a>
-      <p>Dep content here</p>
+    <div class="container" style="margin-top: 20px;">
+        <h5>Go Commands</h5>
+        <a name="commands"></a>
+		<a name="pr-command-tools"></a>
+		
+	<a name="gobuild"></a>
+		<UL>
+          <li><code>gobuild</code>
+            <div>
+               Package build gathers information about Go packages.
+            </div>
+          </li>
+		  
+		     <UL>
+			         <div><li><a href="https://golang.org/pkg/go/build/">Overview - Package build</a></div></li>
+	        </UL>
+			</UL>
+			
+			
+    <a name="goclean"></a>
+		<UL>
+          <li><code>goclean</code>
+            <div>
+               Remove object files and cached files
+            </div>
+          </li>
+		  
+		     <UL>
+			         <div><li><a href="https://golang.org/pkg/cmd/go/internal/clean/">Overview - Package Clean</a></div></li>
+	        </UL>
+			</UL>
+		
+   <a name="godep"></a>
+		<UL> 
+          <li><code>godep</code>
+            <div>
+               Dependency management tool for Go. <a href="https://golang.github.io/dep/">Github - godep</a>. Godep allows users to easily pin dependencies to the $GOPATH to a project, 
+			   copy dependencies from a project to the $GOPATH and browse what dependencies are pinned via Godeps.json.
+            </div>
+          </li>
+		  
+		     <UL>
+                 <div><li><a href="https://github.com/golang/dep">Github - godep</a>
+            </div></li>
+			
+			         <div><li><a href="https://golang.github.io/dep/docs/introduction.html">Getting Started - godep </a></div></li>
+				
+			         <div><li><a href="https://www.freecodecamp.org/news/an-intro-to-dep-how-to-manage-your-golang-project-dependencies-7b07d84e7ba5/"> An Intro to dep: How to Manage Your Golang 
+					       Project Dependencies</a></div></li>
+                     <div><li><a href="https://golang.org/cmd/go/" target="_blank">Go Programming Language - Command Go</a></div></li>
+	        </UL>
+			</UL>
+       
+	   
+	   
+	    <a name="godef"></a>
+		<UL>
+          <li><code>godef</code>
+            <div>
+                Prints the source location of definitions in Go programs.
+            </div>
+          </li>
+		  
+		     <UL>
+			        <div><li><a href="https://godoc.org/github.com/rogpeppe/godef">Command godef</a></li></div>
+	        </UL>
+			</UL>
+			
+	   <a name="goenv"></a>
+		<UL>
+          <li><code>goenv</code>
+            <div>
+               Removes object files and cached files
+            </div>
+          </li>
+		  
+		     <UL>
+			        <div><li><a href="https://github.com/syndbg/goenv">Github - goenv</a></li></div>
+					 <div><li><a href="https://godoc.org/github.com/evilwire/go-env">Overview - Package goenv</a></div></li>
+	        </UL>
+			</UL>
+			
+			
+			 <a name="goguru"></a>
+		<UL>
+          <li><code>goguru</code>
+            <div>
+               goguru is used for answering questions about Go source code.
+            </div>
+          </li>
+		  
+		     <UL>
+			        <div><li><a href="https://github.com/golang/tools/tree/master/cmd/guru">Github</a></li></div>
+					 <div><li><a href="https://github.com/fatih/vim-go/blob/master/autoload/go/guru.vim">Vim integration for the Go guru</a></div></li>
+		    </UL>
+			</UL>
+			
+			
+			 <a name="goimport"></a>
+		<UL>
+          <li><code>goimport</code>
+            <div>
+              Updates your Go import lines, adding missing ones and removing unreferenced ones. 
+			  In addition to fixing imports, goimports also formats your code in the same style as gofmt so it can be used as a replacement for your editor's gofmt-on-save hook.
+            </div>
+          </li>
+		  
+		     <UL>
+			        <div><li><a href="https://github.com/golang/tools/tree/master/cmd/goimports">Github</a></li></div>
+					 <div><li><a href="https://godoc.org/golang.org/x/tools/cmd/goimports">Command Goimports</a></div></li>
+		    </UL>
+			</UL>
+			
+			
+			<a name="golist"></a>
+		<UL>
+          <li><code>golist</code>
+            <div>
+               List packages or modules
+            </div>
+          </li>
+		  
+		     <UL>
+			        <div><li><a href="https://github.com/golang/go/blob/master/src/cmd/go/internal/list/list.go">Github - golist</a></li></div>
+					<div><li><a href="https://golang.org/pkg/cmd/go/internal/list/">Overview - Package list</a></div></li>
+	        </UL>
+			</UL>
+			
+			
+			
+			<a name="gorename"></a>
+		<UL>
+          <li><code>gorename</code>
+            <div>
+              Performs precise type-safe renaming of identifiers in Go source code.
+            </div>
+          </li>
+		  
+		     <UL>
+			        <div><li><a href="https://github.com/golang/tools/tree/master/cmd/gorename">Github</a></li></div>
+	        </UL>
+			</UL>
+	 
+       	<a name="gorun"></a>
+		<UL>
+          <li><code>gorun</code>
+            <div>
+               Package run implements the <code>go run</code> command.  import "cmd/go/internal/run" 
+            </div>
+          </li>
+		  
+		     <UL>
+			        <div><li><a href="https://github.com/golang/go/blob/master/src/cmd/go/internal/run/run.go">Github - gorun</a></li></div>
+					<div><li><a href="https://golang.org/pkg/cmd/go/internal/run/">Overview - Package run</a></div></li>
+	        </UL>
+			</UL>
+	   
+	    	<a name="gotest"></a>
+		<UL>
+          <li><code>gotest</code>
+            <div>
+               Package testing provides support for automated testing of Go packages. It is intended to be used in concert with the <code>gotest</code> command, which automates the 
+		execution of any function of the form.
+            </div>
+          </li>
+		  
+		     <UL>
+			        <div><li><a href="https://github.com/golang/go/blob/master/src/cmd/go/internal/test/test.go">Github - test</a></li></div>
+					<div><li><a href="https://golang.org/pkg/testing/">Overview - Package Testing</a></div></li>
+	        </UL>
+			</UL>
+	   
+	      	<a name="goversion"></a>
+		<UL>
+          <li><code>goversion</code>
+            <div>
+               Prints Go version
+            </div>
+          </li>
+		  
+		     <UL>
+			        <div><li><a href="https://github.com/golang/go/blob/master/src/cmd/go/internal/version/version.go">Github - version</a></li></div>
+					<div><li><a href="https://godoc.org/golang.org/x/build/version">Overview - Package version</a></div></li>
+	        </UL>
+			</UL>
+		 
+	   
+	      	<a name="govet"></a>
+		<UL>
+          <li><code>govet</code>
+            <div>
+               Vet examines Go source code and reports suspicious constructs, such as Printf calls whose arguments do not align with the format string. Vet uses heuristics that do not
+			   guarantee all reports are genuine problems, but it can find errors not caught by the compilers.Vet is normally invoked through the go command. This command vets the package 
+			   in the current directory:
+			   <code>go vet</code>
+                  whereas this one vets the packages whose path is provided:
+                      <code>go vet my/project/...</code> 
+            </div>
+          </li>
+		     <UL>
+			        <div><li><a href="https://github.com/golang/go/tree/master/src/cmd/vet">Github - vet</a></li></div>
+					<div><li><a href="https://golang.org/cmd/vet/">Overview - Command vet</a></div></li>
+	        </UL>
+			</UL>
+	   
 
-      <div class="container" style="margin-top: 20px;">
-        <h5>Go testing</h5>
+	   </UL>
+       </div>
+       </div>
+	   
+	     <div class="container" style="margin-top: 20px;">
+	    <h5 style="margin-top: 20px;">Go Tools</h5>
+        <a name="tools"></a>
+		<a name="pr-command-tools"></a>
+		
+	<a name="gosec"></a>
+		<UL>
+		
+          <li><code>gosec</code>
+            <div>
+              The Golang security checker tool for Go. <a href="https://github.com/securego/gosec">Github - gosec</a>. 
+			Go Sec inspects source code for security problems by scanning the Go AST. 
+            </div>
+          </li>
+		  
+		     <UL>
+			         <div><li><a href="https://securego.io/docs/rules/rule-intro.html">Go Sec - Guidelines</a></div></li>
+		             <div><li><a href="https://github.com/securego/gosec/blob/master/README.md">gosec - Golang Security Checker README</a></div></li>
+	        </UL>
+	    
+		
+		<li><code>godelve</code>
+            <div>
+             Debugger developed in Golang and also dedicated to help trouble-shooting Golang programs
+            </div>
+          </li>
+		  
+		     <UL>
+			         <div><li><a href="https://github.com/go-delve/delve">Github</a></div></li>
+		             <div><li><a href="https://www.jamessturtevant.com/posts/Using-the-Go-Delve-Debugger-from-the-command-line/">Using the Go Delve Debugger from the command line</a></div></li>
+	        </UL>
+		
+			<li><code>gopls</code>
+            <div>
+             gopls (pronounced "go please") is an implementation of the Language Server Protocol (LSP) server for Go. The LSP allows any text editor to be extended with IDE-like features.
+            </div>
+          </li>
+		  
+		     <UL>
+			         <div><li><a href="https://github.com/golang/go/wiki/gopls">Github</a></div></li>
+					 <div><li><a href="https://github.com/golang/tools/blob/master/cmd/gopls/main.go"></a><code>package main // import "golang.org/x/tools/cmd/gopls"</code></div></li>
+
+<div class="highlighter-rouge"><pre class="highlight"> type:
+
+<code>   
+   import (
+	"context"
+	"os"
+
+	"golang.org/x/tools/internal/lsp/cmd"
+	"golang.org/x/tools/internal/lsp/debug"
+	"golang.org/x/tools/internal/tool"
+)
+
+func main() {
+	debug.Version += "-cmd.gopls"
+	tool.Main(context.Background(), cmd.New("", nil), os.Args[1:])
+}
+</code></pre>
+</div>
+	        </UL>
+		
+		<li><code>gometalinter</code>
+            <div>
+             Performs the static analysis of its code and outputs warnings. Many Linters exists for Go but gometalinter can wholly parallel execute all of these Linters, 
+			 and normalize the results and rearrange them so they are easier to see, saving time. 
+            </div>
+          </li>
+		  
+		     <UL>
+			         <div><li><a href="https://github.com/alecthomas/gometalinter">Github</a></div></li>
+		             <div><li><a href="https://blog.sideci.com/utilize-gometalinter-which-can-parallel-execute-wholly-all-kinds-of-linter-for-the-go-language-b3a8edbdd89">How to Use and Support Tools</a></div></li>
+	        </UL>
+		
+	<li><code>golangci-lint</code>
+            <div>
+             golangci-lint is  a linters aggregator. It's fast: on average 5 times faster than gometalinter. It's easy to integrate and use, has nice output and has a minimum number of false positives.
+            </div>
+          </li>
+		  
+		     <UL>
+			         <div><li><a href="https://github.com/golangci/golangci-lint">Github</a></div></li>
+		             <div><li><a href="https://github.com/golangci/golangci-lint/releases">golangci-lint Releases</a></div></li>
+	        </UL>
+		
+	<li><code>golint</code>
+            <div>
+            Golint detects style mistakes in Go code. Golint is in use at Google, and it seeks to match the accepted style of the open source Go project. 
+			The suggestions made by golint are exactly that, suggestions.
+            </div>
+          </li>
+		  
+		     <UL>
+			         <div><li><a href="https://github.com/golang/lint">Github</a></div></li>
+	        </UL>
+		
+	<li><code>gotags</code>
+            <div>
+            Gotags are a way to attach additional information to a struct field. Tags in other languages like &ldquo;C&rdquo; are automatically generated by scanning the 
+			code and allow you to jump to those tagged locations in the code, say you are at a function call, select it and enter a go-to-tag command and you will be taken
+			to the function declaration in the code, maybe in another file, another directory or where ever.
+            </div>
+          </li>
+		  
+		     <UL>
+			         <div><li><a href="https://github.com/jstemmer/gotags">Github</a></div></li>
+					 <div><li><a href="https://flaviocopes.com/go-tags/">GoTags Explained</a></div></li>
+	        </UL>
+		
+		  
+		<li><code>gomodifytags</code>
+            <div>
+             Go tool to modify/update field tags in structs. gomodifytags makes it easy to update, add or delete the tags in a struct field. 
+			 You can easily add new tags, update existing tags (such as appending a new key, i.e: db, xml, etc..) or remove existing tags.
+			 It also allows you to add and remove tag options. It's intended to be used by an editor, but also has modes to run it from the terminal. Read the usage section below for more information.
+            </div>
+          </li>
+		  
+		     <UL>
+			         <div><li><a href="https://github.com/fatih/gomodifytags">Github</a></div></li>
+					 <div><li><a href="https://studygolang.com/articles/10451">Writing a Go Tool to Parse and Modify Struct Tags</a></div></li>
+	        </UL>
+	
+	<li><code>gogetdoc</code>
+            <div>
+             Retrieves documentation for items in the Go source code. The gogetdoc tool makes it easier for editors to provide access to Go documentation. 
+			  
+            </div>
+          </li>
+		  
+		     <UL>
+			         <div><li><a href="https://github.com/zmb3/gogetdoc">Github</a></div></li>
+	        </UL>
+			</UL>
+			
+			
+	     <div class="container" style="margin-top: 20px;">
+	    <h5 style="margin-top: 20px;">Go Testing</h5>
         <a name="go-testing"></a>
-      </div>
-
-    <h4 style="margin-top: 20px;">Working with templates</h4>
-      <div class="container" style="margin-top: 20px;">
+		<a name="pr-command-tools"></a>		
+		
+		
+			<li><code>Go Testing</code>
+            <div>
+            Go has a built-in testing command called go test and a package testing which combine to give a minimal but complete testing experience.The standard tool-chain also includes 
+			benchmarking and statement-based code coverage similar to NCover (.NET) or Istanbul (Node.js).
+			  <a href="https://blog.alexellis.io/golang-writing-unit-tests/">Source: Golang writing unit tests</a> 
+            </div>
+          </li>
+		  
+		     <UL>
+			         <div><li><a href="https://www.calhoun.io/how-to-test-with-go/">How to test with Go</a></div></li>
+					 <div><li><a href="https://golang.org/pkg/testing/">Package Testing</a></div></li>
+	        </UL>
+			</UL>
+			
+			
+			
+			
+		 
+			
+		
+ 
+	  
+       <div class="container" style="margin-top: 20px;">
+        <h4 style="margin-top: 20px;">Working with templates</h4>
+	 
         <h5>Microservices</h5>
         <a name="go-microservices"></a>
 
@@ -311,8 +787,8 @@
           <h6>API Gateways</h6>
           <a name="go-ms-gateway"></a>
           <p>
-          Creates a microservcie that acts as a proxy between to domains.
-          </p>
+          Creates a microservice that acts as a proxy between to domains.
+        </p>
 
           <h6>Aggregator</h6>
           <a name="go-ms-aggregator"></a>
@@ -330,9 +806,9 @@
           <h6>Services</h6>
           <a name="go-ms-services"></a>
           <p>
-          Creates a microservcie that provides processing on object passed to it.  For example, 
+          Creates a microservice that provides processing on object passed to it.  For example, 
           authentication, translation, transformation, or annotation.
-          </p>
+        </p>
 
         <h5>Custom Resource Controller</h5>
         <a name="go-CRD"></a>
