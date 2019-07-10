@@ -9,8 +9,8 @@
     <meta name="description" content="">
     <meta name="author" content="">    
     <link rel="shortcut icon" href="favicon.ico">  
-    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'> 
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'"> 
     <!-- FontAwesome JS -->
     <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js" integrity="sha384-3LK/3kTpDE/Pkp8gTNp2gR/2gOiwQ6QaO7Td0zV76UFJVhqLl4Vl3KL1We6q6wR9" crossorigin="anonymous"></script>
 
@@ -18,9 +18,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <!-- Plugins CSS -->    
-    <link rel="stylesheet" href="../assets/plugins/prism/prism.css">
+    <link rel="stylesheet" href="assets/plugins/prism/prism.css">
     <!-- Theme CSS -->  
-    <link id="theme-style" rel="stylesheet" href="../assets/css/theme-1.css">
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme-1.css">
     <!-- GitHub Button -->
     <script async defer src="https://buttons.github.io/buttons.js"></script> 
 </head> 
@@ -45,7 +45,6 @@
                     <span class="logo-title">PavedRoad.io</span>
                 </a>
             </h1><!--//logo-->              
-
             <nav id="main-nav" class="main-nav navbar-expand-md float-right" role="navigation">
                 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse">
@@ -66,7 +65,7 @@
                              href="#" role="button" aria-haspopup="true" aria-expanded="false">Guides</a>
                           <div class="dropdown-menu">
                             <a class="dropdown-item" href="/devKits.html">DevKits</a>
-                            <a class="dropdown-item" href="/cicdLanding.html">CI/CD</a>
+                            <a class="dropdown-item" href="/cicd.html">CI/CD</a>
                             <a class="dropdown-item" onclick="return false;" href="#">Operations</a>
                             <a class="dropdown-item" onclick="return false;" href="#">Insights</a>
                           </div>
@@ -80,95 +79,155 @@
     </header><!--//header-->
     
     <!-- ******ABOUT****** --> 
-
     <section id="devKitTraining" 
       class="about section">
       <div class="container" style="margin-top: 45px;">
         <span class="text-primary" style="font-size: 25px; virtical-align: text-top;">
-        <img src="../assets/images/git-logo.png" hieght="75" width="75"/>
-        git and GitHub videos
-        </span>
-        <h4 style="margin-top: 10px;">Overview</h4>
-        <div>
-        This page contains links to official git video, paid online training, 
-        and talks on git and GitHub. To keep upto date on the latest news you can also 
-        subscribe to git and GitHub community channels:
-        </div>
-        <ul>
-          <li><a href="https://git-scm.com/community" target="_blank">
-              Git Community</a></li>
-          <li><a href="https://github.community/" target="_blank">
-              GitHub Community</a></li>
-        </ul>
+        DevKits</span>
+        <h4>Overview</h4>
+        <p>
+        A DevKit consists of all the tools required to build, test, and 
+        deploy code. It also provides a "low-code" environment.  These 
+        means templates build the core of your application and you bring
+        your data model and business logic.
+        </p>
+        <p>
+        You can find training material following this short introduction
+        to the DevKit tool network. Each section starts with a description 
+        of the DevKet enhancement to the standard tools, the integration
+        with other tools in the network, and a short getting started 
+        tutorial.
+        </p>
+        <p>
+        After that, you will find links for free and paid resources we 
+        have reviewed  and selected organized  by books, videos, and 
+        tutorials. </p>
+        <p>
+        A DevKit consists of all the tools required to build, test, and 
+        deploy your code.
+        
+        </p>
+        <img src="assets/images/devKit-Context.png" />
+        <h4>Tool Network Steps</h4>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col" width="20%">Step</th>
+              <th scope="col">Description</th>
+            </tr>
+          </thead>
 
-        <h4 style="margin-top: 15px;">Subjects covered</h4>
-        <div class="accordion" id="topicAccording">
-          <div class="card">
-            <div class="card-header" id="topic-working-with">
-              <h2 class="mb-0">
-                <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#collapseOne">
-                  Offical Git training (free)
-                </button>									
-                </h2>
-            </div>
-            <div id="collapseOne" class="collapse show" aria-labelledby="topic-working-with" data-parent="#topicAccording">
-              <div class="card-body">
-                <p><a href="https://git-scm.com/video/what-is-version-control" target="_blank">
-                  Git Basics: What is version control? Length(5:59)</a></p>
-                <p><a href="https://git-scm.com/video/what-is-git" target="_blank">
-                  Git Basics: What is Git? Length(8:15)</a></p>
-                <p><a href="https://git-scm.com/video/get-going" target="_blank">
-                  Git Basics: Get Going with Git Length(4:26)</a></p>
-                <p><a href="https://git-scm.com/video/quick-wins" target="_blank">
-                  Git Basics: Quick wins with Git Length(5:06)</a></p>
-              </div>
-            </div>
-          </div>
+          <tr>
+            <td scope="row">Services</td>
+            <td>
+              <p> 
+              Services, or templates, provide a pre-made base for you to 
+              start coding.  Templates are provided for a variety  of
+              microservices, serverless (faas), and Kubernetes custom 
+              resource. </p>
+              <p>
+              You can create templates using the CLI or portal.
+              </p>
+            </td>
+          </tr>
 
-          <div class="card">
-            <div class="card-header" id="addons">
-                <h2 class="mb-0">
-                    <button type="button" class="btn btn-link collapsed" 
-                      data-toggle="collapse" data-target="#collapseTwo">
-                      Other online training
-                    </button>
-                </h2>
-            </div>
-            <div id="collapseTwo" class="collapse" aria-labelledby="addons" data-parent="#topicAccording">
-                <div class="card-body">
-                  <p><a href="https://www.packtpub.com/application-development/git-complete-video" target="_blank">
-                  Git Complete by Jason Taylor Length(5 hours)</a></p>
-                  <p><a href="https://www.packtpub.com/application-development/git-version-control-made-easy" 
-                    target="_blank">
-                  Git: Version Control Made Easy Length(3 hours)</a></p>
-                  <p><a href="https://www.packtpub.com/application-development/conquering-git-advanced-training-guide-video" target="_blank">
-                  Conquering Git: Advanced Training Guide Length(3 hours 54 minutes)</a></p>
-                </div>
-            </div>
-          </div>
+          <tr>
+            <td scope="row">Code</td>
+            <td>
+            Covers review of the development environment including 
+            compilers, IDE, debuggers, dependency management, and 
+            other tools used while writing your code.  
+            </td>
+          </tr>
 
-          <div class="card">
-            <div class="card-header" id="faas">
-                <h2 class="mb-0">
-                    <button type="button" class="btn btn-link collapsed" 
-                      data-toggle="collapse" data-target="#collapseThree">
-                      Talks
-                    </button>
-                </h2>
-            </div>
-            <div id="collapseThree" class="collapse" aria-labelledby="faas" data-parent="#topicAccording">
-                <div class="card-body">
-                <p><a href="https://www.youtube.com/watch?v=4XpnKHJAok8" target="_blank">
-                  Tech Talk: Linus Torvalds on Git</a></p>
-                <p><a href="https://www.youtube.com/watch?v=ZDR433b0HJY" target="_blank">
-                  Introduction to Git: Scott Chacon</a></p>
-                </div>
-            </div>
-          </div>
+          <tr>
+            <td scope="row">Building/Compiling</td>
+            <td>
+              DevKits provide simple but powerful makefiles to drive the 
+              build process.  Including; self-documenting code, manifest
+              generation, starting and stopping local instances, automated 
+              test execution, tagging, publishing to a repository, and
+            deploying to local or remote kubernetes clusters. </td>
+          </tr>
 
-    </div>
-      </div><!--//container-->
-    </section><!--//about-->
+          <tr>
+            <td scope="row">Testing</td>
+            <td>
+              Reviews writing the  test for GoLang including; function, 
+              performance, and integration.  Base tests are provided 
+              for core template functions.Testing is also integrated
+            with third-party tools like SonarCloud. </td>
+          </tr>
+
+          <tr>
+            <td scope="row">Static Code Analysis</td>
+            <td>
+              Covers the "linters" installed in your DevKit and their 
+              usage.
+            </td>
+          </tr>
+
+          <tr>
+            <td scope="row">Security</td>
+            <td>
+              Covers security checks performed as part of the build
+              process.
+            </td>
+          </tr>
+
+          <tr>
+            <td scope="row">Manifests</td>
+            <td>
+              The build process generates docker and Kubernetes manifests.
+            </td>
+          </tr>
+
+          <tr>
+            <td scope="row">Packaging</td>
+            <td>
+              Builds the docker images that are published to a repository.
+            </td>
+          </tr>
+
+          <tr>
+            <td scope="row">Container tests</td>
+            <td>
+              Before containers are pushed to a repository, you have the 
+              option of using container test tools to verify their 
+              integrity.
+            </td>
+          </tr>
+
+          <tr>
+            <td scope="row">Tagging</td>
+            <td>
+              Before containers are pushed to a repository, they are 
+              tagged.  This section describes the default tagging policy 
+            and options for overriding them. </td>
+          </tr>
+
+          <tr>
+            <td scope="row">Deployment</td>
+            <td>
+              By default, following a successful build, your code
+              is deployed to a local Kuberntes cluster. This section 
+              describes that deployment and your options for changing.
+            </td>
+          </tr>
+
+          <tr>
+            <td scope="row">Microk8s</td>
+            <td>
+              Microk8s is installed providing a single node Kubernetes 
+              cluster.  This section covers configuring options and 
+            day-to-day usage of k8s in your development environment. </td>
+          </tr>
+
+          <tfoot>
+          </tfoot>
+        </table>
+
+        <br><br><br>
     
     <!-- ******CONTACT****** --> 
     <section id="contact" class="contact section has-pattern"
@@ -182,7 +241,7 @@
             </div><!--//contact-inner-->
         </div><!--//container-->
     </section><!--//contact-->  
-
+      
     <!-- ******FOOTER****** --> 
     <footer class="footer">
         <div class="container text-center">
@@ -196,9 +255,9 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script> 
-    <script type="text/javascript" src="../assets/plugins/prism/prism.js"></script>    
-    <script type="text/javascript" src="../assets/js/main.js"></script>  
+    <script type="text/javascript" src="assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script> 
+    <script type="text/javascript" src="assets/plugins/prism/prism.js"></script>    
+    <script type="text/javascript" src="assets/js/main.js"></script>  
 
     
         

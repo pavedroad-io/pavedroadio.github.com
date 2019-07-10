@@ -9,8 +9,8 @@
     <meta name="description" content="">
     <meta name="author" content="">    
     <link rel="shortcut icon" href="favicon.ico">  
-    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'> 
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'"> 
     <!-- FontAwesome JS -->
     <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js" integrity="sha384-3LK/3kTpDE/Pkp8gTNp2gR/2gOiwQ6QaO7Td0zV76UFJVhqLl4Vl3KL1We6q6wR9" crossorigin="anonymous"></script>
 
@@ -18,9 +18,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <!-- Plugins CSS -->    
-    <link rel="stylesheet" href="../assets/plugins/prism/prism.css">
+    <link rel="stylesheet" href="assets/plugins/prism/prism.css">
     <!-- Theme CSS -->  
-    <link id="theme-style" rel="stylesheet" href="../assets/css/theme-1.css">
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme-1.css">
     <!-- GitHub Button -->
     <script async defer src="https://buttons.github.io/buttons.js"></script> 
 </head> 
@@ -45,7 +45,6 @@
                     <span class="logo-title">PavedRoad.io</span>
                 </a>
             </h1><!--//logo-->              
-
             <nav id="main-nav" class="main-nav navbar-expand-md float-right" role="navigation">
                 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse">
@@ -80,71 +79,140 @@
     </header><!--//header-->
     
     <!-- ******ABOUT****** --> 
-
-    <section id="devKitTraining" 
-      class="about section">
-      <div class="container" style="margin-top: 45px;">
-        <span class="text-primary" style="font-size: 25px; virtical-align: text-top;">
-        <img src="../assets/images/kubernetes.png" hieght="75" width="75"/>
-        Go training
-        </span>
-        <h4 style="margin-top: 10px;">Overview</h4>
-        <p>
-        What is this training about
-        </p>
-
+        <a name="training" />
         <h4 style="margin-top: 15px;">Training subjects</h4>
-        <div class="accordion" id="thisTopicAccording">
-          <div class="card">
-            <div class="card-header" id="thisTopic-working-with">
-              <h2 class="mb-0">
-                <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#collapseOne">
-                  Area 1
-                </button>									
-                </h2>
-            </div>
-            <div id="collapseOne" class="collapse show" aria-labelledby="thisTopic-working-with" data-parent="#thisTopicAccording">
-              <div class="card-body">
-                <p><a href="https://github.com/kelseyhightower/intro-to-kubernetes-workshop" target="_blank">
-                  Item 1</a></p>
-                <p><a href="https://github.com/kelseyhightower/kubernetes-the-hard-way" target="_blank">
-                  Item 2</a></p>
-              </div>
-            </div>
-          </div>
+        <div class="row">
 
-          <div class="card">
-            <div class="card-header" id="addons">
-                <h2 class="mb-0">
-                    <button type="button" class="btn btn-link collapsed" 
-                      data-toggle="collapse" data-target="#collapseTwo">
-                      Area 2
-                    </button>
-                </h2>
+          <div class="item col-lg-6 col-md-12">
+            <div class="icon-holder">
+              <i class="fas fa-code"></i>
             </div>
-            <div id="collapseTwo" class="collapse" aria-labelledby="addons" data-parent="#thisTopicAccording">
-                <div class="card-body">
-                </div>
-            </div>
-          </div>
+            <div class="content">
+              <h3 class="sub-title text-info">Program with Go</h3>
+                <h4 class="sub-title">
+                  <a href="go/goDevKit.html">DevKit Enhancements</a>
+                </h4>
+                <h4 class="sub-title">
+                  <a href="go/goDocumentation.html">Documentation</a>
+                </h4>
+                <h4 class="sub-title">
+                  <a href="go/goVideo.html">Video</a>
+                </h4>
+                <h4 class="sub-title">
+                  <a href="go/goTutorials.html">Tutorials</a>
+                </h4>
+            </div><!--//content-->
+          </div><!--//item-->
 
-          <div class="card">
-            <div class="card-header" id="faas">
-                <h2 class="mb-0">
-                    <button type="button" class="btn btn-link collapsed" 
-                      data-toggle="collapse" data-target="#collapseThree">
-                      Area 3
-                    </button>
-                </h2>
+          <div class="item col-lg-6 col-md-12">
+            <div class="icon-holder">
+              <i class="fas fa-edit"></i>
             </div>
-            <div id="collapseThree" class="collapse" aria-labelledby="faas" data-parent="#thisTopicAccording">
-                <div class="card-body">
-                </div>
-            </div>
-          </div>
+            <div class="content">
+              <h3 class="sub-title text-info">Vim as an IDE</h3>
+                <h4 class="sub-title">
+                  <a href="vim/vimDevKit.html">DevKit Enhancements</a>
+                </h4>
+                <h4 class="sub-title">
+                  <a href="vim/vimDocumentation.html">Documentation</a>
+                </h4>
+                <h4 class="sub-title">
+                  <a href="vim/vimVideo.html">Video</a>
+                </h4>
+                <h4 class="sub-title">
+                  <a href="vim/vimTutorials.html">Tutorials</a>
+                </h4>
+            </div><!--//content-->
+          </div><!--//item-->
 
-    </div>
-      </div><!--//container-->
+          <div class="item col-lg-6 col-md-12">
+            <div class="icon-holder">
+              <i class="fas fa-code-branch"></i>
+            </div>
+            <div class="content">
+              <h3 class="sub-title text-info">Git and GitHub</h3>
+                <h4 class="sub-title">
+                  <a href="git/gitDevKit.html">DevKit Enhancements</a>
+                </h4>
+                <h4 class="sub-title">
+                  <a href="git/gitDocumentation.html">Documentation</a>
+                </h4>
+                <h4 class="sub-title">
+                  <a href="git/gitVideo.html">Video</a>
+                </h4>
+                <h4 class="sub-title">
+                  <a href="git/gitTutorials.html">Tutorials</a>
+                </h4>
+            </div><!--//content-->
+          </div><!--//item-->
+
+          <div class="item col-lg-6 col-md-12">
+            <div class="icon-holder">
+              <i class="fas fa-archive"></i>
+            </div>
+            <div class="content">
+              <h3 class="sub-title text-info">Working with Docker</h3>
+                <h4 class="sub-title">
+                  <a href="docker/dockerDevKit.html">DevKit Enhancements</a>
+                </h4>
+                <h4 class="sub-title">
+                  <a href="docker/dockerDocumentation.html">Documentation</a>
+                </h4>
+                <h4 class="sub-title">
+                  <a href="docker/dockerVideo.html">Video</a>
+                </h4>
+                <h4 class="sub-title">
+                  <a href="docker/dockerTutorials.html">Tutorials</a>
+                </h4>
+            </div><!--//content-->
+          </div><!--//item-->
+
+          <div class="item col-lg-6 col-md-12">
+            <div class="icon-holder">
+              <i class="fas fa-wrench"></i>
+            </div>
+            <div class="content">
+              <h3 class="sub-title text-info">Skaffold</h3>
+                <h4 class="sub-title">
+                  <a href="skaffold/skaffoldDevKit.html">DevKit Enhancements</a>
+                </h4>
+                <h4 class="sub-title">
+                  <a href="skaffold/skaffoldDocumentation.html">Documentation</a>
+                </h4>
+                <h4 class="sub-title">
+                  <a href="skaffold/skaffoldVideo.html">Video</a>
+                </h4>
+                <h4 class="sub-title">
+                  <a href="skaffold/skaffoldTutorials.html">Tutorials</a>
+                </h4>
+            </div><!--//content-->
+          </div><!--//item-->
+
+          <div class="item col-lg-6 col-md-12">
+            <div class="icon-holder">
+              <i class="fas fa-anchor"></i>
+            </div>
+            <div class="content">
+              <h3 class="sub-title text-info">Kubernetes</h3>
+                <h4 class="sub-title">
+                  <a href="kubernetes/microk8sDevKit.html">DevKit Enhancements</a>
+                </h4>
+                <h4 class="sub-title">
+                  <a href="kubernetes/microk8sDocumentation.html">Documentation</a>
+                </h4>
+                <h4 class="sub-title">
+                  <a href="kubernetes/microk8sVideo.html">Video</a>
+                </h4>
+                <h4 class="sub-title">
+                  <a href="kubernetes/microk8sTutorials.html">Tutorials</a>
+                </h4>
+            </div><!--//content-->
+          </div><!--//item-->
+
+
+                <div class="clearfix visible-md"></div>    
+            </div><!--//row-->            
+        </div><!--//container-->
     </section><!--//about-->
     
     <!-- ******CONTACT****** --> 
@@ -159,7 +227,7 @@
             </div><!--//contact-inner-->
         </div><!--//container-->
     </section><!--//contact-->  
-
+      
     <!-- ******FOOTER****** --> 
     <footer class="footer">
         <div class="container text-center">
@@ -173,9 +241,9 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script> 
-    <script type="text/javascript" src="../assets/plugins/prism/prism.js"></script>    
-    <script type="text/javascript" src="../assets/js/main.js"></script>  
+    <script type="text/javascript" src="assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script> 
+    <script type="text/javascript" src="assets/plugins/prism/prism.js"></script>    
+    <script type="text/javascript" src="assets/js/main.js"></script>  
 
     
         
