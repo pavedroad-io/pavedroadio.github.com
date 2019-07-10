@@ -62,10 +62,10 @@
                         <li class="nav-item"><a class="nav-link" href="#docs">Documentation</a></li>
                         <li class="nav-item dropdown">
                           <a class="nav-link dropdown-toggle" data-toggle="dropdown"
-                             href="#" role="button" aria-haspopup="true" aria-expanded="false">Training</a>
+                             href="#" role="button" aria-haspopup="true" aria-expanded="false">Guides</a>
                           <div class="dropdown-menu">
                             <a class="dropdown-item" href="/devKits.html">DevKits</a>
-                            <a class="dropdown-item" href="/cicd.html">CI/CD</a>
+                            <a class="dropdown-item" href="/cicdLanding.html">CI/CD</a>
                             <a class="dropdown-item" onclick="return false;" href="#">Operations</a>
                             <a class="dropdown-item" onclick="return false;" href="#">Insights</a>
                           </div>
@@ -78,90 +78,72 @@
         </div>
     </header><!--//header-->
     
-    <!-- ******ABOUT****** --> 
-    <section id="devKitTraining" class="about section">
-      <div class="container">
-        <h3 class="title text-left" style="margin-top: 45px; margin-bottom: 5px;">
-          DevKit training
-        </h3>
-        <p>
-        Select your devKit from the options below to get started.  It provides training on the language, tools, design patterns, and CI/CD pipelines.
-        </p>
-        <div class="row">
+    <!-- ******Guides DevKits****** --> 
+    <section id="devKitTraining" class="guides devkits section">
+        <div class="container-fluid mt-4">
+            <div class="row justify-content-center">
+                <div class="card-body" style="width: 30rem;">
+                    <div class="row">
+                        <div class="col-6"">
+                            <h4 style="margin-top: 15px;">DevKit</h4>
+                            <div class="accordion" id="goAccording">
+                                <div class="card" style="width: 40rem;">
+                                    <div class="card-header" id="pr-tools">
+                                        <h2 class="mb-0">
+                                            <button type="button" class="btn btn-link collapsed"~
+                                            data-toggle="collapse" data-target="#collapseOne">
+                                            GoLang Kit 
+                                            </button>
+                                        </h2>
+                                    </div> <!-- end card-header -->
+                                    <div id="collapseOne" class="collapse show" aria-labelledby="golang-kit" data-parent="#goAccording">
+                                        <div class="card-body">
+                                            <div class="col">
+                                                <ul>
+                                                    <li><a href="/go/goTraining.html">GoLang(1.12)</li>
+                                                    <li><a href="/go/goTraining.html">Vim</li>
+                                                    <li><a href="/go/goTraining.html">Dep</li>
+                                                    <li><a href="/go/goTraining.html">git</li>
+                                                    <li><a href="/go/goTraining.html">linters</li>
+                                                </ul>
+                                            </div>
+                                           <div class="col">
+                                                <ul>
+                                                    <li><a href="/go/goTraining.html">Docker</li>
+                                                    <li><a href="/go/goTraining.html">microk8s</li>
+                                                    <li><a href="/go/goTraining.html">skaffold</li>
+                                                    <li><a href="/go/goTraining.html">enhanced bash</li>
+                                                </ul>
+                                            </div>
+                                           <div class="col">
+                                                <ul>
+                                                    <li><a href="/go/goTraining.html">Delve</li>
+                                                    <li><a href="/go/goTraining.html">kompose</li>
+                                                    <li><a href="/go/goTraining.html">graphviz</li>
+                                                    <li><a href="/go/goTraining.html">More...</li>
+                                                </ul>
+                                            </div>
 
-          <div class="item col-lg-6 col-md-12">
-            <div class="icon-holder">
-              <i class="fas fa-heart"></i>
-            </div>
-            <div class="content" onclick="location.href='goDevKitTraining.html'">
-              <h3 class="sub-title">GoKit</h3>
-              <div class="row">
-
-                <div class="col">
-                 <ul>
-                   <li>Golang(1.12)</li>
-                   <li>Vim</li>
-                   <li>Dep</li>
-                   <li>git</li>
-                   <li>linters</li>
-                 </ul>
-                </div>
-
-                <div class="col">
-                 <ul>
-                   <li>docker</li>
-                   <li>microk8s</li>
-                   <li>skaffold</li>
-                   <li>enhanced bash</li>
-                 </ul>
-                </div>
-
-                <div class="col">
-                 <ul>
-                   <li>Delve</li>
-                   <li>kompose</li>
-                   <li>graphviz</li>
-                   <li>More...</li>
-                 </ul>
-                </div>
-
-              </div>
-            </div><!--//content-->
-          </div><!--//item-->
-
-          <div class="item col-lg-6 col-md-12">
-            <div class="icon-holder">
-              <i class="far fa-clock"></i>
-           </div>
-         <div class="content">
-           <h3 class="sub-title">node.js</h3>
-           <p>Available soon</p>
-         </div><!--//content-->
-       </div><!--//item-->
-
-       <div class="item col-lg-6 col-md-12">
-         <div class="icon-holder">
-           <i class="fas fa-code"></i>
-         </div>
-         <div class="content">
-           <h3 class="sub-title">Python</h3>
-           <p>Available soon</p>
-         </div><!--//content-->
-       </div><!--//item-->
-
-       <div class="item col-lg-6 col-md-12">
-         <div class="icon-holder">
-           <i class="fas fa-crosshairs"></i>
-         </div>
-         <div class="content">
-           <h3 class="sub-title">Java</h3>
-           <p>Available soon</p>
-         </div><!--//content-->
-       </div><!--//item-->           
-                <div class="clearfix visible-md"></div>    
-            </div><!--//row-->            
-        </div><!--//container-->
-    </section><!--//about-->
+                                            <a href="#" class="card-link">Download</a>
+                                            <a href="#" class="card-link">Likes</a>
+                                        </div>
+                                    </div> <!-- end id=collapseOne -->
+                                </div> <!-- end class=card -->
+                            </div> <!-- end class=accordion -->
+                        </div>
+                        <div class="col col-1">
+                            <p> YOOKOO </p>
+                            <div class="row">
+                                <p> HELLO </p>
+                            </div>
+                            <div class="row">
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- end card body -->
+            </div> <!-- end class=row justify-content-center -->
+        </div> <!-- end class=container-fluid -->
+    </section><!--//guides devkits-->
     
     <!-- ******CONTACT****** --> 
     <section id="contact" class="contact section has-pattern"

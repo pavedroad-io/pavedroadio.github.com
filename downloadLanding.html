@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>PavedRoad.io</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">    
+    <link rel="shortcut icon" href="favicon.ico">  
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'> 
+    <!-- FontAwesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js" integrity="sha384-3LK/3kTpDE/Pkp8gTNp2gR/2gOiwQ6QaO7Td0zV76UFJVhqLl4Vl3KL1We6q6wR9" crossorigin="anonymous"></script>
+
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Plugins CSS -->    
+    <link rel="stylesheet" href="assets/plugins/prism/prism.css">
+    <!-- Theme CSS -->  
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme-1.css">
+    <!-- GitHub Button -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script> 
+</head> 
+
+<body data-spy="scroll">
+
+    <!---//Facebook button code-->
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    
+    <!-- ******HEADER****** --> 
+    <header id="header" class="header">  
+        <div class="container">            
+            <h1 class="logo float-left">
+                <a href="/">
+                    <span class="logo-title">PavedRoad.io</span>
+                </a>
+            </h1><!--//logo-->              
+            <nav id="main-nav" class="main-nav navbar-expand-md float-right" role="navigation">
+                
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button><!--//nav-toggle-->
+                           
+                <div class="navbar-collapse collapse" id="navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item sr-only"><a class="nav-link" href="/">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#docs">Documentation</a></li>
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" data-toggle="dropdown"
+                             href="#" role="button" aria-haspopup="true" aria-expanded="false">Guides</a>
+                          <div class="dropdown-menu">
+                            <a class="dropdown-item" href="/devkitsLanding.html">DevKits</a>
+                            <a class="dropdown-item" href="/cicdLanding.html">CI/CD</a>
+                            <a class="dropdown-item" onclick="return false;" href="#">Operations</a>
+                            <a class="dropdown-item" onclick="return false;" href="#">Insights</a>
+                          </div>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="#license">License</a></li>                        
+                        <li class="nav-item last"><a class="nav-link" href="#contact">Contact</a></li>
+                    </ul><!--//nav-->
+                </div><!--//navabr-collapse-->
+            </nav><!--//main-nav-->
+        </div>
+    </header><!--//header-->
+    
+    <!-- ******Download****** --> 
+    <section id="Download" class="about section">
+      <div class="container">
+        <h3 class="title text-left" style="margin-top: 45px; margin-bottom: 5px;">
+          PavedRoad DevKit Download
+        </h3>
+        <p>
+          PavedRoad DevKits provides the tools to install a cloud native software development environment. The development environment supports versions of the bash shell and the vim editor that have been enhanced through completions and plugins to supprt a cloud native environment. In addition the project installs the go language and relevant packages along with the git command and other minimally needed development software. <a href="#download">Jump to download</a>
+        </p>
+        <div class="row">
+
+          <div class="item col-lg-6 col-md-12" style="margin-top:30px;">
+            <div class="icon-holder">
+              <i class="fas fa-check-double"></i>
+            </div>
+            <div class="content">
+              <h3 class="sub-title">Pre Requisites</h3>
+              <table class="table" style="width:1000px">
+                <thead>
+                  <tr>
+                    <th scope="col" width="20%">Dependency</th>
+                    <th scope="col">Description</th>
+                  </tr>
+                </thead>
+                <tr>
+                  <td scope="row"><a href="https://docs.docker.com/install">Docker</a></td>
+                  <td>
+                    <p>
+                    Docker explanation goes here
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td scope="row"><a href="https://www.virtualbox.org/wiki/Downloads">Virtual Box</a></td>
+                  <td>
+                    <p>
+                    VM Explanation goes here
+                    </p>
+                  </td>
+                </tr>
+              </table>
+            </div><!--//content-->
+          </div><!--//item-->
+          <!-- Go-Vim Description Section -->
+          <div class="row">
+          <div class="item col-lg-6 col-md-12" style="margin-top:30px;">
+            <div class="icon-holder">
+              <i class="fas fa-edit"></i>
+            </div>
+            <div class="content">
+              <h3 class="sub-title">Go-Vim DevKit Contents</h3>
+              <table class="table" style="width:1000px">
+                <thead>
+                  <tr>
+                    <th scope="col" width="20%">Tool</th>
+                    <th scope="col">Description</th>
+                  </tr>
+                </thead>
+                <tr>
+                  <td scope="row"><p>Go</p></td>
+                  <td>
+                    <p>
+                    Go is an open source programming language from Google, and has become the defacto choice for developing Cloud Native Microservices. Many Go packages are available either as development tools or as base libraries. Some of these Go tools may have been developed as bash completions or vim plugins. PavedRoad makes it easy by pre-integrating Go package tools as well as completions and plugins. <a href="https://github.com/pavedroad-io/pavedroad/blob/master/devkit/BOM_GO_PACKAGES.md">Click here for a complete list.</a>
+                    </p>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td scope="row"><p>Vim</p></td>
+                  <td>
+                    <p>
+                    Vim is a highly configurable text editor for efficiently creating and changing any kind of text. PavedRoad has enhanced Vim to be a complete IDE adding word completion and development related shell commands that can be run inside of Vim. These commands are mapped to keystrokes for execution allowing developers to work without ever having to leave Vim. If the version of Vim on the target device is not 8.0 or later then the latest version of will be installed.
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td scope="row"><p>Skaffold</p></td>
+                  <td>
+                    <p>
+                    Skaffold is a command line tool that facilitates continuous development for Kubernetes applications. You can iterate on your application source code locally then deploy to local or remote Kubernetes clusters. Skaffold handles the workflow for building, pushing and deploying your application.
+                    </p>
+                  </td>
+                </tr>
+                 <tr>
+                  <td scope="row"><p>Enhanced Bash</p></td>
+                  <td>
+                    <p>
+                    The bash shell, aliases, and completions are integral parts of any development environment. PavedRoad has included a list of helpful bash-completions. Completion of commands is especially important in a development environment as there are commands like git that have many sub commands and options. In addition to completion capabilities, two sets of aliases are installed, one set for GoLang and the other is for git commands. <a href="https://github.com/pavedroad-io/pavedroad/blob/master/devkit/BOM_BASH_COMPS.md">Click here for a complete list.</a>
+                    </p>
+                  </td>
+                </tr>
+                   <tr>
+                  <td scope="row"><p>Kompose</p></td>
+                  <td>
+                    <p>
+                    Kompose is a tool to help users familiar with docker-compose move to Kubernetes. It takes a Docker Compose file and translates it into Kubernetes resources. <a href="https://github.com/kubernetes/kompose">Click here for more information.</a>
+                    </p>
+                  </td>
+                </tr>                          
+
+              </table>
+            </div><!--//content-->
+          </div><!--//item-->
+          
+          <div class="clearfix visible-md"></div>    
+        </div><!--//row-->     
+<!-- marker -->
+        <div class="clearfix visible-md"></div>    
+        </div><!--//row-->       
+        <div class="row">
+          <a name="download" />
+          <div class="item col-lg-11 col-md-12" style="margin-top:30px;">
+            <div class="icon-holder">
+              <i class="fas fa-cogs"></i>
+            </div>
+            <div class="content">
+              <h3 class="sub-title">Download PavedRoad DevKit</h3>
+              <p>Download the bootstrap script for your target OS and run it to install the DevKit. This script installs curl, git, and salt on the target device and then clones the PavedRoad DevKit repository. SaltStack (in masterless mode) is used to install the development environment. The bootstrap script runs salt-call to apply the salt states in the cloned repository on the target device. Running the bootstrap script installs the complete development environment, no knowledge about SaltStack is required. Copy the curl command for your target OS and paste into your systems terminal shell.
+              </p>
+              <table class="table" style="width:1000px">
+                <thead>
+                  <tr>
+                    <th scope="col" width="20%">Operating System</th>
+                    <th scope="col">Download Command</th>
+                  </tr>
+                </thead>
+                <tr>
+                  <td scope="row"><p>Linux</p></td>
+                  <td>
+                    <p>
+                    <code>curl -i https://github.com/pavedroad-io/pavedroad/tree/master/devkit/bootstrap-unix.sh</code>
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td scope="row"><p>MacOS</p></td>
+                  <td>
+                    <p>
+                    <code>curl -i https://github.com/pavedroad-io/pavedroad/tree/master/devkit/bootstrap-macos.sh</code>
+                    </p>
+                  </td>
+                </tr>
+
+              </table>
+            </div><!--//content-->
+          </div><!--//item-->
+          
+          <div class="clearfix visible-md"></div>    
+        </div><!--//row-->          
+      </div><!--//container-->
+    </section><!--//about-->
+    
+    <!-- ******CONTACT****** --> 
+    <section id="contact" class="contact section has-pattern"
+      style="padding: 5px;">
+        <div class="container">
+            <div class="contact-inner">
+                <h2 class="title  text-center"
+                  style="margin-bottom: 5px;">Contact</h2>
+                <p class="text-center">
+                <a href="mailto:training@pavedroad.io">training@pavedroad.io</a></p>
+            </div><!--//contact-inner-->
+        </div><!--//container-->
+    </section><!--//contact-->  
+      
+    <!-- ******FOOTER****** --> 
+    <footer class="footer">
+        <div class="container text-center">
+            <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can buy the commercial license via our website: themes.3rdwavemedia.com */-->
+            <small class="copyright">Designed with <i class="fas fa-heart"></i> by <a href="https://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
+        </div><!--//container-->
+    </footer><!--//footer-->
+     
+    <!-- Javascript -->          
+    <!-- Global JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script> 
+    <script type="text/javascript" src="assets/plugins/prism/prism.js"></script>    
+    <script type="text/javascript" src="assets/js/main.js"></script>  
+
+    
+        
+</body>
+</html> 
+
+

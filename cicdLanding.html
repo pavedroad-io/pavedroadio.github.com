@@ -18,9 +18,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <!-- Plugins CSS -->    
-    <link rel="stylesheet" href="../assets/plugins/prism/prism.css">
+    <link rel="stylesheet" href="assets/plugins/prism/prism.css">
     <!-- Theme CSS -->  
-    <link id="theme-style" rel="stylesheet" href="../assets/css/theme-1.css">
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme-1.css">
     <!-- GitHub Button -->
     <script async defer src="https://buttons.github.io/buttons.js"></script> 
 </head> 
@@ -45,7 +45,6 @@
                     <span class="logo-title">PavedRoad.io</span>
                 </a>
             </h1><!--//logo-->              
-
             <nav id="main-nav" class="main-nav navbar-expand-md float-right" role="navigation">
                 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse">
@@ -65,7 +64,7 @@
                           <a class="nav-link dropdown-toggle" data-toggle="dropdown"
                              href="#" role="button" aria-haspopup="true" aria-expanded="false">Guides</a>
                           <div class="dropdown-menu">
-                            <a class="dropdown-item" href="/devKits.html">DevKits</a>
+                            <a class="dropdown-item" href="/devkitsLanding.html">DevKits</a>
                             <a class="dropdown-item" href="/cicdLanding.html">CI/CD</a>
                             <a class="dropdown-item" onclick="return false;" href="#">Operations</a>
                             <a class="dropdown-item" onclick="return false;" href="#">Insights</a>
@@ -80,71 +79,68 @@
     </header><!--//header-->
     
     <!-- ******ABOUT****** --> 
-
-    <section id="devKitTraining" 
-      class="about section">
-      <div class="container" style="margin-top: 45px;">
-        <span class="text-primary" style="font-size: 25px; virtical-align: text-top;">
-        <img src="../assets/images/kubernetes.png" hieght="75" width="75"/>
-        Git training
-        </span>
-        <h4 style="margin-top: 10px;">Overivew</h4>
+    <section id="CI/CD Training" class="about section">
+      <div class="container">
+        <h3 class="title text-left" style="margin-top: 45px; margin-bottom: 5px;">
+          CI/CD Guides
+        </h3>
         <p>
-        What is this training about
+        There are a number of CI/CD tools that are vying for their place in the Kubernetes (K8s) ecosystem. Some are strong on the build/test (CI) side while others excel at the deployment (CD) side. A few tools can do both and there are several “workflow” or “pipeline” tools that are general purpose but have been effectively used to solve the entire CI/CD pipelines.
         </p>
+        <div class="row">
 
-        <h4 style="margin-top: 15px;">Training subjects</h4>
-        <div class="accordion" id="thisTopicAccording">
-          <div class="card">
-            <div class="card-header" id="thisTopic-working-with">
-              <h2 class="mb-0">
-                <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#collapseOne">
-                  Area 1
-                </button>									
-                </h2>
+          <div class="item col-lg-6 col-md-12" style="margin-top:30px;">
+            <div class="icon-holder">
+              <i class="fas fa-cogs"></i>
             </div>
-            <div id="collapseOne" class="collapse show" aria-labelledby="thisTopic-working-with" data-parent="#thisTopicAccording">
-              <div class="card-body">
-                <p><a href="https://github.com/kelseyhightower/intro-to-kubernetes-workshop" target="_blank">
-                  Item 1</a></p>
-                <p><a href="https://github.com/kelseyhightower/kubernetes-the-hard-way" target="_blank">
-                  Item 2</a></p>
-              </div>
-            </div>
-          </div>
+            <div class="content" onclick="location.href='skaffoldTraining.html'">
+              <h3 class="sub-title">CI/CD Quickstarts and Training</h3>
+              <table class="table" style="width:1000px">
+                <thead>
+                  <tr>
+                    <th scope="col" width="20%">Tool</th>
+                    <th scope="col">Description</th>
+                  </tr>
+                </thead>
+                <tr>
+                  <td scope="row"><a href="skaffoldTraining.html">Skaffold</a></td>
+                  <td>
+                    <p>
+                    Skaffold is a command line tool that facilitates continuous development for Kubernetes applications. You can iterate on your application source code locally then deploy to local or remote Kubernetes clusters. Skaffold handles the workflow for building, pushing and deploying your application.
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td scope="row"><a href="cicdLanding.html">Tekton</a></td>
+                  <td>
+                    <p>
+                    Tekton Pipelines is an open source implementation to configure and run CI/CD style pipelines for your Kubernetes application. Pipeline creates Custom Resources as building blocks to declare pipelines.
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td scope="row"><a href="cicdLanding.html">Argo</a></td>
+                  <td>
+                    <p>
+                    Argo provides container-native workflows for Kubernetes implementing each step in a workflow as a container. Argo enables users to launch multi-step pipelines using a custom DSL that is similar to traditional YAML.
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td scope="row"><a href="cicdLanding.html">Argo CD</a></td>
+                  <td>
+                    <p>
+                    Argo CD is a declarative, GitOps continuous delivery tool for Kubernetes.
+                    </p>
+                  </td>
+                </tr>
+              </table>
+            </div><!--//content-->
+          </div><!--//item-->
 
-          <div class="card">
-            <div class="card-header" id="addons">
-                <h2 class="mb-0">
-                    <button type="button" class="btn btn-link collapsed" 
-                      data-toggle="collapse" data-target="#collapseTwo">
-                      Area 2
-                    </button>
-                </h2>
-            </div>
-            <div id="collapseTwo" class="collapse" aria-labelledby="addons" data-parent="#thisTopicAccording">
-                <div class="card-body">
-                </div>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-header" id="faas">
-                <h2 class="mb-0">
-                    <button type="button" class="btn btn-link collapsed" 
-                      data-toggle="collapse" data-target="#collapseThree">
-                      Area 3
-                    </button>
-                </h2>
-            </div>
-            <div id="collapseThree" class="collapse" aria-labelledby="faas" data-parent="#thisTopicAccording">
-                <div class="card-body">
-                </div>
-            </div>
-          </div>
-
-    </div>
-      </div><!--//container-->
+                <div class="clearfix visible-md"></div>    
+            </div><!--//row-->            
+        </div><!--//container-->
     </section><!--//about-->
     
     <!-- ******CONTACT****** --> 
@@ -159,7 +155,7 @@
             </div><!--//contact-inner-->
         </div><!--//container-->
     </section><!--//contact-->  
-
+      
     <!-- ******FOOTER****** --> 
     <footer class="footer">
         <div class="container text-center">
@@ -173,9 +169,9 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script> 
-    <script type="text/javascript" src="../assets/plugins/prism/prism.js"></script>    
-    <script type="text/javascript" src="../assets/js/main.js"></script>  
+    <script type="text/javascript" src="assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script> 
+    <script type="text/javascript" src="assets/plugins/prism/prism.js"></script>    
+    <script type="text/javascript" src="assets/js/main.js"></script>  
 
     
         
