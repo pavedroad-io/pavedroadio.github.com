@@ -263,48 +263,48 @@
             </tr>
           </thead>
 <tr>
-   <td scope="row"><a href="#gobuild"<code>gobuild</a></code></td>
+   <td scope="row"><a href="#go build"<code>gobuild</a></code></td>
   <td>compile packages and dependencies</td>
 		   </tr>
 		  
 <tr>
-  <td scope="row"><a href="#goclean"<code>goclean</code></a></td>
+  <td scope="row"><a href="#go clean"<code>go clean</code></a></td>
   <td>remove object files and cached files</td>
 		   </tr>
 		   
 <tr>
-  <td scope="row"><a href="#godep"><code>godep</code></a></td>
+  <td scope="row"><a href="#go dep"><code>godep</code></a></td>
   <td>download and install packages and dependencies</td>
 		   </tr>	
 		   
 <tr>
-   <td scope="row"><a href="#goenv"<code>goenv</code></a></td>
+   <td scope="row"><a href="#go env"<code>go env</code></a></td>
   <td>print Go environment information</td>
 		   </tr>		   
 		  	  	  
 	
 <tr>
-   <td scope="row"><a href="#golist"<code>golist</code></a></td>
+   <td scope="row"><a href="#go list"<code>go list</code></a></td>
   <td>list packages or modules</td>
 		   </tr>		  
 
  <tr>
-   <td scope="row"><a href="#gorun"<code>gorun</code></a></td>
+   <td scope="row"><a href="#go run"<code>go run</code></a></td>
   <td>compile and run Go program</td>
 		   </tr>	
 		
 <tr>
-   <td scope="row"><a href="#gotest"<code>gotest</code></a></td>
+   <td scope="row"><a href="#go test"<code>go test</code></a></td>
   <td>test packages</td>
 		   </tr>	
 		   
 <tr>
-   <td scope="row"><a href="#goversion"<code>goversion</code></a></td>
+   <td scope="row"><a href="#go version"<code>go version</code></a></td>
   <td>print Go version</td>
 		   </tr>			  
 		  
 <tr>
-   <td scope="row"><a href="#govet"<code>govet</code></a></td>
+   <td scope="row"><a href="#go vet"<code>vet</code></a></td>
   <td>report likely mistakes in packages</td>
 		   </tr>		  
 		  
@@ -326,14 +326,14 @@
 			</tr>
 			
 			<tr>
-  <td scope="row"><a href="#gosec"><code>gosec</code></a></td>
+  <td scope="row"><a href="#gosec"><code>go sec</code></a></td>
   <td>
     Go security checker  
   </td>
 			</tr>
 			
 			<tr>
-  <td scope="row"><a href="#godelve"><code>godelve</code></a></td>
+  <td scope="row"><a href="#godelve"><code>dlv</code></a></td>
   <td>
     Delve is a debugger for the Go programming language  
   </td>
@@ -401,9 +401,9 @@
         <a name="commands"></a>
 		<a name="pr-command-tools"></a>
 		
-	<a name="gobuild"></a>
+	<a name="go build"></a>
 		<UL>
-          <li><code>gobuild</code>
+          <li><code>go build</code>
             <div>
                Package build gathers information about Go packages.
             </div>
@@ -415,9 +415,9 @@
 			</UL>
 			
 			
-    <a name="goclean"></a>
+    <a name="go clean"></a>
 		<UL>
-          <li><code>goclean</code>
+          <li><code>go clean</code>
             <div>
                Remove object files and cached files
             </div>
@@ -428,9 +428,9 @@
 	        </UL>
 			</UL>
 		
-   <a name="godep"></a>
+   <a name="go dep"></a>
 		<UL> 
-          <li><code>godep</code>
+          <li><code>go dep</code>
             <div>
                Dependency management tool for Go. <a href="https://golang.github.io/dep/">Github - godep</a>. Godep allows users to easily pin dependencies to the $GOPATH to a project, 
 			   copy dependencies from a project to the $GOPATH and browse what dependencies are pinned via Godeps.json.
@@ -451,9 +451,9 @@
        
 	   
 	   
-	    <a name="godef"></a>
+	    <a name="go def"></a>
 		<UL>
-          <li><code>godef</code>
+          <li><code>go def</code>
             <div>
                 Prints the source location of definitions in Go programs.
             </div>
@@ -464,9 +464,9 @@
 	        </UL>
 			</UL>
 			
-	   <a name="goenv"></a>
+	   <a name="go env"></a>
 		<UL>
-          <li><code>goenv</code>
+          <li><code>go env</code>
             <div>
                Removes object files and cached files
             </div>
@@ -479,9 +479,9 @@
 			</UL>
 			
 			
-			 <a name="goguru"></a>
+			 <a name="go guru"></a>
 		<UL>
-          <li><code>goguru</code>
+          <li><code>guru</code>
             <div>
                goguru is used for answering questions about Go source code.
             </div>
@@ -494,9 +494,9 @@
 			</UL>
 			
 			
-			 <a name="goimport"></a>
+			 <a name="go import"></a>
 		<UL>
-          <li><code>goimport</code>
+          <li><code>go import</code>
             <div>
               Updates your Go import lines, adding missing ones and removing unreferenced ones. 
 			  In addition to fixing imports, goimports also formats your code in the same style as gofmt so it can be used as a replacement for your editor's gofmt-on-save hook.
@@ -510,9 +510,9 @@
 			</UL>
 			
 			
-			<a name="golist"></a>
+			<a name="go list"></a>
 		<UL>
-          <li><code>golist</code>
+          <li><code>go list</code>
             <div>
                List packages or modules
             </div>
@@ -528,7 +528,7 @@
 			
 			<a name="gorename"></a>
 		<UL>
-          <li><code>gorename</code>
+          <li><code>go rename</code>
             <div>
               Performs precise type-safe renaming of identifiers in Go source code.
             </div>
@@ -539,9 +539,9 @@
 	        </UL>
 			</UL>
 	 
-       	<a name="gorun"></a>
+       	<a name="go run"></a>
 		<UL>
-          <li><code>gorun</code>
+          <li><code>go run</code>
             <div>
                Package run implements the <code>go run</code> command.  import "cmd/go/internal/run" 
             </div>
@@ -553,9 +553,9 @@
 	        </UL>
 			</UL>
 	   
-	    	<a name="gotest"></a>
+	    	<a name="go test"></a>
 		<UL>
-          <li><code>gotest</code>
+          <li><code>go test</code>
             <div>
                Package testing provides support for automated testing of Go packages. It is intended to be used in concert with the <code>gotest</code> command, which automates the 
 		execution of any function of the form.
@@ -568,9 +568,9 @@
 	        </UL>
 			</UL>
 	   
-	      	<a name="goversion"></a>
+	      	<a name="go version"></a>
 		<UL>
-          <li><code>goversion</code>
+          <li><code>go version</code>
             <div>
                Prints Go version
             </div>
@@ -583,9 +583,9 @@
 			</UL>
 		 
 	   
-	      	<a name="govet"></a>
+	      	<a name="go vet"></a>
 		<UL>
-          <li><code>govet</code>
+          <li><code>go vet</code>
             <div>
                Vet examines Go source code and reports suspicious constructs, such as Printf calls whose arguments do not align with the format string. Vet uses heuristics that do not
 			   guarantee all reports are genuine problems, but it can find errors not caught by the compilers.Vet is normally invoked through the go command. This command vets the package 
@@ -627,7 +627,7 @@
 	        </UL>
 	    
 		
-		<li><code>godelve</code>
+		<li><code>dlv</code>
             <div>
              Debugger developed in Golang and also dedicated to help trouble-shooting Golang programs
             </div>
