@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">    
-    <link rel="shortcut icon" href="favicon.ico">  
+    <link rel="shortcut icon" href="favicon.ico">
     <link href='https://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'> 
     <!-- FontAwesome JS -->
@@ -85,24 +85,22 @@
       class="about section">
       <div class="container" style="margin-top: 45px;">
         <span class="text-primary" style="font-size: 25px; virtical-align: text-top;">
-        <img src="../assets/images/Go-Logo/PNG/Go-Logo_Fuchsia.png" hieght="75" width="75"/>
-        training
+         <img src="../assets/images/docker.jpg" height="75" width="75"/>
+        Docker DevKit
         </span>
         <h4 style="margin-top: 10px;">Overview</h4>
-        <p dir="ltr">Go is an open source programming language from Google with the first stable 
-        release in 2011. The Go source code can be found in <a taget="_blank" href="https://github.com/golang/go">
-          Github</a>. Go was built to resemble a simplified version of the C programming language. 
-        Go reduces the complexity that languages like C known for being difficult to work with and not 
-        secure, while Ruby is safe but slower and has many dependencies, Java which became too complex 
-        and verbose. Go removes these obstacles for ease of programming. Go is being used by over half 
-        of a million programmers in the <a taget="_blank" href="https://research.swtch.com/gophercount">
-          Go community</a>. It compiles at the machine level. </p>
-        <p dir="ltr">
-          Go was created at Google in 2007 by Robert Griesemer, Rob Pike, and Ken Thompson.
-        </p>
-
+        <p dir="ltr"><a taget="_blank" href="https://www.docker.com/why-docker">Docker</a> is an open source platform for developing, shipping and running applications. 
+		Docker enables you to separate your applications from your infrastructure to enable quick
+		software delivery. Docker provides the ability to package and run an application in an isolated environment called a container. Many containers can be run 
+		on one host due to the isolation and security of the container. Containers are lightweight since a hypervisor is not needed, the container runs directly 
+		within the host machines kernel. 
+		Organizations that use Docker benefit in many ways: Increased developer productivity and velocity; utilizing docker aides in developers being more productive since 
+		they do not have to individually setup the environments and figure out dependencies for getting started. The QA team also benefits from the use of Docker since they
+		do not need to install all the dependent software and applications to test the code, this saves time. This also ensures that the working environment is consistent
+		across all the individuals involved in the process, starting from development to deployment. 
+	
         <h4 style="margin-top: 15px;">Subjects</h4>
-        <div class="accordion" id="goAccording">
+        <div class="accordion" id="dockerAccording">
           <div class="card">
             <div class="card-header" id="pr-tools">
               <h2 class="mb-0">
@@ -112,17 +110,17 @@
                 </button>
               </h2>
             </div>
-            <div id="collapseOne" class="collapse show" aria-labelledby="pr-tools" data-parent="#goAccording">
+            <div id="collapseOne" class="collapse show" aria-labelledby="pr-tools" data-parent="#dockerAccording">
                 <div class="card-body">
-                  <p><a href="#pr-go-env">Environment defaults & configuration</a></p>
-                  <p><a href="#pr-go-make">Makefile</a></p>
-                  <p><a href="#pr-go-auto-doc">Auto documentation</a></p>
-                  <p><a href="#pr-go-sonarcloud">Sonarcloud</a></p>
-                  <p><a href="#pr-go-test-coverage">Test coverage</a></p>
-                  <p><a href="#pr-go-github">GitHub integration</a></p>
-                  <p><a href="#pr-go-skaffold">Skaffold integration</a></p>
-                  <p><a href="#pr-go-FOSSA">FOSSA license scanning</a></p>
-                  <p><a href="../kubernetes/microk8sDevKit.html">Kubernetes + addons</a></p>
+                  <p><a href="#pr-go-env"><strong>NEED DOCKER INFO </strong>- Environment defaults & configuration</a></p>
+                  <p><a href="#pr-go-make"><strong>NEED DOCKER INFO </strong>Makefile</a></p>
+                  <p><a href="#pr-go-auto-doc"><strong>NEED DOCKER INFO </strong>Auto documentation</a></p>
+                  <p><a href="#pr-go-sonarcloud"><strong>NEED DOCKER INFO </strong>Sonarcloud</a></p>
+                  <p><a href="#pr-go-test-coverage"><strong>NEED DOCKER INFO </strong>Test coverage</a></p>
+                  <p><a href="#pr-go-github"><strong>NEED DOCKER INFO </strong>GitHub integration</a></p>
+                  <p><a href="#pr-go-skaffold"><strong>NEED DOCKER INFO </strong>Skaffold integration</a></p>
+                  <p><a href="#pr-go-FOSSA"><strong>NEED DOCKER INFO </strong>FOSSA license scanning</a></p>
+                  <p><a href="../kubernetes/microk8sDevKit.html"><strong>NEED DOCKER INFO </strong>Kubernetes + addons</a></p>
                 </div>
             </div>
           </div>
@@ -132,16 +130,16 @@
               <h2 class="mb-0">
                 <button type="button" class="btn btn-link" data-toggle="collapse" 
                   data-target="#collapseTwo">
-                  Daily Go
+                  Daily Docker
                 </button>									
               </h2>
             </div>
             <div id="collapseTwo" class="collapse" aria-labelledby="go-working-with" 
-              data-parent="#goAccording">
+              data-parent="#dockerAccording">
               <div class="card-body">
-                <p><a href="#go-commands">Go Commands</a></p>
-                <p><a href="#go-tools">Go Tools</a></p>
-                <p><a href="#go-testing">Go testing</a></p>
+                <p><a href="#docker-architecture">Docker Architecture</a></p>
+                <p><a href="#go-tools">Docker Technology</a></p>
+                <p><a href="#docker-commands">Docker Commands</a></p>
               </div>
             </div>
         </div>
@@ -154,7 +152,7 @@
                     </button>
                 </h2>
             </div>
-            <div id="collapseThree" class="collapse" aria-labelledby="serverless" data-parent="#goAccording">
+            <div id="collapseThree" class="collapse" aria-labelledby="serverless" data-parent="#dockerAccording">
                 <div class="card-body">
                   <p><a href="#go-microservices">Microservices</a></p>
                   <ul>
@@ -196,11 +194,11 @@
                     </button>
                 </h2>
             </div>
-            <div id="collapseFour" class="collapse" aria-labelledby="learning" data-parent="#goAccording">
+            <div id="collapseFour" class="collapse" aria-labelledby="learning" data-parent="#dockerAccording">
                 <div class="card-body">
-                  <p><a href="goDocumentation.html">Documentation</a></p>
-                  <p><a href="goVideo.html">Videos</a></p>
-                  <p><a href="goTutorials.html">Tutorials</a></p>
+                  <p><a href="dockerDocumentation.html">Documentation</a></p>
+                  <p><a href="dockerVideo.html">Videos</a></p>
+                  <p><a href="dockerTutorials.html">Tutorials</a></p>
                 </div>
             </div>
         </div>
@@ -209,7 +207,7 @@
     <h4 style="margin-top: 20px;">PavedRoad enhancements</h4>
 
       <div class="container" style="margin-top: 20px;">
-        <h5>Evnironment</h5>
+        <h5>Environment</h5>
         <a name="pr-go-env"></a>
       </div>
 
@@ -219,7 +217,7 @@
       </div>
 
       <div class="container" style="margin-top: 20px;">
-        <h5>Auto docuemntation</h5>
+        <h5>Auto documentation</h5>
         <a name="pr-go-auto-doc"></a>
       </div>
 
@@ -248,22 +246,150 @@
         <a name="pr-go-FOSSA"></a>
       </div>
 
-    <h4 style="margin-top: 20px;">Daily Go</h4>
+    <h4 style="margin-top: 20px;">Daily Docker</h4>
       <div class="container" style="margin-top: 20px;">
-        <h5>Go commands</h5>
-        <a name="go-commands"></a>
+        <h5>Docker Architecture</h5>
+        <a name="docker-architecture"></a>
       </div>
 
+	  <div>
+     Docker uses a client-server architecture. The Docker <em>client</em> talks to the Docker <em>daemon</em>, the <em>daemon</em>  performs the building, running and 
+	 distributing of the Docker containers. The Docker client and daemon can run on the same system or a Docker client can be connected to a remote Docker daemon. 
+	 The Docker client and daemon communicate using a REST API, over UNIX sockets or a network interface. 
+	  </div>
+	 <div>
+	  <li>Docker daemon</li>The Docker daemon (dockerd) listens for Docker API requests and manages Docker objects such as images, containers, networks, and 
+	  volumes. A daemon can also communicate with other daemons to manage Docker services.
+	  <li>Docker client</li> The Docker client (docker) is the primary way that many Docker users interact with Docker. When you use commands such as <code>
+	  docker run</code>
+	  the client sends these commands to dockerd, which carries them out. The docker command uses the Docker API. The Docker client can communicate with more than one daemon.
+	  <li>Docker registries</li>A Docker registry stores Docker images. Docker Hub is a public registry that anyone can use, and Docker is configured to look for 
+	  images on Docker Hub by default. You can even run your own private registry. If you use Docker Datacenter (DDC), it includes Docker Trusted Registry (DTR).
+      When the docker pull or docker run commands are used, the required images are pulled from your configured registry. When you use the docker push command, your 
+	  image is pushed to your configured registry.
+
+	  <li>Docker objects</li>When you use Docker, you are creating and using images, containers, networks, volumes, plugins, and other objects. Below is a brief overview 
+	  of the objects:	 
+	  <ul>
+	  <li>Images</li>An image is a read-only template with instructions for creating a Docker container. Often, an image is based on another image, with some
+	  additional customization. For example, you may build an image which is based on the ubuntu image, but installs the Apache web server and your application, 
+	  as well as the configuration details needed to make your application run. You might create your own images or you might only use those created by 
+	  others and published in a registry. To build your own image, you create a Dockerfile with a simple syntax for defining the steps needed to create the image and run it.
+	  Each instruction in a Dockerfile creates a layer in the image. When you change the Dockerfile and rebuild the image, only those layers which have changed are rebuilt.
+	  This is part of what makes images so lightweight, small, and fast, when compared to other virtualization technologies.
+		
+		<li>Containers</li> A container is a runnable instance of an image. You can create, start, stop, move, or delete a container using the Docker API or CLI. 
+		You can connect a container to one or more networks, attach storage to it, or even create a new image based on its current state. By default, a container is 
+		relatively well isolated from other containers and its host machine. You can control how isolated a container's network, storage, or other underlying subsystems 
+		are from other containers or from the host machine. A container is defined by its image as well as any configuration options you provide to it when you
+		create or start it. When a container is removed, any changes to its state that are not stored in persistent storage disappear.
+		
+		<div><strong>Example docker run command</strong></div>
+           The following command runs an ubuntu container, attaches interactively to the local command-line session, and runs /bin/bash. 
+		   <div><code>docker run -i -t ubuntu /bin/bash</code></div>
+           When this command is run, the following occurs (assuming the default registry configuration is being used):
+		    <ol>1. If the ubuntu image is not local, Docker pulls it from the configured registry, as though a the comand <code>docker pull ubuntu</code> had been run manually.</ol>
+			<ol>2.	Docker creates a new container, as though you had run a docker container create command manually.</ol>
+			<ol>3.	Docker allocates a read-write filesystem to the container, as its final layer. This allows a running container to create or modify files and directories in 
+					its local filesystem.</ol>
+			<ol>4.	Docker creates a network interface to connect the container to the default network, since specific networking options were not given. This includes assigning 
+					an IP address to the container. By default, containers can connect to external networks using the host machine's network connection.</ol>
+			<ol>5.	Docker starts the container and executes <code>/bin/bash</code>. Because the container is running interactively and attached to thhhe terminal (due to the -i and -t flags), 
+					a user can provide input using the keyboard while the output is logged to your terminal.</ol>
+			<ol>6.	When the user types exit to terminate the /bin/bash command, the container stops but is not removed. You can start it again or remove it.</ol>
+	    <li>Services</li> Services allow containers to scale across multiple Docker daemons, which all work together as a <em>swarm</em> with multiple managers and workers. Each member of
+		    a swarm is a Docker daemon, the daemons all communicate sing the Docker API. A services is used to define the desired state, such as the number of replicas of the service that must
+			be available at any given time. By default the service is load-balanced across all worker nodes. 
+	  <div>&nbsp</div>
+				  </ul>
+	 				 </div>
+	
+	  
       <div class="container" style="margin-top: 20px;">
-        <h5>Go tools</h5>
+        <h5>Docker Technology</h5>
         <a name="go-tools"></a>
       </div>
 
-      <div class="container" style="margin-top: 20px;">
-        <h5>Go testing</h5>
-        <a name="go-testing"></a>
-      </div>
+	   <div>Docker is written in <a href="https://golang.org/">Go</a> and takes advantage of some features of the Linux kernel to deliver its functionality.</div>
+	    <div>&nbsp</div>
+		
+	  <div><strong>Namespaces</strong></div>
+	  Docker uses a technology called namespaces to provide the isolated workspace called the container. When you run a container, Docker creates a set
+	   of namespaces for that container. These namespaces provide a layer of isolation. Each aspect of a container runs in a separate namespace and its access is limited to 
+	   that namespace. 
+	   <div>Docker Engine uses namespaces such as the following on Linux:</div>
+		<ul>
+		<li> The pid namespace: Process isolation (PID: process ID).</li>
+		<li> The net namespace: Managing network interfaces (NET: Networking). </li>
+		<li> The ipc namespace: Managing access to IPC resources (IPC: InterProcess Communication).</li>
+		<li> The mnt namespace: Managing filesystem mount points (MNT: Mount).</li>
+		<li> The uts namespace: Isolating kernel and version identifiers. (UTS: Unix Timesharing System).</li>
+				</ul> 
+				
+		<div><strong>Control Groups</strong></div>	
+		Docker Engine on Linux also relies on another technology called control groups (cgroups). A cgroup limits an application to a specific set of resources. 
+		Control groups allow Docker Engine to share available hardware resources to containers and optionally enforce limits and constraints. For example, you can limit 
+		the memory available to a specific container.
+		
+		<div><strong>Union file system</strong></div>
+		Union file systems, or UnionFS, are file systems that operate by creating layers, making them very lightweight and fast. Docker Engine uses UnionFS 
+		to provide the building blocks for containers. Docker Engine can use multiple UnionFS variants, including AUFS, btrfs, vfs, and DeviceMapper.
+		
+		<div><strong>Container format</strong></div>
+		Docker Engine combines the namespaces, control groups, and UnionFS into a wrapper called a container format. The default container format is libcontainer.
+		
+		<div><strong>containerd</strong></div>
+		containerd is an industry-standard container runtime with an emphasis on simplicity, robustness and portability. It is available as a daemon for Linux and Windows, 
+		which can manage the complete container lifecycle of its host system: image transfer and storage, container execution and supervision, low-level storage and 
+		network attachments, etc.
+		containerd is designed to be embedded into a larger system, rather than being used directly by developers or end-users.
 
+		<div><strong>RunC</strong></div>
+		RunC is a container runtime originally developed as part of Docker and later extracted out as a separate open source tool and library. As a "low level" container 
+		runtime, runC is mainly used by "high level" container runtimes (e.g. Docker) to spawn and run containers, although it can be used as a stand-alone tool.
+		
+		
+		
+      <div class="container" style="margin-top: 20px;">
+        <h5>Docker Commands</h5>
+        <a name="docker-commands"></a>
+      </div>
+	  <div><strong>Basic Commands</strong></div>
+	  The complete list of Docker commands are located in <a href="https://docs.docker.com/engine/reference/commandline/">docker docs</a>.
+	   <li><code>docker version [Options]</code></li>Check the currently used Docker version on your system.  
+	   <li><code>docker info</code></li>Dislay system wide information
+	   <li><code>docker --help</code></li>
+	   <li><code>docker login [options] [server]</code></li>Log in to a Docker registry
+	   
+	   <div>&nbsp</div>
+	   <div><strong>Images</strong></div>
+	    <li><code>docker images</code></li> Lists all the images on the local machine
+		<li><code>docker pull[image name]</code></li>Pull the image from Docker hub
+	    <li><code>docker rm [container id]</code></li>Removes/deltes  the stopped container
+		<li><code>docker rmi [image id]</code></li>Remove/delete the image from the local machine
+	  
+	  <div>&nbsp</div>
+	  
+	   <div><strong>Containers</strong></div>
+		<li><code>docker run [image name]</code></li>Runs the container from the image
+		<li><code>docker ps</code></li>Lists all running containers
+		<li><code>docker ps -a</code></li>Lists all containers, running and exited
+		<li><code>docker start[container id]</code></li>To start a container
+		<li><code>docker stop[container id]</code></li>To stop a container that is running
+		<li><code>docker exec it [container id] bash</code></li>To access the running container
+		<li><code>docker kill [container id]</code></li>Immediately stops the container
+		
+		<div>&nbsp</div>
+		<div><strong>System</strong></div>
+		 <li><code>docker stats [image name]</code></li>Use to live stream a container's runtime metrics. 
+		 <li><code>docker system df [image name]</code></li>Displays information regarding the amount of disk space used by the docker daemon
+	     <li><code>docker system prune [image name]</code></li>The best way to remove all stopped, dangling and unused networks 
+		
+	  
+	  
+	  
+	  
+	  
     <h4 style="margin-top: 20px;">Working with templates</h4>
       <div class="container" style="margin-top: 20px;">
         <h5>Microservices</h5>
@@ -280,7 +406,7 @@
           <h6>API Gateways</h6>
           <a name="go-ms-gateway"></a>
           <p>
-          Creates a microservcie that acts as a proxy between to domains.
+          Creates a microservice that acts as a proxy between to domains.
           </p>
 
           <h6>Aggregator</h6>
@@ -299,7 +425,7 @@
           <h6>Services</h6>
           <a name="go-ms-services"></a>
           <p>
-          Creates a microservcie that provides processing on object passed to it.  For example, 
+          Creates a microservice that provides processing on object passed to it.  For example, 
           authentication, translation, transformation, or annotation.
           </p>
 
