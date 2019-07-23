@@ -106,8 +106,7 @@
             </div>
             <div id="collapseOne" class="collapse show" aria-labelledby="pr-tools" data-parent="#goAccording">
                 <div class="card-body">
-                  <p><a href="#pr-go-env">Macros</a></p>
-                  
+                  <p><a href="#pr-go-env">Plugins</a></p>
                 </div>
             </div>
           </div>
@@ -125,14 +124,14 @@
               data-parent="#goAccording">
               <div class="card-body">
                 <p><a href="#go-commands">Vim Commands</a></p>
-                <p><a href="#go-tools">Go Tools</a></p>
-                <p><a href="#go-testing">Go testing</a></p>
+                <!--<p><a href="#go-tools">Go Tools</a></p>
+                <p><a href="#go-testing">Go testing</a></p>-->
               </div>
             </div>
         </div>
-        <div class="card">
+       <!-- <div class="card">
             <div class="card-header" id="templates">
-                <!--<h2 class="mb-0">
+                <h2 class="mb-0">
                     <button type="button" class="btn btn-link collapsed" data-toggle="collapse" 
                       data-target="#collapseThree">
                     Working with templates
@@ -145,33 +144,9 @@
                   <ul>
                     <a href="#go-ms-data">
                       <li>Data manager</li>
-                    </a>
-                  </ul>
-                  <ul>
-                    <a href="#go-ms-gateway">
-                      <li>API Gateway</li>
-                    </a>
-                  </ul>
-                  <ul>
-                    <a href="#go-ms-aggregator">
-                      <li>Aggregator</li>
-                    </a>
-                  </ul>
-                  <ul>
-                    <a href="#go-ms-ux">
-                      <li>User Interface Component</li>
-                    </a>
-                  </ul>
-                  <ul>
-                    <a href="#go-ms-service">
-                      <li>Service</li>
-                    </a>
-                  </ul>
-                  <p><a href="#go-CRD">Custom Resource Controller</a></p>
-                  <p><a href="#go-faas">Serverless</a></p>
                 </div>
-            </div>-->
-        </div>
+            </div>
+        </div>-->
         <div class="card">
             <div class="card-header" id="learning">
                 <h2 class="mb-0">
@@ -183,9 +158,9 @@
             </div>
             <div id="collapseFour" class="collapse" aria-labelledby="learning" data-parent="#goAccording">
                 <div class="card-body">
-                  <p><a href="goDocumentation.html">Documentation</a></p>
-                  <p><a href="goVideo.html">Videos</a></p>
-                  <p><a href="goTutorials.html">Tutorials</a></p>
+                  <p><a href="vimDocumentation.html">Documentation</a></p>
+                  <p><a href="vimVideo.html">Videos</a></p>
+                  <p><a href="vimTutorials.html">Tutorials</a></p>
                 </div>
             </div>
         </div>
@@ -194,21 +169,35 @@
     <h4 style="margin-top: 20px;">PavedRoad enhancements</h4>
 
       <div class="container" style="margin-top: 20px;">
-        <h5>Macros</h5>
+        <h5>Plugins</h5>
         <a name="pr-go-env"></a>
-      </div>
-
-      
+		<div>PavedRoad has installed <a href="https://github.com/pavedroad-io/pavedroad/blob/devkit-readmes/devkit/BOM_VIM_PLUGINS.md" target="_blank">5 vim plugins</a>.
+		  As a Developer the two plugins you need to be aware of are vim-go and deoplete-go.
+		  These supply respectively the vim go commands and vim go completion.
+		
+		The other three plugins are pre-requites for the deoplete-go plugin:
+		<ul>
+			<li>deoplete-go requires:</li>
+		  		<ul>deoplete.nvim plugin</ul>
+			<li>deoplete.nvim plugin requires:
+        		<ul>nvim-yarp plugin</ul>
+    	  		<ul>vim-hug-neovim-rpc plugin</ul>
+    	</ul>
+		For now we rely on the default settings for the plugins. More information about the vim-go settings can be located in section 7 of its
+		<a href="https://github.com/fatih/vim-go/blob/master/doc/vim-go.txt" target="_blank">document page.</a>
+		All of the settings for deoplete-go are described in the <a href="https://github.com/deoplete-plugins/deoplete-go" target="_blank">Available Settings</a> section of its main landing page.
+			</div>
+		</div>
 
     <h4 style="margin-top: 20px;">Daily Vim</h4>
+	
       <div class="container" style="margin-top: 20px;">
         <h5>Vim commands</h5>
         <a name="go-commands"></a>
 			<div><a href="https://www.cs.cmu.edu/~15131/f17/topics/vim/vim-cheatsheet.pdf">Vim CheatSheet</a></div>
-			<div><a href="https://www.maketecheasier.com/vim-keyboard-shortcuts-cheatsheet/">Vim Keyboard Cheatsheet</a></div>
-      </div>
+			
 
-      <div class="container" style="margin-top: 20px;">
+      <!--<div class="container" style="margin-top: 20px;">
         <h5>Go tools</h5>
         <a name="go-tools"></a>
       </div>
@@ -216,58 +205,9 @@
       <div class="container" style="margin-top: 20px;">
         <h5>Go testing</h5>
         <a name="go-testing"></a>
-      </div>
+      </div>-->
 
-    <h4 style="margin-top: 20px;">Working with templates</h4>
-      <div class="container" style="margin-top: 20px;">
-        <h5>Microservices</h5>
-        <a name="go-microservices"></a>
-
-          <h6>Data Managers</h6>
-          <a name="go-ms-data"></a>
-          <p>
-          Creates a microservice used for managing object persisted to storage such as a 
-          database.  When select, you must juse a data store.  Optionally, you can just an 
-          event source.
-          </p>
-
-          <h6>API Gateways</h6>
-          <a name="go-ms-gateway"></a>
-          <p>
-          Creates a microservcie that acts as a proxy between to domains.
-          </p>
-
-          <h6>Aggregator</h6>
-          <a name="go-ms-aggregator"></a>
-          <p>
-          Aggregates data from lower level data sources including event streams and returns 
-          information to the caller.
-          </p>
-
-          <h6>User Interface Components</h6>
-          <a name="go-ms-ux"></a>
-          <p>
-          Returns a UX component
-          </p>
-
-          <h6>Services</h6>
-          <a name="go-ms-services"></a>
-          <p>
-          Creates a microservcie that provides processing on object passed to it.  For example, 
-          authentication, translation, transformation, or annotation.
-          </p>
-
-        <h5>Custom Resource Controller</h5>
-        <a name="go-CRD"></a>
-        <p>TBD</p>
-
-        <h5>Serverless</h5>
-        <a name="go-faas"></a>
-        <p>TBD</p>
-
-      </div>
-
-
+   
       </div><!--//container-->
     </section><!--//about-->
     
