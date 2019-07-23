@@ -65,8 +65,8 @@
                           <a class="nav-link dropdown-toggle" data-toggle="dropdown"
                              href="#" role="button" aria-haspopup="true" aria-expanded="false">Guides</a>
                           <div class="dropdown-menu">
-                            <a class="dropdown-item" href="/devKits.html">DevKits</a>
-                            <a class="dropdown-item" href="/cicdLanding.html">CI/CD</a>
+                            <a class="dropdown-item" href="../devkitsLanding.html">DevKits</a>
+                            <a class="dropdown-item" href="../cicdLanding.html">CI/CD</a>
                             <a class="dropdown-item" onclick="return false;" href="#">Operations</a>
                             <a class="dropdown-item" onclick="return false;" href="#">Insights</a>
                           </div>
@@ -85,21 +85,13 @@
       class="about section">
       <div class="container" style="margin-top: 45px;">
         <span class="text-primary" style="font-size: 25px; virtical-align: text-top;">
-        <img src="../assets/images/Go-Logo/PNG/Go-Logo_Fuchsia.png" hieght="75" width="75"/>
-        training
+        <img src="../assets/images/vim.jpg" height="75" width="75"/>
+        Vim  
         </span>
         <h4 style="margin-top: 10px;">Overview</h4>
-        <p dir="ltr">Go is an open source programming language from Google with the first stable 
-        release in 2011. The Go source code can be found in <a taget="_blank" href="https://github.com/golang/go">
-          Github</a>. Go was built to resemble a simplified version of the C programming language. 
-        Go reduces the complexity that languages like C known for being difficult to work with and not 
-        secure, while Ruby is safe but slower and has many dependencies, Java which became too complex 
-        and verbose. Go removes these obstacles for ease of programming. Go is being used by over half 
-        of a million programmers in the <a taget="_blank" href="https://research.swtch.com/gophercount">
-          Go community</a>. It compiles at the machine level. </p>
-        <p dir="ltr">
-          Go was created at Google in 2007 by Robert Griesemer, Rob Pike, and Ken Thompson.
-        </p>
+        <p dir="ltr">Vim is a clone, with additions, of Bill Joy's vi text editor program for Unix. Vim's author, Bram Moolenaar, based it
+		upon the source code for a port of the Stevie editor to the Amiga and released a version to the public in 1991. 
+        
 
         <h4 style="margin-top: 15px;">Subjects</h4>
         <div class="accordion" id="goAccording">
@@ -114,15 +106,8 @@
             </div>
             <div id="collapseOne" class="collapse show" aria-labelledby="pr-tools" data-parent="#goAccording">
                 <div class="card-body">
-                  <p><a href="#pr-go-env">Environment defaults & configuration</a></p>
-                  <p><a href="#pr-go-make">Makefile</a></p>
-                  <p><a href="#pr-go-auto-doc">Auto documentation</a></p>
-                  <p><a href="#pr-go-sonarcloud">Sonarcloud</a></p>
-                  <p><a href="#pr-go-test-coverage">Test coverage</a></p>
-                  <p><a href="#pr-go-github">GitHub integration</a></p>
-                  <p><a href="#pr-go-skaffold">Skaffold integration</a></p>
-                  <p><a href="#pr-go-FOSSA">FOSSA license scanning</a></p>
-                  <p><a href="../kubernetes/microk8sDevKit.html">Kubernetes + addons</a></p>
+                  <p><a href="#pr-go-env">Macros</a></p>
+                  
                 </div>
             </div>
           </div>
@@ -132,14 +117,14 @@
               <h2 class="mb-0">
                 <button type="button" class="btn btn-link" data-toggle="collapse" 
                   data-target="#collapseTwo">
-                  Daily Go
+                  Daily Vim
                 </button>									
               </h2>
             </div>
             <div id="collapseTwo" class="collapse" aria-labelledby="go-working-with" 
               data-parent="#goAccording">
               <div class="card-body">
-                <p><a href="#go-commands">Go Commands</a></p>
+                <p><a href="#go-commands">Vim Commands</a></p>
                 <p><a href="#go-tools">Go Tools</a></p>
                 <p><a href="#go-testing">Go testing</a></p>
               </div>
@@ -147,7 +132,7 @@
         </div>
         <div class="card">
             <div class="card-header" id="templates">
-                <h2 class="mb-0">
+                <!--<h2 class="mb-0">
                     <button type="button" class="btn btn-link collapsed" data-toggle="collapse" 
                       data-target="#collapseThree">
                     Working with templates
@@ -185,7 +170,7 @@
                   <p><a href="#go-CRD">Custom Resource Controller</a></p>
                   <p><a href="#go-faas">Serverless</a></p>
                 </div>
-            </div>
+            </div>-->
         </div>
         <div class="card">
             <div class="card-header" id="learning">
@@ -209,49 +194,18 @@
     <h4 style="margin-top: 20px;">PavedRoad enhancements</h4>
 
       <div class="container" style="margin-top: 20px;">
-        <h5>Evnironment</h5>
+        <h5>Macros</h5>
         <a name="pr-go-env"></a>
       </div>
 
-      <div class="container" style="margin-top: 20px;">
-        <h5>Makefile</h5>
-        <a name="pr-go-make"></a>
-      </div>
+      
 
+    <h4 style="margin-top: 20px;">Daily Vim</h4>
       <div class="container" style="margin-top: 20px;">
-        <h5>Auto docuemntation</h5>
-        <a name="pr-go-auto-doc"></a>
-      </div>
-
-      <div class="container" style="margin-top: 20px;">
-        <h5>Sonoarcloud</h5>
-        <a name="pr-go-sonarcloud"></a>
-      </div>
-
-      <div class="container" style="margin-top: 20px;">
-        <h5>Test coverage</h5>
-        <a name="pr-go-test-coverage"></a>
-      </div>
-
-      <div class="container" style="margin-top: 20px;">
-        <h5>GitHub integrations</h5>
-        <a name="pr-go-github"></a>
-      </div>
-
-      <div class="container" style="margin-top: 20px;">
-        <h5>Skaffold integrations</h5>
-        <a name="pr-go-skaffold"></a>
-      </div>
-
-      <div class="container" style="margin-top: 20px;">
-        <h5>FOSSA license scanning</h5>
-        <a name="pr-go-FOSSA"></a>
-      </div>
-
-    <h4 style="margin-top: 20px;">Daily Go</h4>
-      <div class="container" style="margin-top: 20px;">
-        <h5>Go commands</h5>
+        <h5>Vim commands</h5>
         <a name="go-commands"></a>
+			<div><a href="https://www.cs.cmu.edu/~15131/f17/topics/vim/vim-cheatsheet.pdf">Vim CheatSheet</a></div>
+			<div><a href="https://www.maketecheasier.com/vim-keyboard-shortcuts-cheatsheet/">Vim Keyboard Cheatsheet</a></div>
       </div>
 
       <div class="container" style="margin-top: 20px;">
