@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">    
-    <link rel="shortcut icon" href="favicon.ico">  
+    <link rel="shortcut icon" href="../favicon.ico">    
     <link href='https://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'> 
     <!-- FontAwesome JS -->
@@ -65,8 +65,8 @@
                           <a class="nav-link dropdown-toggle" data-toggle="dropdown"
                              href="#" role="button" aria-haspopup="true" aria-expanded="false">Guides</a>
                           <div class="dropdown-menu">
-                            <a class="dropdown-item" href="/devKits.html">DevKits</a>
-                            <a class="dropdown-item" href="/cicd.html">CI/CD</a>
+                            <a class="dropdown-item" href="../devkitsLanding.html">DevKits</a>
+                            <a class="dropdown-item" href="../cicdLanding.html">CI/CD</a>
                             <a class="dropdown-item" onclick="return false;" href="#">Operations</a>
                             <a class="dropdown-item" onclick="return false;" href="#">Insights</a>
                           </div>
@@ -85,13 +85,15 @@
       class="about section">
       <div class="container" style="margin-top: 45px;">
         <span class="text-primary" style="font-size: 25px; virtical-align: text-top;">
-        <img src="../assets/images/kubernetes.png" hieght="75" width="75"/>
-        Training topic
+        <img src="../assets/images/skaffold-logo-100x42.png" height="42" width="100"/>
+        Tutorials
         </span>
-        <h4 style="margin-top: 10px;">Overview</h4>
-        <p>
-        Topic introduction
-        </p>
+      
+	 <div>&nbsp </div>
+	    <h4 style="margin-top: 10px;">Overview</h4>
+        <div>
+        These tutorials will assist with your usage of Skaffold.
+        </div>
 
         <h4 style="margin-top: 15px;">Subjects covered</h4>
         <div class="accordion" id="topicAccording">
@@ -99,21 +101,27 @@
             <div class="card-header" id="topic-working-with">
               <h2 class="mb-0">
                 <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#collapseOne">
-                  Area 1
+                  The Basics
                 </button>									
                 </h2>
             </div>
             <div id="collapseOne" class="collapse show" aria-labelledby="topic-working-with" data-parent="#topicAccording">
               <div class="card-body">
-                <p><a href="https://github.com/kelseyhightower/intro-to-kubernetes-workshop" target="_blank">
-                  item 1</a></p>
-                <p><a href="https://github.com/kelseyhightower/kubernetes-the-hard-way" target="_blank">
-                  item 2</a></p>
+               
+			   <div><a href="https://hackernoon.com/node-js-development-with-skaffold-file-sync-99c687b906d5" target="_blank">
+                  Node.js example</a></div>
+			   <div><a href="https://ahmet.im/blog/skaffold/" target="_blank">
+                  Skaffold: happy Kubernetes workflows</a></div>
+				  
+				  <div><a href="https://nemethgergely.com/using-kubernetes-for-local-development/" target="_blank">
+                  Using Kubernetes for Local Development</a></div>
+				  
+				  
               </div>
             </div>
           </div>
 
-          <div class="card">
+         <!-- <div class="card">
             <div class="card-header" id="addons">
                 <h2 class="mb-0">
                     <button type="button" class="btn btn-link collapsed" 
@@ -141,7 +149,7 @@
                 <div class="card-body">
                 </div>
             </div>
-          </div>
+          </div>-->
 
     </div>
       </div><!--//container-->
