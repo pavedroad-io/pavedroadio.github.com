@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">    
-    <link rel="shortcut icon" href="favicon.ico">  
+    <link rel="shortcut icon" href="../favicon.ico">  
     <link href='https://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'> 
     <!-- FontAwesome JS -->
@@ -65,8 +65,8 @@
                           <a class="nav-link dropdown-toggle" data-toggle="dropdown"
                              href="#" role="button" aria-haspopup="true" aria-expanded="false">Guides</a>
                           <div class="dropdown-menu">
-                            <a class="dropdown-item" href="/devKits.html">DevKits</a>
-                            <a class="dropdown-item" href="/cicd.html">CI/CD</a>
+                            <a class="dropdown-item" href="../devkitsLanding.html">DevKits</a>
+                            <a class="dropdown-item" href="../cicdLanding.html">CI/CD</a>
                             <a class="dropdown-item" onclick="return false;" href="#">Operations</a>
                             <a class="dropdown-item" onclick="return false;" href="#">Insights</a>
                           </div>
@@ -86,30 +86,32 @@
       <div class="container" style="margin-top: 45px;">
         <span class="text-primary" style="font-size: 25px; virtical-align: text-top;">
         <!-- change to proper image -->
-        <img src="../assets/images/kubernetes.png" hieght="75" width="75"/>
-        Training name
+         <img src="../assets/images/skaffold-logo-100x42.png" height="42" width="100"/>
+
+        Documentation
         </span>
         <h4 style="margin-top: 10px;">Overview</h4>
-        <p>
-        Introduction paragraph
-        </p>
+		<div>&nbsp;</div>
+        <div>
+        Use this page to assist you in getting to know Skaffold.
+        </div>
 
         <h4 style="margin-top: 15px;">Subjects covered</h4>
-        <div class="accordion" id="k8sAccording">
+        <div class="accordion" id="skaffoldAccording">
           <div class="card">
             <div class="card-header" id="topic-working-with">
               <h2 class="mb-0">
                 <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#collapseOne">
-                  Area 1
+                  Getting to Know Skaffold
                 </button>									
                 </h2>
             </div>
-            <div id="collapseOne" class="collapse show" aria-labelledby="topic-working-with" data-parent="#k8sAccording">
+            <div id="collapseOne" class="collapse show" aria-labelledby="topic-working-with" data-parent="#skaffoldAccording">
               <div class="card-body">
-                <p><a href="https://pepa.holla.cz/wp-content/uploads/2016/10/Getting-Started-with-Kubernetes.pdf" target="_blank">
-                  item 1</a></p>
-                <p><a href="https://go.heptio.com/rs/383-ENX-437/images/Managing_Kubernetes.pdf" target="_blank">
-                  item 2</a></p>
+                <div><a href="https://github.com/GoogleContainerTools/skaffold" target="_blank">
+                  GitHub - Skaffold</a></div>
+                <div><a href="https://skaffold.dev/docs" target="_blank">
+                  Offical Skaffold Documentation</a></div>
               </div>
             </div>
           </div>
@@ -119,43 +121,22 @@
                 <h2 class="mb-0">
                     <button type="button" class="btn btn-link collapsed" 
                       data-toggle="collapse" data-target="#collapseTwo">
-                      Area 2
+                      Articles, Books & Blogs
                     </button>
                 </h2>
             </div>
-            <div id="collapseTwo" class="collapse" aria-labelledby="addons" data-parent="#k8sAccording">
+            <div id="collapseTwo" class="collapse" aria-labelledby="addons" data-parent="#skaffoldAccording">
                 <div class="card-body">
-                  <p><a href="https://microk8s.io/docs/" target="_blank">
-                    item 1</a></p>
-                  <p><a href="https://tutorials.ubuntu.com/tutorial/install-a-local-kubernetes-with-microk8s#0" target="_blank">
-                    item 2</a></p>
-                  <p><a href="https://github.com/ubuntu/microk8s/blob/master/docs/community.md" target="_blank">
-                    item 3</a></p>
-                  <p><a href="https://docs.cilium.io/en/stable/gettingstarted/microk8s/" target="_blank">
-                    item 4</a></p>
+                  <div><a href="https://blog.shanelee.name/2019/02/20/skaffold-for-local-kubernetes-development/" target="_blank">
+                    Easy and Repeatable Kubnernetes Development, Blog</a></div>
+				  <div><a href="https://books.apple.com/fr/book/an-introduction-to-skaffold/id915259722?l=en" target="_blank">
+                    An Introduction to Skaffold, book</a></div>
+				  <div><a href="https://kubernetes.io/blog/2018/05/01/developing-on-kubernetes/" target="_blank">
+                    Developing on Kubernetes</a></div>
                 </div>
             </div>
           </div>
-
-          <div class="card">
-            <div class="card-header" id="faas">
-                <h2 class="mb-0">
-                    <button type="button" class="btn btn-link collapsed" 
-                      data-toggle="collapse" data-target="#collapseThree">
-                      Area 3
-                    </button>
-                </h2>
-            </div>
-            <div id="collapseThree" class="collapse" aria-labelledby="faas" data-parent="#k8sAccording">
-                <div class="card-body">
-                  <p><a href=" https://johnmccabe.net/technology/projects/openfaas-on-microk8s/" target="_blank">
-                    item 1</a></p>
-                  <p><a href="https://github.com/openfaas/faas" target="_blank">
-                    item 1</a></p>
-                </div>
-            </div>
-          </div>
-
+		  
       </div><!--//container-->
     </section><!--//about-->
     
