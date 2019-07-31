@@ -212,16 +212,129 @@
       <div class="container" style="margin-top: 20px;">
         <h5>Environment</h5>
         <a name="pr-go-env"></a>
+        <h6>.bashrc</h6>
+        <div>
+        The following environment variables are add or appended in your 
+        $HOME/.bashrc file
+        </div>
+        <table class="table table-sm">
+          <caption>PavedRoad environment variables</caption>
+          <thead>
+            <col width="25%">
+            <col width="75%">
+            <tr>
+              <th scope="col">Variable</th>
+              <th scope="col">Description</th>
+            </tr>
+          </thead>
+          <tr>
+            <td>PATH</td>
+            <td><ul>
+                <li>$HOME/bin is added for PR utilities</li>
+                <li>/usr/local/go/bin is added for go</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>EDITOR</td>
+            <td>is set to vim</td>
+          </tr>
+
+          <tr>
+            <td>OPENFASS_PASSWORD</td>
+            <td>pavedroad</td>
+          </tr>
+
+          <tr>
+            <td>OPENFASS_URL</td>
+            <td>is set to http://localhost:31112</td>
+          </tr>
+
+        </table>
+
       </div>
 
       <div class="container" style="margin-top: 20px;">
         <h5>Makefile</h5>
         <a name="pr-go-make"></a>
+        <table class="table table-sm">
+          <caption>Makefile options</caption>
+          <thead>
+            <col width="25%">
+            <col width="75%">
+            <tr>
+              <th scope="col">Command</th>
+              <th scope="col">Description</th>
+            </tr>
+          </thead>
+          <tr>
+            <td>make</td>                
+            <td>Test, compile, and deploy microservice</td>
+          </tr>
+          <tr>
+            <td>make check</td>
+            <td>Run all tests, code coverage, and linters</td>
+          </tr>
+          <tr>
+            <td>make generate</td>
+            <td>Enforce dependencies, generate dependency graph</td>
+          </tr>
+          <tr>
+            <td>make compile</td>
+            <td>Compile the binary and docker container</td>
+          </tr>
+          <tr>
+            <td>make show-coverage</td>
+            <td>Open a browser window showing code highlighed by coverage</td>
+          </tr>
+          <tr>
+            <td>make show-test</td>
+            <td>Open a browser window showing sonarcube test report</td>
+          </tr>
+          <tr>
+            <td>make start</td>
+            <td>Start a copy of the microservice locally</td>
+          </tr>
+          <tr>
+            <td>make stop</td>
+            <td>Stop local microservice</td>
+          </tr>
+          <tr>
+            <td>make clean</td>
+            <td>Remove executables and run go-clean</td>
+          </tr>
+          <tr>
+            <td>make install</td>
+            <td>Install microserice in /usr/local/bin</td>
+          </tr>
+          <tr>
+            <td>make kompose</td>
+            <td>Generate Kubernetes manifests</td>
+          </tr>
+          <tr>
+            <td>make fmt</td>
+            <td>Enforce go coding standard</td>
+          </tr>
+          <tr>
+            <td>make simplify</td>
+            <td>Simplify go code</td>
+          </tr>
+        </table>
       </div>
 
       <div class="container" style="margin-top: 20px;">
         <h5>Auto documentation</h5>
         <a name="pr-go-auto-doc"></a>
+        <h6>README.md</h6>
+        <div>
+        A README.md template is generate in the doc/ directory.  That file includes links to two auto generated artifacts:
+        <ul>
+          <li><span>microService.png: Is an auto generated graph of the microservices dependencies</li>
+          <li><span>microServiceAPII: Is an auto generated Swager 2.0 API documentation
+        </ul>
+        </div>
+        <h6>Swager 2.0</h6>
+
       </div>
 
       <div class="container" style="margin-top: 20px;">
@@ -242,6 +355,91 @@
       <div class="container" style="margin-top: 20px;">
         <h5>Skaffold integrations</h5>
         <a name="pr-go-skaffold"></a>
+        Durring the `make compile` phase of a build several things happen:
+        <ul>
+          <li>After the go binary is built, a copy is made in the local directory.  The local binary is necessary for building the docker image.  Docker expects all files to be in the current build context.  The build context is the directory passed to the docker deaemon.  In this case that is "." for the current working directory.</li>
+          <li>It then issues the `skaffold run` command.  This command builds the docker image, tags it with the current git commit-id, executes any specified container-tests, and then pushes the deployment to the local microk8s cluster.  This requires enabling the microk8s repository service with microk8s.enable repository.</li>
+        </ul>
+
+Sample output:
+<pre>
+<code>skaffold run</code>
+Generating tags...
+ - localhost:32000/prtoken -> localhost:32000/prtoken:8b1064b-dirty
+Tags generated in 11.022957ms
+Starting build...
+Building [localhost:32000/prtoken]...
+Sending build context to Docker daemon   14.8MB
+Step 1/11 : FROM golang:latest
+ ---> 9fe4cdc1f173
+Step 2/11 : LABEL "vendor": "PavedRoad.io"       "microservice": "prToken"       "description": "Stores OAUTH access tokens"       "version": "0.0.1"       "env": "dev"
+ ---> Using cache
+ ---> 71daff69908f
+Step 3/11 : MAINTAINER "support@pavedroad.io"
+ ---> Using cache
+ ---> 5d30e621e516
+Step 4/11 : ENV ms prToken
+---> Using cache
+ ---> fdfa5c9ea833
+Step 5/11 : ENV kevlar /kevlar
+ ---> Using cache
+ ---> 647b5d1d300b
+Step 6/11 : ENV kevlarbin $kevlar/$ms
+ ---> Using cache
+ ---> ab273d45fae4
+Step 7/11 : RUN mkdir ${kevlar}
+ ---> Using cache
+ ---> 90f18ba0f5e8
+Step 8/11 : WORKDIR ${kevlar}
+ ---> Using cache
+ ---> 85644e19edda
+Step 9/11 : COPY $ms $kevlar
+ ---> Using cache
+ ---> Using cache
+ ---> 7d62287c7b07
+Step 10/11 : EXPOSE 8081
+ ---> Using cache
+ ---> 6fc1d9521224
+Step 11/11 : CMD ["/bin/sh", "-c", "$kevlarbin"]
+ ---> Using cache
+ ---> f50a616e1f70
+Successfully built f50a616e1f70
+Successfully tagged localhost:32000/prtoken:8b1064b-dirty
+The push refers to repository [localhost:32000/prtoken]
+8bb9d43faf58: Preparing
+6ca26f3cae44: Preparing
+39ba5a88a3c4: Preparing
+56df4f4c91ea: Preparing
+510e5f32af35: Preparing
+2c8d31157b81: Preparing
+7b76d801397d: Preparing
+f32868cde90b: Preparing
+0db06dff9d9a: Preparing
+2c8d31157b81: Waiting
+7b76d801397d: Waiting
+f32868cde90b: Waiting
+0db06dff9d9a: Waiting
+56df4f4c91ea: Layer already exists
+510e5f32af35: Layer already exists
+8bb9d43faf58: Layer already exists
+6ca26f3cae44: Layer already exists
+39ba5a88a3c4: Layer already exists
+2c8d31157b81: Layer already exists
+7b76d801397d: Layer already exists
+f32868cde90b: Layer already exists
+0db06dff9d9a: Layer already exists
+8b1064b-dirty: digest: sha256:358438715d27deec4962dc38f02721c1a86eae0563507e027435742335a2ff8b size: 2214
+Build complete in 624.922056ms
+tarting deploy...
+kubectl client version: 1.14
+deployment.extensions/prtoken configured
+service/prtoken configured
+persistentvolumeclaim/roach-ui-claim0 configured
+deployment.extensions/roach-ui configured
+service/roach-ui configured
+Deploy complete in 2.144968707s
+You can also run [skaffold run --tail] to get the logs
+</pre>
       </div>
 
       <div class="container" style="margin-top: 20px;">
