@@ -11,7 +11,11 @@
     <link rel="shortcut icon" href="favicon.ico">  
     <link href='https://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'> 
-    <!-- FontAwesome JS -->
+    
+	<!-- breadcrumb -->
+	<link type="text/css" rel="stylesheet" href="../assets/css/pr.css"/>
+	
+	<!-- FontAwesome JS -->
     <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js" integrity="sha384-3LK/3kTpDE/Pkp8gTNp2gR/2gOiwQ6QaO7Td0zV76UFJVhqLl4Vl3KL1We6q6wR9" crossorigin="anonymous"></script>
 
     <!-- Global CSS -->
@@ -37,7 +41,7 @@
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
     
-    <!-- ******HEADER****** --> 
+     <!-- ******HEADER****** --> 
     <header id="header" class="header">  
         <div class="container">            
             <h1 class="logo float-left">
@@ -45,6 +49,8 @@
                     <span class="logo-title">PavedRoad.io</span>
                 </a>
             </h1><!--//logo-->              
+
+			
             <nav id="main-nav" class="main-nav navbar-expand-md float-right" role="navigation">
                 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse">
@@ -57,21 +63,21 @@
                 <div class="navbar-collapse collapse" id="navbar-collapse">
                     <ul class="nav navbar-nav">
                         <li class="nav-item sr-only"><a class="nav-link" href="/">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#docs">Documentation</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/#features">Features</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/#docs">Documentation</a></li>
                         <li class="nav-item dropdown">
                           <a class="nav-link dropdown-toggle" data-toggle="dropdown"
                              href="#" role="button" aria-haspopup="true" aria-expanded="false">Guides</a>
                           <div class="dropdown-menu">
-                            <a class="dropdown-item" href="./devkitsLanding.html">DevKits</a>
-                            <a class="dropdown-item" href="./cicdLanding.html">CI/CD</a>
-                            <a class="dropdown-item" onclick="return false;" href="#">Operations</a>
-                            <a class="dropdown-item" onclick="return false;" href="#">Insights</a>
+                            <a class="dropdown-item" href="../devKitsLanding.html">DevKits</a>
+                            <a class="dropdown-item" href="../cicdLanding.html">CI/CD</a>
+                            <a class="dropdown-item" href="../operationsLanding.html">Operations</a>
+                            <a class="dropdown-item" href="../insightsLanding.html">Insights</a>
                           </div>
                         </li>
-                        <li class="nav-item"><a class="nav-link" href="#license">License</a></li>                        
-                        <li class="nav-item last"><a class="nav-link" href="#contact">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/#license">License</a></li>                        
+                        <li class="nav-item last"><a class="nav-link" href="/#contact">Contact</a></li>
                     </ul><!--//nav-->
                 </div><!--//navabr-collapse-->
             </nav><!--//main-nav-->
@@ -79,18 +85,19 @@
     </header><!--//header-->
    
     <!-- ******ABOUT****** --> 
-    <section id="SkaffoldTraining" class="about section">
-	   <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
+      <section id="Skaffold Training" class="about section">
+	  
+	<nav aria-label="breadcrumb">
+     <ul class="prbreadcrumb breadcrumb">
        <li class="breadcrumb-item"><a href="/">Home</a></li>
        <li class="breadcrumb-item active" aria-current="page">Skaffold DevKit</li>
-     </ol>
+     </ul>
    </nav>
    
       <div class="container" style="margin-top: 45px;">
         <span class="text-primary" style="font-size: 25px; virtical-align: text-top;">
-        <img src="assets/images/skaffold-logo-100x42.png" height="42" width="100"/>
-           DevKit
+       <!-- <img src="assets/images/skaffold-logo-100x42.png" height="42" width="100"/> -->
+          Skaffold DevKit
         </span>
     
         <h4 style="margin-top: 10px;">Overview</h4>
@@ -107,8 +114,9 @@
         
 		<div>Skaffold features a five-stage workflow:</div>
   
+  
 		<div>
-        <img src="assets/images/skaffold_workflow.png" height="165" width="714"/>
+        <img src="assets/images/SkaffoldPipelineTopLevelDiagram2.png" height="165" width="714">
 		</div>
 		
         <h4 style="margin-top: 15px;">Subjects</h4>
