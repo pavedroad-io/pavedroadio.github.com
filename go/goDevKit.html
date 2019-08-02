@@ -11,7 +11,11 @@
     <link rel="shortcut icon" href="../favicon.ico">
     <link href='https://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'> 
-    <!-- FontAwesome JS -->
+    
+	<!-- breadcrumb -->
+	<link type="text/css" rel="stylesheet" href="../assets/css/pr.css"/>
+	
+	<!-- FontAwesome JS -->
     <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js" integrity="sha384-3LK/3kTpDE/Pkp8gTNp2gR/2gOiwQ6QaO7Td0zV76UFJVhqLl4Vl3KL1We6q6wR9" crossorigin="anonymous"></script>
 
     <!-- Global CSS -->
@@ -55,24 +59,24 @@
                     <span class="icon-bar"></span>
                 </button><!--//nav-toggle-->
                            
-                <div class="navbar-collapse collapse" id="navbar-collapse">
+                 <div class="navbar-collapse collapse" id="navbar-collapse">
                     <ul class="nav navbar-nav">
                         <li class="nav-item sr-only"><a class="nav-link" href="/">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#docs">Documentation</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/#features">Features</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/#docs">Documentation</a></li>
                         <li class="nav-item dropdown">
                           <a class="nav-link dropdown-toggle" data-toggle="dropdown"
                              href="#" role="button" aria-haspopup="true" aria-expanded="false">Guides</a>
                           <div class="dropdown-menu">
-                            <a class="dropdown-item" href="../devkitsLanding.html">DevKits</a>
+                            <a class="dropdown-item" href="../devKitsLanding.html">DevKits</a>
                             <a class="dropdown-item" href="../cicdLanding.html">CI/CD</a>
-                            <a class="dropdown-item" onclick="return false;" href="#">Operations</a>
-                            <a class="dropdown-item" onclick="return false;" href="#">Insights</a>
+                            <a class="dropdown-item" href="../operationsLanding.html">Operations</a>
+                            <a class="dropdown-item" href="../insightsLanding.html">Insights</a>
                           </div>
                         </li>
-                        <li class="nav-item"><a class="nav-link" href="#license">License</a></li>                        
-                        <li class="nav-item last"><a class="nav-link" href="#contact">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/#license">License</a></li>                        
+                        <li class="nav-item last"><a class="nav-link" href="/#contact">Contact</a></li>
                     </ul><!--//nav-->
                 </div><!--//navabr-collapse-->
             </nav><!--//main-nav-->
@@ -81,8 +85,16 @@
     
     <!-- ******ABOUT****** --> 
 
-    <section id="devKitTraining" 
-      class="about section">
+    <section id="devKitTraining" class="about section">
+	
+	<nav aria-label="breadcrumb">
+     <ul class="prbreadcrumb breadcrumb">
+       <li class="breadcrumb-item"><a href="/">Home</a></li>
+       <li class="breadcrumb-item active" aria-current="page">Go DevKit</li>
+     </ul>
+   </nav>
+	
+	
       <div class="container" style="margin-top: 45px;">
 	  <img src="../assets/images/Go-Logo/PNG/Go-Logo_Fuchsia.png" height="75" width="75"/>
         <span class="text-primary" style="font-size: 25px; virtical-align: text-top;"><span class="container" style="margin-top: 45px;">
@@ -91,12 +103,12 @@
 		
         <h4 style="margin-top: 10px;">Overview</h4>
         <p dir="ltr">Go is an open source programming language from Google with the first stable 
-        release in 2011. The Go source code can be found in <a taget="_blank" href="https://github.com/golang/go">
+        release in 2011. The Go source code can be found in <a href="https://github.com/golang/go" target="_blank">
           Github</a>. Go was built to resemble a simplified version of the C programming language. 
         Go reduces the complexity that languages like C known for being difficult to work with and not 
         secure, while Ruby is safe but slower and has many dependencies, Java which became too complex 
         and verbose. Go removes these obstacles for ease of programming. Go is being used by over half 
-        of a million programmers in the <a taget="_blank" href="https://research.swtch.com/gophercount">
+        of a million programmers in the <a href="https://research.swtch.com/gophercount" target="_blank">
           Go community</a>. It compiles at the machine level. </p>
         <p dir="ltr">
           Go was created at Google in 2007 by Robert Griesemer, Rob Pike, and Ken Thompson.
@@ -199,9 +211,9 @@
             </div>
             <div id="collapseFour" class="collapse" aria-labelledby="learning" data-parent="#goAccording">
                 <div class="card-body">
-                  <p><a href="goDocumentation.html">Documentation</a></p>
-                  <p><a href="goVideo.html">Videos</a></p>
-                  <p><a href="goTutorials.html">Tutorials</a></p>
+                  <p><a href="goDocumentation.html" target="_blank">Documentation</a></p>
+                  <p><a href="goVideo.html" target="_blank">Videos</a></p>
+                  <p><a href="goTutorials.html" target="_blank">Tutorials</a></p>
                 </div>
             </div>
         </div>
@@ -263,7 +275,7 @@
             </tr>
           </thead>
 <tr>
-   <td scope="row"><a href="#go build"<code>gobuild</a></code></td>
+   <td scope="row"><a href="#go build"<code>go build</a></code></td>
   <td>compile packages and dependencies</td>
 		   </tr>
 		  
@@ -273,7 +285,7 @@
 		   </tr>
 		   
 <tr>
-  <td scope="row"><a href="#go dep"><code>godep</code></a></td>
+  <td scope="row"><a href="#go dep"><code>dep</code></a></td>
   <td>download and install packages and dependencies</td>
 		   </tr>	
 		   
@@ -326,7 +338,7 @@
 			</tr>
 			
 			<tr>
-  <td scope="row"><a href="#gosec"><code>go sec</code></a></td>
+  <td scope="row"><a href="#gosec"><code>gosec</code></a></td>
   <td>
     Go security checker  
   </td>
@@ -410,7 +422,7 @@
           </li>
 		  
 		     <UL>
-			         <div><li><a href="https://golang.org/pkg/go/build/">Overview - Package build</a></div></li>
+			         <div><li><a href="https://golang.org/pkg/go/build/" target="_blank">Overview - Package build</a></div></li>
 	        </UL>
 			</UL>
 			
@@ -424,26 +436,26 @@
           </li>
 		  
 		     <UL>
-			         <div><li><a href="https://golang.org/pkg/cmd/go/internal/clean/">Overview - Package Clean</a></div></li>
+			         <div><li><a href="https://golang.org/pkg/cmd/go/internal/clean/" target="_blank">Overview - Package Clean</a></div></li>
 	        </UL>
 			</UL>
 		
    <a name="go dep"></a>
 		<UL> 
-          <li><code>go dep</code>
+          <li><code>dep</code>
             <div>
-               Dependency management tool for Go. <a href="https://golang.github.io/dep/">Github - godep</a>. Godep allows users to easily pin dependencies to the $GOPATH to a project, 
+               Dependency management tool for Go. <a href="https://golang.github.io/dep/" target="_blank">Github - dep</a>. Go dep allows users to easily pin dependencies to the $GOPATH to a project, 
 			   copy dependencies from a project to the $GOPATH and browse what dependencies are pinned via Godeps.json.
             </div>
           </li>
 		  
 		     <UL>
-                 <div><li><a href="https://github.com/golang/dep">Github - godep</a>
+                 <div><li><a href="https://github.com/golang/dep" target="_blank">Github - godep</a>
             </div></li>
 			
-			         <div><li><a href="https://golang.github.io/dep/docs/introduction.html">Getting Started - godep </a></div></li>
+			         <div><li><a href="https://golang.github.io/dep/docs/introduction.html" target="_blank">Getting Started - godep </a></div></li>
 				
-			         <div><li><a href="https://www.freecodecamp.org/news/an-intro-to-dep-how-to-manage-your-golang-project-dependencies-7b07d84e7ba5/"> An Intro to dep: How to Manage Your Golang 
+			         <div><li><a href="https://www.freecodecamp.org/news/an-intro-to-dep-how-to-manage-your-golang-project-dependencies-7b07d84e7ba5/" target="_blank"> An Intro to dep: How to Manage Your Golang 
 					       Project Dependencies</a></div></li>
                      <div><li><a href="https://golang.org/cmd/go/" target="_blank">Go Programming Language - Command Go</a></div></li>
 	        </UL>
@@ -460,7 +472,7 @@
           </li>
 		  
 		     <UL>
-			        <div><li><a href="https://godoc.org/github.com/rogpeppe/godef">Command godef</a></li></div>
+			        <div><li><a href="https://godoc.org/github.com/rogpeppe/godef" target="_blank">Command godef</a></li></div>
 	        </UL>
 			</UL>
 			
@@ -473,8 +485,8 @@
           </li>
 		  
 		     <UL>
-			        <div><li><a href="https://github.com/syndbg/goenv">Github - goenv</a></li></div>
-					 <div><li><a href="https://godoc.org/github.com/evilwire/go-env">Overview - Package goenv</a></div></li>
+			        <div><li><a href="https://github.com/syndbg/goenv" target="_blank">Github - goenv</a></li></div>
+					 <div><li><a href="https://godoc.org/github.com/evilwire/go-env" target="_blank">Overview - Package goenv</a></div></li>
 	        </UL>
 			</UL>
 			
@@ -488,8 +500,8 @@
           </li>
 		  
 		     <UL>
-			        <div><li><a href="https://github.com/golang/tools/tree/master/cmd/guru">Github</a></li></div>
-					 <div><li><a href="https://github.com/fatih/vim-go/blob/master/autoload/go/guru.vim">Vim integration for the Go guru</a></div></li>
+			        <div><li><a href="https://github.com/golang/tools/tree/master/cmd/guru" target="_blank">Github</a></li></div>
+					 <div><li><a href="https://github.com/fatih/vim-go/blob/master/autoload/go/guru.vim" target="_blank">Vim integration for the Go guru</a></div></li>
 		    </UL>
 			</UL>
 			
@@ -504,8 +516,8 @@
           </li>
 		  
 		     <UL>
-			        <div><li><a href="https://github.com/golang/tools/tree/master/cmd/goimports">Github</a></li></div>
-					 <div><li><a href="https://godoc.org/golang.org/x/tools/cmd/goimports">Command Goimports</a></div></li>
+			        <div><li><a href="https://github.com/golang/tools/tree/master/cmd/goimports" target="_blank">Github</a></li></div>
+					 <div><li><a href="https://godoc.org/golang.org/x/tools/cmd/goimports" target="_blank">Command Goimports</a></div></li>
 		    </UL>
 			</UL>
 			
@@ -519,8 +531,8 @@
           </li>
 		  
 		     <UL>
-			        <div><li><a href="https://github.com/golang/go/blob/master/src/cmd/go/internal/list/list.go">Github - golist</a></li></div>
-					<div><li><a href="https://golang.org/pkg/cmd/go/internal/list/">Overview - Package list</a></div></li>
+			        <div><li><a href="https://github.com/golang/go/blob/master/src/cmd/go/internal/list/list.go" target="_blank">Github - golist</a></li></div>
+					<div><li><a href="https://golang.org/pkg/cmd/go/internal/list/" target="_blank">Overview - Package list</a></div></li>
 	        </UL>
 			</UL>
 			
@@ -535,7 +547,7 @@
           </li>
 		  
 		     <UL>
-			        <div><li><a href="https://github.com/golang/tools/tree/master/cmd/gorename">Github</a></li></div>
+			        <div><li><a href="https://github.com/golang/tools/tree/master/cmd/gorename" target="_blank">Github</a></li></div>
 	        </UL>
 			</UL>
 	 
@@ -548,8 +560,8 @@
           </li>
 		  
 		     <UL>
-			        <div><li><a href="https://github.com/golang/go/blob/master/src/cmd/go/internal/run/run.go">Github - gorun</a></li></div>
-					<div><li><a href="https://golang.org/pkg/cmd/go/internal/run/">Overview - Package run</a></div></li>
+			        <div><li><a href="https://github.com/golang/go/blob/master/src/cmd/go/internal/run/run.go" target="_blank">Github - gorun</a></li></div>
+					<div><li><a href="https://golang.org/pkg/cmd/go/internal/run/" target="_blank">Overview - Package run</a></div></li>
 	        </UL>
 			</UL>
 	   
@@ -563,8 +575,8 @@
           </li>
 		  
 		     <UL>
-			        <div><li><a href="https://github.com/golang/go/blob/master/src/cmd/go/internal/test/test.go">Github - test</a></li></div>
-					<div><li><a href="https://golang.org/pkg/testing/">Overview - Package Testing</a></div></li>
+			        <div><li><a href="https://github.com/golang/go/blob/master/src/cmd/go/internal/test/test.go" target="_blank">Github - test</a></li></div>
+					<div><li><a href="https://golang.org/pkg/testing/" target="_blank">Overview - Package Testing</a></div></li>
 	        </UL>
 			</UL>
 	   
@@ -577,8 +589,8 @@
           </li>
 		  
 		     <UL>
-			        <div><li><a href="https://github.com/golang/go/blob/master/src/cmd/go/internal/version/version.go">Github - version</a></li></div>
-					<div><li><a href="https://godoc.org/golang.org/x/build/version">Overview - Package version</a></div></li>
+			        <div><li><a href="https://github.com/golang/go/blob/master/src/cmd/go/internal/version/version.go" target="_blank">Github - version</a></li></div>
+					<div><li><a href="https://godoc.org/golang.org/x/build/version" target="_blank">Overview - Package version</a></div></li>
 	        </UL>
 			</UL>
 		 
@@ -596,8 +608,8 @@
             </div>
           </li>
 		     <UL>
-			        <div><li><a href="https://github.com/golang/go/tree/master/src/cmd/vet">Github - vet</a></li></div>
-					<div><li><a href="https://golang.org/cmd/vet/">Overview - Command vet</a></div></li>
+			        <div><li><a href="https://github.com/golang/go/tree/master/src/cmd/vet" target="_blank">Github - vet</a></li></div>
+					<div><li><a href="https://golang.org/cmd/vet/" target="_blank">Overview - Command vet</a></div></li>
 	        </UL>
 			</UL>
 	   
@@ -616,14 +628,14 @@
 		
           <li><code>gosec</code>
             <div>
-              The Golang security checker tool for Go. <a href="https://github.com/securego/gosec">Github - gosec</a>. 
+              The Golang security checker tool for Go. <a href="https://github.com/securego/gosec" target="_blank">Github - gosec</a>. 
 			Go Sec inspects source code for security problems by scanning the Go AST. 
             </div>
           </li>
 		  
 		     <UL>
-			         <div><li><a href="https://securego.io/docs/rules/rule-intro.html">Go Sec - Guidelines</a></div></li>
-		             <div><li><a href="https://github.com/securego/gosec/blob/master/README.md">gosec - Golang Security Checker README</a></div></li>
+			         <div><li><a href="https://securego.io/docs/rules/rule-intro.html"  target="_blank">Go Sec - Guidelines</a></div></li>
+		             <div><li><a href="https://github.com/securego/gosec/blob/master/README.md" target="_blank">gosec - Golang Security Checker README</a></div></li>
 	        </UL>
 	    
 		
@@ -634,8 +646,9 @@
           </li>
 		  
 		     <UL>
-			         <div><li><a href="https://github.com/go-delve/delve">Github</a></div></li>
-		             <div><li><a href="https://www.jamessturtevant.com/posts/Using-the-Go-Delve-Debugger-from-the-command-line/">Using the Go Delve Debugger from the command line</a></div></li>
+			         <div><li><a href="https://github.com/go-delve/delve" target="_blank">Github</a></div></li>
+		             <div><li><a href="https://www.jamessturtevant.com/posts/Using-the-Go-Delve-Debugger-from-the-command-line/" target="_blank">Using the Go Delve Debugger
+					  from the command line</a></div></li>
 	        </UL>
 		
 			<li><code>gopls</code>
@@ -645,8 +658,8 @@
           </li>
 		  
 		     <UL>
-			         <div><li><a href="https://github.com/golang/go/wiki/gopls">Github</a></div></li>
-					 <div><li><a href="https://github.com/golang/tools/blob/master/cmd/gopls/main.go"></a><code>package main // import "golang.org/x/tools/cmd/gopls"</code></div></li>
+			         <div><li><a href="https://github.com/golang/go/wiki/gopls" target="_blank">Github</a></div></li>
+					 <div><li><a href="https://github.com/golang/tools/blob/master/cmd/gopls/main.go" target="_blank"></a><code>package main // import "golang.org/x/tools/cmd/gopls"</code></div></li>
 
 <div class="highlighter-rouge"><pre class="highlight"> type:
 
@@ -676,19 +689,21 @@ func main() {
           </li>
 		  
 		     <UL>
-			         <div><li><a href="https://github.com/alecthomas/gometalinter">Github</a></div></li>
-		             <div><li><a href="https://blog.sideci.com/utilize-gometalinter-which-can-parallel-execute-wholly-all-kinds-of-linter-for-the-go-language-b3a8edbdd89">How to Use and Support Tools</a></div></li>
+			         <div><li><a href="https://github.com/alecthomas/gometalinter" target="_blank">Github</a></div></li>
+		             <div><li><a href="https://blog.sideci.com/utilize-gometalinter-which-can-parallel-execute-wholly-all-kinds-of-linter-for-the-go-language-b3a8edbdd89" target="_blank">
+					 How to Use and Support Tools</a></div></li>
 	        </UL>
 		
 	<li><code>golangci-lint</code>
             <div>
-             golangci-lint is  a linters aggregator. It's fast: on average 5 times faster than gometalinter. It's easy to integrate and use, has nice output and has a minimum number of false positives.
+             golangci-lint is  a linters aggregator. It's fast: on average 5 times faster than gometalinter. It's easy to integrate and use, has nice output and has a minimum number of 
+			 false positives.
             </div>
           </li>
 		  
 		     <UL>
-			         <div><li><a href="https://github.com/golangci/golangci-lint">Github</a></div></li>
-		             <div><li><a href="https://github.com/golangci/golangci-lint/releases">golangci-lint Releases</a></div></li>
+			         <div><li><a href="https://github.com/golangci/golangci-lint" target="_blank">Github</a></div></li>
+		             <div><li><a href="https://github.com/golangci/golangci-lint/releases" target="_blank">golangci-lint Releases</a></div></li>
 	        </UL>
 		
 	<li><code>golint</code>
@@ -699,7 +714,7 @@ func main() {
           </li>
 		  
 		     <UL>
-			         <div><li><a href="https://github.com/golang/lint">Github</a></div></li>
+			         <div><li><a href="https://github.com/golang/lint" target="_blank">Github</a></div></li>
 	        </UL>
 		
 	<li><code>gotags</code>
@@ -711,8 +726,8 @@ func main() {
           </li>
 		  
 		     <UL>
-			         <div><li><a href="https://github.com/jstemmer/gotags">Github</a></div></li>
-					 <div><li><a href="https://flaviocopes.com/go-tags/">GoTags Explained</a></div></li>
+			         <div><li><a href="https://github.com/jstemmer/gotags" target="_blank">Github</a></div></li>
+					 <div><li><a href="https://flaviocopes.com/go-tags/" target="_blank">GoTags Explained</a></div></li>
 	        </UL>
 		
 		  
@@ -725,8 +740,8 @@ func main() {
           </li>
 		  
 		     <UL>
-			         <div><li><a href="https://github.com/fatih/gomodifytags">Github</a></div></li>
-					 <div><li><a href="https://studygolang.com/articles/10451">Writing a Go Tool to Parse and Modify Struct Tags</a></div></li>
+			         <div><li><a href="https://github.com/fatih/gomodifytags"  target="_blank">Github</a></div></li>
+					 <div><li><a href="https://studygolang.com/articles/10451" target="_blank">Writing a Go Tool to Parse and Modify Struct Tags</a></div></li>
 	        </UL>
 	
 	<li><code>gogetdoc</code>
@@ -737,7 +752,7 @@ func main() {
           </li>
 		  
 		     <UL>
-			         <div><li><a href="https://github.com/zmb3/gogetdoc">Github</a></div></li>
+			         <div><li><a href="https://github.com/zmb3/gogetdoc" target="_blank">Github</a></div></li>
 	        </UL>
 			</UL>
 			
@@ -750,15 +765,15 @@ func main() {
 		
 			<li><code>Go Testing</code>
             <div>
-            Go has a built-in testing command called go test and a package testing which combine to give a minimal but complete testing experience.The standard tool-chain also includes 
+            Go has a built-in testing command called go test and a package testing which combine to give a minimal but complete testing experience. The standard tool-chain also includes 
 			benchmarking and statement-based code coverage similar to NCover (.NET) or Istanbul (Node.js).
-			  <a href="https://blog.alexellis.io/golang-writing-unit-tests/">Source: Golang writing unit tests</a> 
+			  <a href="https://blog.alexellis.io/golang-writing-unit-tests/" target="_blank">Source: Golang writing unit tests</a> 
             </div>
           </li>
 		  
 		     <UL>
-			         <div><li><a href="https://www.calhoun.io/how-to-test-with-go/">How to test with Go</a></div></li>
-					 <div><li><a href="https://golang.org/pkg/testing/">Package Testing</a></div></li>
+			         <div><li><a href="https://www.calhoun.io/how-to-test-with-go/">How to test with Go  target="_blank"</a></div></li>
+					 <div><li><a href="https://golang.org/pkg/testing/">Package Testing  target="_blank"</a></div></li>
 	        </UL>
 			</UL>
 			
