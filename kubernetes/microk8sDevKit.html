@@ -247,7 +247,7 @@ serviceaccount/kube-dns unchanged
 configmap/kube-dns unchanged
 deployment.extensions/kube-dns configured
 Restarting kubelet
-[sudo] password for jscharber:
+[sudo] password for user:
 DNS is enabled
 </samp>
           </pre>
@@ -291,8 +291,8 @@ Ingress is disabled
           </div>
           <span class="text-success font-weight-bold">Starting</span>
           <pre>
-jscharber@ubuntu:~$ time microk8s.start
-[sudo] password for jscharber:
+user@ubuntu:~$ time microk8s.start
+[sudo] password for user:
 Started.
 Enabling pod scheduling
 node/ubuntu already uncordoned
@@ -300,11 +300,11 @@ node/ubuntu already uncordoned
 real	0m14.862s
 user	0m0.591s
 sys	0m0.761s
-jscharber@ubuntu:~$
+user@ubuntu:~$
           </pre>
           <span class="text-success font-weight-bold">Stopping</span>
           <pre>
-jscharber@ubuntu:~$ time microk8s.stop
+user@ubuntu:~$ time microk8s.stop
 Stopped.
 
 real	0m0.906s
@@ -317,8 +317,8 @@ In testing, it is often required to clear all previous state and
 start with a clean cluster.  The <code>microk8s.reset</code> accomplishes this.  When executes, it resets all the cluster state to that of a new cluster.
 
 <pre>
-jscharber@ubuntu:~$ /snap/bin/microk8s.reset
-[sudo] password for jscharber:
+user@ubuntu:~$ /snap/bin/microk8s.reset
+[sudo] password for user:
 Calling clean_cluster
 Cleaning resources in namespace container-registry
 endpoints "registry" deleted
@@ -351,7 +351,7 @@ Cleaning up addons client binaries..
           displays all services in the cluster irrespective of namespace.</p>
           <p>Example:</p>
           <pre>
-jscharber@ubuntu:~$ microk8s.kubectl get services --all-namespaces
+user@ubuntu:~$ microk8s.kubectl get services --all-namespaces
 NAMESPACE            NAME                   TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)                               AGE
 container-registry   registry               NodePort    10.152.183.73    <none>        5000:32000/TCP                        46s
 default              default-http-backend   ClusterIP   10.152.183.215   <none>        80/TCP                                39s
@@ -369,7 +369,7 @@ kube-system          monitoring-influxdb    ClusterIP   10.152.183.228   <none> 
           <p>Enter: <code>microk8s.kubectl cluster-info</code> as shown below.</p>
           <p>Example</p>
           <pre>
-jscharber@ubuntu:~$ microk8s.kubectl cluster-info
+user@ubuntu:~$ microk8s.kubectl cluster-info
 Kubernetes master is running at https://127.0.0.1:16443
 Heapster is running at https://127.0.0.1:16443/api/v1/namespaces/kube-system/services/heapster/proxy
 KubeDNS is running at https://127.0.0.1:16443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
@@ -377,7 +377,7 @@ Grafana is running at https://127.0.0.1:16443/api/v1/namespaces/kube-system/serv
 InfluxDB is running at https://127.0.0.1:16443/api/v1/namespaces/kube-system/services/monitoring-influxdb:http/proxy
 
 To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
-jscharber@ubuntu:~$
+user@ubuntu:~$
           </pre>
           <h6>To get details on a service.</h6>
           <p>Use the --namespace=xxxxx option to limit your search, followed by 
@@ -392,7 +392,7 @@ jscharber@ubuntu:~$
           For example, <code>microk8s.kubectl --namespace=kube-system describe service kubernetes-dashboard</code><br>
           <pre>
 
-jscharber@ubuntu:~$ microk8s.kubectl --namespace=kube-system describe service kubernetes-dashboard
+user@ubuntu:~$ microk8s.kubectl --namespace=kube-system describe service kubernetes-dashboard
 Name:              kubernetes-dashboard
 Namespace:         kube-system
 Labels:            k8s-app=kubernetes-dashboard
@@ -470,7 +470,7 @@ Events:            <none>
             command in a program, add the <code>--yaml</code> option.
             </p>
             <pre>
-jscharber@ubuntu:~$ microk8s.status --yaml
+user@ubuntu:~$ microk8s.status --yaml
 microk8s:
   running: true
 addons:
@@ -508,7 +508,7 @@ addons:
             issues and recommend actions.
             </p>
             <pre><code>
-jscharber@ubuntu:~$ microk8s.inspect
+user@ubuntu:~$ microk8s.inspect
 Inspecting services
   Service snap.microk8s.daemon-containerd is running
   Service snap.microk8s.daemon-apiserver is running
@@ -532,7 +532,7 @@ Building the report tarball
             </code></pre>
 
             <code><pre>
-jscharber@ubuntu:~$ journalctl -u snap.microk8s.daemon-etc.service.microk8s.inspect
+user@ubuntu:~$ journalctl -u snap.microk8s.daemon-etc.service.microk8s.inspect
 -- Logs begin at Sun 2019-05-26 00:08:04 PDT, end at Sat 2019-06-08 08:12:23 PDT
 -- No entries --
             </code></pre>
@@ -557,7 +557,7 @@ jscharber@ubuntu:~$ journalctl -u snap.microk8s.daemon-etc.service.microk8s.insp
             </ul>
             <b>Sample output</b><br>
             <pre><code>
-jscharber@ubuntu:~$ microk8s.config
+user@ubuntu:~$ microk8s.config
 apiVersion: v1
 clusters:
 - cluster:
