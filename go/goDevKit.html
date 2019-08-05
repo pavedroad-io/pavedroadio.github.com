@@ -325,31 +325,257 @@
       <div class="container" style="margin-top: 20px;">
         <h5>Auto documentation</h5>
         <a name="pr-go-auto-doc"></a>
-        <h6>README.md</h6>
+        <h6>template.html</h6>
         <div>
-        A README.md template is generate in the doc/ directory.  That file includes links to two auto generated artifacts:
+        PaveRoad follows the practice that the code is the documentation.
+        To that end, we use go-doc and swagger inline with the code to auto 
+        generate documentation.
+        </div>
+        <div>
+        A template.html is generate in the doc/ directory, where "template",
+        is the name of your service.  That file includes links to two 
+        auto generated artifacts:
         <ul>
-          <li><span>microService.png: Is an auto generated graph of the microservices dependencies</li>
-          <li><span>microServiceAPII: Is an auto generated Swager 2.0 API documentation
+          <li><span>template.png: Is an auto generated graph of the microservices dependencies</li>
+          <li><span>api.html: Is an auto generated Swager 2.0 API documentation
         </ul>
         </div>
+
+        <h6>Sample template.html</h6>
+        <div style="margin-bottom: 15px;">
+          <img src="../assets/images/sample-template-doc.png">
+        </div>
+        
+        <h6>Sample api.html</h6>
+        <div style="margin-bottom: 15px;">
+          <img src="../assets/images/sample-api-doc.png">
+        </div>
+        
         <h6>Swager 2.0</h6>
+        <div>
+          Documentation is embedded in the code using comments that contain <code>swagger:tag-name</code>.  For example, the following example uses the "swagger:meta" tag.  go-swagger markup supports the following tags:
+        </div>
+        <ul>
+          <li>swagger:meta</li>
+          <li>swagger:route</li>
+          <li>swagger:parameters</li>
+          <li>swagger:response</li>
+          <li>swagger:operation</li>
+          <li>swagger:model</li>
+          <li>swagger:allOf</li>
+          <li>swagger:strfmt</li>
+          <li>swagger:discriminated</li>
+          <li>swagger:ignore</li>
+        </ul>
+
+        <div>
+          The file <code>template.go</code> contains the summary information 
+          for your code.
+        </div>
+        <pre>
+// Microservice for mapping multiple 3rd party id into internal ID
+//
+// Given a key, login, or email address return the PR UUID
+//
+// Terms Of Service:
+//
+// there are no TOS at this moment, use at your own risk we take no responsibility
+//
+//     Schemes: http, https
+//     Host: api.pavedroad.io
+//     BasePath: /api/v1/namespace/pavedroad.io/prUserIdMappers
+//     Version: 0.0.1
+//     License: Apache 2
+//     Contact: John Scharber<john@pavedroad.io> http://john.pavedroad.io
+//
+//     Consumes:
+//     - application/json
+//
+//     Produces:
+//     - application/json
+//
+// swagger:meta
+        </pre>
+        <div>
+          The file <code>templateApp.go</code> will define your routes as 
+          shown in the example below.  The route takes an HTTP verb and 
+          an end-point.  Those are followed by a tag for grouping and 
+          a reference to the function that it calls
+        </div>
+        <pre>
+// getUserIdMappers swagger:route GET /prUserIdMappersLIST userIdMappers getUserIdMappers
+//
+// Returns a list of tokens
+//
+// Responses:
+//    default: genericError
+//        200: tokenList
+func (a *prUserIdMapperApp) getUserIdMappers(w http.ResponseWriter, r *http.Request) {
+  UserIdMapper := prUserIdMapper{}
+        </pre>
+        <div>
+          The file <code>templatModel.go</code> contains responses, and swagger models.
+        </div>
+        <pre>
+// Return a basic message as json in the body
+//
+// swagger:response statusResponse
+type statusResponse struct {
+  // in: body
+  msg error `json:"message"`
+}
+        </pre>
+        <div>Example model</div>
+        <pre>
+// prUserIdMapper data structure for mapper storage
+// It is used to map a 3rd party credential to an interanl UUID
+//
+// swagger:model userIdMapper
+type prUserIdMapper struct {
+  // API verions
+  //
+  // required: true
+  APIVersion string `json:"apiVersion"`
+
+  // Object verions
+  //
+  // required: true
+  ObjVersion string `json:"objVersion"`
+
+  // Type of object
+  //
+  // required: true
+  Kind       string `json:"kind"`
+
+  // 3rd party credential: email, login, or key
+  //
+  // required: true
+  Credential string `json:"login"`
+
+  // PR user ID
+  //
+  // required: true
+  UserUUID   string `json:"userUUID"`
+
+  // Number of times this user has logged in
+  //
+  // readonly
+  LoginCount int    `json:"loginCount"`
+
+  // Time this record was creaetd
+  //
+  // readonly
+  Created    string `json:"created,ignoreempty"`
+
+  // Time this record was last updated
+  //
+  // readonly
+  Updated    string `json:"updated,ignoreempty"`
+
+  // Is this an active user true or false, default true
+  //
+  // required: false
+  Active     string `json:"active"`
+}
+        </pre>
+        <div>
+          The following links provide more details and examples for swagger 
+          and the tools we use:
+        </div>
+        <ul>
+          <li><a href="https://spin.atomicobject.com/2018/08/30/swagger-api-intro/">
+            Introduction to Swagger
+            </a></li>
+          <li><a href="https://github.com/go-swagger/go-swagger">
+            go-swagger: Swagger generation for Go 
+            </a></li>
+          <li><a href="https://github.com/go-swagger/go-swagger/tree/master/fixtures/goparsing/petstore">
+              Petstore example go markup</a></li>
+            <li><a href="https://twskj.github.io/pretty-swag/">
+            Pretty-swag: swagger json > html
+              </a></li>
+        </ul>
 
       </div>
 
       <div class="container" style="margin-top: 20px;">
-        <h5>Sonoarcloud</h5>
+        <h5>Sonarcloud</h5>
         <a name="pr-go-sonarcloud"></a>
+        <div>
+          <h6>artifacts directory</h6>
+          Contains build artificats produced by sonarlcloud scanner, 
+          linters, and code coverage.
+        </div>
+        <div>
+          <h6>sonarcloud.sh</h6>
+          Executes the sonarcloud scanner and uploads the results.
+          You will see output similar to the sample provided below when
+          a build is executed.
+          <pre>
+INFO: Scanner configuration file: /home/jscharber/eng/sonarcloud/sonar-scanner-3.3.0.1492-linux/conf/sonar-scanner.properties
+INFO: Project root configuration file: /home/jscharber/eng/kevlar-web/dev/services/src/prToken/sonar-project.properties
+INFO: SonarQube Scanner 3.3.0.1492
+INFO: Java 1.8.0_121 Oracle Corporation (64-bit)
+INFO: Linux 4.15.0-55-generic amd64
+INFO: User cache: /home/jscharber/.sonar/cache
+INFO: SonarQube server 8.0.0
+INFO: Default locale: "en_US", source code encoding: "UTF-8" (analysis is platform dependent)
+...
+INFO: ANALYSIS SUCCESSFUL, you can browse https://sonarcloud.io/dashboard?id=pavedroad-io_kevlar-web
+INFO: Note that you will be able to access the updated dashboard once the server has processed the submitted analysis report
+INFO: More about the report processing at https://sonarcloud.io/api/ce/task?id=AWxh5-q7iOX_Qgt-OYK0
+INFO: Analysis total time: 24.533 s
+INFO: ------------------------------------------------------------------------
+INFO: EXECUTION SUCCESS
+INFO: ------------------------------------------------------------------------
+INFO: Total time: 1:15.934s
+INFO: Final Memory: 46M/560M
+INFO: ------------------------------------------------------------------------
+          </pre>
+        </div>
+        <div style="margin-bottom: 15px;">
+          <h6>Make file support</h6>
+          Issuing the command <code>make show-coverage</code> will launch
+          your browser and bring up sonarcube test reports.
+        </div>
+        <div margin-bottom: 15px;">
+          <img src="../assets/images/sonar-summary.png">
+        </div>
+        <div style="margin-bottom: 15px;">
+          <h6>doc/templateDoc.html</h6>
+          Build bagges are for sonar cloud and FOSSA license scanning are
+          added to the CI section
+          <img src="../assets/images/sonarcloud.png">
+        </div>
       </div>
 
       <div class="container" style="margin-top: 20px;">
         <h5>Test coverage</h5>
         <a name="pr-go-test-coverage"></a>
+        <div>
+          <h6>Go test coverage</h6>
+          <div style="margin-bottom: 15px;">
+          Go test coverage is configured by default.  Test coverage output
+          is storred in the artifacts directory.  To view the test coverage 
+          report, enter <code>make show-coverage</code> on the command line.
+          Alternatively, you can run <code>go tool cover -html=artifacts/coverage.out</code>
+          </div>
+          
+          <div>
+          <img src="../assets/images/test-coverage.png">
+            
+          </div>
+        </div>
       </div>
 
       <div class="container" style="margin-top: 20px;">
         <h5>GitHub integrations</h5>
         <a name="pr-go-github"></a>
+        Currently, we integrate the following:
+        <ul>
+          <li>FOSSA license scanning</li>
+          <li>Sonar Cloud</li>
+        </ul>
       </div>
 
       <div class="container" style="margin-top: 20px;">
@@ -445,7 +671,11 @@ You can also run [skaffold run --tail] to get the logs
       <div class="container" style="margin-top: 20px;">
         <h5>FOSSA license scanning</h5>
         <a name="pr-go-FOSSA"></a>
+        The free version of FOSSA license scanning is configured by default.
+        A badge is added to the read me document.  Click on that link will
+        take you to the details results of the most recent scan.
       </div>
+      <img src="../assets/images/fossa-scan.png">
 
     <h4 style="margin-top: 20px;">Daily Go</h4>
       <div class="container" style="margin-top: 20px;">
