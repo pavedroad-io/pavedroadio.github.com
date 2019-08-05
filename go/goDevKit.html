@@ -1187,34 +1187,288 @@ func main() {
 	     <div class="container" style="margin-top: 20px;">
 	    <h5 style="margin-top: 20px;">Go Testing</h5>
         <a name="go-testing"></a>
-		<a name="pr-command-tools"></a>		
+		    <a name="pr-command-tools"></a>		
 		
 		
-			<li><code>Go Testing</code>
+			    <li><code>go test</code>
             <div>
-            Go has a built-in testing command called go test and a package testing which combine to give a minimal but complete testing experience.The standard tool-chain also includes 
-			benchmarking and statement-based code coverage similar to NCover (.NET) or Istanbul (Node.js).
-			  <a href="https://blog.alexellis.io/golang-writing-unit-tests/">Source: Golang writing unit tests</a> 
+              Go has a built-in testing command called <code>go test</code>
+              and a package testing which combine to give a solid starting 
+              point. The standard tool-chain also includes benchmarking and 
+              statement-based code coverage similar to NCover (.NET) 
+              or Istanbul (Node.js).
+			      <a href="https://blog.alexellis.io/golang-writing-unit-tests/">Source: Golang writing unit tests</a> 
             </div>
           </li>
 		  
-		     <UL>
-			         <div><li><a href="https://www.calhoun.io/how-to-test-with-go/">How to test with Go</a></div></li>
-					 <div><li><a href="https://golang.org/pkg/testing/">Package Testing</a></div></li>
-	        </UL>
-			</UL>
+		       <ul>
+			       <div>
+               <li>
+                 <a href="https://www.calhoun.io/how-to-test-with-go/">How to test with Go</a>
+               </li>
+             </div>
+					   <div>
+               <li>
+                 <a href="https://golang.org/pkg/testing/">Package Testing</a>
+               </li>
+             </div>
+	        </ul>
+			</div>
 			
-			
-			
-			
-		 
-			
-		
- 
-	  
        <div class="container" style="margin-top: 20px;">
-        <h4 style="margin-top: 20px;">Working with templates</h4>
-	 
+        <h4 style="margin-top: 20px;">Working with templates, aka Low-Code</h4>
+        <div>
+          One of the key advantages of PavedRoad DevKits is pre-packaged 
+          templates the implement best practices for writing clound native
+          applications.  You download and use template using the <code>
+            road-ctl</code> command line interface (CLI).
+        </div>
+        <h5>road-ctl</h5>
+        <div>
+          The <code>road-ctl</code> CLI allows you to manage your development
+          and CI/CD tool network.  It is modeled after Kubernetes kubectl. 
+          Each command takes a very, noun and optional name along with a 
+          series of options.
+        </div>
+        <div class="font-weight-bold" style="margin: 10px 10px;">
+        road-ctl VERB NOUN NAME [options]
+        </div>
+        <div>
+          <table class="table">
+            <caption style="caption-side: top;">road-ctl VERBs meanings</caption>
+            <thead>
+              <tr>
+                <th width="20%">VERB</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>edit</td>
+                <td>
+                  Invoke the configured EDITOR and load the named resources YAML
+                </td>
+              </tr>
+
+              <tr>
+                <td>get</td>
+                <td>
+                  Return summary information about a resource(s)
+                </td>
+              </tr>
+
+              <tr>
+                <td>describe</td>
+                <td>
+                  Return detailed information about a resource(s)
+                </td>
+              </tr>
+
+              <tr>
+                <td>explain</td>
+                <td>
+                  Provide documentation about a resource(s)
+                </td>
+              </tr>
+
+              <tr>
+                <td>delete</td>
+                <td>
+                  Delete all or a named resource(s)
+                </td>
+              </tr>
+
+              <tr>
+                <td>replace</td>
+                <td>
+                  Delete then create the named resource(s)
+                </td>
+              </tr>
+
+              <tr>
+                <td>create</td>
+                <td>
+                  Create a new instance of a resource
+                </td>
+              </tr>
+
+              <tr>
+                <td>apply</td>
+                <td>
+                  Apply new configuration to named resource
+                </td>
+              </tr>
+
+              <tr>
+                <td>config</td>
+                <td>
+                  Manage road-ctl configuration options
+                </td>
+              </tr>
+
+              <tr>
+                <td>logs</td>
+                <td>
+                  Get logs for the named resource
+                </td>
+              </tr>
+
+              <tr>
+                <td>events</td>
+                <td>
+                  Get events for the named resource
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div>
+          <table class="table">
+            <caption style="caption-side: top;">road-ctl NOUNs meanings</caption>
+            <thead>
+              <tr>
+                <th width="20%">NOUN</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>environments</td>
+                <td>
+                  Manage deployment environments like dev, test, staggin, and production
+                </td>
+              </tr>
+
+              <tr>
+                <td>builders</td>
+                <td>
+                  Manage tools that build applications
+                </td>
+              </tr>
+
+              <tr>
+                <td>packagers</td>
+                <td>
+                  Manage container generation
+                </td>
+              </tr>
+
+              <tr>
+                <td>taggers</td>
+                <td>
+                  Manage tagging of builds, container images, artificats, and deployments
+                </td>
+              </tr>
+
+              <tr>
+                <td>tests</td>
+                <td>
+                  Manage test execution and testing such as; unit, function, security, ...
+                </td>
+              </tr>
+
+              <tr>
+                <td>templates</td>
+                <td>
+                  Manage low-code templates
+                </td>
+              </tr>
+
+              <tr>
+                <td>tool-networks</td>
+                <td>
+                  Manage the tool-network used to build pipelines
+                </td>
+              </tr>
+
+              <tr>
+                <td>artifacts</td>
+                <td>
+                  Manage build and deployment artifacts such as test results
+                </td>
+              </tr>
+
+              <tr>
+                <td>providers</td>
+                <td>
+                  Manage cloud providers public or private
+                </td>
+              </tr>
+
+              <tr>
+                <td>deployments</td>
+                <td>
+                  Manage deployments pipelines
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+
+        <h6>road-ctl templates commands</h6>
+        <pre>
+Provide a list of local templates
+---------------------------------
+road-ctl get templates
+
+Initialize, aka download or update local templates
+--------------------------------------------------
+road-ctl get templates --init
+
+Create a new service,aka name, from the specified template
+----------------------------------------------------------
+road-ctl create templates name --tempalte name
+
+example,
+road-ctl create templates myNewService --template datamgr
+
+This results in a new directory "src/myNewServcie" at the
+current working directory. In that directory, you will find
+a file call myNewService.yaml.
+
+Edit service options
+----------------------------------------------------------
+road-ctl edit templates name
+
+example,
+road-ctl edit templates myNewService
+
+To edit service options
+
+Apply edited service options
+----------------------------------------------------------
+road-ctl apply templates myNewService
+
+Describe details of a template
+----------------------------------------------------------
+road-ctl describe templates data-mgr
+
+Get documentation for a template with explain
+----------------------------------------------------------
+road-ctl explain templates data-mgr
+        </pre>
+        <h6>Template directory structure</h6>
+        <div>
+          Templates are organized into three catagories:
+          <ul>
+            <li>crd: provides templates for Kubernetes custom resource definition and their custom controllers</li>
+            <li>microservcies: Various microservice design patterns</li>
+            <li>serverless: Knative or Open-faas serverless functions</li>
+          </ul>
+        </div>
+        <div>
+          Inside of each top level template type, you will find three 
+          different directories that identify the stability of the 
+          templates they contain.
+          <ul>
+            <li>ga: General Availability, considered stable</li>
+            <li>incubation: Not fully mature, not ready for production use</li>
+            <li>experimental: As implied by the name</li>
+          </ul>
+        </div>
+
         <h5>Microservices</h5>
         <a name="go-microservices"></a>
 
@@ -1254,11 +1508,41 @@ func main() {
 
         <h5>Custom Resource Controller</h5>
         <a name="go-CRD"></a>
-        <p>TBD</p>
+        <div>CRDs are supported via kubebuilder.  Full documenation can
+        be found at <a href="https://book.kubebuilder.io/">
+          book.kubebuilder.io</a>. There is also a quick 
+        <a href="https://book.kubebuilder.io/quick-start.html">
+          start guide</a>.
+        </div>
 
-        <h5>Serverless</h5>
+        <h5 style="margin-top: 15px;">Serverless</h5>
         <a name="go-faas"></a>
-        <p>TBD</p>
+        <div>
+        As of this release, Knative is in alpha. There for, to 
+        provide a stable servless function frame work we included
+        both open-faas and Knative support.
+        </div>
+        <div>
+          OpenFasS is a widely used serverless function with a wide
+          set of supported programming langaues.  Like Kantive, it
+          uses docker images as the container for functions.  Unlike
+          Knative, it support deployments on environment other than
+          Kubernetes.
+        </div>
+        <div>
+          OpenFaaS recommended reading
+          <ul>
+            <li>
+              <a href="https://docs.openfaas.com/">
+            Offical documentation
+              </a>
+            </li>
+            <li>
+              <a href="https://docs.openfaas.com/tutorials/first-python-function/">
+                First function tutorial
+              </a>
+            </li>
+        </div>
 
       </div>
 
