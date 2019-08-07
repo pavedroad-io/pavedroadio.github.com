@@ -11,10 +11,13 @@
     <link rel="shortcut icon" href="favicon.ico">  
     <link href='https://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'> 
-    <!-- FontAwesome JS -->
+    
+	<!-- FontAwesome JS -->
     <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js" integrity="sha384-3LK/3kTpDE/Pkp8gTNp2gR/2gOiwQ6QaO7Td0zV76UFJVhqLl4Vl3KL1We6q6wR9" crossorigin="anonymous"></script>
+
     <!-- Global CSS -->
-    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
     <!-- Plugins CSS -->    
     <link rel="stylesheet" href="assets/plugins/prism/prism.css">
     <!-- Theme CSS -->  
@@ -24,8 +27,6 @@
 </head> 
 
 <body data-spy="scroll">
-	
-    
 
     <!---//Facebook button code-->
     <div id="fb-root"></div>
@@ -41,7 +42,7 @@
     <header id="header" class="header">  
         <div class="container">            
             <h1 class="logo float-left">
-                <a class="scrollto" href="#promo">
+                <a href="/">
                     <span class="logo-title">PavedRoad.io</span>
                 </a>
             </h1><!--//logo-->              
@@ -56,12 +57,22 @@
                            
                 <div class="navbar-collapse collapse" id="navbar-collapse">
                     <ul class="nav navbar-nav">
-                        <li class="nav-item sr-only"><a class="nav-link scrollto" href="#promo">Home</a></li>
-                        <li class="nav-item"><a class="nav-link scrollto" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link scrollto" href="#features">Features</a></li>
-                        <li class="nav-item"><a class="nav-link scrollto" href="#docs">Documentation</a></li>
-                        <li class="nav-item"><a class="nav-link scrollto" href="#license">License</a></li>                        
-                        <li class="nav-item last"><a class="nav-link scrollto" href="#contact">Contact</a></li>
+                        <li class="nav-item sr-only"><a class="nav-link" href="/">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/#features">Features</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/#docs">Documentation</a></li>
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" data-toggle="dropdown"
+                             href="#" role="button" aria-haspopup="true" aria-expanded="false">Guides</a>
+                          <div class="dropdown-menu">
+                            <a class="dropdown-item" href="../devKitsLanding.html">DevKits</a>
+                            <a class="dropdown-item" href="../cicdLanding.html">CI/CD</a>
+                            <a class="dropdown-item" href="../operationsLanding.html">Operations</a>
+                            <a class="dropdown-item" href="../insightsLanding.html">Insights</a>
+                          </div>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="/#license">License</a></li>                        
+                        <li class="nav-item last"><a class="nav-link" href="/#contact">Contact</a></li>
                     </ul><!--//nav-->
                 </div><!--//navabr-collapse-->
             </nav><!--//main-nav-->
@@ -71,11 +82,10 @@
     <!-- ******PROMO****** -->
     <section id="promo" class="promo section offset-header">
         <div class="container text-center">
-            <!-- <h2 class="title">PavedRoad</h2> -->
-	    <img src="assets/images/pavedroad_webhome.png" class="img-fluid" alt="pavedroad.io">
-            <p class="intro">Assurance for digital transformation</p>
+            <h2 class="title">PavedRoad.io</h2>
+            <p class="intro">Engineering for Software Development and Operations</p>
             <div class="btns">
-                <a class="btn btn-cta-secondary" href="" target="_blank">Coming Soon</a>
+                <a class="btn btn-cta-secondary" href="downloadLanding.html" target="_blank">Download Go DevKit</a>
             </div>
             <ul class="meta list-inline">
                 <li class="list-inline-item"><a href="https://github.com/pavedroad-io" target="_blank">View on GitHub</a></li>
@@ -85,7 +95,7 @@
         <div class="social-media">
             <div class="social-media-inner container text-center">
                 <ul class="list-inline mb-2">
-                    <li class="list-inline-item twitter-follow"><a href="https://twitter.com/pavedroadio" class="twitter-follow-button" data-show-count="false">Follow @PavedRoad.io</a>
+                    <li class="list-inline-item twitter-follow"><a href="https://twitter.com/pavedroad" class="twitter-follow-button" data-show-count="false">Follow @PavedRoad.io</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
                     </li><!--//twitter-follow-->
                     <li class="list-inline-item twitter-tweet">
@@ -108,13 +118,9 @@
     <!-- ******ABOUT****** --> 
     <section id="about" class="about section">
         <div class="container">
-            <h2 class="title text-center">What is PavedRoad?</h2>
-            <p class="intro text-center"> PavedRoad is a service and software for enterprises that provides a simple to use framework to create and deploy cloud-native applications. PavedRoad is the first complete and open-source approach to bringing Continuous Integration/Continuous Deployment (CI/CD), Software Delivery Operations (SDO) and Agile with a high degree of success to any company.
-</p>
+            <h2 class="title text-center">What is a Paved Road?</h2>
             <p class="intro text-center"> The term “Paved Road” was coined by the Netflix tools teams which created several fully integrated end-to-end toolchains for writing, testing, deploying, and operating their streaming video service. For each support execution framework such as Java, Python, or Go, an integrated working CI/CD toolchain was created.  This method of pre-integrated and tested toolchains converts a bumpy and difficult road into a delightfully smooth road which dramatically increases the velocity of development teams.
-</p>		
-            <p class="intro text-center"> Most companies lack the technology, the people, and the process that results in a successful digital transformation effort. A large percentage of digital transformation efforts fail. Our team’s background building and operating large and complex services on a global scale provided a unique insight into how to create the technology and service that can simplify getting any company to cloud-native agile.
-</p>	
+</p>
             <div class="row">
                 <div class="item col-lg-4 col-md-6 col-12">
                     <div class="icon-holder">
@@ -122,7 +128,7 @@
                     </div>
                     <div class="content">
                         <h3 class="sub-title">Designed for developers</h3>
-                        <p>Quickly enable a cloud-native development environment (IDE, development tool chains), CI/CD, MicroServices, Operations, and GitHub repositories that are auto populated with everything you need to pursue cloud native development.</p>
+                        <p>Quickly enable a cloud-native development environment (IDE, development tool chains),CI/CD, MicroServices, Operationas, and GitHub repositories that are auto populated with everything you need to pursue cloud native development.</p>
                     </div><!--//content-->
                 </div><!--//item-->
                 <div class="item col-lg-4 col-md-6 col-12">
@@ -185,7 +191,7 @@
                 <li><i class="fas fa-check"></i> Support for the most popular Cloud Native IDE's and languages</li>
                 <li><i class="fas fa-check"></i> Automated GitHub repository creation based on profile: OSS, Enterpise, or Individual projects</li>
                 <li><i class="fas fa-check"></i> Template based file generation based on repository profile</li>
-                <li><i class="fas fa-check"></i> Container compatible CI/CD</li>
+                <li><i class="fas fa-check"></i> Clontainer compatible CI/CD</li>
                 <li><i class="fas fa-check"></i> Advanced analytics across the entire delivery chain for your organization or comparative data looking at other customers using the same toolchain</li>
                 <li><i class="fas fa-check"></i> 100% Open Source</li>
             </ul>
@@ -246,12 +252,14 @@
     </footer><!--//footer-->
      
     <!-- Javascript -->          
-    <script type="text/javascript" src="assets/plugins/jquery-3.3.1.min.js"></script>   
-    <script type="text/javascript" src="assets/plugins/jquery.easing.1.3.js"></script>   
-    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>     
+    <!-- Global JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script> 
     <script type="text/javascript" src="assets/plugins/prism/prism.js"></script>    
     <script type="text/javascript" src="assets/js/main.js"></script>  
+
     
         
 </body>

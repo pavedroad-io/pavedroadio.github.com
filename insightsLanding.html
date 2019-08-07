@@ -11,10 +11,16 @@
     <link rel="shortcut icon" href="favicon.ico">  
     <link href='https://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'> 
-    <!-- FontAwesome JS -->
+   
+    <!-- breadcrumb -->
+	<link type="text/css" rel="stylesheet" href="../assets/css/pr.css"/>
+	
+	<!-- FontAwesome JS -->
     <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js" integrity="sha384-3LK/3kTpDE/Pkp8gTNp2gR/2gOiwQ6QaO7Td0zV76UFJVhqLl4Vl3KL1We6q6wR9" crossorigin="anonymous"></script>
+
     <!-- Global CSS -->
-    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
     <!-- Plugins CSS -->    
     <link rel="stylesheet" href="assets/plugins/prism/prism.css">
     <!-- Theme CSS -->  
@@ -24,8 +30,6 @@
 </head> 
 
 <body data-spy="scroll">
-	
-    
 
     <!---//Facebook button code-->
     <div id="fb-root"></div>
@@ -41,7 +45,7 @@
     <header id="header" class="header">  
         <div class="container">            
             <h1 class="logo float-left">
-                <a class="scrollto" href="#promo">
+                <a href="/">
                     <span class="logo-title">PavedRoad.io</span>
                 </a>
             </h1><!--//logo-->              
@@ -54,7 +58,7 @@
                     <span class="icon-bar"></span>
                 </button><!--//nav-toggle-->
                            
-               	 <div class="navbar-collapse collapse" id="navbar-collapse">
+                <div class="navbar-collapse collapse" id="navbar-collapse">
                     <ul class="nav navbar-nav">
                         <li class="nav-item sr-only"><a class="nav-link" href="/">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="/#about">About</a></li>
@@ -72,21 +76,97 @@
                         </li>
                         <li class="nav-item"><a class="nav-link" href="/#license">License</a></li>                        
                         <li class="nav-item last"><a class="nav-link" href="/#contact">Contact</a></li>
-						
                     </ul><!--//nav-->
                 </div><!--//navabr-collapse-->
             </nav><!--//main-nav-->
         </div>
     </header><!--//header-->
     
+    <!-- ******ABOUT****** --> 
+    <section id="insights" class="about section">
+	
+	<nav aria-label="breadcrumb">
+     <ul class="prbreadcrumb breadcrumb">
+       <li class="breadcrumb-item"><a href="/">Home</a></li>
+       <li class="breadcrumb-item active" aria-current="page">Insights</li>
+     </ul>
+   </nav>
+	
+      <div class="container">
+        <h3 class="title text-left" style="margin-top: 45px; margin-bottom: 5px;">
+          Insights
+        </h3>
+        <div>
+       Coming Soon
+       <!-- </div>
+        <div class="row">
+
+          <div class="item col-lg-6 col-md-12" style="margin-top:30px;">
+            <div class="icon-holder">
+              <i class="fas fa-cogs"></i>
+            </div>
+            <div class="content" onclick="location.href='skaffoldTraining.html'">
+              <h3 class="sub-title">CI/CD Quickstarts and Training</h3>
+              <table class="table" style="width:1000px">
+                <thead>
+                  <tr>
+                    <th scope="col" width="20%">Tool</th>
+                    <th scope="col">Description</th>
+                  </tr>
+                </thead>
+                <tr>
+                  <td scope="row"><a href="skaffoldTraining.html">Skaffold</a></td>
+                  <td>
+                    <p>
+                    Skaffold is a command line tool that facilitates continuous development for Kubernetes applications. You can iterate on your application source code locally then deploy to local or remote Kubernetes clusters. Skaffold handles the workflow for building, pushing and deploying your application.
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td scope="row"><a href="cicdLanding.html">Tekton</a></td>
+                  <td>
+                    <p>
+                    Tekton Pipelines is an open source implementation to configure and run CI/CD style pipelines for your Kubernetes application. Pipeline creates Custom Resources as building blocks to declare pipelines.
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td scope="row"><a href="cicdLanding.html">Argo</a></td>
+                  <td>
+                    <p>
+                    Argo provides container-native workflows for Kubernetes implementing each step in a workflow as a container. Argo enables users to launch multi-step pipelines using a custom DSL that is similar to traditional YAML.
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td scope="row"><a href="cicdLanding.html">Argo CD</a></td>
+                  <td>
+                    <p>
+                    Argo CD is a declarative, GitOps continuous delivery tool for Kubernetes.
+                    </p>
+                  </td>
+                </tr>
+              </table>
+            </div><!--//content-->  
+          </div><!--//item-->  
+
+                <div class="clearfix visible-md"></div>    
+            </div><!--//row-->            
+        </div><!--//container-->
+    </section><!--//about-->
+    
     <!-- ******CONTACT****** --> 
-    <section id="contact" class="contact section has-pattern">
+    <section id="contact" class="contact section has-pattern"
+      style="padding: 5px;">
         <div class="container">
-         <!-- Google Contact Form --> 
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeJSWfmWBruWcknRbpeCjnndbkcTDVRXK16R8b7z-gev3Je-A/viewform?embedded=true" width="640" height="1403" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+            <div class="contact-inner">
+                <h2 class="title  text-center"
+                  style="margin-bottom: 5px;">Contact</h2>
+                <p class="text-center">
+                <a href="mailto:training@pavedroad.io">training@pavedroad.io</a></p>
+            </div><!--//contact-inner-->
         </div><!--//container-->
     </section><!--//contact-->  
-
       
     <!-- ******FOOTER****** --> 
     <footer class="footer">
@@ -97,13 +177,17 @@
     </footer><!--//footer-->
      
     <!-- Javascript -->          
-    <script type="text/javascript" src="assets/plugins/jquery-3.3.1.min.js"></script>   
-    <script type="text/javascript" src="assets/plugins/jquery.easing.1.3.js"></script>   
-    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>     
+    <!-- Global JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script> 
     <script type="text/javascript" src="assets/plugins/prism/prism.js"></script>    
     <script type="text/javascript" src="assets/js/main.js"></script>  
+
     
         
 </body>
 </html> 
+
+

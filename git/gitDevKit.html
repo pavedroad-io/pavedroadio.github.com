@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>PavedRoad.io</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">    
+    <link rel="shortcut icon" href="favicon.ico">  
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'> 
+   
+    <!-- breadcrumb -->
+	<link type="text/css" rel="stylesheet" href="../assets/css/pr.css"/>
+   
+    <!-- FontAwesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js" integrity="sha384-3LK/3kTpDE/Pkp8gTNp2gR/2gOiwQ6QaO7Td0zV76UFJVhqLl4Vl3KL1We6q6wR9" crossorigin="anonymous"></script>
+
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Plugins CSS -->    
+    <link rel="stylesheet" href="../assets/plugins/prism/prism.css">
+    <!-- Theme CSS -->  
+    <link id="theme-style" rel="stylesheet" href="../assets/css/theme-1.css">
+    <!-- GitHub Button -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script> 
+</head> 
+
+<body data-spy="scroll">
+
+    <!---//Facebook button code-->
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    
+    <!-- ******HEADER****** --> 
+    <header id="header" class="header">  
+        <div class="container">            
+            <h1 class="logo float-left">
+                <a href="/">
+                    <span class="logo-title">PavedRoad.io</span>
+                </a>
+            </h1><!--//logo-->              
+
+            <nav id="main-nav" class="main-nav navbar-expand-md float-right" role="navigation">
+                
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button><!--//nav-toggle-->
+                           
+                <div class="navbar-collapse collapse" id="navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item sr-only"><a class="nav-link" href="/">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/#features">Features</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/#docs">Documentation</a></li>
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" data-toggle="dropdown"
+                             href="#" role="button" aria-haspopup="true" aria-expanded="false">Guides</a>
+                          <div class="dropdown-menu">
+                            <a class="dropdown-item" href="../devKitsLanding.html">DevKits</a>
+                            <a class="dropdown-item" href="../cicdLanding.html">CI/CD</a>
+                            <a class="dropdown-item" href="../operationsLanding.html">Operations</a>
+                            <a class="dropdown-item" href="../insightsLanding.html">Insights</a>
+                          </div>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="/#license">License</a></li>                        
+                        <li class="nav-item last"><a class="nav-link" href="/#contact">Contact</a></li>
+                    </ul><!--//nav-->
+                </div><!--//navabr-collapse-->
+            </nav><!--//main-nav-->
+        </div>
+    </header><!--//header-->
+    
+    <!-- ******ABOUT****** --> 
+
+    <section id="devKitTraining" 
+      class="about section">
+	  
+	  <nav aria-label="breadcrumb">
+     <ul class="prbreadcrumb breadcrumb">
+       <li class="breadcrumb-item"><a href="/">Home</a></li>
+       <li class="breadcrumb-item active" aria-current="page">Git DevKit</li>
+     </ul>
+   </nav>
+   
+      <div class="container" style="margin-top: 45px;">
+        <span class="text-primary" style="font-size: 25px; virtical-align: text-top;">
+        <img src="../assets/images/git-logo.png" height="45" width="75"/>
+         DevKit
+        </span>
+        <h4 style="margin-top: 10px;">Overview</h4>
+        <p dir="ltr">
+        Intro
+        </p>
+
+        <h4 style="margin-top: 15px;">Subjects</h4>
+        <div class="accordion" id="goAccording">
+          <div class="card">
+            <div class="card-header" id="pr-tools">
+              <h2 class="mb-0">
+                <button type="button" class="btn btn-link collapsed" 
+                  data-toggle="collapse" data-target="#collapseOne">
+                  Git / GitHub
+                </button>
+              </h2>
+            </div>
+            <div id="collapseOne" class="collapse show" aria-labelledby="pr-tools" data-parent="#goAccording">
+                <div class="card-body">
+                  <p><a href="#pr-git-basics">Beginner git</a></p>
+                </div>
+            </div>
+          </div>
+        <div class="card">
+            <div class="card-header" id="learning">
+                <h2 class="mb-0">
+                    <button type="button" class="btn btn-link collapsed" 
+                      data-toggle="collapse" data-target="#collapseTwo">
+                      Learning Center
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="learning" data-parent="#goAccording">
+                <div class="card-body">
+                  <p><a href="gitDocumentation.html" target="_blank">Documentation</a></p>
+                  <p><a href="gitVideo.html" target="_blank">Videos</a></p>
+                  <p><a href="gitTutorials.html" target="_blank">Tutorials</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h3 style="margin-top: 20px;">Git/GitHub</h3>
+
+      <div class="container" style="margin-top: 20px;">
+        <h4>Basic git usage</h4>
+        <a name="pr-git-basics"></a>
+        <h5>Managing files and Commits</h5>
+        <p>
+        </p>
+        <ul>
+          <li><code>git status</code>
+            <div>
+              Show the current status for files.  The git status command has 
+              two sections; the first display modified or deleted files that 
+              are currently being tracked by git, and the second shows files 
+              not being tracked by git.
+            </div>
+          </li>
+          <li><code>git add file|directory</code>
+            <div>
+              Is used to add one or more files or directories
+            </div>
+          </li>
+          <li><code>git mv file|directory</code>
+            <div>
+              Is used to move one or more files or directories
+            </div>
+          </li>
+          <li><code>git rm file|directory</code>
+            <div>
+              Is used to delete/remove one or more files or directories
+            </div>
+          </li>
+          <li><code>git commit</code>
+            <div>
+              Is used to delete/remove one or more files or directories
+            </div>
+          </li>
+          <li><code>git commit -m "my message"</code>
+            <div>
+              Commit stages adds, moves, and deletes for updates to the 
+              current branch.  The <b>-m</b> option allows you to create a 
+              commit message on the command line.  If not included, your
+              configured editor will be started allowing to add a commit 
+              message. Include the issue ID addressed by this change in the 
+              commit message.
+            </div>
+          </li>
+          <li><code>git commit --amend</code>
+            <div>
+              Use the --amend option to add the current changes to a prior 
+              commit  
+            </div>
+          </li>
+        </ul>
+        <div>
+        Below is an example of checking git status, adding a file, and then
+        making a commit using the command line option <b>-m</b>.  Note, 
+        you should include the issue the commit is related to in the 
+        commit message.
+        </div>
+<pre style="padding: 5px; border: 1px solid blue; white-space:pre-line;">
+# run git status
+$ <b>git status</b>
+On branch git-content
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   git/gitDevKit.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	assets/images/git-logo.png
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+# Note: git/gitDevKit.html is modified, assets/images/git-logo.png is 
+# not being tracked. Let's add them using "git add" as suggested.
+
+$ <b>git add git/gitDevKit.html assets/images/git-logo.png</b>
+$ <b>git status</b>
+<samp>
+On branch git-content
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   assets/images/git-logo.png
+	modified:   git/gitDevKit.html
+
+Untracked files:
+<samp>
+
+$ <b>git commit -m "WIP: Issue: 10 taining for git"</b>
+<samp>
+[git-content 5e8ebb4] WIP: Issue: 10 taining for git
+ 2 files changed, 256 insertions(+), 176 deletions(-)
+ create mode 100644 assets/images/git-logo.png
+</samp>
+</pre>
+
+
+        <h5>Working with branches</h5>
+        <h6>See what branches exists</h6>
+        <div>
+        Below is a list of commonly used commands for seeing what git 
+        branches are available.  This example uses the PavedRoad GitHub pages
+        as an example.  Examples of all three commands can are directly 
+        below.
+        </div>
+        <div>
+        HEAD is the reference to the latest commit in the current checked out 
+        branch. It usually points to a branch called "master," but it can 
+        point to any branch.
+        </div>
+        <ul>
+          <li><code>git branch</code>
+            <div>
+              Shows a list branches current on your machine
+            </div>
+          </li>
+          <li><code>git branch -r</code>
+            <div>
+              Shows all branches on the remote server, aka "origin" in 
+              most cases
+            </div>
+          </li>
+          <li><code>git branch -a</code>
+            <div>
+              Shows all local and remote branches
+            </div>
+          </li>
+          <li><code>git fetch</code>
+            <div>
+              Add remote branches to your local ones
+            </div>
+          </li>
+        </ul>
+        <mark>* represents the current branch</mark>
+<pre style="padding: 5px; border: 1px solid blue; white-space:pre-line;">
+$ <b>git branch</b>
+<samp>
+*  gh-pages
+  master
+</samp>
+</pre>
+
+<pre style="padding: 5px; border: 1px solid blue; white-space:pre-line;">
+$ <b>git branch -r</b>
+<samp>
+  origin/HEAD -> origin/master
+  origin/gh-pages
+  origin/master
+</samp>
+</pre>
+
+<pre style="padding: 5px; border: 1px solid blue; white-space:pre-line;">
+$ <b>git branch -a</b>
+<samp>
+* gh-pages
+  master
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/gh-pages
+  remotes/origin/master
+</samp>
+</pre>
+        <h6>Creating new branches</h6>
+        <p>
+        The command <code>git checkout</code> is used to create or switch 
+        branches.
+        </p>
+        <ul>
+          <li><code>git checkout -b mynewbranch</code>
+            <div>
+              Creates a new branch off of the HEAD/master
+            </div>
+          </li>
+          <li><code>git checkout -b mynewbranch anotherbranch</code>
+            <div>
+              Creates a new branch off of another branch.
+            </div>
+          </li>
+          <li><code>git stash</code>
+            <div>
+              If you have uncommitted changes, git will not let you switch/
+              create a new branch.  If you want to keep your changes, you 
+              can use the "stash" command to save them.
+            </div>
+          </li>
+          <li><code>git stash list</code>
+            <div>
+              Use the <b>list</b> option to see a list of saved, aka stashed, 
+              changes.
+            </div>
+          </li>
+          <li><code>git stash apply stashid</code>
+            <div>
+              The <b>apply</b> option applies the saved change to your current
+              working branch.
+            </div>
+          </li>
+          <li><code>git stash drop stashid</code>
+            <div>
+              The <b>drop</b> option deletes a saved change.
+            </div>
+          </li>
+        </ul>
+
+<pre style="padding: 5px; border: 1px solid blue; white-space:pre-line;">
+$ <b>git checkout -b newbranch</b>
+<samp>
+Switched to a new branch 'newbranch'
+</samp>
+</pre>
+
+<pre style="padding: 5px; border: 1px solid blue; white-space:pre-line;">
+$ <b>git checkout -b gh-pages vim-content</b>
+<samp>
+Switched to a new branch 'vim-content'
+</samp>
+</pre>
+
+<mark>Example error</mark>
+<pre style="padding: 5px; border: 1px solid blue; white-space:pre-line;">
+$ <b>git checkout -b gh-pages vim-content</b>
+<samp>
+fatal: 'vim-content' is not a commit and a branch 'gh-pages' cannot be created from it
+</samp>
+$ <b>git status</b>
+<samp>
+On branch git-content
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   git/gitDevKit.html
+</samp>
+$ <b>git stash</b>
+<samp>
+$ <b>git stash</b>
+Saved working directory and index state WIP on git-content: d44239e Create generic landing pages for each training area Create sub-directories for each area to keep things clean Correct menus to work with sub-directories Stubout content for Go training
+</samp>
+$ <b>git stash list</b>
+<samp>
+stash@{0}: WIP on git-content: d44239e Create generic landing pages for each training area Create sub-directories for each area to keep things clean Correct menus to work with sub-directories Stubout content for Go training
+</samp>
+$ <b>git stash apply stash@{0}</b>
+<samp>
+On branch git-content
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   git/gitDevKit.html
+</samp>
+</pre>
+
+        <h6>Deleting branches</h6>
+        <ul>
+          <li><code>git branch -d branch-to-delete</code>
+            <div>
+              Deletes the branch
+            </div>
+          </li>
+        </ul>
+<pre style="padding: 5px; border: 1px solid blue; white-space:pre-line;">
+# Create a branch called example
+$ <b>git checkout -b example</b>
+<samp>
+Switched to a new branch 'example'
+</samp>
+# list branches
+$ <b>git branch</b>
+<samp>
+* example
+  gh-pages
+  git-content
+  master
+
+# Switch to your old branch
+# Delete the example branch
+# List again to confirm it is gone
+$ git checkout git-content
+Switched to branch 'git-content'
+$ <b>git branch -d example</b>
+<samp>
+Deleted branch example (was d44239e).
+</samp>
+$ <b>git branch</b>
+<samp>
+  gh-pages
+* git-content
+  master
+</samp>
+</pre>
+
+        <h6>Merging branches</h6>
+        <div>
+        In our examples, we have a branch called "gh-pages" and one called
+        "git-content".  The "git-content" branch contains this document.  The
+        "gh-pages" branch are changes stagged for the master branch. 
+        If we want the changes in our "git-content" branch to be merged with
+        "gh-pages", we use the <code>git merge</code> command.
+        </div>
+        <div>
+        You can merge from one branch into another multiple time.
+        </div>
+        <ul>
+          <li>
+            start your merge by switching to the march you want to merge <b>into</b> using the <code>git checkout</code> command</li>
+        </ul>
+
+<pre style="padding: 5px; border: 1px solid blue; white-space:pre-line;">
+# Change branches
+$ <b>git checkout gh-pages</b>
+<samp>
+Switched to branch 'gh-pages'
+</samp>
+$ <b>git merge git-content</b>
+<samp>
+Updating d44239e..d74c28f
+
+Fast-forward
+ assets/images/git-logo.png | Bin 0 -> 3728 bytes
+ git/gitDevKit.html         | 500 +++++++++++++++++++++++++++++----------------
+ 2 files changed, 322 insertions(+), 178 deletions(-)
+ create mode 100644 assets/images/git-logo.png
+</samp>
+</pre>
+
+        <h6>Merging conflicts</h6>
+        <div>
+        A merge conflict happens when the changes in one branch for the same 
+        section of the code are different.  Git doesn't know which version is 
+        correct so, it is up to the developer to tell git which changes to keep.
+        </div>
+        <div>
+        We will demonstrate this by creating a conflict between the "gh-pages"
+        branch and the "git-content" branch. The example below demonstrates:
+        </div>
+        <ul>
+          <li>Switch to the gh-pages branch and changing "git" to "get" on a 
+            line of code</li>
+          <li>Adding then commiting that change</li>
+          <li>Then trying to merge the "git-content" branch in again</li>
+        </ul>
+<pre style="padding: 5px; border: 1px solid blue; white-space:pre-line;">
+$ <b>git checkout gh-pages</b>
+Switched to branch 'gh-pages'
+
+# Make the conflicting change
+$ <b>vi git/gitDevKit.html</b>
+
+# See the change is detected, then add and commit it
+$ <b>git status</b>
+On branch gh-pages
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   git/gitDevKit.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+$ <b>git add git/gitDevKit.html</b>
+$ <b>git commit -m "create sample merge conflict"</b>
+[gh-pages 2ee42e9] create sample merge conflict
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+# Now attempt to re-merge
+$ <b>git merge git-content</b>
+Auto-merging git/gitDevKit.html
+CONFLICT (content): <mark>Merge conflict in git/gitDevKit.html</mark>
+Automatic merge failed; fix conflicts and then commit the result.
+
+$ <b>vi git/gitDevKit.html</b>
+# vi file(s) identified as conflicting, CONFLICT (content).
+# Then look for the conflict(s): 
+#
+# <<<<<<< is what is in our current branch
+# ======= seperates the changes in the branch being merged
+# >>>>>>> is the end of the conflicts
+# In this case, we want to keep the changes in the git-content branch
+# so delete the changes in head and remove the markers
+
+<<<<<<< HEAD
+        If we want the changes in our "get-content" branch to be merged with
+=======
+        If we want the changes in our "git-content" branch to be merged with
+>>>>>>> git-content
+
+# Add the modified file and commit the changes
+
+$ <b>git add git/gitDevKit.html</b>
+$ <b>git commit</b>
+[gh-pages eaa4688] Merge branch 'git-content' into gh-pages
+</pre>
+
+        <h6>Pushing changes and Pulling updates from the origin</h6>
+        <div>
+        So far we have made local changes, what happens when we want 
+        to push our changes to the origin so other developers can see
+        them, or pull in other developers changes?
+        </div>
+        <div>
+        The following commands accomplish this:
+        </div>
+        <ul>
+          <li><code>git push -u origin mybranch</code>
+            <div>
+              Push my changes to origin, use the -u option to update the origin
+            </div>
+          </li>
+          <li><code>git push origin mybranch</code>
+            <div>
+              Push my changes to origin
+            </div>
+          </li>
+          <li><code>git pull origin mybranch</code>
+            <div>
+              Pull other developers changes from the origin
+            </div>
+          </li>
+        </ul>
+        <div>
+        The following example demonstrates an initial push with the -u.  
+        <b>Note: GitHub suggests creating a pull request; you should use the 
+        link provided to do that.</b>
+        </div>
+<pre style="padding: 5px; border: 1px solid blue; white-space:pre-line;">
+$ <b>git push -u origin git-content</b>
+Username for 'https://github.com': usename
+Password for 'https://username@github.com':
+Counting objects: 11, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (11/11), done.
+Writing objects: 100% (11/11), 10.01 KiB | 3.34 MiB/s, done.
+Total 11 (delta 7), reused 0 (delta 0)
+remote: Resolving deltas: 100% (7/7), completed with 4 local objects.
+remote:
+remote: Create a pull request for 'git-content' on GitHub by visiting:
+remote:      <mark>https://github.com/pavedroad-io/pavedroadio.github.com/pull/new/git-content</mark>
+remote:
+To https://github.com/pavedroad-io/pavedroadio.github.com.git
+ * [new branch]      git-content -> git-content
+Branch 'git-content' set up to track remote branch 'git-content' from 'origin'.
+$
+</pre>
+        <div>
+        Next lets make more changes and push again without the -u.
+        </div>
+
+<pre style="padding: 5px; border: 1px solid blue; white-space:pre-line;">
+$ <b>vi git/gitDevKit.html</b>
+
+$ <b>git add git/gitDevKit.html</b>
+
+$ <b>git commit </b>
+[git-content df71443] Exmaple of pushing without -u option
+ 1 file changed, 31 insertions(+)
+
+$ <b>git push origin git-content</b>
+Username for 'https://github.com': username
+Password for 'https://username@github.com': 
+Counting objects: 4, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 1004 bytes | 1004.00 KiB/s, done.
+Total 4 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/pavedroad-io/pavedroadio.github.com.git
+   2397506..df71443  git-content -> git-content
+</pre>
+        <div>
+          Let's look for changes on the origin using <code>git pull</code>. In 
+          this case there are merge conflicts.  Resolve them as shown above and
+          commit the changes.
+        </div>
+
+<pre style="padding: 5px; border: 1px solid blue; white-space:pre-line;">
+$ <b>git pull origin git-content</b>
+From https://github.com/pavedroad-io/pavedroadio.github.com
+ * branch            git-content -> FETCH_HEAD
+Auto-merging git/gitDevKit.html
+CONFLICT (content): Merge conflict in git/gitDevKit.html
+Automatic merge failed; fix conflicts and then commit the result.
+</pre>
+
+<pre style="padding: 5px; border: 1px solid blue; white-space:pre-line;">
+$ <b>vi git/gitDevKit.html</b>
+$ <b>git add git/gitDevKit.html</b>
+$ <b>git commit</b>
+[git-content d8c07a7] Merge branch 'git-content' of https://github.com/pavedroad-io/pavedroadio.github.com into git-content
+$ git push origin git-content 
+Username for 'https://github.com': username
+Password for 'https://username@github.com': 
+Counting objects: 8, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (8/8), 1.22 KiB | 1.22 MiB/s, done.
+Total 8 (delta 6), reused 0 (delta 0)
+remote: Resolving deltas: 100% (6/6), completed with 3 local objects.
+To https://github.com/pavedroad-io/pavedroadio.github.com.git
+   df71443..d8c07a7  git-content -> git-content
+</pre>
+
+        <h6>Seeing git hisotry with git log</h6>
+        <div>
+        To see a history of all your commits, use the command "git log".  
+        The log command has many different options to control the level 
+        of verbosity and output format.
+        </div>
+        <ul>
+          <li><code>git log -n 10 --since="2016-06-24"</code>
+            <div>
+              Displays the commit id, date, author, and commit message. 
+              Limit the number of enteries returned using the -n option
+              or --sence and a date.
+            </div>
+          </li>
+          <li><code>git log -n 10 --oneline</code>
+            <div>
+              Reduce output to one line that includes the commit id and 
+              commit message. 
+            </div>
+          </li>
+          <li><code>git log --oneline --decorate --graph --all  -n 10</code>
+            <div>
+              The graph option provides a graphical  history of branches, 
+              commits, and merges.
+            </div>
+          </li>
+        </ul>
+
+<pre style="padding: 5px; border: 1px solid blue; white-space:pre-line;">
+$ <b>git log -n 2</b>
+<samp>
+commit d4953c4271f982599ec0bc00c3289b7e49bb3675 (HEAD -> git-content, origin/git-content)
+Author: John Scharber <john@pavedroad.io>
+Date:   Mon Jun 24 18:31:23 2019 -0700
+
+    WIP: to git docs
+
+commit d8c07a786cf06961e945c4ed2b154cea14f71424
+Merge: 6685655 df71443
+Author: John Scharber <john@pavedroad.io>
+Date:   Mon Jun 24 18:26:36 2019 -0700
+
+    Merge branch 'git-content' of https://github.com/pavedroad-io/pavedroadio.github.com into git-content
+</samp>
+$ <b>git log --since="2019-06-24"</b>
+<samp>
+commit d4953c4271f982599ec0bc00c3289b7e49bb3675 (HEAD -> git-content, origin/git-content)
+Author: John Scharber <john@pavedroad.io>
+Date:   Mon Jun 24 18:31:23 2019 -0700
+
+    WIP: to git docs
+
+commit d8c07a786cf06961e945c4ed2b154cea14f71424
+Merge: 6685655 df71443
+Author: John Scharber <john@pavedroad.io>
+Date:   Mon Jun 24 18:26:36 2019 -0700
+
+    Merge branch 'git-content' of https://github.com/pavedroad-io/pavedroadio.github.com into git-content
+</samp>
+$ <b>git log --oneline -n 10</b>
+<samp>
+d4953c4 (HEAD -> git-content, origin/git-content) WIP: to git docs
+d8c07a7 Merge branch 'git-content' of https://github.com/pavedroad-io/pavedroadio.github.com into git-content
+6685655 Exmaple of pushing without -u option Save change of last example
+df71443 Exmaple of pushing without -u option
+2397506 WIP: more updates to git traning WIP: and some more
+5e8ebb4 WIP: Issue: 10 taining for git
+d44239e (help) Create generic landing pages for each training area Create sub-directories for each area to keep things clean Correct menus to work with sub-directories Stubout content for Go training
+334e7fd Makesure CI/CD menu option works across all pages
+f20a386 Merge branch 'gh-pages' of https://github.com/pavedroad-io/pavedroadio.github.com into gh-pages
+04344dc Adding CICD landing page and skaffold training
+</samp>
+
+$ <b>git log --oneline --decorate --graph --all  -n 10</b>
+<samp>
+*   ba35b07 (origin/gh-pages, gh-pages) Merge branch 'git-content' into gh-pages
+|\  
+| * d4953c4 (HEAD -> git-content, origin/git-content) WIP: to git docs
+| *   d8c07a7 Merge branch 'git-content' of https://github.com/pavedroad-io/pavedroadio.github.com into git-content
+| |\  
+| | * df71443 Exmaple of pushing without -u option
+| * | 6685655 Exmaple of pushing without -u option Save change of last example
+| |/  
+| * 2397506 WIP: more updates to git traning WIP: and some more
+* |   eaa4688 Merge branch 'git-content' into gh-pages
+|\ \  
+| * | 7ca54e8 WIP: more updates to git traning
+| |/  
+* | 2ee42e9 create sample merge conflict
+* | d74c28f WIP: more updates to git traning
+|/  
+</samp>
+</pre>
+
+
+      </div><!--//container-->
+    </section><!--//about-->
+    
+    <!-- ******CONTACT****** --> 
+    <section id="contact" class="contact section has-pattern"
+      style="padding: 5px;">
+        <div class="container">
+            <div class="contact-inner">
+                <h2 class="title  text-center"
+                  style="margin-bottom: 5px;">Contact</h2>
+                <p class="text-center">
+                <a href="mailto:training@pavedroad.io">training@pavedroad.io</a></p>
+            </div><!--//contact-inner-->
+        </div><!--//container-->
+    </section><!--//contact-->  
+
+    <!-- ******FOOTER****** --> 
+    <footer class="footer">
+        <div class="container text-center">
+            <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can buy the commercial license via our website: themes.3rdwavemedia.com */-->
+            <small class="copyright">Designed with <i class="fas fa-heart"></i> by <a href="https://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
+        </div><!--//container-->
+    </footer><!--//footer-->
+     
+    <!-- Javascript -->          
+    <!-- Global JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script> 
+    <script type="text/javascript" src="../assets/plugins/prism/prism.js"></script>    
+    <script type="text/javascript" src="../assets/js/main.js"></script>  
+
+    
+        
+</body>
+</html> 
+
+
