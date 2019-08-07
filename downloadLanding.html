@@ -93,64 +93,62 @@
    </nav>
    
       <div class="container">
-        <h3 class="title text-left" style="margin-top: 45px; margin-bottom: 5px;">
+       <div class="row">
+	    <h3 class="title text-left" style="margin-top: 45px; margin-bottom: 5px;">
           PavedRoad DevKit Download
         </h3>
-        <p>
+	     <div>
           PavedRoad DevKits provides the tools to install a cloud native software development environment. The development environment supports versions of the bash shell 
 		  and the vim editor that have been enhanced through completions and plugins to support a cloud native environment. In addition the project installs the go language 
 		  and relevant packages along with the git command and other minimally needed development software.  
-        </p>
-        <div class="row">
+        </div>
+       
+	    <div class="row">
 	
 	<!-- marker -->
-        <div class="clearfix visible-md"></div>    
-        </div><!--//row-->       
-        <div class="row">
-          <a name="download" />
-          <div class="item col-lg-11 col-md-12" style="margin-top:30px;">
-            <div class="icon-holder">
-              <i class="fas fa-cogs"></i>
+		
+		  <div class="item col-lg-11 col-md-12" style="margin-top:30px;">
             </div>
             <div class="content">
               <h3 class="sub-title">Download PavedRoad DevKit</h3>
-              <p>Download the bootstrap script for your target OS and run it to install the DevKit. This script installs curl, git, and salt on the target device and 
-			  then clones the PavedRoad DevKit repository. SaltStack (in masterless mode) is used to install the development environment. The bootstrap script runs salt-call
-			   to apply the salt states in the cloned repository on the target device. Running the bootstrap script installs the complete development environment, 
-			   no knowledge about SaltStack is required. Copy the curl command for your target OS and paste into your systems terminal shell.
-              </p>
               <table class="table" style="width:1000px">
                 <thead>
                   <tr>
-                    <th scope="col" width="20%">Operating System</th>
+					 <th scope="col" width="20%">Operating System</th>
                     <th scope="col">Download Command</th>
                   </tr>
                 </thead>
+		
+            
+              <div>Download the bootstrap script for your target OS and run it to install the DevKit. This script installs curl, git, and salt on the target device and 
+			  then clones the PavedRoad DevKit repository. SaltStack (in masterless mode) is used to install the development environment. The bootstrap script runs salt-call
+			   to apply the salt states in the cloned repository on the target device. Running the bootstrap script installs the complete development environment, 
+			   no knowledge about SaltStack is required. Copy the curl command for your target OS and paste into your systems terminal shell.
+              </div>
+              <table class="table" style="width:1000px">
+               
                 <tr>
-                  <td scope="row"><p>Linux</p></td>
+                  <td scope="row"><div>Linux</div></td>
                   <td>
-                    <p>
+                    <div>
                     <code>curl -L https://raw.githubusercontent.com/pavedroad-io/pavedroad/master/devkit/bootstrap-unix.sh | /bin/bash</code>
-                    </p>
+                    </div>
                   </td>
                 </tr>
                 <tr>
-                  <td scope="row"><p>MacOS</p></td>
+                  <td scope="row"><div>MacOS</div></td>
                   <td>
-                    <p>
+                    <div>
                     <code>curl -L https://raw.githubusercontent.com/pavedroad-io/pavedroad/master/devkit/bootstrap-macos.sh | /bin/bash</code>
-                    </p>
+                    </div>
                   </td>
                 </tr>
-
               </table>
             </div><!--//content-->
           </div><!--//item-->
 		  
 		  
-          <div class="item col-lg-6 col-md-12" style="margin-top:30px;">
-            <div class="icon-holder">
-              <i class="fas fa-check-double"></i>
+          <div class="item col-lg-11 col-md-12" style="margin-top:30px;">
             </div>
             <div class="content">
               <h3 class="sub-title">Install Options</h3>
@@ -202,10 +200,9 @@
             </div><!--//content-->
           </div><!--//item-->
 		  
-		    <div class="item col-lg-6 col-md-12" style="margin-top:30px;">
-            <div class="icon-holder">
-              <i class="fas fa-check-double"></i>
-            </div>
+		  
+		    <div class="item col-lg-11 col-md-12" style="margin-top:30px;">
+			</div>
             <div class="content">
               <h3 class="sub-title">What is being installed?</h3>
               <table class="table" style="width:1000px">
@@ -217,14 +214,14 @@
                 </thead>
 				 
 				   <tr>
-                  <td scope="row"><a href="https://github.com/pavedroad-io/pavedroad/tree/master/devkit" target="_blank">Complete DevKit</a></td>
-                  <td>
-                    <div>
-                     This project provides the tools to install a cloud native software development environment. The development environment supports versions of the bash shell 
-					 and the vim editor that have been enhanced through completions and plugins to support a cloud native environment. 
-					 <br>
-					 <br>
-					 Select the link to see all details regarding the development kit, features, development environment and more.
+                     <td scope="row"><a href="https://github.com/pavedroad-io/pavedroad/tree/master/devkit" target="_blank">Complete DevKit</a></td>
+                     <td>
+                       <div>
+                         This project provides the tools to install a cloud native software development environment. The development environment supports versions of the bash shell 
+					     and the vim editor that have been enhanced through completions and plugins to support a cloud native environment. 
+					     <br>
+					     <br>
+					     Select the link to see all details regarding the development kit, features, development environment and more.
                     </div>
                   </td>
                 </tr>
@@ -240,29 +237,28 @@
                 </tr>
 				
 					 <tr>
-                  <td scope="row"><a href="https://github.com/pavedroad-io/pavedroad/blob/master/devkit/BOM_VIM_PLUGINS.md" target="_blank">Vim</a></td>
-                  <td>
-                    <div>
-                     The complete list of plugins installed.
+                       <td scope="row"><a href="https://github.com/pavedroad-io/pavedroad/blob/master/devkit/BOM_VIM_PLUGINS.md" target="_blank">Vim</a></td>
+                        <td>
+                         <div>
+                           The complete list of plugins installed.
                     </div>
                   </td>
                 </tr>
 				
 			    <tr>
                   <td scope="row"><a href="https://github.com/pavedroad-io/pavedroad/blob/master/devkit/BOM_GO_PACKAGES.md" target="_blank">Golang</a></td>
-                  <td>
+                   <td>
                     <div>
-                     The complete list of packages installed.
-                    </div>
+                       The complete list of packages installed.
+                     </div>
                   </td>
                 </tr>
-			  </th>
-			
-				 </td>
-                </tr>
-              </table>
+
+            </table>
             </div><!--//content-->
           </div><!--//item-->
+		
+          
 
 		  
           <div class="clearfix visible-md"></div>    
