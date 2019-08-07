@@ -97,112 +97,13 @@
           PavedRoad DevKit Download
         </h3>
         <p>
-          PavedRoad DevKits provides the tools to install a cloud native software development environment. The development environment supports versions of the bash shell and the vim editor that have been enhanced through completions and plugins to supprt a cloud native environment. In addition the project installs the go language and relevant packages along with the git command and other minimally needed development software. <a href="#download">Jump to download</a>
+          PavedRoad DevKits provides the tools to install a cloud native software development environment. The development environment supports versions of the bash shell 
+		  and the vim editor that have been enhanced through completions and plugins to support a cloud native environment. In addition the project installs the go language 
+		  and relevant packages along with the git command and other minimally needed development software.  
         </p>
         <div class="row">
-
-          <div class="item col-lg-6 col-md-12" style="margin-top:30px;">
-            <div class="icon-holder">
-              <i class="fas fa-check-double"></i>
-            </div>
-            <div class="content">
-              <h3 class="sub-title">Pre Requisites</h3>
-              <table class="table" style="width:1000px">
-                <thead>
-                  <tr>
-                    <th scope="col" width="20%">Dependency</th>
-                    <th scope="col">Description</th>
-                  </tr>
-                </thead>
-                <tr>
-                  <td scope="row"><a href="https://docs.docker.com/install" target="_blank">Docker</a></td>
-                  <td>
-                    <p>
-                    Docker is a platform which packages an application and all its dependencies together in the form of containers. This containerization aspect of Docker ensures that the application works in any environment. Kubernetes is a platform for automating deployment, scaling, and operating application containers across clusters of hosts, so the first order of business to use Kubernetes is to create containers for your applications.
-                    </p>
-                  </td>
-                </tr>
-                <tr>
-                  <td scope="row"><a href="https://www.virtualbox.org/wiki/Downloads" target="_blank">Virtual Box</a></td>
-                  <td>
-                    <p>
-                    A virtual machine (VM) is a software program or operating system that not only exhibits the behavior of a separate computer, but is also capable of performing tasks such as running applications and programs like a separate computer. Kubernetes can run on VMs or Bare Metal, but for local development it is typically more efficient to use VMs.
-                    </p>
-                  </td>
-                </tr>
-              </table>
-            </div><!--//content-->
-          </div><!--//item-->
-          <!-- Go-Vim Description Section -->
-          <div class="row">
-          <div class="item col-lg-6 col-md-12" style="margin-top:30px;">
-            <div class="icon-holder">
-              <i class="fas fa-edit"></i>
-            </div>
-            <div class="content">
-              <h3 class="sub-title">Go-Vim DevKit Contents</h3>
-              <table class="table" style="width:1000px">
-                <thead>
-                  <tr>
-                    <th scope="col" width="20%">Tool</th>
-                    <th scope="col">Description</th>
-                  </tr>
-                </thead>
-                <tr>
-                  <td scope="row"><p>Go</p></td>
-                  <td>
-                    <p>
-                    Go is an open source programming language from Google, and has become the defacto choice for developing Cloud Native Microservices. Many Go packages are available either
-					 as development tools or as base libraries. Some of these Go tools may have been developed as bash completions or vim plugins. PavedRoad makes it easy by pre-integrating Go 
-					 package tools as well as completions and plugins. <a href="https://github.com/pavedroad-io/pavedroad/blob/master/devkit/BOM_GO_PACKAGES.md" target="_blank">Click here for a complete list.</a>
-                    </p>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td scope="row"><p>Vim</p></td>
-                  <td>
-                    <p>
-                    Vim is a highly configurable text editor for efficiently creating and changing any kind of text. PavedRoad has enhanced Vim to be a complete IDE adding word completion and
-					 development related shell commands that can be run inside of Vim. These commands are mapped to keystrokes for execution allowing developers to work without 
-					 ever having to leave Vim. If the version of Vim on the target device is not 8.0 or later then the latest version of will be installed.
-                    <a href="./vim/vimDevKit.html" target="_blank">Click here for more information.</a></p>
-                  </td>
-                </tr>
-                <tr>
-                  <td scope="row"><p>Skaffold</p></td>
-                  <td>
-                    <p>
-                    Skaffold is a command line tool that facilitates continuous development for Kubernetes applications. You can iterate on your application source code locally then deploy to 
-					local or remote Kubernetes clusters. Skaffold handles the workflow for building, pushing and deploying your application.
-					<a href="skaffoldTraining.html" target="_blank">Click here for more information.</a>
-                    </p>
-                  </td>
-                </tr>
-                 <tr>
-                  <td scope="row"><p>Enhanced Bash</p></td>
-                  <td>
-                    <p>
-                    The bash shell, aliases, and completions are integral parts of any development environment. PavedRoad has included a list of helpful bash-completions. Command completion is especially important in a development environment as there are commands like git that have many sub commands and options. In addition to completion capabilities, two sets of aliases are installed, one set for GoLang and the other for git commands. <a href="https://github.com/pavedroad-io/pavedroad/blob/master/devkit/BOM_BASH_COMPS.md" target="_blank">Click here for a complete list.</a>
-                    </p>
-                  </td>
-                </tr>
-                   <tr>
-                  <td scope="row"><p>Kompose</p></td>
-                  <td>
-                    <p>
-                    Kompose is a tool to help users familiar with docker-compose move to Kubernetes. It takes a Docker Compose file and translates it into Kubernetes resources. <a href="https://github.com/kubernetes/kompose" target="_blank">Click here for more information.</a>
-                    </p>
-                  </td>
-                </tr>                          
-
-              </table>
-            </div><!--//content-->
-          </div><!--//item-->
-          
-          <div class="clearfix visible-md"></div>    
-        </div><!--//row-->     
-<!-- marker -->
+	
+	<!-- marker -->
         <div class="clearfix visible-md"></div>    
         </div><!--//row-->       
         <div class="row">
@@ -213,7 +114,10 @@
             </div>
             <div class="content">
               <h3 class="sub-title">Download PavedRoad DevKit</h3>
-              <p>Download the bootstrap script for your target OS and run it to install the DevKit. This script installs curl, git, and salt on the target device and then clones the PavedRoad DevKit repository. SaltStack (in masterless mode) is used to install the development environment. The bootstrap script runs salt-call to apply the salt states in the cloned repository on the target device. Running the bootstrap script installs the complete development environment, no knowledge about SaltStack is required. Copy the curl command for your target OS and paste into your systems terminal shell.
+              <p>Download the bootstrap script for your target OS and run it to install the DevKit. This script installs curl, git, and salt on the target device and 
+			  then clones the PavedRoad DevKit repository. SaltStack (in masterless mode) is used to install the development environment. The bootstrap script runs salt-call
+			   to apply the salt states in the cloned repository on the target device. Running the bootstrap script installs the complete development environment, 
+			   no knowledge about SaltStack is required. Copy the curl command for your target OS and paste into your systems terminal shell.
               </p>
               <table class="table" style="width:1000px">
                 <thead>
@@ -242,6 +146,127 @@
               </table>
             </div><!--//content-->
           </div><!--//item-->
+		  
+		  
+          <div class="item col-lg-6 col-md-12" style="margin-top:30px;">
+            <div class="icon-holder">
+              <i class="fas fa-check-double"></i>
+            </div>
+            <div class="content">
+              <h3 class="sub-title">Install Options</h3>
+              <table class="table" style="width:1000px">
+                <thead>
+                  <tr>
+                    <th scope="col" width="20%">Selections</th>
+                    <th scope="col">Description</th>
+                  </tr>
+                </thead>
+				 
+                <tr>
+                  <td scope="row"><a href="https://docs.docker.com/install" target="_blank">Run as a Docker Container</a></td>
+                  <td>
+                    <p>
+                    Docker is a platform which packages an application and all its dependencies together in the form of containers. This containerization aspect 
+					of Docker ensures that the application works in any environment. Kubernetes is a platform for automating deployment, scaling, and operating 
+					application containers across clusters of hosts, so the first order of business to use Kubernetes is to create containers for your applications.
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td scope="row"><a href="https://www.virtualbox.org/wiki/Downloads" target="_blank">Install on a Virtual Machine (VM)</a></td>
+                  <td>
+                    <p>
+                    A virtual machine (VM) is a software program or operating system that not only exhibits the behavior of a separate computer, but is also capable 
+					of performing tasks such as running applications and programs like a separate computer. Kubernetes can run on VMs or Bare Metal, but for local 
+					development it is typically more efficient to use VMs.
+                    </p>
+                  </td>
+                </tr>
+				<tr>
+                  <td scope="row"><a href="https://en.wikipedia.org/wiki/Bare-metal_server" target="_blank">Install Bare Metal / Native</a></td>
+                  <td>
+                    <p>
+              Bare-metal servers are 'physical' servers. Each logical server offered for rental is a distinct physical piece of hardware that is a functional server on its own. 
+			  Bare-metal servers have a single 'tenant'. Bare metal refers to a server that is not in a hypervisor or "cloud server". 
+                    </p>
+                  </td>
+                </tr>
+				
+				<tr>
+				  <td scope="row"><a href="https://blog.docker.com/2016/04/physical-virtual-container-deployment/" target="_blank">Which installation is right for you?</a></td>
+				  <td scope="row">To Use Physical Or To Use Virtual: That is the container deployment question</td>
+				</tr>
+				
+				
+              </table>
+            </div><!--//content-->
+          </div><!--//item-->
+		  
+		    <div class="item col-lg-6 col-md-12" style="margin-top:30px;">
+            <div class="icon-holder">
+              <i class="fas fa-check-double"></i>
+            </div>
+            <div class="content">
+              <h3 class="sub-title">What is being installed?</h3>
+              <table class="table" style="width:1000px">
+                <thead>
+                  <tr>
+                    <th scope="col" width="20%">Full Content</th>
+                    <th scope="col">Description</a></th>
+                  </tr>
+                </thead>
+				 
+				   <tr>
+                  <td scope="row"><a href="https://github.com/pavedroad-io/pavedroad/tree/master/devkit" target="_blank">Complete DevKit</a></td>
+                  <td>
+                    <div>
+                     This project provides the tools to install a cloud native software development environment. The development environment supports versions of the bash shell 
+					 and the vim editor that have been enhanced through completions and plugins to support a cloud native environment. 
+					 <br>
+					 <br>
+					 Select the link to see all details regarding the development kit, features, development environment and more.
+                    </div>
+                  </td>
+                </tr>
+				
+				
+				 <tr>
+                  <td scope="row"><a href="https://github.com/pavedroad-io/pavedroad/blob/master/devkit/BOM_BASH_COMPS.md" target="_blank">Bash</a></td>
+                  <td>
+                    <div>
+                     The complete list of completions installed.
+                    </div>
+                  </td>
+                </tr>
+				
+					 <tr>
+                  <td scope="row"><a href="https://github.com/pavedroad-io/pavedroad/blob/master/devkit/BOM_VIM_PLUGINS.md" target="_blank">Vim</a></td>
+                  <td>
+                    <div>
+                     The complete list of plugins installed.
+                    </div>
+                  </td>
+                </tr>
+				
+			    <tr>
+                  <td scope="row"><a href="https://github.com/pavedroad-io/pavedroad/blob/master/devkit/BOM_GO_PACKAGES.md" target="_blank">Golang</a></td>
+                  <td>
+                    <div>
+                     The complete list of packages installed.
+                    </div>
+                  </td>
+                </tr>
+			  </th>
+			
+				 </td>
+                </tr>
+              </table>
+            </div><!--//content-->
+          </div><!--//item-->
+
+		  
+          <div class="clearfix visible-md"></div>    
+        </div><!--//row-->     
           
           <div class="clearfix visible-md"></div>    
         </div><!--//row-->          
