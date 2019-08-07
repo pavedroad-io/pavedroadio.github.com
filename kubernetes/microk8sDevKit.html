@@ -85,10 +85,10 @@
     
     <!-- ******ABOUT****** --> 
 
-    <section id="devKitTraining" class="about section">
+    <section id="devKitTraining" class="about section bg-light">
 	
 	<nav aria-label="breadcrumb">
-     <ul class="prbreadcrumb breadcrumb">
+     <ul class="breadcrumb bg-light">
        <li class="breadcrumb-item"><a href="/">Home</a></li>
        <li class="breadcrumb-item active" aria-current="page">Kubernetes (microk8s) DevKit</li>
      </ul>
@@ -560,10 +560,7 @@ user@ubuntu:~$ journalctl -u snap.microk8s.daemon-etc.service.microk8s.inspect
 user@ubuntu:~$ microk8s.config
 apiVersion: v1
 clusters:
-- cluster:
-    certificate-authority-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUMvakNDQWVhZ0F3SUJBZ0lKQUtvK3d0MzhkK3FFTUEwR0NTcUdTSWIzRFFFQkN3VUFNQlF4RWpBUUJnTlYKQkFNTUNURXlOeTR3TGpBdU1UQWVGdzB4T1RBMU1EY3lNalE1TVRGYUZ3MDBOakE1TWpJeU1qUTVNVEZhTUJReApFakFRQmdOVkJBTU1DVEV5Tnk0d0xqQXVNVENDQVNJd0RRWUpLb1pJaHZjTkFRRUJCUUFEZ2dFUEFEQ0NBUW9DCmdnRUJBTWZzSXZhNTlUaXVYU1lWZDFmYXlkVmFQbndkclU3clVZalR2dmNsdE5XVG5BOEVSK3hmblV4UTA2OVUKR3VkQ25WaklLOVQ5ZExjQkp5Y0ZmYnVYTjdJMmVWYUJVcVhKeGdVVG1pRjJlUWZkTkRINUt1dzRJUzkxajJKUwpSakJjcXNyWlBXVjNqdEFaMXNDWE1IVnZoR0IyNmtYUm1OUCtoNW8wNklDeWpndUFxQTUrL2VmM3RvbmUyRDA2CjNuT3p6cGlkS2FGdVFRMGdBZlVGMFdZKzhsUVdsTkk1UHl3UHZ6UUdyT3pOeUZBcmVQaXRGeWpJMHpweFRKdXIKRDh1TlQ4dWhaS1pQOCt6cUtpZFJqTGdQczhKUmhIUjdaRFh5R1Ruakg0STludGxTa3JBOEM4ajlTZHNSS2RxUwpzNVpvUHVqSXo2VUxtbFZLVWhuSE1pQmtOZVVDQXdFQUFhTlRNRkV3SFFZRFZSME9CQllFRkVQaHdBV2ZoNGpMCjJJZS9yUFFpVmo2Vm5NYytNQjhHQTFVZEl3UVlNQmFBRkVQaHdBV2ZoNGpMMkllL3JQUWlWajZWbk1jK01BOEcKQTFVZEV3RUIvd1FGTUFNQkFmOHdEUVlKS29aSWh2Y05BUUVMQlFBRGdnRUJBTHQzV09Kd3A2SnBQWlNQMHB2WQpaVnB2RFVocXBhL0lIbjQ2bTRsZDVxZGUwTTF5a0N6d2hWSnZTNXNWQjlBS2dvS2wzbzNXUWExU1B6RnFEZDdXCnJPMkpxQ0xUVk9TbGJWMkVNME1vRUxyNmR1S1BCc0xISEJ4TzVOZFJvRndBdnFhOENmeXZwa2FsSGx1dHpqdnMKcC96cXF1dWpIU0NuZ3pSeXNGZ2tZMk1EaGkvQkQ2WGRvT0NEK1lpRVh1VkIvcWE3cWNzZnNIVVE3RFNWVTNhbgp1aGlsYnVEMU84NnBZdC9LaVZvZG9hV2R6YklvNkVmcW4wTXJaVGJuZUVjMThPNEJ2a1ZkSWZiVzkzMUUyMWl6ClpkNEpoZEhBcDIyeWN0M0lwRFFqWDl4Q2xzM080a3JUaWFGOFpBMERlZC96MnVIYjAzVk5qWFM0RTFkYjh5NXIKOEM0PQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
-    server: https://192.168.150.179:16443
-  name: microk8s-cluster
+- cluster: certificate-authority-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUMvakNDQWVhZ0F3SUJBZ0lKQUtvK3d0MzhkK3FFTUEwR0NTcUdTSWIzRFFFQkN3VUFNQlF4RWpBUUJnTlYKQkFNTUNURXlOeTR3TGpBdU1UQWVGdzB4T1RBMU1EY3lNalE1TVRGYUZ3MDBOakE1TWpJeU1qUTVNVEZhTUJReApFakFRQmdOVkJBTU1DVEV5Tnk0d0xqQXVNVENDQVNJd0RRWUpLb1pJaHZjTkFRRUJCUUFEZ2dFUEFEQ0NBUW9DCmdnRUJBTWZzSXZhNTlUaXVYU1lWZDFmYXlkVmFQbndkclU3clVZalR2dmNsdE5XVG5BOEVSK3hmblV4UTA2OVUKR3VkQ25WaklLOVQ5ZExjQkp5Y0ZmYnVYTjdJMmVWYUJVcVhKeGdVVG1pRjJlUWZkTkRINUt1dzRJUzkxajJKUwpSakJjcXNyWlBXVjNqdEFaMXNDWE1IVnZoR0IyNmtYUm1OUCtoNW8wNklDeWpndUFxQTUrL2VmM3RvbmUyRDA2CjNuT3p6cGlkS2FGdVFRMGdBZlVGMFdZKzhsUVdsTkk1UHl3UHZ6UUdyT3pOeUZBcmVQaXRGeWpJMHpweFRKdXIKRDh1TlQ4dWhaS1pQOCt6cUtpZFJqTGdQczhKUmhIUjdaRFh5R1Ruakg0STludGxTa3JBOEM4ajlTZHNSS2RxUwpzNVpvUHVqSXo2VUxtbFZLVWhuSE1pQmtOZVVDQXdFQUFhTlRNRkV3SFFZRFZSME9CQllFRkVQaHdBV2ZoNGpMCjJJZS9yUFFpVmo2Vm5NYytNQjhHQTFVZEl3UVlNQmFBRkVQaHdBV2ZoNGpMMkllL3JQUWlWajZWbk1jK01BOEcKQTFVZEV3RUIvd1FGTUFNQkFmOHdEUVlKS29aSWh2Y05BUUVMQlFBRGdnRUJBTHQzV09Kd3A2SnBQWlNQMHB2WQpaVnB2RFVocXBhL0lIbjQ2bTRsZDVxZGUwTTF5a0N6d2hWSnZTNXNWQjlBS2dvS2wzbzNXUWExU1B6RnFEZDdXCnJPMkpxQ0xUVk9TbGJWMkVNME1vRUxyNmR1S1BCc0xISEJ4TzVOZFJvRndBdnFhOENmeXZwa2FsSGx1dHpqdnMKcC96cXF1dWpIU0NuZ3pSeXNGZ2tZMk1EaGkvQkQ2WGRvT0NEK1lpRVh1VkIvcWE3cWNzZnNIVVE3RFNWVTNhbgp1aGlsYnVEMU84NnBZdC9LaVZvZG9hV2R6YklvNkVmcW4wTXJaVGJuZUVjMThPNEJ2a1ZkSWZiVzkzMUUyMWl6ClpkNEpoZEhBcDIyeWN0M0lwRFFqWDl4Q2xzM080a3JUaWFGOFpBMERlZC96MnVIYjAzVk5qWFM0RTFkYjh5NXIKOEM0PQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg== server: https://192.168.150.179:16443 name: microk8s-cluster
 contexts:
 - context:
     cluster: microk8s-cluster
@@ -578,9 +575,11 @@ users:
     username: admin
     password: ###################################
             </code></pre>
+          <div class="font-weight-bold text-danger text-center">
+          NOTE: After restarting microk8s the IP address of the cluster will change.  You must 
+          regenerate the configuration for kubectl to function correctly.
+          </div>
 
-
-          <h5>Kubernetes wrapper commands</h5>
             <table class="table table-hover">
               <thead>
                 <tr>
