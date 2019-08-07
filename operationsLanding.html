@@ -11,16 +11,20 @@
     <link rel="shortcut icon" href="favicon.ico">  
     <link href='https://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'> 
-    <!-- FontAwesome JS -->
+    
+	<!-- breadcrumb -->
+	<link type="text/css" rel="stylesheet" href="../assets/css/pr.css"/>
+	
+	<!-- FontAwesome JS -->
     <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js" integrity="sha384-3LK/3kTpDE/Pkp8gTNp2gR/2gOiwQ6QaO7Td0zV76UFJVhqLl4Vl3KL1We6q6wR9" crossorigin="anonymous"></script>
 
     <!-- Global CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <!-- Plugins CSS -->    
-    <link rel="stylesheet" href="../assets/plugins/prism/prism.css">
+    <link rel="stylesheet" href="assets/plugins/prism/prism.css">
     <!-- Theme CSS -->  
-    <link id="theme-style" rel="stylesheet" href="../assets/css/theme-1.css">
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme-1.css">
     <!-- GitHub Button -->
     <script async defer src="https://buttons.github.io/buttons.js"></script> 
 </head> 
@@ -45,7 +49,6 @@
                     <span class="logo-title">PavedRoad.io</span>
                 </a>
             </h1><!--//logo-->              
-
             <nav id="main-nav" class="main-nav navbar-expand-md float-right" role="navigation">
                 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse">
@@ -58,21 +61,21 @@
                 <div class="navbar-collapse collapse" id="navbar-collapse">
                     <ul class="nav navbar-nav">
                         <li class="nav-item sr-only"><a class="nav-link" href="/">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#docs">Documentation</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/#features">Features</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/#docs">Documentation</a></li>
                         <li class="nav-item dropdown">
                           <a class="nav-link dropdown-toggle" data-toggle="dropdown"
                              href="#" role="button" aria-haspopup="true" aria-expanded="false">Guides</a>
                           <div class="dropdown-menu">
-                            <a class="dropdown-item" href="/devKits.html">DevKits</a>
-                            <a class="dropdown-item" href="/cicd.html">CI/CD</a>
-                            <a class="dropdown-item" onclick="return false;" href="#">Operations</a>
-                            <a class="dropdown-item" onclick="return false;" href="#">Insights</a>
+                            <a class="dropdown-item" href="../devKitsLanding.html">DevKits</a>
+                            <a class="dropdown-item" href="../cicdLanding.html">CI/CD</a>
+                            <a class="dropdown-item" href="../operationsLanding.html">Operations</a>
+                            <a class="dropdown-item" href="../insightsLanding.html">Insights</a>
                           </div>
                         </li>
-                        <li class="nav-item"><a class="nav-link" href="#license">License</a></li>                        
-                        <li class="nav-item last"><a class="nav-link" href="#contact">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/#license">License</a></li>                        
+                        <li class="nav-item last"><a class="nav-link" href="/#contact">Contact</a></li>
                     </ul><!--//nav-->
                 </div><!--//navabr-collapse-->
             </nav><!--//main-nav-->
@@ -80,83 +83,77 @@
     </header><!--//header-->
     
     <!-- ******ABOUT****** --> 
+    <section id="operations" class="about section"> 
+	
+	
+	<nav aria-label="breadcrumb">
+     <ul class="prbreadcrumb breadcrumb">
+       <li class="breadcrumb-item"><a href="/">Home</a></li>
+       <li class="breadcrumb-item active" aria-current="page">Operations</li>
+     </ul>
+   </nav>
+   
+      <div class="container">
+        <h3 class="title text-left" style="margin-top: 45px; margin-bottom: 5px;">
+         Operations
+        </h3>
+        <div>
+         Coming Soon
+        </div>
+     <!--   <div class="row">
 
-    <section id="devKitTraining" 
-      class="about section">
-      <div class="container" style="margin-top: 45px;">
-        <span class="text-primary" style="font-size: 25px; virtical-align: text-top;">
-        <!-- change to proper image -->
-        <img src="../assets/images/kubernetes.png" hieght="75" width="75"/>
-        Training name
-        </span>
-        <h4 style="margin-top: 10px;">Overview</h4>
-        <p>
-        Introduction paragraph
-        </p>
+          <div class="item col-lg-6 col-md-12" style="margin-top:30px;">
+            <div class="icon-holder">
+              <i class="fas fa-cogs"></i>
+            </div>
+            <div class="content" onclick="location.href='skaffoldTraining.html'">
+              <h3 class="sub-title">CI/CD Quickstarts and Training</h3>
+              <table class="table" style="width:1000px">
+                <thead>
+                  <tr>
+                    <th scope="col" width="20%">Tool</th>
+                    <th scope="col">Description</th>
+                  </tr>
+                </thead>
+                <tr>
+                  <td scope="row"><a href="skaffoldTraining.html">Skaffold</a></td>
+                  <td>
+                    <p>
+                    Skaffold is a command line tool that facilitates continuous development for Kubernetes applications. You can iterate on your application source code locally then deploy to local or remote Kubernetes clusters. Skaffold handles the workflow for building, pushing and deploying your application.
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td scope="row"><a href="cicdLanding.html">Tekton</a></td>
+                  <td>
+                    <p>
+                    Tekton Pipelines is an open source implementation to configure and run CI/CD style pipelines for your Kubernetes application. Pipeline creates Custom Resources as building blocks to declare pipelines.
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td scope="row"><a href="cicdLanding.html">Argo</a></td>
+                  <td>
+                    <p>
+                    Argo provides container-native workflows for Kubernetes implementing each step in a workflow as a container. Argo enables users to launch multi-step pipelines using a custom DSL that is similar to traditional YAML.
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td scope="row"><a href="cicdLanding.html">Argo CD</a></td>
+                  <td>
+                    <p>
+                    Argo CD is a declarative, GitOps continuous delivery tool for Kubernetes.
+                    </p>
+                  </td>
+                </tr>
+              </table>
+            </div><!--//content-->
+          </div><!--//item-->
 
-        <h4 style="margin-top: 15px;">Subjects covered</h4>
-        <div class="accordion" id="k8sAccording">
-          <div class="card">
-            <div class="card-header" id="topic-working-with">
-              <h2 class="mb-0">
-                <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#collapseOne">
-                  Area 1
-                </button>									
-                </h2>
-            </div>
-            <div id="collapseOne" class="collapse show" aria-labelledby="topic-working-with" data-parent="#k8sAccording">
-              <div class="card-body">
-                <p><a href="https://pepa.holla.cz/wp-content/uploads/2016/10/Getting-Started-with-Kubernetes.pdf" target="_blank">
-                  item 1</a></p>
-                <p><a href="https://go.heptio.com/rs/383-ENX-437/images/Managing_Kubernetes.pdf" target="_blank">
-                  item 2</a></p>
-              </div>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-header" id="addons">
-                <h2 class="mb-0">
-                    <button type="button" class="btn btn-link collapsed" 
-                      data-toggle="collapse" data-target="#collapseTwo">
-                      Area 2
-                    </button>
-                </h2>
-            </div>
-            <div id="collapseTwo" class="collapse" aria-labelledby="addons" data-parent="#k8sAccording">
-                <div class="card-body">
-                  <p><a href="https://microk8s.io/docs/" target="_blank">
-                    item 1</a></p>
-                  <p><a href="https://tutorials.ubuntu.com/tutorial/install-a-local-kubernetes-with-microk8s#0" target="_blank">
-                    item 2</a></p>
-                  <p><a href="https://github.com/ubuntu/microk8s/blob/master/docs/community.md" target="_blank">
-                    item 3</a></p>
-                  <p><a href="https://docs.cilium.io/en/stable/gettingstarted/microk8s/" target="_blank">
-                    item 4</a></p>
-                </div>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-header" id="faas">
-                <h2 class="mb-0">
-                    <button type="button" class="btn btn-link collapsed" 
-                      data-toggle="collapse" data-target="#collapseThree">
-                      Area 3
-                    </button>
-                </h2>
-            </div>
-            <div id="collapseThree" class="collapse" aria-labelledby="faas" data-parent="#k8sAccording">
-                <div class="card-body">
-                  <p><a href=" https://johnmccabe.net/technology/projects/openfaas-on-microk8s/" target="_blank">
-                    item 1</a></p>
-                  <p><a href="https://github.com/openfaas/faas" target="_blank">
-                    item 1</a></p>
-                </div>
-            </div>
-          </div>
-
-      </div><!--//container-->
+                <div class="clearfix visible-md"></div>    
+            </div><!--//row-->            
+        </div><!--//container-->
     </section><!--//about-->
     
     <!-- ******CONTACT****** --> 
@@ -171,7 +168,7 @@
             </div><!--//contact-inner-->
         </div><!--//container-->
     </section><!--//contact-->  
-
+      
     <!-- ******FOOTER****** --> 
     <footer class="footer">
         <div class="container text-center">
@@ -185,9 +182,9 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script> 
-    <script type="text/javascript" src="../assets/plugins/prism/prism.js"></script>    
-    <script type="text/javascript" src="../assets/js/main.js"></script>  
+    <script type="text/javascript" src="assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script> 
+    <script type="text/javascript" src="assets/plugins/prism/prism.js"></script>    
+    <script type="text/javascript" src="assets/js/main.js"></script>  
 
     
         

@@ -11,7 +11,11 @@
     <link rel="shortcut icon" href="favicon.ico">  
     <link href='https://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'> 
-    <!-- FontAwesome JS -->
+   
+    <!-- breadcrumb -->
+	<link type="text/css" rel="stylesheet" href="../assets/css/pr.css"/>
+	
+	<!-- FontAwesome JS -->
     <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js" integrity="sha384-3LK/3kTpDE/Pkp8gTNp2gR/2gOiwQ6QaO7Td0zV76UFJVhqLl4Vl3KL1We6q6wR9" crossorigin="anonymous"></script>
 
     <!-- Global CSS -->
@@ -57,90 +61,98 @@
                 <div class="navbar-collapse collapse" id="navbar-collapse">
                     <ul class="nav navbar-nav">
                         <li class="nav-item sr-only"><a class="nav-link" href="/">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#docs">Documentation</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/#features">Features</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/#docs">Documentation</a></li>
                         <li class="nav-item dropdown">
                           <a class="nav-link dropdown-toggle" data-toggle="dropdown"
                              href="#" role="button" aria-haspopup="true" aria-expanded="false">Guides</a>
                           <div class="dropdown-menu">
-                            <a class="dropdown-item" href="/devkitsLanding.html">DevKits</a>
-                            <a class="dropdown-item" href="/cicdLanding.html">CI/CD</a>
-                            <a class="dropdown-item" onclick="return false;" href="#">Operations</a>
-                            <a class="dropdown-item" onclick="return false;" href="#">Insights</a>
+                            <a class="dropdown-item" href="../devKitsLanding.html">DevKits</a>
+                            <a class="dropdown-item" href="../cicdLanding.html">CI/CD</a>
+                            <a class="dropdown-item" href="../operationsLanding.html">Operations</a>
+                            <a class="dropdown-item" href="../insightsLanding.html">Insights</a>
                           </div>
                         </li>
-                        <li class="nav-item"><a class="nav-link" href="#license">License</a></li>                        
-                        <li class="nav-item last"><a class="nav-link" href="#contact">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/#license">License</a></li>                        
+                        <li class="nav-item last"><a class="nav-link" href="/#contact">Contact</a></li>
                     </ul><!--//nav-->
                 </div><!--//navabr-collapse-->
             </nav><!--//main-nav-->
         </div>
     </header><!--//header-->
     
-    <!-- ******DevKits****** --> 
-    <section id="DevKit Guides" class="about section">
+    <!-- ******ABOUT****** --> 
+    <section id="insights" class="about section">
+	
+	<nav aria-label="breadcrumb">
+     <ul class="prbreadcrumb breadcrumb">
+       <li class="breadcrumb-item"><a href="/">Home</a></li>
+       <li class="breadcrumb-item active" aria-current="page">Insights</li>
+     </ul>
+   </nav>
+	
       <div class="container">
         <h3 class="title text-left" style="margin-top: 45px; margin-bottom: 5px;">
-          DevKit Guides
+          Insights
         </h3>
-        <p>
-          DevKits are an integrated and tested collection of Open Source tool, which we call Tool Networks, that when integrated in this fashion form a powerful Development, Deployment, and Operational Model. It also provides a "low-code" environment where templates build the core of your application and you bring your data model and business logic. PavedRoad makes it easy to assemble and use these integrated stacks and make it easy for you to learn about them. We have assembled quickstart guides and training, which consists both of curated online resources and PavedRoad created training packages. The guides are organized by development language.
-        </p>
+        <div>
+       Coming Soon
+       <!-- </div>
         <div class="row">
 
           <div class="item col-lg-6 col-md-12" style="margin-top:30px;">
             <div class="icon-holder">
-              <i class="fas fa-edit"></i>
+              <i class="fas fa-cogs"></i>
             </div>
-            <div class="content">
-              <h3 class="sub-title">DevKit Quickstarts and Training</h3>
+            <div class="content" onclick="location.href='skaffoldTraining.html'">
+              <h3 class="sub-title">CI/CD Quickstarts and Training</h3>
               <table class="table" style="width:1000px">
                 <thead>
                   <tr>
-                    <th scope="col" width="20%">Language</th>
-                    <th scope="col">Tool Network</th>
+                    <th scope="col" width="20%">Tool</th>
+                    <th scope="col">Description</th>
                   </tr>
                 </thead>
                 <tr>
-                  <td scope="row"><a href="Tooling.html">GoLang</a></td>
+                  <td scope="row"><a href="skaffoldTraining.html">Skaffold</a></td>
                   <td>
                     <p>
-                    GoLang, Vim, Dep, git, linters, Docker, microk8s, skaffold, enhanced bash, Delve, kompose, graphviz, more ...
+                    Skaffold is a command line tool that facilitates continuous development for Kubernetes applications. You can iterate on your application source code locally then deploy to local or remote Kubernetes clusters. Skaffold handles the workflow for building, pushing and deploying your application.
                     </p>
                   </td>
                 </tr>
                 <tr>
-                  <td scope="row"><a href="devkitsLanding.html">Python</a></td>
+                  <td scope="row"><a href="cicdLanding.html">Tekton</a></td>
                   <td>
                     <p>
-                    Coming Soon
+                    Tekton Pipelines is an open source implementation to configure and run CI/CD style pipelines for your Kubernetes application. Pipeline creates Custom Resources as building blocks to declare pipelines.
                     </p>
                   </td>
                 </tr>
                 <tr>
-                  <td scope="row"><a href="devkitsLanding.html">node.js</a></td>
+                  <td scope="row"><a href="cicdLanding.html">Argo</a></td>
                   <td>
                     <p>
-                    Coming Soon
+                    Argo provides container-native workflows for Kubernetes implementing each step in a workflow as a container. Argo enables users to launch multi-step pipelines using a custom DSL that is similar to traditional YAML.
                     </p>
                   </td>
                 </tr>
                 <tr>
-                  <td scope="row"><a href="devkitsLanding.html">Java</a></td>
+                  <td scope="row"><a href="cicdLanding.html">Argo CD</a></td>
                   <td>
                     <p>
-                    Coming Soon
+                    Argo CD is a declarative, GitOps continuous delivery tool for Kubernetes.
                     </p>
                   </td>
                 </tr>
-
               </table>
-            </div><!--//content-->
-          </div><!--//item-->
-          <div class="clearfix visible-md"></div>    
-        </div><!--//row-->            
-      </div><!--//container-->
+            </div><!--//content-->  
+          </div><!--//item-->  
+
+                <div class="clearfix visible-md"></div>    
+            </div><!--//row-->            
+        </div><!--//container-->
     </section><!--//about-->
     
     <!-- ******CONTACT****** --> 

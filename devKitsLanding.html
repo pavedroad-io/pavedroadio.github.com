@@ -11,16 +11,20 @@
     <link rel="shortcut icon" href="favicon.ico">  
     <link href='https://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'> 
-    <!-- FontAwesome JS -->
+    
+	<!-- breadcrumb -->
+	<link type="text/css" rel="stylesheet" href="../assets/css/pr.css"/>
+	
+	<!-- FontAwesome JS -->
     <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js" integrity="sha384-3LK/3kTpDE/Pkp8gTNp2gR/2gOiwQ6QaO7Td0zV76UFJVhqLl4Vl3KL1We6q6wR9" crossorigin="anonymous"></script>
 
     <!-- Global CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <!-- Plugins CSS -->    
-    <link rel="stylesheet" href="../assets/plugins/prism/prism.css">
+    <link rel="stylesheet" href="assets/plugins/prism/prism.css">
     <!-- Theme CSS -->  
-    <link id="theme-style" rel="stylesheet" href="../assets/css/theme-1.css">
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme-1.css">
     <!-- GitHub Button -->
     <script async defer src="https://buttons.github.io/buttons.js"></script> 
 </head> 
@@ -45,7 +49,6 @@
                     <span class="logo-title">PavedRoad.io</span>
                 </a>
             </h1><!--//logo-->              
-
             <nav id="main-nav" class="main-nav navbar-expand-md float-right" role="navigation">
                 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse">
@@ -58,96 +61,98 @@
                 <div class="navbar-collapse collapse" id="navbar-collapse">
                     <ul class="nav navbar-nav">
                         <li class="nav-item sr-only"><a class="nav-link" href="/">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#docs">Documentation</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/#features">Features</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/#docs">Documentation</a></li>
                         <li class="nav-item dropdown">
                           <a class="nav-link dropdown-toggle" data-toggle="dropdown"
                              href="#" role="button" aria-haspopup="true" aria-expanded="false">Guides</a>
                           <div class="dropdown-menu">
-                            <a class="dropdown-item" href="/devKits.html">DevKits</a>
-                            <a class="dropdown-item" href="/cicd.html">CI/CD</a>
-                            <a class="dropdown-item" onclick="return false;" href="#">Operations</a>
-                            <a class="dropdown-item" onclick="return false;" href="#">Insights</a>
+                            <a class="dropdown-item" href="../devKitsLanding.html">DevKits</a>
+                            <a class="dropdown-item" href="../cicdLanding.html">CI/CD</a>
+                            <a class="dropdown-item" href="../operationsLanding.html">Operations</a>
+                            <a class="dropdown-item" href="../insightsLanding.html">Insights</a>
                           </div>
                         </li>
-                        <li class="nav-item"><a class="nav-link" href="#license">License</a></li>                        
-                        <li class="nav-item last"><a class="nav-link" href="#contact">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/#license">License</a></li>                        
+                        <li class="nav-item last"><a class="nav-link" href="/#contact">Contact</a></li>
                     </ul><!--//nav-->
                 </div><!--//navabr-collapse-->
             </nav><!--//main-nav-->
         </div>
     </header><!--//header-->
     
-    <!-- ******ABOUT****** --> 
-
-    <section id="devKitTraining" 
-      class="about section">
-      <div class="container" style="margin-top: 45px;">
-        <span class="text-primary" style="font-size: 25px; virtical-align: text-top;">
-        <img src="../assets/images/kubernetes.png" hieght="75" width="75"/>
-        Training topic
-        </span>
-        <h4 style="margin-top: 10px;">Overview</h4>
+    <!-- ******DevKits****** --> 
+    <section id="DevKit Guides" class="about section">
+	
+	<nav aria-label="breadcrumb">
+     <ul class="prbreadcrumb breadcrumb">
+       <li class="breadcrumb-item"><a href="/">Home</a></li>
+       <li class="breadcrumb-item active" aria-current="page">DevKit Guides</li>
+     </ul>
+   </nav>
+	
+      <div class="container">
+        <h3 class="title text-left" style="margin-top: 45px; margin-bottom: 5px;">
+          DevKit Guides
+        </h3>
         <p>
-        Introduction
+          DevKits are an integrated and tested collection of Open Source tool, which we call Tool Networks, that when integrated in this fashion form a powerful Development, Deployment, and Operational Model. It also provides a "low-code" environment where templates build the core of your application and you bring your data model and business logic. PavedRoad makes it easy to assemble and use these integrated stacks and make it easy for you to learn about them. We have assembled quickstart guides and training, which consists both of curated online resources and PavedRoad created training packages. The guides are organized by development language.
         </p>
+        <div class="row">
 
-        <h4 style="margin-top: 15px;">Subjects covered</h4>
-        <div class="accordion" id="topicAccording">
-          <div class="card">
-            <div class="card-header" id="topic-working-with">
-              <h2 class="mb-0">
-                <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#collapseOne">
-                  Area 1
-                </button>									
-                </h2>
+          <div class="item col-lg-6 col-md-12" style="margin-top:30px;">
+            <div class="icon-holder">
+              <i class="fas fa-edit"></i>
             </div>
-            <div id="collapseOne" class="collapse show" aria-labelledby="topic-working-with" data-parent="#topicAccording">
-              <div class="card-body">
-                <p><a href="https://www.youtube.com/watch?v=PH-2FfFD2PU" target="_blank">
-                  item 2</a></p>
-                <p><a href="https://www.youtube.com/watch?v=kOa_llowQ1c" target="_blank">
-                  item 2</a></p>
-                <p><a href="https://www.youtube.com/watch?v=zeS6OyDoy78" target="_blank">
-                  item 3</a></p>
-              </div>
-            </div>
-          </div>
+            <div class="content">
+              <h3 class="sub-title">DevKit Quickstarts and Training</h3>
+              <table class="table" style="width:1000px">
+                <thead>
+                  <tr>
+                    <th scope="col" width="20%">Language</th>
+                    <th scope="col">Tool Network</th>
+                  </tr>
+                </thead>
+                <tr>
+                  <td scope="row"><a href="Tooling.html">GoLang</a></td>
+                  <td>
+                    <p>
+                    GoLang, Vim, Dep, git, linters, Docker, microk8s, skaffold, enhanced bash, Delve, kompose, graphviz, more ...
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                 
+				  <td scope="row"><!--<a href="devkitsLanding.html"></a>-->Python</td>
+                  <td>
+                    <p>
+                    Coming Soon
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td scope="row"><!--a href="devkitsLanding.html"></a>-->node.js</td>
+                  <td>
+                    <p>
+                    Coming Soon
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td scope="row"><!--a href="devkitsLanding.html"></a>-->Java</td>
+                  <td>
+                    <p>
+                    Coming Soon
+                    </p>
+                  </td>
+                </tr>
 
-          <div class="card">
-            <div class="card-header" id="addons">
-                <h2 class="mb-0">
-                    <button type="button" class="btn btn-link collapsed" 
-                      data-toggle="collapse" data-target="#collapseTwo">
-                      Area 2
-                    </button>
-                </h2>
-            </div>
-            <div id="collapseTwo" class="collapse" aria-labelledby="addons" data-parent="#topicAccording">
-                <div class="card-body">
-                </div>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-header" id="faas">
-                <h2 class="mb-0">
-                    <button type="button" class="btn btn-link collapsed" 
-                      data-toggle="collapse" data-target="#collapseThree">
-                      Area 3
-                    </button>
-                </h2>
-            </div>
-            <div id="collapseThree" class="collapse" aria-labelledby="faas" data-parent="#topicAccording">
-                <div class="card-body">
-                <p><a href="https://www.youtube.com/watch?v=CylT5O6IfkU" target="_blank">
-                  item 1</a></p>
-                </div>
-            </div>
-          </div>
-
-    </div>
+              </table>
+            </div><!--//content-->
+          </div><!--//item-->
+          <div class="clearfix visible-md"></div>    
+        </div><!--//row-->            
       </div><!--//container-->
     </section><!--//about-->
     
@@ -163,7 +168,7 @@
             </div><!--//contact-inner-->
         </div><!--//container-->
     </section><!--//contact-->  
-
+      
     <!-- ******FOOTER****** --> 
     <footer class="footer">
         <div class="container text-center">
@@ -177,9 +182,9 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script> 
-    <script type="text/javascript" src="../assets/plugins/prism/prism.js"></script>    
-    <script type="text/javascript" src="../assets/js/main.js"></script>  
+    <script type="text/javascript" src="assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script> 
+    <script type="text/javascript" src="assets/plugins/prism/prism.js"></script>    
+    <script type="text/javascript" src="assets/js/main.js"></script>  
 
     
         

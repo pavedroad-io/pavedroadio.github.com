@@ -11,7 +11,11 @@
     <link rel="shortcut icon" href="favicon.ico">  
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'"> 
-    <!-- FontAwesome JS -->
+    
+	<!-- breadcrumb -->
+	<link type="text/css" rel="stylesheet" href="../assets/css/pr.css"/>
+	
+	<!-- FontAwesome JS -->
     <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js" integrity="sha384-3LK/3kTpDE/Pkp8gTNp2gR/2gOiwQ6QaO7Td0zV76UFJVhqLl4Vl3KL1We6q6wR9" crossorigin="anonymous"></script>
 
     <!-- Global CSS -->
@@ -54,24 +58,24 @@
                     <span class="icon-bar"></span>
                 </button><!--//nav-toggle-->
                            
-                <div class="navbar-collapse collapse" id="navbar-collapse">
+               <div class="navbar-collapse collapse" id="navbar-collapse">
                     <ul class="nav navbar-nav">
                         <li class="nav-item sr-only"><a class="nav-link" href="/">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#docs">Documentation</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/#features">Features</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/#docs">Documentation</a></li>
                         <li class="nav-item dropdown">
                           <a class="nav-link dropdown-toggle" data-toggle="dropdown"
                              href="#" role="button" aria-haspopup="true" aria-expanded="false">Guides</a>
                           <div class="dropdown-menu">
-                            <a class="dropdown-item" href="./devKitsLanding.html">DevKits</a>
-                            <a class="dropdown-item" href="./cicdLanding.html">CI/CD</a>
-                            <a class="dropdown-item" onclick="return false;" href="#">Operations</a>
-                            <a class="dropdown-item" onclick="return false;" href="#">Insights</a>
+                            <a class="dropdown-item" href="../devKitsLanding.html">DevKits</a>
+                            <a class="dropdown-item" href="../cicdLanding.html">CI/CD</a>
+                            <a class="dropdown-item" href="../operationsLanding.html">Operations</a>
+                            <a class="dropdown-item" href="../insightsLanding.html">Insights</a>
                           </div>
                         </li>
-                        <li class="nav-item"><a class="nav-link" href="#license">License</a></li>                        
-                        <li class="nav-item last"><a class="nav-link" href="#contact">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/#license">License</a></li>                        
+                        <li class="nav-item last"><a class="nav-link" href="/#contact">Contact</a></li>
                     </ul><!--//nav-->
                 </div><!--//navabr-collapse-->
             </nav><!--//main-nav-->
@@ -82,6 +86,14 @@
 
     <section id="devKitTraining" 
       class="about section">
+	  
+	  <nav aria-label="breadcrumb">
+     <ul class="prbreadcrumb breadcrumb">
+       <li class="breadcrumb-item"><a href="/">Home</a></li>
+       <li class="breadcrumb-item active" aria-current="page">GoLang Quick Start</li>
+     </ul>
+   </nav>
+   
       <div class="container" style="margin-top: 45px;">
         <span class="text-primary" style="font-size: 25px; virtical-align: text-top;">
      
@@ -98,16 +110,16 @@
             <div class="content">
               <h3 class="sub-title text-info">Program with Go</h3>
                 <h4 class="sub-title">
-                  <a href="go/goDevKit.html">Getting Started</a>
+                  <a href="go/goDevKit.html" target="_blank">Getting Started</a>
                 </h4>
                 <h4 class="sub-title">
-                  <a href="go/goDocumentation.html">Documentation</a>
+                  <a href="go/goDocumentation.html" target="_blank">Documentation</a>
                 </h4>
                 <h4 class="sub-title">
-                  <a href="go/goVideo.html">Video</a>
+                  <a href="go/goVideo.html" target="_blank">Video</a>
                 </h4>
                 <h4 class="sub-title">
-                  <a href="go/goTutorials.html">Tutorials</a>
+                  <a href="go/goTutorials.html" target="_blank">Tutorials</a>
                 </h4>
             </div><!--//content-->
           </div><!--//item-->
@@ -119,16 +131,16 @@
             <div class="content">
               <h3 class="sub-title text-info">Vim as an IDE</h3>
                 <h4 class="sub-title">
-                  <a href="vim/vimDevKit.html">Getting Started</a>
+                  <a href="vim/vimDevKit.html" target="_blank">Getting Started</a>
                 </h4>
                 <h4 class="sub-title">
-                  <a href="vim/vimDocumentation.html">Documentation</a>
+                  <a href="vim/vimDocumentation.html" target="_blank">Documentation</a>
                 </h4>
                 <h4 class="sub-title">
-                  <a href="vim/vimVideo.html">Video</a>
+                  <a href="vim/vimVideo.html" target="_blank">Video</a>
                 </h4>
                 <h4 class="sub-title">
-                  <a href="vim/vimTutorials.html">Tutorials</a>
+                  <a href="vim/vimTutorials.html" target="_blank">Tutorials</a>
                 </h4>
             </div><!--//content-->
           </div><!--//item-->
@@ -140,16 +152,16 @@
             <div class="content">
               <h3 class="sub-title text-info">Git and GitHub</h3>
                 <h4 class="sub-title">
-                  <a href="git/gitDevKit.html">Getting Started</a>
+                  <a href="git/gitDevKit.html" target="_blank">Getting Started</a>
                 </h4>
                 <h4 class="sub-title">
-                  <a href="git/gitDocumentation.html">Documentation</a>
+                  <a href="git/gitDocumentation.html" target="_blank">Documentation</a>
                 </h4>
                 <h4 class="sub-title">
-                  <a href="git/gitVideo.html">Video</a>
+                  <a href="git/gitVideo.html" target="_blank">Video</a>
                 </h4>
                 <h4 class="sub-title">
-                  <a href="git/gitTutorials.html">Tutorials</a>
+                  <a href="git/gitTutorials.html" target="_blank">Tutorials</a>
                 </h4>
             </div><!--//content-->
           </div><!--//item-->
@@ -161,16 +173,16 @@
             <div class="content">
               <h3 class="sub-title text-info">Working with Docker</h3>
                 <h4 class="sub-title">
-                  <a href="docker/dockerDevKit.html">Getting Started</a>
+                  <a href="docker/dockerDevKit.html" target="_blank">Getting Started</a>
                 </h4>
                 <h4 class="sub-title">
-                  <a href="docker/dockerDocumentation.html">Documentation</a>
+                  <a href="docker/dockerDocumentation.html" target="_blank">Documentation</a>
                 </h4>
                 <h4 class="sub-title">
-                  <a href="docker/dockerVideo.html">Video</a>
+                  <a href="docker/dockerVideo.html" target="_blank">Video</a>
                 </h4>
                 <h4 class="sub-title">
-                  <a href="docker/dockerTutorials.html">Tutorials</a>
+                  <a href="docker/dockerTutorials.html" target="_blank">Tutorials</a>
                 </h4>
             </div><!--//content-->
           </div><!--//item-->
@@ -182,18 +194,18 @@
             <div class="content">
               <h3 class="sub-title text-info">Skaffold</h3>
                 <h4 class="sub-title">
-                  <a href="skaffoldTraining.html">Getting Started</a>
+                  <a href="skaffoldTraining.html" target="_blank">Getting Started</a>
                 </h4>
-               <!--removing since there are no pages - content is on the top level page
+               
 			    <h4 class="sub-title">
-                  <a href="skaffold/skaffoldDocumentation.html">Documentation</a>
+                  <a href="skaffold/skaffoldDocumentation.html" target="_blank">Documentation</a>
                 </h4>
                 <h4 class="sub-title">
-                  <a href="skaffold/skaffoldVideo.html">Video</a>
+                  <a href="skaffold/skaffoldVideo.html" target="_blank">Video</a>
                 </h4>
                 <h4 class="sub-title">
-                  <a href="skaffold/skaffoldTutorials.html">Tutorials</a>
-                </h4> -->
+                  <a href="skaffold/skaffoldTutorials.html" target="_blank">Tutorials</a>
+                </h4> 
             </div><!--//content-->
           </div><!--//item-->
 
@@ -204,16 +216,16 @@
             <div class="content">
               <h3 class="sub-title text-info">Kubernetes</h3>
                 <h4 class="sub-title">
-                  <a href="kubernetes/microk8sDevKit.html">Getting Started</a>
+                  <a href="kubernetes/microk8sDevKit.html" target="_blank">Getting Started</a>
                 </h4>
                 <h4 class="sub-title">
-                  <a href="kubernetes/microk8sDocumentation.html">Documentation</a>
+                  <a href="kubernetes/microk8sDocumentation.html" target="_blank">Documentation</a>
                 </h4>
                 <h4 class="sub-title">
-                  <a href="kubernetes/microk8sVideo.html">Video</a>
+                  <a href="kubernetes/microk8sVideo.html" target="_blank">Video</a>
                 </h4>
                 <h4 class="sub-title">
-                  <a href="kubernetes/microk8sTutorials.html">Tutorials</a>
+                  <a href="kubernetes/microk8sTutorials.html" target="_blank">Tutorials</a>
                 </h4>
             </div><!--//content-->
           </div><!--//item-->
