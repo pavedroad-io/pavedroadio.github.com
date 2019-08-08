@@ -109,6 +109,7 @@
 		
 		  <div class="item col-lg-11 col-md-12" style="margin-top:30px;">
             </div>
+            <a name="download"></a>
             <div class="content">
               <h3 class="sub-title">Download PavedRoad DevKit</h3>
               <table class="table" style="width:1000px">
@@ -130,7 +131,9 @@
                   <td scope="row"><div>Linux</div></td>
                   <td>
                     <div>
-                    <code>curl -L https://raw.githubusercontent.com/pavedroad-io/pavedroad/master/devkit/bootstrap-unix.sh | /bin/bash</code>
+                      <input size="80" id="linux-copy-clipboard" value="curl -L https://raw.githubusercontent.com/pavedroad-io/pavedroad/master/devkit/bootstrap-unix.sh | /bin/bash">
+                      </input>
+                      <a href="#download"><i class="far fa-copy" onclick="copyLinux()"></i></a>
                     </div>
                   </td>
                 </tr>
@@ -138,7 +141,8 @@
                   <td scope="row"><div>MacOS</div></td>
                   <td>
                     <div>
-                    <code>curl -L https://raw.githubusercontent.com/pavedroad-io/pavedroad/master/devkit/bootstrap-macos.sh | /bin/bash</code>
+                      <input size="80" id="mac-copy-clipboard" value="curl -L https://raw.githubusercontent.com/pavedroad-io/pavedroad/master/devkit/bootstrap-macos.sh | /bin/bash">
+                      <a href="#download"><i class="far fa-copy" onclick="copyMac()"></i></a>
                     </div>
                   </td>
                 </tr>
@@ -297,10 +301,22 @@
     <script type="text/javascript" src="assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script> 
     <script type="text/javascript" src="assets/plugins/prism/prism.js"></script>    
     <script type="text/javascript" src="assets/js/main.js"></script>  
+    <script language="JavaScript">
+      function copyLinux() {
+        var copyText = document.getElementById("linux-copy-clipboard");
+        copyText.select();
+        document.execCommand("copy");
+      }
+    
+      function copyMac() {
+        var copyText = document.getElementById("mac-copy-clipboard");
+        copyText.select();
+        document.execCommand("copy");
+      }
+    </script>
 
     
         
 </body>
 </html> 
-
 
