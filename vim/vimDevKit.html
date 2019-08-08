@@ -103,18 +103,19 @@
         </span>
         <h4 style="margin-top: 10px;">Overview</h4>
         <p dir="ltr">
-      <div>  Vim is a highly configurable text editor for efficiently creating and changing any kind of text. Vim is a clone, with additions, of Bill Joy's vi text editor program for Unix. 
-		Vim's author, Bram Moolenaar, based it upon the source code for a port of the Stevie editor to the Amiga and released a version to the public in 1991. </div>
 		
-		<div>&nbsp;</div>
-		
-		<div>PavedRoad has enhanced Vim to be a complete IDE adding word completion and development related shell commands that can be run inside of Vim. These commands are mapped to 
-		keystrokes for execution allowing developers to work without ever having to leave Vim. If the version of Vim on the target device is not 8.0 or later then the 
-		latest version of will be installed.</div>
-                     
+	     <div> While Vim is technically not an IDE, it is the most popular text editor used by developers today, which is why we at
+		 PavedRoad selected it. However, it lacks some of the capabilities found in other IDEs such as Microsoft Visual Studio, therefore,
+		 we have integrated plugins to add the missing capabilities such as syntax completion, language documentation, compiling and debugging
+		 in the editor directly. To add these capabilities in Vim provides a plugin system. From that system, we have selected and integrated 5
+		 plugins.
+		</div>
+	  
+	  <div>&nbsp;</div>
 
+                   
         <h4 style="margin-top: 15px;">Subjects</h4>
-        <div class="accordion" id="goAccording">
+        <div class="accordion" id="vimAccording">
           <div class="card">
             <div class="card-header" id="pr-tools">
               <h2 class="mb-0">
@@ -124,15 +125,31 @@
                 </button>
               </h2>
             </div>
-            <div id="collapseOne" class="collapse show" aria-labelledby="pr-tools" data-parent="#goAccording">
+            <div id="collapseOne" class="collapse show" aria-labelledby="pr-tools" data-parent="#vimAccording">
                 <div class="card-body">
-                  <p><a href="#pr-go-env">Plugins</a></p>
-				  <p><a href="#go-commands">Vim Commands</a></p>
+                  <p><a href="#pr-vim-env">Plugins</a></p>
                 </div>
             </div>
           </div>
 
          
+		   <div class="card">
+            <div class="card-header" id="daily">
+                <h2 class="mb-0">
+                    <button type="button" class="btn btn-link collapsed" 
+                      data-toggle="collapse" data-target="#collapseTwo">
+                      Daily Vim
+                    </button>
+                </h2>
+            </div>
+			
+            <div id="collapseTwo" class="collapse" aria-labelledby="learning" data-parent="#vimAccording">
+                <div class="card-body">
+                  <p><a href="#getting-started">Getting Started</a></p> 
+                </div>
+            </div>
+        </div>
+
         <div class="card">
             <div class="card-header" id="learning">
                 <h2 class="mb-0">
@@ -142,7 +159,8 @@
                     </button>
                 </h2>
             </div>
-            <div id="collapseTwo" class="collapse" aria-labelledby="learning" data-parent="#goAccording">
+			
+            <div id="collapseThree" class="collapse" aria-labelledby="learning" data-parent="#vimAccording">
                 <div class="card-body">
                   <div><a href="vimDocumentation.html" target="_blank">Documentation</a></div>
                   <div><a href="vimVideo.html" target="_blank">Videos</a></div>
@@ -156,43 +174,99 @@
 
       <div class="container" style="margin-top: 20px;">
         <h5>Plugins</h5>
-        <a name="pr-go-env"></a>
-		<div>PavedRoad has integrated <a href="https://github.com/pavedroad-io/pavedroad/blob/master/devkit/BOM_VIM_PLUGINS.md" target="_blank">5 vim plugins</a> together.
-		These five plugins provide a developer with an enhanced VIM environment that requires minimal effort on the developers part to get setup and running.  
+        <a name="pr-vim-env"></a>
+		<div>PavedRoad has incorporated <a href="https://github.com/pavedroad-io/pavedroad/blob/master/devkit/BOM_VIM_PLUGINS.md" target="_blank">5 plugins</a> in Vim.
+		These plugins provide a developer with an enhanced Vim environment by providing the convenience of the most typical Go commands. This environment requires minimal effort on the developers part to get set up and running.   
 		The plugins called vim-go and deoplete-go supply respectively the vim go commands and vim go completion.
+		
+		
 	  <div>&nbsp;</div>
- 
 
-<ol>
-<li><a href="https://github.com/fatih/vim-go" target="_blank">vim-go - provides Go language support for VIM.</a></li>
 
-<li><a href="https://github.com/deoplete-plugins/deoplete-go" target="_blank">deoplete-go - asynchronous Go completion for Neovim. deoplete source for Go. 
-deoplete.nvim is a required plugin for deoplete-go</a></li>
+<div class="item col-lg-11 col-md-12" style="margin-top:30px;"> 
+	</div> 
+	<div class="content"> 
+	<table class="table" style="width:1000px"> 
+	<thead> 
+	<tr> 
+	<th scope="col" width="20%">Plugin </th> 
+	<th scope="col">Description</th> 
+	</tr> 
+	</thead> 
+	
+	<tr> 
+	<td scope="row">
+       <a href="https://github.com/fatih/vim-go" target="_blank">vim-go</a></td> 
+	<td> 
+	<div> 
+	This plugin adds Go language support for Vim with the following features: code completion, snippet support, improved syntax highlighting, go toolchain commands. It also provides the ability 
+	 to compile, and test as well as execute and debug files plug much much more. Individual features can be toggled easily. vim-go leverages a number of tools developed by the Go 
+	 community to provide a seamless Vim experience.
+	</div> 
+	</td> 
+	</tr> 
+	
+	<tr> 
+	<td scope="row">
+       <a href="https://github.com/deoplete-plugins/deoplete-go" target="_blank">deoplete-go</a></td> 
+	<td> 
+	<div> 
+	 This plugin will display completions via complete() by default for Go. The plugins nvim-yarp and vim-hug-neovim-rpc for Vim8 are required for deoplete-go PavedRoad has also installed those by default. 
+	 All of the settings for deoplete-go are described in the <a href="https://github.com/deoplete-plugins/deoplete-go" target="_blank">available settings</a> section of its main landing page.
+	<div> 
+	</td> 
+	</tr> 
+	
+	<tr> 
+	<td scope="row">
+       <a href="https://github.com/Shougo/deoplete.nvim" target="_blank">deoplete.nvim</a></td> 
+	<td> 
+	<div> 
+	 This plugin will display completions for existing plugins that provide completions via omnifunc.  The plugins nvim-yarp and vim-hug-neovim-rpc for Vim8 are required for deoplete-go PavedRoad has also installed those by default.	 
+	<div> 
+	</td> 
+	</tr> 
+	
+		<tr> 
+	<td scope="row">
+       <a href="https://github.com/roxma/nvim-yarp" target="_blank">nvim-yarp</a></td> 
+	<td> 
+	<div> 
+	 Provides a remote plugin framework for Neovim without ':UpdateRemotePlugins' and is a required plugin for deoplete.nvim plugin.	 
+	<div> 
+	</td> 
+	</tr> 
+	
+		<tr> 
+	<td scope="row">
+       <a href="https://github.com/roxma/vim-hug-neovim-rpc" target="_blank">vim-hug-neovim-rpc</a></td> 
+	<td> 
+	<div> 
+	Used to build a compatibility layer for neovim rpc client working on vim8.
+				- required plugin for deoplete.nvim plugin 
+	<div> 
+	</td> 
+	</tr> 
+	
+	</table>
 
-<li><a href="https://github.com/Shougo/deoplete.nvim" target="_blank">deoplete.nvim - Deoplete is the abbreviation of "dark powered neo-completion". Deoplete provides an extensible and 
-asynchronous completion framework for neovim/Vim8. deoplete will display completions via complete() by default.</a></li>
 
-<li><a href="https://github.com/roxma/nvim-yarp" target="_blank">nvim-yarp - is a remote plugin framework for Neovim without ':UpdateRemotePlugins'
-				and is a required plugin for deoplete.nvim plugin.</a></li>
-				
-<li><a href="https://github.com/roxma/vim-hug-neovim-rpc" target="_blank">vim-hug-neovim-rpc - Used to build a compatibility layer for neovim rpc client working on vim8.
-				- required plugin for deoplete.nvim plugin.</a></li>
-</ol>
- 		
-	 
 		For now we rely on the default settings for the plugins. More information about the vim-go settings can be located in section 7 of its
 		<a href="https://github.com/fatih/vim-go/blob/master/doc/vim-go.txt" target="_blank">document page.</a>
-		All of the settings for deoplete-go are described in the <a href="https://github.com/deoplete-plugins/deoplete-go" target="_blank">Available Settings</a> section of its main landing page.
 			</div>
 		
 
      <div>&nbsp;</div>
 	 
-        <h5>Vim commands</h5>
-        <a name="go-commands"></a>
-			<div><a href="https://www.cs.cmu.edu/~15131/f17/topics/vim/vim-cheatsheet.pdf" target="_blank">Vim CheatSheet</a></div>
+        <h5>Getting Started</h5>
+        <a name="getting-started"></a>
+			<div><a href="http://alexquinn.org/techref/Vim_Quick_Reference_Guide.pdf/" target="_blank">Vim Quick Reference Guide</a></div>
+			<div><a href="https://tpaschalis.github.io/vim-go-setup/" target="_blank">My Vim IDE set up for Go</a></div>
+			<div><a href="https://octetz.com/posts/vim-as-go-ide" target="_blank">Vim as a Go (Golang) IDE using LSP and vim-go</a></div>
+	     <div>&nbsp;</div>
+	 
+	 
 			</div>
-   
       </div><!--//container-->
     </section><!--//about-->
     
@@ -227,7 +301,7 @@ asynchronous completion framework for neovim/Vim8. deoplete will display complet
     <script type="text/javascript" src="../assets/js/main.js"></script>  
 
     
-        
+	    
 </body>
 </html> 
 
