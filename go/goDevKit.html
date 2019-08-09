@@ -339,7 +339,7 @@
         <a name="pr-go-auto-doc"></a>
         <h6>template.html</h6>
         <div>
-        PaveRoad follows the practice that the code is the documentation.
+        PavedRoad follows the practice that the code is the documentation.
         To that end, we use go-doc and swagger inline with the code to auto 
         generate documentation.
         </div>
@@ -349,7 +349,7 @@
         auto generated artifacts:
         <ul>
           <li><span>template.png: Is an auto generated graph of the microservices dependencies</li>
-          <li><span>api.html: Is an auto generated Swager 2.0 API documentation
+          <li><span>api.html: Is an auto generated Swagger 2.0 API documentation
         </ul>
         </div>
 
@@ -363,7 +363,7 @@
           <img src="../assets/images/sample-api-doc.png">
         </div>
         
-        <h6>Swager 2.0</h6>
+        <h6>Swagger 2.0</h6>
         <div>
           Documentation is embedded in the code using comments that contain <code>swagger:tag-name</code>.  For example, the following example uses the "swagger:meta" tag.  go-swagger markup supports the following tags:
         </div>
@@ -440,11 +440,11 @@ type statusResponse struct {
         <div>Example model</div>
         <pre>
 // prUserIdMapper data structure for mapper storage
-// It is used to map a 3rd party credential to an interanl UUID
+// It is used to map a 3rd party credential to an internal UUID
 //
 // swagger:model userIdMapper
 type prUserIdMapper struct {
-  // API verions
+  // API versions
   //
   // required: true
   APIVersion string `json:"apiVersion"`
@@ -529,7 +529,7 @@ type prUserIdMapper struct {
         <a name="pr-go-sonarcloud"></a>
         <div>
           <h6>artifacts directory</h6>
-          Contains build artificats produced by sonarlcloud scanner, 
+          Contains build artifacts produced by sonarlcloud scanner, 
           linters, and code coverage.
         </div>
         <div>
@@ -538,12 +538,12 @@ type prUserIdMapper struct {
           You will see output similar to the sample provided below when
           a build is executed.
           <pre>
-INFO: Scanner configuration file: /home/jscharber/eng/sonarcloud/sonar-scanner-3.3.0.1492-linux/conf/sonar-scanner.properties
-INFO: Project root configuration file: /home/jscharber/eng/kevlar-web/dev/services/src/prToken/sonar-project.properties
+INFO: Scanner configuration file: /home/user/eng/sonarcloud/sonar-scanner-3.3.0.1492-linux/conf/sonar-scanner.properties
+INFO: Project root configuration file: /home/user/eng/kevlar-web/dev/services/src/prToken/sonar-project.properties
 INFO: SonarQube Scanner 3.3.0.1492
 INFO: Java 1.8.0_121 Oracle Corporation (64-bit)
 INFO: Linux 4.15.0-55-generic amd64
-INFO: User cache: /home/jscharber/.sonar/cache
+INFO: User cache: /home/user/.sonar/cache
 INFO: SonarQube server 8.0.0
 INFO: Default locale: "en_US", source code encoding: "UTF-8" (analysis is platform dependent)
 ...
@@ -567,12 +567,12 @@ INFO: ------------------------------------------------------------------------
         <div margin-bottom: 15px;">
           <img src="../assets/images/sonar-summary.png">
         </div>
-        <div style="margin-bottom: 15px;">
+        <!-- <div style="margin-bottom: 15px;">
           <h6>doc/templateDoc.html</h6>
           Build bagges are for sonar cloud and FOSSA license scanning are
           added to the CI section
           <img src="../assets/images/sonarcloud.png">
-        </div>
+        </div> -->
       </div>
 
       <div class="container" style="margin-top: 20px;">
@@ -582,7 +582,7 @@ INFO: ------------------------------------------------------------------------
           <h6>Go test coverage</h6>
           <div style="margin-bottom: 15px;">
           Go test coverage is configured by default.  Test coverage output
-          is storred in the artifacts directory.  To view the test coverage 
+          is stored in the artifacts directory.  To view the test coverage 
           report, enter <code>make show-coverage</code> on the command line.
           Alternatively, you can run <code>go tool cover -html=artifacts/coverage.out</code>
           </div>
@@ -607,9 +607,9 @@ INFO: ------------------------------------------------------------------------
       <div class="container" style="margin-top: 20px;">
         <h5>Skaffold integrations</h5>
         <a name="pr-go-skaffold"></a>
-        Durring the `make compile` phase of a build several things happen:
+        During the `make compile` phase of a build several things happen:
         <ul>
-          <li>After the go binary is built, a copy is made in the local directory.  The local binary is necessary for building the docker image.  Docker expects all files to be in the current build context.  The build context is the directory passed to the docker deaemon.  In this case that is "." for the current working directory.</li>
+          <li>After the go binary is built, a copy is made in the local directory.  The local binary is necessary for building the docker image.  Docker expects all files to be in the current build context.  The build context is the directory passed to the docker daemon.  In this case that is "." for the current working directory.</li>
           <li>It then issues the `skaffold run` command.  This command builds the docker image, tags it with the current git commit-id, executes any specified container-tests, and then pushes the deployment to the local microk8s cluster.  This requires enabling the microk8s repository service with microk8s.enable repository.</li>
         </ul>
 
@@ -682,7 +682,7 @@ f32868cde90b: Layer already exists
 0db06dff9d9a: Layer already exists
 8b1064b-dirty: digest: sha256:358438715d27deec4962dc38f02721c1a86eae0563507e027435742335a2ff8b size: 2214
 Build complete in 624.922056ms
-tarting deploy...
+starting deploy...
 kubectl client version: 1.14
 deployment.extensions/prtoken configured
 service/prtoken configured
@@ -1237,7 +1237,7 @@ func main() {
         <h4 style="margin-top: 20px;">Working with templates, aka Low-Code</h4>
         <div>
           One of the key advantages of PavedRoad DevKits is pre-packaged 
-          templates the implement best practices for writing clound native
+          templates the implement best practices for writing cloud native
           applications.  You download and use template using the <code>
             road-ctl</code> command line interface (CLI).
         </div>
@@ -1354,7 +1354,7 @@ func main() {
               <tr>
                 <td>environments</td>
                 <td>
-                  Manage deployment environments like dev, test, staggin, and production
+                  Manage deployment environments like dev, test, stagging, and production
                 </td>
               </tr>
 
@@ -1437,7 +1437,7 @@ road-ctl get templates --init
 
 Create a new service,aka name, from the specified template
 ----------------------------------------------------------
-road-ctl create templates name --tempalte name
+road-ctl create templates name --template name
 
 example,
 road-ctl create templates myNewService --template datamgr
@@ -1469,10 +1469,10 @@ road-ctl explain templates data-mgr
         </pre>
         <h6>Template directory structure</h6>
         <div>
-          Templates are organized into three catagories:
+          Templates are organized into three categories:
           <ul>
             <li>crd: provides templates for Kubernetes custom resource definition and their custom controllers</li>
-            <li>microservcies: Various microservice design patterns</li>
+            <li>microservices: Various microservice design patterns</li>
             <li>serverless: Knative or Open-faas serverless functions</li>
           </ul>
         </div>
@@ -1494,7 +1494,7 @@ road-ctl explain templates data-mgr
           <a name="go-ms-data"></a>
           <p>
           Creates a microservice used for managing object persisted to storage such as a 
-          database.  When select, you must juse a data store.  Optionally, you can just an 
+          database.  When select, you must use a data store.  Optionally, you can just an 
           event source.
           </p>
 
@@ -1526,7 +1526,7 @@ road-ctl explain templates data-mgr
 
         <h5>Custom Resource Controller</h5>
         <a name="go-CRD"></a>
-        <div>CRDs are supported via kubebuilder.  Full documenation can
+        <div>CRDs are supported via kubebuilder.  Full documentation can
         be found at <a href="https://book.kubebuilder.io/">
           book.kubebuilder.io</a>. There is also a quick 
         <a href="https://book.kubebuilder.io/quick-start.html">
@@ -1537,12 +1537,12 @@ road-ctl explain templates data-mgr
         <a name="go-faas"></a>
         <div>
         As of this release, Knative is in alpha. There for, to 
-        provide a stable servless function frame work we included
+        provide a stable serverless function frame work we included
         both open-faas and Knative support.
         </div>
         <div>
-          OpenFasS is a widely used serverless function with a wide
-          set of supported programming langaues.  Like Kantive, it
+          OpenFaaS is a widely used serverless function with a wide
+          set of supported programming languages.  Like Kantive, it
           uses docker images as the container for functions.  Unlike
           Knative, it support deployments on environment other than
           Kubernetes.
@@ -1552,7 +1552,7 @@ road-ctl explain templates data-mgr
           <ul>
             <li>
               <a href="https://docs.openfaas.com/">
-            Offical documentation
+            Official documentation
               </a>
             </li>
             <li>
