@@ -121,6 +121,7 @@
                 <p><a href="#k8s-daily">Daily usage/cheat sheet</a></p>
                 <p><a href="#k8s-addons">Enabling addons</a></p>
                 <p><a href="#k8s-ci">CI integrations</a></p>
+                <p><a href="#k8s-kubctl">Kubectl</a></p>
               </div>
             </div>
         </div>
@@ -628,8 +629,25 @@ users:
           <h5>CI integrations</h5>
           <a name="k8s-ci"></a>
           <p>
-          TBD
+          See <a href="../go/goDevKit.html#pr-go-skaffold">Skaffold Integration</a>
           </p>
+        </div>
+
+        <div class="container" style="margin-top: 20px;">
+          <h5>CI integrations</h5>
+          <a name="k8s-kubectl"></a>
+          <p>
+          <div style="margin-bottom: 5px;">
+          The Kubernetes client, kubectl, is install in addition to microk8s.kubectl.
+          For <code>scaffold</code> to operate correctly, <span class="text-danger">you must save the configuration output
+            from microk8s.config into $HOME/.kube/config</span>.
+          </div>
+          <code>
+microk8s.config > $HOME/.kube/config
+          </code>
+          <div>
+            Once the microk8s.config is saved, you can use either microk8s.config or kubectl.
+          </div>
         </div>
 
         <div class="container" style="margin-top: 20px;">
