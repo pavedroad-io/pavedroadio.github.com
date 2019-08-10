@@ -68,10 +68,10 @@
                           <a class="nav-link dropdown-toggle" data-toggle="dropdown"
                              href="#" role="button" aria-haspopup="true" aria-expanded="false">Guides</a>
                           <div class="dropdown-menu">
-                            <a class="dropdown-item" href="../devKitsLanding.html">DevKits</a>
-                            <a class="dropdown-item" href="../cicdLanding.html">CI/CD</a>
-                            <a class="dropdown-item" href="../operationsLanding.html">Operations</a>
-                            <a class="dropdown-item" href="../insightsLanding.html">Insights</a>
+                            <a class="dropdown-item" href="devKitsLanding.html">DevKits</a>
+                            <a class="dropdown-item" href="cicdLanding.html">CI/CD</a>
+                            <a class="dropdown-item" href="operationsLanding.html">Operations</a>
+                            <a class="dropdown-item" href="insightsLanding.html">Insights</a>
                           </div>
                         </li>
                         <li class="nav-item"><a class="nav-link" href="/#license">License</a></li>                        
@@ -83,10 +83,10 @@
     </header><!--//header-->
     
     <!-- ******Download****** --> 
-    <section id="Download" class="about section">
+  <section id="Download" class="about section bg-light">
 	
 	<nav aria-label="breadcrumb">
-     <ul class="prbreadcrumb breadcrumb">
+     <ul class="breadcrumb bg-light">
        <li class="breadcrumb-item"><a href="/">Home</a></li>
        <li class="breadcrumb-item active" aria-current="page">PavedRoad DevKit Download</li>
      </ul>
@@ -94,7 +94,7 @@
    
       <div class="container">
        <div class="row">
-	    <h3 class="title text-left" style="margin-top: 45px; margin-bottom: 5px;">
+	    <h3 class="sub-title text-left" style="margin-top: 5; margin-bottom: 5px;">
           PavedRoad DevKit Download
         </h3>
 	     <div>
@@ -103,24 +103,25 @@
 		  and relevant packages along with the git command and other minimally needed development software.  
         </div>
        
-	    <div class="row">
+	  
 	
 	<!-- marker -->
 		
-		  <div class="item col-lg-11 col-md-12" style="margin-top:30px;">
+		  <div class="row" style="margin-left:0px;">
+		  <div class="item col-lg-11 col-md-12" style="margin-top:0;">
             </div>
+            <a name="download"></a>
             <div class="content">
               <h3 class="sub-title">Download PavedRoad DevKit</h3>
               <table class="table" style="width:1000px">
                 <thead>
                   <tr>
-					 <th scope="col" width="20%">Operating System</th>
+					 <th scope="col" width="14%">Operating System</th>
                     <th scope="col">Download Command</th>
                   </tr>
                 </thead>
 		
-            
-              <div>Download the bootstrap script for your target OS and run it to install the DevKit. This script installs curl, git, and salt on the target device and 
+              <div style="margin-bottom: 5px;">Download the bootstrap script for your target OS and run it to install the DevKit. This script installs curl, git, and salt on the target device and 
 			  then clones the PavedRoad DevKit repository. SaltStack (in masterless mode) is used to install the development environment. The bootstrap script runs salt-call
 			   to apply the salt states in the cloned repository on the target device. Running the bootstrap script installs the complete development environment, 
 			   no knowledge about SaltStack is required. Copy the curl command for your target OS and paste into your systems terminal shell.
@@ -130,7 +131,9 @@
                   <td scope="row"><div>Linux</div></td>
                   <td>
                     <div>
-                    <code>curl -L https://raw.githubusercontent.com/pavedroad-io/pavedroad/master/devkit/bootstrap-unix.sh | /bin/bash</code>
+                      <input size="88" id="linux-copy-clipboard" value="curl -L https://raw.githubusercontent.com/pavedroad-io/pavedroad/master/devkit/bootstrap-unix.sh | /bin/bash">
+                      </input>
+                      <a href="#download"><i class="far fa-copy" onclick="copyLinux()"></i></a>
                     </div>
                   </td>
                 </tr>
@@ -138,7 +141,8 @@
                   <td scope="row"><div>MacOS</div></td>
                   <td>
                     <div>
-                    <code>curl -L https://raw.githubusercontent.com/pavedroad-io/pavedroad/master/devkit/bootstrap-macos.sh | /bin/bash</code>
+                      <input size="88" id="mac-copy-clipboard" value="curl -L https://raw.githubusercontent.com/pavedroad-io/pavedroad/master/devkit/bootstrap-macos.sh | /bin/bash">
+                      <a href="#download"><i class="far fa-copy" onclick="copyMac()"></i></a>
                     </div>
                   </td>
                 </tr>
@@ -146,11 +150,11 @@
             </div><!--//content-->
           </div><!--//item-->
 		  
-		  
-          <div class="item col-lg-11 col-md-12" style="margin-top:30px;">
+		    <div class="row" style="margin-left:0px;">
+          <div class="item col-lg-5 col-md-5">
             </div>
             <div class="content">
-              <h3 class="sub-title">Install Options</h3>
+              <h4 class="sub-title">Install Options</h4>
               <table class="table" style="width:1000px">
                 <thead>
                   <tr>
@@ -199,11 +203,11 @@
             </div><!--//content-->
           </div><!--//item-->
 		  
-		  
-		    <div class="item col-lg-11 col-md-12" style="margin-top:30px;">
+		  <div class="row" style="margin-left:0px;">
+		    <div class="item col-lg-6 col-md-12" style="margin-top:10px;">
 			</div>
             <div class="content">
-              <h3 class="sub-title">What is being installed?</h3>
+              <h4 class="sub-title">Key README for Go Devkit</h4>
               <table class="table" style="width:1000px">
                 <thead>
                   <tr>
@@ -281,26 +285,37 @@
         </div><!--//container-->
     </section><!--//contact-->  
       
-    <!-- ******FOOTER****** --> 
+     <!-- ******FOOTER****** --> 
     <footer class="footer">
         <div class="container text-center">
-            <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can buy the commercial license via our website: themes.3rdwavemedia.com */-->
-            <small class="copyright">Designed with <i class="fas fa-heart"></i> by <a href="https://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
+            <small class="copyright">© 2019 PavedRoad - PavedRoad and the PavedRoad logo are trademarks of PavedRoad </a> </small>
         </div><!--//container-->
     </footer><!--//footer-->
      
     <!-- Javascript -->          
     <!-- Global JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script> 
     <script type="text/javascript" src="assets/plugins/prism/prism.js"></script>    
     <script type="text/javascript" src="assets/js/main.js"></script>  
+    <script language="JavaScript">
+      function copyLinux() {
+        var copyText = document.getElementById("linux-copy-clipboard");
+        copyText.select();
+        document.execCommand("copy");
+      }
+    
+      function copyMac() {
+        var copyText = document.getElementById("mac-copy-clipboard");
+        copyText.select();
+        document.execCommand("copy");
+      }
+    </script>
 
     
         
 </body>
 </html> 
-
 

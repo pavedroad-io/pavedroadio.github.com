@@ -85,21 +85,33 @@
     
     <!-- ******ABOUT****** --> 
 
-    <section id="devKitTraining" class="about section">
+    <section id="devKitTraining" class="about section bg-light">
 	
 	<nav aria-label="breadcrumb">
-     <ul class="prbreadcrumb breadcrumb">
+     <ul class="breadcrumb bg-light">
        <li class="breadcrumb-item"><a href="/">Home</a></li>
+       <li class="breadcrumb-item"><a href="../Tooling.html">GoLang Quick Start</a></li>
        <li class="breadcrumb-item active" aria-current="page">Go DevKit</li>
      </ul>
    </nav>
 	
 	
-      <div class="container" style="margin-top: 45px;">
+    <!--  <div class="container" style="margin-top: 45px;">
 	  <img src="../assets/images/Go-Logo/PNG/Go-Logo_Fuchsia.png" height="75" width="75"/>
-        <span class="text-primary" style="font-size: 25px; virtical-align: text-top;"><span class="container" style="margin-top: 45px;">
-		<span class="text-primary" style="font-size: 25px; virtical-align: text-top;">DevKit</span></span></span><span class="container" style="margin-top: 45px;">
-		<span class="text-primary" style="font-size: 25px; virtical-align: text-top;"></span></span>
+        <span class="sub-title" style="font-size: 25px; virtical-align: text-top;"><span class="container" style="margin-top: 45px;">
+		<span class="sub-title" style="font-size: 25px; virtical-align: text-top;">DevKit</span></span></span><span class="container" style="margin-top: 45px;">
+		<span class="sub-title" style="font-size: 25px; virtical-align: text-top;"></span></span>
+		
+		-->
+		
+		
+		  <div class="container" style="margin-top: 45px;">
+        <h3 class="sub-title text-left" style="margin-top: 5; margin-bottom: 5px;">
+        <img src="../assets/images/Go-Logo/PNG/Go-Logo_Fuchsia.png" height="75" width="75"/>
+          DevKit 
+        <//h3>
+
+		
 		
         <h4 style="margin-top: 10px;">Overview</h4>
         <p dir="ltr">Go is an open source programming language from Google with the first stable 
@@ -127,14 +139,14 @@
             </div>
             <div id="collapseOne" class="collapse show" aria-labelledby="pr-tools" data-parent="#goAccording">
                 <div class="card-body">
-                  <p><a href="#pr-go-env">Environment defaults & configuration</a></p>
-                  <p><a href="#pr-go-make">Makefile</a></p>
-                  <p><a href="#pr-go-auto-doc">Auto documentation</a></p>
-                  <p><a href="#pr-go-sonarcloud">Sonarcloud</a></p>
-                  <p><a href="#pr-go-test-coverage">Test coverage</a></p>
-                  <p><a href="#pr-go-github">GitHub integration</a></p>
-                  <p><a href="#pr-go-skaffold">Skaffold integration</a></p>
-                  <p><a href="#pr-go-FOSSA">FOSSA license scanning</a></p>
+                  <p><a class="scrollto" href="#pr-go-env">Environment defaults & configuration</a></p>
+                  <p><a class="scrollto" href="#pr-go-make">Makefile</a></p>
+                  <p><a class="scrollto" href="#pr-go-auto-doc">Auto documentation</a></p>
+                  <p><a class="scrollto" href="#pr-go-sonarcloud">Sonarcloud</a></p>
+                  <p><a class="scrollto" href="#pr-go-test-coverage">Test coverage</a></p>
+                  <p><a class="scrollto" href="#pr-go-github">GitHub integration</a></p>
+                  <p><a class="scrollto" href="#pr-go-skaffold">Skaffold integration</a></p>
+                  <p><a class="scrollto" href="#pr-go-FOSSA">FOSSA license scanning</a></p>
                   <p><a href="../kubernetes/microk8sDevKit.html">Kubernetes + addons</a></p>
                 </div>
             </div>
@@ -223,7 +235,7 @@
 
       <div class="container" style="margin-top: 20px;">
         <h5>Environment</h5>
-        <a name="pr-go-env"></a>
+        <a class="scrollto" id="pr-go-env" name="pr-go-env"></a>
         <h6>.bashrc</h6>
         <div>
         The following environment variables are add or appended in your 
@@ -268,7 +280,7 @@
 
       <div class="container" style="margin-top: 20px;">
         <h5>Makefile</h5>
-        <a name="pr-go-make"></a>
+        <a class="scrollto" id="pr-go-make" name="pr-go-make"></a>
         <table class="table table-sm">
           <caption>Makefile options</caption>
           <thead>
@@ -336,10 +348,10 @@
 
       <div class="container" style="margin-top: 20px;">
         <h5>Auto documentation</h5>
-        <a name="pr-go-auto-doc"></a>
+        <a class="scrollto" id="pr-go-auto-doc" name="pr-go-auto-doc"></a>
         <h6>template.html</h6>
         <div>
-        PaveRoad follows the practice that the code is the documentation.
+        PavedRoad follows the practice that the code is the documentation.
         To that end, we use go-doc and swagger inline with the code to auto 
         generate documentation.
         </div>
@@ -349,7 +361,7 @@
         auto generated artifacts:
         <ul>
           <li><span>template.png: Is an auto generated graph of the microservices dependencies</li>
-          <li><span>api.html: Is an auto generated Swager 2.0 API documentation
+          <li><span>api.html: Is an auto generated Swagger 2.0 API documentation
         </ul>
         </div>
 
@@ -363,7 +375,7 @@
           <img src="../assets/images/sample-api-doc.png">
         </div>
         
-        <h6>Swager 2.0</h6>
+        <h6>Swagger 2.0</h6>
         <div>
           Documentation is embedded in the code using comments that contain <code>swagger:tag-name</code>.  For example, the following example uses the "swagger:meta" tag.  go-swagger markup supports the following tags:
         </div>
@@ -381,7 +393,7 @@
         </ul>
 
         <div>
-          The file <code>template.go</code> contains the summary information 
+          The file <code>templateDoc.go</code> contains the summary information 
           for your code.
         </div>
         <pre>
@@ -440,11 +452,11 @@ type statusResponse struct {
         <div>Example model</div>
         <pre>
 // prUserIdMapper data structure for mapper storage
-// It is used to map a 3rd party credential to an interanl UUID
+// It is used to map a 3rd party credential to an internal UUID
 //
 // swagger:model userIdMapper
 type prUserIdMapper struct {
-  // API verions
+  // API versions
   //
   // required: true
   APIVersion string `json:"apiVersion"`
@@ -526,10 +538,10 @@ type prUserIdMapper struct {
 
       <div class="container" style="margin-top: 20px;">
         <h5>Sonarcloud</h5>
-        <a name="pr-go-sonarcloud"></a>
+        <a class="scrollto" id="pr-go-sonarcloud" name="pr-go-sonarcloud"></a>
         <div>
           <h6>artifacts directory</h6>
-          Contains build artificats produced by sonarlcloud scanner, 
+          Contains build artifacts produced by sonarlcloud scanner, 
           linters, and code coverage.
         </div>
         <div>
@@ -538,12 +550,12 @@ type prUserIdMapper struct {
           You will see output similar to the sample provided below when
           a build is executed.
           <pre>
-INFO: Scanner configuration file: /home/jscharber/eng/sonarcloud/sonar-scanner-3.3.0.1492-linux/conf/sonar-scanner.properties
-INFO: Project root configuration file: /home/jscharber/eng/kevlar-web/dev/services/src/prToken/sonar-project.properties
+INFO: Scanner configuration file: /home/user/eng/sonarcloud/sonar-scanner-3.3.0.1492-linux/conf/sonar-scanner.properties
+INFO: Project root configuration file: /home/user/eng/kevlar-web/dev/services/src/prToken/sonar-project.properties
 INFO: SonarQube Scanner 3.3.0.1492
 INFO: Java 1.8.0_121 Oracle Corporation (64-bit)
 INFO: Linux 4.15.0-55-generic amd64
-INFO: User cache: /home/jscharber/.sonar/cache
+INFO: User cache: /home/user/.sonar/cache
 INFO: SonarQube server 8.0.0
 INFO: Default locale: "en_US", source code encoding: "UTF-8" (analysis is platform dependent)
 ...
@@ -567,22 +579,22 @@ INFO: ------------------------------------------------------------------------
         <div margin-bottom: 15px;">
           <img src="../assets/images/sonar-summary.png">
         </div>
-        <div style="margin-bottom: 15px;">
+        <!-- <div style="margin-bottom: 15px;">
           <h6>doc/templateDoc.html</h6>
           Build bagges are for sonar cloud and FOSSA license scanning are
           added to the CI section
           <img src="../assets/images/sonarcloud.png">
-        </div>
+        </div> -->
       </div>
 
       <div class="container" style="margin-top: 20px;">
         <h5>Test coverage</h5>
-        <a name="pr-go-test-coverage"></a>
+        <a class="scrollto" id="pr-go-test-coverage" name="pr-go-test-coverage"></a>
         <div>
           <h6>Go test coverage</h6>
           <div style="margin-bottom: 15px;">
           Go test coverage is configured by default.  Test coverage output
-          is storred in the artifacts directory.  To view the test coverage 
+          is stored in the artifacts directory.  To view the test coverage 
           report, enter <code>make show-coverage</code> on the command line.
           Alternatively, you can run <code>go tool cover -html=artifacts/coverage.out</code>
           </div>
@@ -596,7 +608,7 @@ INFO: ------------------------------------------------------------------------
 
       <div class="container" style="margin-top: 20px;">
         <h5>GitHub integrations</h5>
-        <a name="pr-go-github"></a>
+        <a class="scrollto" id="pr-go-github" name="pr-go-github"></a>
         Currently, we integrate the following:
         <ul>
           <li>FOSSA license scanning</li>
@@ -606,10 +618,10 @@ INFO: ------------------------------------------------------------------------
 
       <div class="container" style="margin-top: 20px;">
         <h5>Skaffold integrations</h5>
-        <a name="pr-go-skaffold"></a>
-        Durring the `make compile` phase of a build several things happen:
+        <a class="scrollto" id="pr-go-skaffold" name="pr-go-skaffold"></a>
+        During the `make compile` phase of a build several things happen:
         <ul>
-          <li>After the go binary is built, a copy is made in the local directory.  The local binary is necessary for building the docker image.  Docker expects all files to be in the current build context.  The build context is the directory passed to the docker deaemon.  In this case that is "." for the current working directory.</li>
+          <li>After the go binary is built, a copy is made in the local directory.  The local binary is necessary for building the docker image.  Docker expects all files to be in the current build context.  The build context is the directory passed to the docker daemon.  In this case that is "." for the current working directory.</li>
           <li>It then issues the `skaffold run` command.  This command builds the docker image, tags it with the current git commit-id, executes any specified container-tests, and then pushes the deployment to the local microk8s cluster.  This requires enabling the microk8s repository service with microk8s.enable repository.</li>
         </ul>
 
@@ -682,7 +694,7 @@ f32868cde90b: Layer already exists
 0db06dff9d9a: Layer already exists
 8b1064b-dirty: digest: sha256:358438715d27deec4962dc38f02721c1a86eae0563507e027435742335a2ff8b size: 2214
 Build complete in 624.922056ms
-tarting deploy...
+starting deploy...
 kubectl client version: 1.14
 deployment.extensions/prtoken configured
 service/prtoken configured
@@ -696,7 +708,7 @@ You can also run [skaffold run --tail] to get the logs
 
       <div class="container" style="margin-top: 20px;">
         <h5>FOSSA license scanning</h5>
-        <a name="pr-go-FOSSA"></a>
+        <a class="scrollto" id="pr-go-FOSSA" name="pr-go-FOSSA"></a>
         The free version of FOSSA license scanning is configured by default.
         A badge is added to the read me document.  Click on that link will
         take you to the details results of the most recent scan.
@@ -706,7 +718,7 @@ You can also run [skaffold run --tail] to get the logs
     <h4 style="margin-top: 20px;">Daily Go</h4>
       <div class="container" style="margin-top: 20px;">
         <h5>Go commands</h5>
-        <a name="go-commands"></a>
+        <a class="scrollto" id="go-commands" name="go-commands"></a>
 		  <h6>Basic commands to know</h6>
 		  <br>
        <table class="table">
@@ -767,7 +779,7 @@ You can also run [skaffold run --tail] to get the logs
 
       <div class="container" style="margin-top: 20px;">
         <h5>Go tools</h5>
-        <a name="go-tools"></a>
+        <a class="scrollto" id="go-tools" name="go-tools"></a>
 		  <h6>Basic tools to know</h6>
 		  
 		    <table class="table">
@@ -852,10 +864,10 @@ You can also run [skaffold run --tail] to get the logs
 
     <div class="container" style="margin-top: 20px;">
         <h5>Go Commands</h5>
-        <a name="commands"></a>
-		<a name="pr-command-tools"></a>
+        <a class="scrollto" id="commands" name="commands"></a>
+		<a class="scrollto" id="pr-command-tools" name="pr-command-tools"></a>
 		
-	<a name="go build"></a>
+	<a class="scrollto" id="go build "name="go build"></a>
 		<UL>
           <li><code>go build</code>
             <div>
@@ -869,7 +881,7 @@ You can also run [skaffold run --tail] to get the logs
 			</UL>
 			
 			
-    <a name="go clean"></a>
+    <a class="scrollto" id="go clean" name="go clean"></a>
 		<UL>
           <li><code>go clean</code>
             <div>
@@ -882,7 +894,7 @@ You can also run [skaffold run --tail] to get the logs
 	        </UL>
 			</UL>
 		
-   <a name="go dep"></a>
+   <a class="scrollto" id="go dep" name="go dep"></a>
 		<UL> 
           <li><code>dep</code>
             <div>
@@ -905,7 +917,7 @@ You can also run [skaffold run --tail] to get the logs
        
 	   
 	   
-	    <a name="go def"></a>
+	    <a class="scrollto" id="go def" name="go def"></a>
 		<UL>
           <li><code>go def</code>
             <div>
@@ -918,7 +930,7 @@ You can also run [skaffold run --tail] to get the logs
 	        </UL>
 			</UL>
 			
-	   <a name="go env"></a>
+	   <a class="scrollto" id="go env" name="go env"></a>
 		<UL>
           <li><code>go env</code>
             <div>
@@ -933,7 +945,7 @@ You can also run [skaffold run --tail] to get the logs
 			</UL>
 			
 			
-			 <a name="go guru"></a>
+			 <a class="scrollto" id="go guru" name="go guru"></a>
 		<UL>
           <li><code>guru</code>
             <div>
@@ -948,7 +960,7 @@ You can also run [skaffold run --tail] to get the logs
 			</UL>
 			
 			
-			 <a name="go import"></a>
+			 <a class="scrollto" id="go import" name="go import"></a>
 		<UL>
           <li><code>go import</code>
             <div>
@@ -964,7 +976,7 @@ You can also run [skaffold run --tail] to get the logs
 			</UL>
 			
 			
-			<a name="go list"></a>
+			<a class="scrollto" id="go list" name="go list"></a>
 		<UL>
           <li><code>go list</code>
             <div>
@@ -980,7 +992,7 @@ You can also run [skaffold run --tail] to get the logs
 			
 			
 			
-			<a name="gorename"></a>
+			<a class="scrollto" id="gorename" name="gorename"></a>
 		<UL>
           <li><code>go rename</code>
             <div>
@@ -993,7 +1005,7 @@ You can also run [skaffold run --tail] to get the logs
 	        </UL>
 			</UL>
 	 
-       	<a name="go run"></a>
+       	<a class="scrollto" id="go run" name="go run"></a>
 		<UL>
           <li><code>go run</code>
             <div>
@@ -1007,7 +1019,7 @@ You can also run [skaffold run --tail] to get the logs
 	        </UL>
 			</UL>
 	   
-	    	<a name="go test"></a>
+	    	<a class="scrollto" id="go test" name="go test"></a>
 		<UL>
           <li><code>go test</code>
             <div>
@@ -1022,7 +1034,7 @@ You can also run [skaffold run --tail] to get the logs
 	        </UL>
 			</UL>
 	   
-	      	<a name="go version"></a>
+	      	<a class="scrollto" id="go version" name="go version"></a>
 		<UL>
           <li><code>go version</code>
             <div>
@@ -1037,7 +1049,7 @@ You can also run [skaffold run --tail] to get the logs
 			</UL>
 		 
 	   
-	      	<a name="go vet"></a>
+	      	<a class="scrollto" id="go vet" name="go vet"></a>
 		<UL>
           <li><code>go vet</code>
             <div>
@@ -1062,10 +1074,10 @@ You can also run [skaffold run --tail] to get the logs
 	   
 	     <div class="container" style="margin-top: 20px;">
 	    <h5 style="margin-top: 20px;">Go Tools</h5>
-        <a name="tools"></a>
-		<a name="pr-command-tools"></a>
+        <a class="scrollto" id="tools" name="tools"></a>
+		<a class="scrollto" id="pr-command-tools" name="pr-command-tools"></a>
 		
-	<a name="gosec"></a>
+	<a class="scrollto" id="gosec" name="gosec"></a>
 		<UL>
 		
           <li><code>gosec</code>
@@ -1204,8 +1216,8 @@ func main() {
 			
 	     <div class="container" style="margin-top: 20px;">
 	    <h5 style="margin-top: 20px;">Go Testing</h5>
-        <a name="go-testing"></a>
-		    <a name="pr-command-tools"></a>		
+        <a class="scrollto" id="go-testing" name="go-testing"></a>
+		    <a class="scrollto" id="pr-command-tools" name="pr-command-tools"></a>		
 		
 		
 			    <li><code>go test</code>
@@ -1237,7 +1249,7 @@ func main() {
         <h4 style="margin-top: 20px;">Working with templates, aka Low-Code</h4>
         <div>
           One of the key advantages of PavedRoad DevKits is pre-packaged 
-          templates the implement best practices for writing clound native
+          templates the implement best practices for writing cloud native
           applications.  You download and use template using the <code>
             road-ctl</code> command line interface (CLI).
         </div>
@@ -1354,7 +1366,7 @@ func main() {
               <tr>
                 <td>environments</td>
                 <td>
-                  Manage deployment environments like dev, test, staggin, and production
+                  Manage deployment environments like dev, test, stagging, and production
                 </td>
               </tr>
 
@@ -1437,7 +1449,7 @@ road-ctl get templates --init
 
 Create a new service,aka name, from the specified template
 ----------------------------------------------------------
-road-ctl create templates name --tempalte name
+road-ctl create templates name --template name
 
 example,
 road-ctl create templates myNewService --template datamgr
@@ -1469,10 +1481,10 @@ road-ctl explain templates data-mgr
         </pre>
         <h6>Template directory structure</h6>
         <div>
-          Templates are organized into three catagories:
+          Templates are organized into three categories:
           <ul>
             <li>crd: provides templates for Kubernetes custom resource definition and their custom controllers</li>
-            <li>microservcies: Various microservice design patterns</li>
+            <li>microservices: Various microservice design patterns</li>
             <li>serverless: Knative or Open-faas serverless functions</li>
           </ul>
         </div>
@@ -1488,45 +1500,45 @@ road-ctl explain templates data-mgr
         </div>
 
         <h5>Microservices</h5>
-        <a name="go-microservices"></a>
+        <a class="scrollto" id="go-microservices" name="go-microservices"></a>
 
           <h6>Data Managers</h6>
-          <a name="go-ms-data"></a>
+          <a class="scrollto" id="go-ms-data" name="go-ms-data"></a>
           <p>
           Creates a microservice used for managing object persisted to storage such as a 
-          database.  When select, you must juse a data store.  Optionally, you can just an 
+          database.  When select, you must use a data store.  Optionally, you can just an 
           event source.
           </p>
 
           <h6>API Gateways</h6>
-          <a name="go-ms-gateway"></a>
+          <a class="scrollto" id="go-ms-gateway" name="go-ms-gateway"></a>
           <p>
           Creates a microservice that acts as a proxy between to domains.
         </p>
 
           <h6>Aggregator</h6>
-          <a name="go-ms-aggregator"></a>
+          <a class="scrollto" id="go-ms-aggregator" name="go-ms-aggregator"></a>
           <p>
           Aggregates data from lower level data sources including event streams and returns 
           information to the caller.
           </p>
 
           <h6>User Interface Components</h6>
-          <a name="go-ms-ux"></a>
+          <a class="scrollto" id="go-ms-ux" name="go-ms-ux"></a>
           <p>
           Returns a UX component
           </p>
 
           <h6>Services</h6>
-          <a name="go-ms-services"></a>
+          <a class="scrollto" id="go-ms-services" name="go-ms-services"></a>
           <p>
           Creates a microservice that provides processing on object passed to it.  For example, 
           authentication, translation, transformation, or annotation.
         </p>
 
         <h5>Custom Resource Controller</h5>
-        <a name="go-CRD"></a>
-        <div>CRDs are supported via kubebuilder.  Full documenation can
+        <a class="scrollto" id="go-CRD" name="go-CRD"></a>
+        <div>CRDs are supported via kubebuilder.  Full documentation can
         be found at <a href="https://book.kubebuilder.io/">
           book.kubebuilder.io</a>. There is also a quick 
         <a href="https://book.kubebuilder.io/quick-start.html">
@@ -1534,15 +1546,15 @@ road-ctl explain templates data-mgr
         </div>
 
         <h5 style="margin-top: 15px;">Serverless</h5>
-        <a name="go-faas"></a>
+        <a class="scrollto" id="go-faas" name="go-faas"></a>
         <div>
         As of this release, Knative is in alpha. There for, to 
-        provide a stable servless function frame work we included
+        provide a stable serverless function frame work we included
         both open-faas and Knative support.
         </div>
         <div>
-          OpenFasS is a widely used serverless function with a wide
-          set of supported programming langaues.  Like Kantive, it
+          OpenFaaS is a widely used serverless function with a wide
+          set of supported programming languages.  Like Kantive, it
           uses docker images as the container for functions.  Unlike
           Knative, it support deployments on environment other than
           Kubernetes.
@@ -1552,7 +1564,7 @@ road-ctl explain templates data-mgr
           <ul>
             <li>
               <a href="https://docs.openfaas.com/">
-            Offical documentation
+            Official documentation
               </a>
             </li>
             <li>
@@ -1581,22 +1593,22 @@ road-ctl explain templates data-mgr
         </div><!--//container-->
     </section><!--//contact-->  
 
-    <!-- ******FOOTER****** --> 
+     <!-- ******FOOTER****** --> 
     <footer class="footer">
         <div class="container text-center">
-            <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can buy the commercial license via our website: themes.3rdwavemedia.com */-->
-            <small class="copyright">Designed with <i class="fas fa-heart"></i> by <a href="https://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
+            <small class="copyright">© 2019 PavedRoad - PavedRoad and the PavedRoad logo are trademarks of PavedRoad </a> </small>
         </div><!--//container-->
     </footer><!--//footer-->
+	  
      
     <!-- Javascript -->          
     <!-- Global JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script> 
-    <script type="text/javascript" src="../assets/plugins/prism/prism.js"></script>    
-    <script type="text/javascript" src="../assets/js/main.js"></script>  
+    <!-- script type="text/javascript" src="../assets/plugins/prism/prism.js"></script -->
+    <script type="text/javascript" src="../assets/js/main.js"></script>
 
     
         

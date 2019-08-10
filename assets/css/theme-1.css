@@ -50,7 +50,7 @@ a:hover {
 }
 
 .btn:focus, a.btn:focus {
-  color: #fff;
+  color: #333333;
 }
 
 a.btn-cta-primary, .btn-cta-primary {
