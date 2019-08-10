@@ -118,10 +118,10 @@
             </div>
             <div id="collapseOne" class="collapse show" aria-labelledby="k8s-working-with" data-parent="#k8sAccording">
               <div class="card-body">
-                <p><a href="#k8s-daily">Daily usage/cheat sheet</a></p>
-                <p><a href="#k8s-addons">Enabling addons</a></p>
-                <p><a href="#k8s-ci">CI integrations</a></p>
-                <p><a href="#k8s-kubectl">Kubectl</a></p>
+                <p><a class="scrollto" href="#k8s-daily">Daily usage/cheat sheet</a></p>
+                <p><a class="scrollto" href="#k8s-addons">Enabling addons</a></p>
+                <p><a class="scrollto" href="#k8s-ci">CI integrations</a></p>
+                <p><a class="scrollto" href="#k8s-kubectl">Kubectl</a></p>
               </div>
             </div>
         </div>
@@ -136,18 +136,18 @@
             </div>
             <div id="collapseTwo" class="collapse" aria-labelledby="addons" data-parent="#k8sAccording">
                 <div class="card-body">
-                  <p><a href="#k8s-jaeger">Jaeger</a></p>
-                  <p><a href="#k8s-fluentd">Fluentd</a></p>
-                  <p><a href="#k8s-gpu">GPU support</a></p>
-                  <p><a href="#k8s-storage">Storage</a></p>
-                  <p><a href="#k8s-rbac">RBAC</a></p>
-                  <p><a href="#k8s-ingress">Ingress</a></p>
-                  <p><a href="#k8s-dns">DNS</a></p>
-                  <p><a href="#k8s-metrics">Metrics server</a></p>
-                  <p><a href="#k8s-linkerd">Linkerd service</a></p>
-                  <p><a href="#k8s-prometheus">Prometheus</a></p>
-                  <p><a href="#k8s-istio">Istio</a></p>
-                  <p><a href="#k8s-dashboard">K8s dashboard</a></p>
+                  <p><a class="scrollto" href="#k8s-jaeger">Jaeger</a></p>
+                  <p><a class="scrollto" href="#k8s-fluentd">Fluentd</a></p>
+                  <p><a class="scrollto" href="#k8s-gpu">GPU support</a></p>
+                  <p><a class="scrollto" href="#k8s-storage">Storage</a></p>
+                  <p><a class="scrollto" href="#k8s-rbac">RBAC</a></p>
+                  <p><a class="scrollto" href="#k8s-ingress">Ingress</a></p>
+                  <p><a class="scrollto" href="#k8s-dns">DNS</a></p>
+                  <p><a class="scrollto" href="#k8s-metrics">Metrics server</a></p>
+                  <p><a class="scrollto" href="#k8s-linkerd">Linkerd service</a></p>
+                  <p><a class="scrollto" href="#k8s-prometheus">Prometheus</a></p>
+                  <p><a class="scrollto" href="#k8s-istio">Istio</a></p>
+                  <p><a class="scrollto" href="#k8s-dashboard">K8s dashboard</a></p>
                 </div>
             </div>
         </div>
@@ -162,9 +162,9 @@
             </div>
             <div id="collapseThree" class="collapse" aria-labelledby="serverless" data-parent="#k8sAccording">
                 <div class="card-body">
-                  <p><a href="#k8s-knative">Knative</a></p>
-                  <p><a href="#k8s-open-faas">OpenFaaS</a></p>
-                  <p><a href="#k8s-first-faas">Write your first function()</a></p>
+                  <p><a class="scrollto" href="#k8s-knative">Knative</a></p>
+                  <p><a class="scrollto" href="#k8s-open-faas">OpenFaaS</a></p>
+                  <p><a class="scrollto" href="#k8s-first-faas">Write your first function()</a></p>
                 </div>
             </div>
         </div>
@@ -194,7 +194,7 @@
 
         <div class="container" style="margin-top: 20px;">
           <h5>Enabling addons</h5>
-          <a name="k8s-addons"></a>
+          <a id="k8s-addons" name="k8s-addons"></a>
           <h6>Addons</h6>
           <p>The initial install of microk8s includes only the upstream 
           distribution.  However, microk8s supports several popular add-ons 
@@ -277,7 +277,7 @@ Ingress is disabled
         </div>
 
         <div class="container" style="margin-top: 20px;">
-          <a name="k8s-daily"><h5>Daily usage</h5></a>
+          <a id="k8s-daily" name="k8s-daily"><h5>Daily usage</h5></a>
           
           <h6>Starting, Stopping, and Resetting your cluster microk8s</h6>
           You can use the <code>microk8s.start</code> and <code>microk8s.stop</code> 
@@ -627,15 +627,15 @@ users:
 
         <div class="container" style="margin-top: 20px;">
           <h5>CI integrations</h5>
-          <a name="k8s-ci"></a>
+          <a id="k8s-ci" name="k8s-ci"></a>
           <p>
           See <a href="../go/goDevKit.html#pr-go-skaffold">Skaffold Integration</a>
           </p>
         </div>
 
         <div class="container" style="margin-top: 20px;">
-          <h5>CI integrations</h5>
-          <a name="k8s-kubectl"></a>
+          <h5>Kubectl</h5>
+          <a id="k8s-kubectl" name="k8s-kubectl"></a>
           <p>
           <div style="margin-bottom: 5px;">
           The Kubernetes client, kubectl, is install in addition to microk8s.kubectl.
@@ -652,7 +652,7 @@ microk8s.config > $HOME/.kube/config
 
         <div class="container" style="margin-top: 20px;">
           <h5>Jaeger</h5>
-          <a name="k8s-jaeger"></a>
+          <a id="k8s-jaeger" name="k8s-jaeger"></a>
           <p>
           Jaeger is used for monitoring and troubleshooting microservices-based 
           distributed systems, including:
@@ -676,7 +676,7 @@ microk8s.config > $HOME/.kube/config
 
         <div class="container" style="margin-top: 20px;">
           <h5>Fluentd</h5>
-          <a name="k8s-fluentd"></a>
+          <a id="k8s-fluentd" name="k8s-fluentd"></a>
           <p>
           Fluentd is an open source data collector for unified logging 
           layer. Fluentd allows you to unify data collection and 
@@ -689,7 +689,7 @@ microk8s.config > $HOME/.kube/config
 
         <div class="container" style="margin-top: 20px;">
           <h5>GPU support</h5>
-          <a name="k8s-gpu"></a>
+          <a id="k8s-gpu" name="k8s-gpu"></a>
           <p>Expose GPU(s) to MicroK8s by enabling the nvidia-docker runtime 
           and nvidia-device-plugin-daemonset. Requires NVIDIA drivers.  
           These driver are already installed on most systems.
@@ -698,7 +698,7 @@ microk8s.config > $HOME/.kube/config
 
         <div class="container" style="margin-top: 20px;">
           <h5>Storage</h5>
-          <a name="k8s-storage"></a>
+          <a id="k8s-storage" name="k8s-storage"></a>
           <p>Creates a default storage class. This storage class makes 
           use of the hostpath-provisioner pointing to a directory on 
           the host.
@@ -707,7 +707,7 @@ microk8s.config > $HOME/.kube/config
 
         <div class="container" style="margin-top: 20px;">
           <h5>RBAC</h5>
-          <a name="k8s-rbac"></a>
+          <a id="k8s-rbac" name="k8s-rbac"></a>
           <p>
           By default, RBAC is disabled.  If you enable RBAC, you can use 
           <code>--authorization-mode=AlwaysAllow</code> as needed.
@@ -720,7 +720,7 @@ microk8s.config > $HOME/.kube/config
 
         <div class="container" style="margin-top: 20px;">
           <h5>Ingress controllers</h5>
-          <a name="k8s-ingress"></a>
+          <a id="k8s-ingress" name="k8s-ingress"></a>
           <h6>What is Ingress?</h6>
 <p>
 Ingress, added in Kubernetes v1.1, exposes HTTP and HTTPS routes from 
@@ -755,7 +755,7 @@ Service.Type=NodePort or Service.Type=LoadBalancer.
 
         <div class="container" style="margin-top: 20px;">
           <h5>DNS</h5>
-          <a name="k8s-dns"></a>
+          <a id="k8s-dns" name="k8s-dns"></a>
           <p>
           Kube-dns makes Kubernetes endpoints available via DNS.  
           </p>
@@ -775,7 +775,7 @@ Service.Type=NodePort or Service.Type=LoadBalancer.
 
         <div class="container" style="margin-top: 20px;">
           <h5>Kuberentes metrics server</h5>
-          <a name="k8s-metrics"></a>
+          <a id="k8s-metrics" name="k8s-metrics"></a>
           <p>
           The k8s metrics server provides a unified method for collection 
           resource usage information. You collected data by making calls 
@@ -789,7 +789,7 @@ Service.Type=NodePort or Service.Type=LoadBalancer.
 
         <div class="container" style="margin-top: 20px;">
           <h5>Linkerd</h5>
-          <a name="k8s-linkerd"</a>
+          <a id="k8s-linkerd" name="k8s-linkerd"></a>
           <p>
           Linkerd is a service mesh for Kubernetes and other frameworks. It 
           makes running services easier and safer by giving you runtime 
@@ -807,7 +807,7 @@ Service.Type=NodePort or Service.Type=LoadBalancer.
 
         <div class="container" style="margin-top: 20px;">
           <h5>Prometheous</h5>
-          <a name="k8s-prometheous"</a>
+          <a id="k8s-prometheous" name="k8s-prometheous"></a>
           <div>
           Prometheus is an open source monitoring and alerting system 
           that directly scrapes metrics from agents running on the 
@@ -835,7 +835,7 @@ Service.Type=NodePort or Service.Type=LoadBalancer.
 
         <div class="container" style="margin-top: 20px;">
           <h5>Istio</h5>
-          <a name="k8s-istio"</a>
+          <a id="k8s-istio" name="k8s-istio"></a>
           <p>
           Istio makes it easy to create a network of deployed services with 
           load balancing, service-to-service authentication, monitoring, and 
@@ -858,7 +858,7 @@ Service.Type=NodePort or Service.Type=LoadBalancer.
 
         <div class="container" style="margin-top: 20px;">
           <h5>Kubernetes dashboard</h5>
-          <a name="k8s-dashboard"</a>
+          <a id="k8s-dashboard" name="k8s-dashboard"></a>
           <p>
           Kubernetes Dashboard is a general purpose, web-based UI for 
           Kubernetes clusters. It allows users to manage applications running 
@@ -874,19 +874,19 @@ Service.Type=NodePort or Service.Type=LoadBalancer.
 
         <div class="container" style="margin-top: 20px;">
           <h5>Knative</h5>
-          <a name="k8s-knative"</a>
+          <a id="k8s-knative" name="k8s-knative"></a>
           <p>TBD</p>
         </div>
 
         <div class="container" style="margin-top: 20px;">
           <h5>OpenFaaS</h5>
-          <a name="k8s-open-faas"</a>
+          <a id="k8s-open-faas" name="k8s-open-faas"></a>
           <p>TBD</p>
         </div>
 
         <div class="container" style="margin-top: 20px;">
           <h5>First function</h5>
-          <a name="k8s-first-faas"</a>
+          <a id="k8s-first-faas" name="k8s-first-faas"></a>
           <p>TBD</p>
         </div>
 
@@ -916,7 +916,7 @@ Service.Type=NodePort or Service.Type=LoadBalancer.
      
     <!-- Javascript -->          
     <!-- Global JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script> 
